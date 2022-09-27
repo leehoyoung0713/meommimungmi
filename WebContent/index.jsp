@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>팀 프로젝트 연습</title>
 </head>
 <body>
-
+<h3>허강산</h3>
 </body>
 </html>
