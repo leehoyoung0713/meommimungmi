@@ -11,7 +11,7 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <h3>허강산</h3>
-<h3>손호현</h3>
+
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
