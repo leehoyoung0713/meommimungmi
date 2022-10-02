@@ -7,6 +7,7 @@ body {
 header{
     border-bottom: 1px solid #f0f2f5;
     padding-bottom: 11px;
+    height: 43px;
 }
 div#logo{
     display: inline-block;
@@ -71,7 +72,7 @@ button{
 div{
     display: block;
 }
-.container{
+.container {
     display: inline-block;
     text-decoration: none;
     color: #212529;
@@ -81,8 +82,9 @@ div{
     list-style: none;
     margin: 0;
     padding-left: 13px;
-    top: -1px;
+    top: 12px;
 }
+
 .container li{
     display: inline-block;
     font-size: 20px;
@@ -90,6 +92,8 @@ div{
     justify-content: space-between;
     margin-left: 24px;
     vertical-align: top;
+    line-height: 30px;
+   	letter-spacing: -.6px;
 }
 
 .search {
@@ -97,6 +101,8 @@ div{
     /* display: inline-block; */
     min-width: 295px;
     padding-right: 72px;
+    top: 5px;
+    position: relative;
 }
 
 .search_icon {
