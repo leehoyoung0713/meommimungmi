@@ -87,7 +87,7 @@
                 <div class="input"><input type="email" class="inputId" id="id" placeholder="이메일 입력"></div>
                 <div><button>인증하기</button></div>
             </div>
-            <p class="idalter"></p>
+            <p class="idalter" style="position: absolute;"></p>
             <div id="name">
                 <div class="label"><label for="이름">이름</label></div>
                 <div class="input"><input type="text" placeholder="이름 입력"></div>
@@ -114,7 +114,7 @@
             </span>
         </span>
     </button>
-                    <input id = "agreement_checkbox" type="checkbox">
+                    <input id = "agreement_checkbox" type="checkbox" style="position: absolute;">
                     <label for = "agreement_checkbox"></label>
                     <span style="padding-left:15px ;">전체동의</span>
                 </div>
