@@ -11,9 +11,10 @@
 </head>
 <body>
 <jsp:include page ="header.jsp"/>
+
     <main class="pg-search ng-scope reverse" ng-controller="mp20_search_result_controller" data-keyword="강남역">
         <article class="contents">
-            <div class="black_screen"></div>
+            <div class="black_screen" id="blackScreen" style="display:none;"></div>
             <div class="column-wrapper">
                 <div class="column-contents flex-contents">
                     <!-- 검색결과 식당 리스트 flex로 변경 -->
@@ -21,12 +22,11 @@
                         <!-- 검색 식당 목록 -->
                         <section class="module search-results short-bottom">
                             <div class="search_info">
-
                                 <div class="search-options"
                                     ng-class="{is_empty_result: search_result_list.length === 0}">
                                     <button class="btn filter"
                                         data-background_url="https://d1jrqqyoo3n46w.cloudfront.net/web/resources/prwed8gjtoikxz6h.png"
-                                        style="position:relative;bottom:-42px;">필터</button>
+                                        style="position:relative;bottom:-47px;">필터</button>
                                 </div>
                                 <div class="search_top_title_wrap">
                                     <div class="title_wrap">
@@ -80,7 +80,7 @@
 
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a href="/restaurants/vnc0i7l-fd">
+                                                        <a href="">
                                                             <h2 class="title">농민백암왕순대
                                                                 <span class="branch">(강남역점)</span>
                                                             </h2>
@@ -97,7 +97,7 @@
                                         </div>
                                         <div class="list-restaurant-item" data-subcusine_code="6">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" href="/restaurants/9fX9iZIgEG7H">
+                                                <a class="only-desktop_not" href="">
                                                     <div class="thumb">
 
                                                         <img class="center-croping lazy"
@@ -111,7 +111,7 @@
 
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a href="/restaurants/9fX9iZIgEG7H">
+                                                        <a href="">
                                                             <h2 class="title">옥토스
                                                             </h2>
                                                         </a>
@@ -129,7 +129,7 @@
                                     <li class="list-restaurant server_render_search_result_item">
                                         <div class="list-restaurant-item" data-subcusine_code="29">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" href="/restaurants/51t4XhhxEGpT">
+                                                <a class="only-desktop_not" href="">
                                                     <div class="thumb">
 
                                                         <img class="center-croping lazy" alt="강아지"
@@ -142,7 +142,7 @@
 
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a href="/restaurants/51t4XhhxEGpT">
+                                                        <a href="">
                                                             <h2 class="title">반티엔야오카오위
                                                                 <span class="branch">(강남점)</span>
                                                             </h2>
@@ -159,7 +159,7 @@
                                         </div>
                                         <div class="list-restaurant-item" data-subcusine_code="3">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" href="/restaurants/HVICF2U7bp3e">
+                                                <a class="only-desktop_not" href="">
                                                     <div class="thumb">
 
                                                         <img class="center-croping lazy"
@@ -173,7 +173,7 @@
 
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a href="/restaurants/HVICF2U7bp3e">
+                                                        <a href="">
                                                             <h2 class="title">청류벽
                                                             </h2>
                                                         </a>
@@ -192,7 +192,7 @@
                                     <li class="list-restaurant server_render_search_result_item">
                                         <div class="list-restaurant-item" data-subcusine_code="2">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" href="/restaurants/-39YxkOe8auF">
+                                                <a class="only-desktop_not" href="">
                                                     <div class="thumb">
 
                                                         <img class="center-croping lazy"
@@ -206,7 +206,7 @@
 
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a href="/restaurants/-39YxkOe8auF">
+                                                        <a href="">
                                                             <h2 class="title">강남진해장
                                                             </h2>
                                                         </a>
@@ -222,7 +222,7 @@
                                         </div>
                                         <div class="list-restaurant-item" data-subcusine_code="16">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" href="/restaurants/pWAvmqr2i7TE">
+                                                <a class="only-desktop_not" href="">
                                                     <div class="thumb">
 
                                                         <img class="center-croping lazy"
@@ -236,7 +236,7 @@
 
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a href="/restaurants/pWAvmqr2i7TE">
+                                                        <a href="">
                                                             <h2 class="title">딜리셧부티끄</h2>
                                                         </a>
                                                         <strong class="point search_point ">4.4</strong>
@@ -253,7 +253,7 @@
                                     <li class="list-restaurant server_render_search_result_item">
                                         <div class="list-restaurant-item" data-subcusine_code="21">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" href="/restaurants/w_Uk02YqcI9h">
+                                                <a class="only-desktop_not" href="">
                                                     <div class="thumb">
 
                                                         <img class="center-croping lazy" alt="정돈 사진 - 서울시 강남구 역삼동 811-4"
@@ -266,7 +266,7 @@
 
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a href="/restaurants/w_Uk02YqcI9h">
+                                                        <a href="">
                                                             <h2 class="title">정돈
                                                                 <span class="branch">(강남역점)</span>
                                                             </h2>
@@ -283,7 +283,7 @@
                                         </div>
                                         <div class="list-restaurant-item" data-subcusine_code="29">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" href="/restaurants/dKX9LuHmBLx0">
+                                                <a class="only-desktop_not" href="">
                                                     <div class="thumb">
 
                                                         <img class="center-croping lazy"
@@ -296,7 +296,7 @@
 
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a href="/restaurants/dKX9LuHmBLx0">
+                                                        <a href="">
                                                             <h2 class="title">하이디라오
                                                                 <span class="branch">(서초지점)</span>
                                                             </h2>
@@ -316,7 +316,7 @@
                                     <li class="list-restaurant server_render_search_result_item">
                                         <div class="list-restaurant-item" data-subcusine_code="5">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" href="/restaurants/1lddS4GuHX">
+                                                <a class="only-desktop_not" href="">
                                                     <div class="thumb">
 
                                                         <img class="center-croping lazy"
@@ -329,7 +329,7 @@
 
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a href="/restaurants/1lddS4GuHX">
+                                                        <a href="">
                                                             <h2 class="title">서동한우
                                                                 <span class="branch">(강남점)</span>
                                                             </h2>
@@ -346,7 +346,7 @@
                                         </div>
                                         <div class="list-restaurant-item" data-subcusine_code="21">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" href="/restaurants/udMS7prvVnNn">
+                                                <a class="only-desktop_not" href="">
                                                     <div class="thumb">
 
                                                         <img class="center-croping lazy"
@@ -359,7 +359,7 @@
 
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a href="/restaurants/udMS7prvVnNn">
+                                                        <a href="">
                                                             <h2 class="title">카츠8
                                                                 <span class="branch">(강남점)</span>
                                                             </h2>
@@ -380,8 +380,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/vnc0i7l-fd"
-                                                    href="/restaurants/vnc0i7l-fd">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -395,8 +395,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/vnc0i7l-fd"
-                                                            href="/restaurants/vnc0i7l-fd">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">농민백암왕순대
                                                                 class="branch ng-binding ng-scope"
                                                                 ng-if="restaurant.restaurant.branch_name">(강남역점)</span>
@@ -432,8 +432,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/9fX9iZIgEG7H"
-                                                            href="/restaurants/9fX9iZIgEG7H">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">옥토스
                                                             </span>
                                                         </a>
@@ -468,7 +468,7 @@
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
                                                 <a class="only-desktop_not" ng-href="/restaurants/51t4XhhxEGpT"
-                                                    href="/restaurants/51t4XhhxEGpT">
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -482,8 +482,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/51t4XhhxEGpT"
-                                                            href="/restaurants/51t4XhhxEGpT">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">반티엔야오카오위
                                                                 class="branch ng-binding ng-scope"
                                                                 ng-if="restaurant.restaurant.branch_name">(강남점)</span>
@@ -505,8 +505,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/HVICF2U7bp3e"
-                                                    href="/restaurants/HVICF2U7bp3e">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -520,8 +520,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/HVICF2U7bp3e"
-                                                            href="/restaurants/HVICF2U7bp3e">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">청류벽</span>
                                                         </a>
                                                         <strong class="point search_point ">4.4</strong>
@@ -544,8 +544,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/-39YxkOe8auF"
-                                                    href="/restaurants/-39YxkOe8auF">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -559,8 +559,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/-39YxkOe8auF"
-                                                            href="/restaurants/-39YxkOe8auF">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">강남진해장
                                                             </span>
                                                         </a>
@@ -580,8 +580,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/pWAvmqr2i7TE"
-                                                    href="/restaurants/pWAvmqr2i7TE">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -595,8 +595,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/pWAvmqr2i7TE"
-                                                            href="/restaurants/pWAvmqr2i7TE">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">딜리셧부티끄
                                                             </span>
                                                         </a>
@@ -630,8 +630,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/w_Uk02YqcI9h"
-                                                    href="/restaurants/w_Uk02YqcI9h">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -644,8 +644,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/w_Uk02YqcI9h"
-                                                            href="/restaurants/w_Uk02YqcI9h">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">정돈
                                                                 class="branch ng-binding ng-scope"
                                                                 ng-if="restaurant.restaurant.branch_name">(강남역점)</span>
@@ -667,8 +667,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/dKX9LuHmBLx0"
-                                                    href="/restaurants/dKX9LuHmBLx0">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -682,8 +682,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/dKX9LuHmBLx0"
-                                                            href="/restaurants/dKX9LuHmBLx0">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">하이디라오
                                                                 class="branch ng-binding ng-scope"
                                                                 ng-if="restaurant.restaurant.branch_name">(서초지점)</span>
@@ -708,8 +708,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/1lddS4GuHX"
-                                                    href="/restaurants/1lddS4GuHX">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -723,8 +723,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/1lddS4GuHX"
-                                                            href="/restaurants/1lddS4GuHX">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">서동한우
                                                                 class="branch ng-binding ng-scope"
                                                                 ng-if="restaurant.restaurant.branch_name">(강남점)</span>
@@ -746,8 +746,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/udMS7prvVnNn"
-                                                    href="/restaurants/udMS7prvVnNn">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -761,8 +761,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/udMS7prvVnNn"
-                                                            href="/restaurants/udMS7prvVnNn">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">카츠8
                                                                 class="branch ng-binding ng-scope"
                                                                 ng-if="restaurant.restaurant.branch_name">(강남점)</span>
@@ -787,8 +787,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/kZUywyY8DPyx"
-                                                    href="/restaurants/kZUywyY8DPyx">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -802,8 +802,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/kZUywyY8DPyx"
-                                                            href="/restaurants/kZUywyY8DPyx">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">위트앤미트
                                                                 class="branch ng-binding ng-scope"
                                                                 ng-if="restaurant.restaurant.branch_name">(강남점)</span>
@@ -825,8 +825,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/0Ftpl9Mr_Isl"
-                                                    href="/restaurants/0Ftpl9Mr_Isl">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -840,8 +840,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/0Ftpl9Mr_Isl"
-                                                            href="/restaurants/0Ftpl9Mr_Isl">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">손욱정힘불끈황소곱창
                                                             </span>
                                                         </a>
@@ -875,8 +875,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/LAdeR2S_gOHB"
-                                                    href="/restaurants/LAdeR2S_gOHB">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -890,8 +890,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/LAdeR2S_gOHB"
-                                                            href="/restaurants/LAdeR2S_gOHB">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">스시산원 반주헌
                                                             </span>
                                                         </a>
@@ -911,8 +911,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/G4aZU0L7b4iV"
-                                                    href="/restaurants/G4aZU0L7b4iV">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -926,8 +926,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/G4aZU0L7b4iV"
-                                                            href="/restaurants/G4aZU0L7b4iV">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">굿스터프이터리
                                                             </span>
                                                         </a>
@@ -961,8 +961,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/RUNDFXjAgsLg"
-                                                    href="/restaurants/RUNDFXjAgsLg">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -976,8 +976,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/RUNDFXjAgsLg"
-                                                            href="/restaurants/RUNDFXjAgsLg">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">고메램<span
                                                                     class="branch ng-binding ng-scope"
                                                                     ng-if="restaurant.restaurant.branch_name">(강남점)</span>
@@ -1000,8 +1000,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/TiUni946ZA8c"
-                                                    href="/restaurants/TiUni946ZA8c">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -1015,8 +1015,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/TiUni946ZA8c"
-                                                            href="/restaurants/TiUni946ZA8c">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">강남명전
 
                                                             </span>
@@ -1051,8 +1051,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/fBVd5rEQHN"
-                                                    href="/restaurants/fBVd5rEQHN">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -1066,8 +1066,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/fBVd5rEQHN"
-                                                            href="/restaurants/fBVd5rEQHN">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">로리스더프라임립
                                                             </span>
                                                         </a>
@@ -1087,8 +1087,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/0Vq0bf1rZJLZ"
-                                                    href="/restaurants/0Vq0bf1rZJLZ">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -1102,8 +1102,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/0Vq0bf1rZJLZ"
-                                                            href="/restaurants/0Vq0bf1rZJLZ">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">모범갈빗살
                                                                 class="branch ng-binding ng-scope"
                                                                 ng-if="restaurant.restaurant.branch_name">(강남역본점)</span>
@@ -1129,8 +1129,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/gp9G0cn4E-uR"
-                                                    href="/restaurants/gp9G0cn4E-uR">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -1144,8 +1144,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/gp9G0cn4E-uR"
-                                                            href="/restaurants/gp9G0cn4E-uR">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">낙원타코
                                                                 <!-- ngIf: restaurant.restaurant.branch_name --><span
                                                                     class="branch ng-binding ng-scope"
@@ -1169,8 +1169,8 @@
                                         <div ng-repeat="restaurant in restaurant_pair"
                                             class="list-restaurant-item ng-scope">
                                             <figure class="restaurant-item">
-                                                <a class="only-desktop_not" ng-href="/restaurants/X19cFYkkiI"
-                                                    href="/restaurants/X19cFYkkiI">
+                                                <a class="only-desktop_not" ng-href=""
+                                                    href="">
                                                     <div class="thumb">
                                                         <i class="featured_badge ng-hide" ng-show="false"
                                                             style="background-image: url('')"></i>
@@ -1184,8 +1184,8 @@
                                                 </a>
                                                 <figcaption>
                                                     <div class="info">
-                                                        <a ng-href="/restaurants/X19cFYkkiI"
-                                                            href="/restaurants/X19cFYkkiI">
+                                                        <a ng-href=""
+                                                            href="">
                                                             <span class="title ng-binding">시골야채된장
                                                                 <!-- ngIf: restaurant.restaurant.branch_name -->
                                                             </span>
@@ -1287,7 +1287,7 @@
                         </section>
                     </div>
 
-                    <aside class="popup search-filter">
+                    <aside class="popup search-filter" id="asideFilter" style="display:none;">
                         <div class="inner">
                             <div>
                                 <div class="filter-item">
@@ -1308,19 +1308,11 @@
                                     <label for="">가격/1인당</label>
 
                                     <p class="cost_wrap">
-                                        <input type="checkbox" id="cost01" name="cost" class="cost"
-                                            ng-checked="is_checked_price_value(price_filter_name, 1)"
-                                            data-value="1"><label><span>만원미만</span></label>
-                                        <input type="checkbox" id="cost02" name="cost" class="cost"
-                                            ng-checked="is_checked_price_value(price_filter_name, 2)"
-                                            data-value="2"><label><span>1만원대</span></label>
-                                        <input type="checkbox" id="cost03" name="cost" class="cost"
-                                            ng-checked="is_checked_price_value(price_filter_name, 3)"
-                                            data-value="3"><label><span>2만원대</span></label>
-                                        <input type="checkbox" id="cost04" name="cost" class="cost"
-                                            ng-checked="is_checked_price_value(price_filter_name, 4)"
-                                            data-value="4"><label><span>3만원대</span></label>
-                                    </p>
+                                        <input type="checkbox" id="cost01" name="cost" class="cost" ng-checked="is_checked_price_value(price_filter_name, 1)" data-value="1"><label for="cost01" class="cost01 cost-zoom" data-filter="1" ng-click="set_filter_value(price_filter_name, $event, price_filter_value_hadler)"><span>만원미만</span></label>
+                                        <input type="checkbox" id="cost02" name="cost" class="cost" ng-checked="is_checked_price_value(price_filter_name, 2)" data-value="2"><label for="cost02" class="cost02 cost-zoom" data-filter="2" ng-click="set_filter_value(price_filter_name, $event, price_filter_value_hadler)"><span>1만원대</span></label>
+                                        <input type="checkbox" id="cost03" name="cost" class="cost" ng-checked="is_checked_price_value(price_filter_name, 3)" data-value="3"><label for="cost03" class="cost03 cost-zoom" data-filter="3" ng-click="set_filter_value(price_filter_name, $event, price_filter_value_hadler)"><span>2만원대</span></label>
+                                        <input type="checkbox" id="cost04" name="cost" class="cost" ng-checked="is_checked_price_value(price_filter_name, 4)" data-value="4"><label for="cost04" class="cost04 cost-zoom" data-filter="4,5" ng-click="set_filter_value(price_filter_name, $event, price_filter_value_hadler)"><span>3만원대</span></label>
+                                      </p>
                                 </div>
 
                                 <div class="filter-item only-desktop">
@@ -1859,27 +1851,11 @@
                             </div>
 
 
-                            <!-- 앱으로 연결 -->
-                            <aside class="connect-mp-app"
-                                style="background-image: url('https://d1jrqqyoo3n46w.cloudfront.net/web/resources/prwed8gjtoikxz6h.png')">
-                                <div class="inner">
-                                    <p>앱에서 검색하기</p>
 
-                                    <p class="icon">
-                                        <img src="https://mp-seoul-image-production-s3.mangoplate.com/web/resources/gc6axol9tbyfjkj-.png?fit=around|*:*&amp;crop=*:*;*,*&amp;output-format=jpg&amp;output-quality=80"
-                                            alt="망고플레이트 아이콘">
-                                    </p>
-                                    <p>망고플레이트 앱에서 모든 필터로 간편하게 맛집들을 검색해보세요!</p>
-
-                                    <a href="#" go_to_app_or_market(this);return false;"
-                                        data-event_name="CLICK_DWN_POPUPFILTER_W1" data-event_term="V1"
-                                        class="btn-shortcut-app">앱에서 입맛대로 검색하기</a>
-                                </div>
-                            </aside>
                         </div>
 
                         <div class="submit-container" style="top: initial; bottom: 0px;">
-                            <button class="btn cancel" ng-click="close_filter_button()">취소</button>
+                            <button class="btn cancel">취소</button>
                             <button type="submit" value="" ng-click="do_filter_search()" class="btn submit">적용</button>
                         </div>
                     </aside>
@@ -2096,7 +2072,7 @@
                                                         d="M6.069 6.72l4.123-3.783 1.216 1.326-5.32 4.881L.603 4.273l1.196-1.346z">
                                                     </path>
                                                 </svg>
-                                                <div class="popout popout--prepared popout--axis-1 popout--dir-2 popout--cross-dir-2"
+                                                <div id="popOut" class="popout popout--prepared popout--axis-1 popout--dir-2 popout--cross-dir-2"
                                                     data-popout="true"
                                                     style="position: absolute; z-index: 1000; top: 29px; right: 9.0156px;">
                                                     <div id="starFilterOption" class="filterBtnOff">
@@ -2603,7 +2579,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                       
+                        </div>
+                        
+
                         <!-- 리뷰 코멘트들 -->
                         <div class="reviewList">
                             <div class="reviewItemContainer">
@@ -3162,6 +3140,12 @@
 
 
                         <!-- 리뷰 작성 -->
+                        <div class="attachWrap">
+                            <label for="attach">
+                                <div class="attach">
+                                </div>
+                            </label>
+                        </div>
                         <div class="reviewWritingSection">
                             <div class="review-modal__section">
                                 <div class="review-modal__form__star__wrap">
@@ -3242,11 +3226,11 @@
                                             <input type="text" class="userCommentWritingSector"
                                                 placeholder="후기를 남겨보세요.">
                                             <div class="commentPhoto">
-                                                <button type="button" class="cameraImgWrap">
-                                                    <span class="cameraImg">
-                                                        <img src="camera.PNG">
-                                                    </span>
-                                                </button>
+                                                <label class="cameraImg" for="attach">
+                                                    <img src="camera.PNG">
+                                                    <input type="file" id="attach" class="cameraImgWrap" style="display:none;">
+                                                    </input>
+                                                </label>
                                             </div>
 
                                             <button type="submit" class="putComment">입력</button>
@@ -3267,7 +3251,7 @@
                                 </button>
                             </li>
                             <li><button class="pageBtnNumber clickNumber">1</button></li>
-                            <li><button class="pageBtnNumber">2</button></li>
+                            <li><button class="pageBtnNumber"">2</button></li>
                             <li><button class="pageBtnNumber">3</button></li>
                             <li><button class="pageBtnNumber">4</button></li>
                             <li><button class="pageBtnNumber">5</button></li>

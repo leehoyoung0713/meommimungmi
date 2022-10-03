@@ -37,6 +37,17 @@ main{
     background-color: #f7f7f7;
 }
 
+.layerClose {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+
 /* 왼쪽 인기 검색 순위 */
 .pg-search .search-results .search_info {
     overflow: hidden;
@@ -48,7 +59,7 @@ main{
 }
 
 .pg-search .search-results .search-options .btn {
-    font-size: 0.875em;
+    font-size: 1.1em;
     color: #9b9b9b;
 }
 
@@ -96,6 +107,75 @@ main{
     background-color: #E7E7E7;
     margin: 0 8px;
 }
+
+.search-filter .filter-item .region {
+    overflow: hidden;
+    padding-bottom: 2px;
+}
+
+.search-filter .filter-item .region:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #9b9b9b;
+}
+
+.search-filter .filter-item .region a.selected {
+    color: #ff792a;
+}
+
+.search-filter .filter-item .region a {
+    display: block;
+    position: relative;
+    float: left;
+    width: 16.666%;
+    font-size: 1.125rem;
+    color: #9b9b9b;
+    line-height: 59px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pg-search .search-results .search-options .btn:before {
+    content: '';
+    display: inline-block;
+    margin: -2px 7px 0 20px;
+    vertical-align: middle;
+}
+
+.pg-search.reverse .search-filter .filter-item .metro {
+    width: 415px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.search-filter .filter-item .metro {
+    width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.pg-search.reverse .search-filter .filter-item .metro .metro_btn {
+    word-break: break-all;
+    display: inline-block;
+    width: 46%;
+    min-height: 50px;
+    margin: 22px 29px 0 0;
+}
+
+.search-filter .filter-item .metro .metro_btn {
+    word-break: break-all;
+    display: inline-block;
+    width: 22%;
+    min-height: 50px;
+    margin: 22px 29px 0 0;
+    cursor: pointer;
+}
+
 
 /* 왼쪽 하단부 */
 .pg-search .search-results .search-list-restaurants-inner-wrap {
@@ -320,8 +400,29 @@ article, aside, canvas, details, figcaption, figure, footer, header, nav, menu, 
     border-radius: 40px;
 }
 
+.search-filter .filter-item .region a.selected:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    left: 0;
+    height: 3px;
+    background-color: #ff792a;
+}
+
+.pg-search.reverse .search-filter .cuisine_list_wrap {
+    width: auto;
+    margin: auto;
+}
+
 .pg-search.reverse .search-filter label {
     margin-right: 0;
+}
+
+.search-filter .filter-item .cuisine_list_wrap {
+    width: 624px;
+    margin: 0 auto;
 }
 
 .search-filter .filter-item {
@@ -355,10 +456,19 @@ article, aside, canvas, details, figcaption, figure, footer, header, nav, menu, 
     margin-bottom: 10px;
 }
 
-.search-filter .filter-item p {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
+.pg-search.reverse .search-filter .filter-item .metro .metro_btn:nth-child(2n) {
+    margin-right: 0;
+}
+
+.search-filter .filter-item .btn-region-cancel_wrap {
+    text-align: right;
+    visibility: hidden;
+}
+
+.search-filter .filter-item .btn-region-cancel {
+    margin-top: 20px;
+    font-size: 1.000rem;
+    color: #9b9b9b;
 }
 
 .search-filter .filter-item input[type=checkbox] {
@@ -373,6 +483,43 @@ article, aside, canvas, details, figcaption, figure, footer, header, nav, menu, 
     border-radius: 0px;
 }
 
+.search-filter .filter-item input[type=checkbox]:checked+label{
+    color: #ff792a;
+    border-color: #ff792a;
+}
+
+.pg-search.reverse .search-filter .cuisine_list_wrap label {
+    float: none;
+}
+
+.more-region {
+    display: none;
+}
+
+.search-filter .filter-item .more-region>a {
+    display: block;
+    font-size: 1.000rem;
+    color: #cbcbcb;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.search-filter .filter-item .more-region>a:hover, .search-filter .filter-item .more-region>a.selected {
+    color: #ff792a;
+}
+
+.search-filter .filter-item .more-region {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    z-index: 500;
+    padding: 12px 0;
+    width: 200px;
+    border: 1px solid #9b9b9b;
+    background-color: #ffffff;
+}
+
 .search-filter .filter-item input[type=checkbox]+label {
     display: inline-block;
     width: 134px;
@@ -384,6 +531,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, nav, menu, 
     border: 2px solid #cbcbcb;
     border-radius: 40px;
 }
+
+
 
 
 /* 오른쪽 영역 */
@@ -936,6 +1085,7 @@ button.filterActive {
 
 .filterBtnOff{
     visibility: visible;
+    display:none;
     opacity: 0;
     transform: none;
     transition: opacity .2s,transform .2s;
@@ -1077,7 +1227,12 @@ button.filterActive {
     background-color: #fff;
 }
 
-.reviewCommentGoodBtnTxt {
+.reviewCommentGoodBtn.clicked{
+    background-color: #35c5f0;
+    color:#fff;
+}
+
+.reviewCommentGoodBtn .reviewCommentGoodBtnTxt {
     position: relative;
     top: -1px;
 }
@@ -1217,6 +1372,17 @@ button.filterActive {
     font-size: 24px;
     line-height: 1;
     background-color:rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+label[for='attach'] div.attached{
+    content:'첨부 이미지';
+    width: 150px;
+    height: 150px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    
 }
 
 .putComment {
@@ -1373,6 +1539,13 @@ button.filterActive {
     border-color: transparent transparent #fff;
 }
 
+.popOutDisplayNone{
+    display : none;
+    transform: none;
+    transition: opacity .2s,transform .2s;
+    transform-origin: 50% 0;
+}
+
 .css-1q9dafi {
     -webkit-box-align: center;
     align-items: center;
@@ -1504,4 +1677,42 @@ button.filterActive {
     line-height: 0;
     cursor: pointer;
     transition: color .1s;
+}
+
+label[class='cameraImg'] div{
+    cursor: pointer;
+}
+
+label[for='attach'] {
+    cursor: pointer;
+}
+
+
+.attachWrap {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(234, 235, 239);
+    margin-bottom: 15px;    
+}
+
+
+.attached {
+    width: 150px;
+    height: 150px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+    margin: 0 auto;
+}
+
+.attached::after {
+    background-image: url(xButton.png);
+    content: "";
+    display: flex;
+    height: 16px;
+    width: 20px;
+    background-size: 111%;
+    left: 428px;
+    bottom: -3px;
+    position: relative;
 }
