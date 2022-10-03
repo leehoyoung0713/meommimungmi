@@ -29,8 +29,10 @@
     <section>
         <main id = "top">
             <h2>로그인</h2>
+            <div style="argin-top: 12px; margin-bottom:12px;">
                 <input type="email" id="userName" name="userName" class="input-text" placeholder="이메일 입력" title="아이디 입력">
-                <p class="idalter"></p>
+                <h1 class="idalter"></h1>
+                </div>
                 <input type="password" id="password" name="password" class="input-text" placeholder="비밀번호 입력" title="비밀번호 입력">
                 <p class="forgot"><a class="wz text">로그인 정보를 잊으셨나요?</a></p>
         
@@ -56,8 +58,8 @@
                                 </svg>카카오로 시작하기</span>
                             </span>
                         </button>
-                        <button type="button" id="naverLogin"><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
-                            
+                        <button type="button" id="naverLogin" style="background-image: url(구글아이콘.png); background-repeat: no-repeat;
+    background-position: 18px center;"  ><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
                       </svg>구글로 시작하기</button>
       
       
