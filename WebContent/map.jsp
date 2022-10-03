@@ -22,6 +22,7 @@
                         <!-- 검색 식당 목록 -->
                         <section class="module search-results short-bottom">
                             <div class="search_info">
+
                                 <div class="search-options"
                                     ng-class="{is_empty_result: search_result_list.length === 0}">
                                     <button class="btn filter"
@@ -2581,6 +2582,12 @@
                             </div>
                         </div>
                         
+                        <!-- 필터 들어갈 공간 -->
+                        <div class="filteringStarWrap">
+                            <div class="filteringStar">
+                            </div>
+                        </div>
+
 
                         <!-- 리뷰 코멘트들 -->
                         <div class="reviewList">
@@ -3141,9 +3148,10 @@
 
                         <!-- 리뷰 작성 -->
                         <div class="attachWrap">
+                            <!-- 첨부파일 이미지 공간 -->
+                            <div class="xButton" onclick="xBtn()"></div>
                             <label for="attach">
-                                <div class="attach">
-                                </div>
+                                <div class="attach"></div>
                             </label>
                         </div>
                         <div class="reviewWritingSection">
@@ -3233,10 +3241,9 @@
                                                 </label>
                                             </div>
 
-                                            <button type="submit" class="putComment">입력</button>
+                                            <button type="submit" class="putComment" onclick="regist()">입력</button>
                                         </div>
                                     </div>
-
                                 </div>
                         </div>
                         </form>
