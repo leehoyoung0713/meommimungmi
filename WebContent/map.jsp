@@ -3234,7 +3234,7 @@
                                             <input type="text" class="userCommentWritingSector"
                                                 placeholder="후기를 남겨보세요.">
                                             <div class="commentPhoto">
-                                                <label class="cameraImg" for="attach">
+                                                <label class="cameraImg" for="attach" style="font-size: 51px;">
                                                     <img src="camera.PNG">
                                                     <input type="file" id="attach" class="cameraImgWrap" style="display:none;">
                                                     </input>
