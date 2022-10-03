@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 body {
     font-family: 'Noto Sans KR', sans-serif;
     color: rgba(0, 0, 0, .84);
@@ -597,10 +598,11 @@ footer a{
     left: 34%;
     border-radius: 10px;
     width: 480px;
-    height: 378px;
+    height: 515px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     overflow:auto; width:500px; height:150px;
     overflow-x:hidden;
+    top: 272px;
 }
 
 .modalclass_hidden {
