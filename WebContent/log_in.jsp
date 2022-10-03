@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
- <header>
+    <header>
         <!-- 와디즈 좌측 상단 로고 -->
 
         <div id = "logo">       
@@ -20,24 +20,62 @@
                 
             </svg>
         </div>
-        <span  id = "login" style = "float : right;"><a href="log_in.html">로그인</a></span>
-        <span  id = "join_in" style = "float : right;"><a href="join_in.html">회원가입</a></span>
+        <span  id = "login" style = "float : right;"><a href="log_in.html" style="text-decoration-line: none;
+            color: black;">로그인</a></span>
+        <span  id = "join_in" style = "float : right;"><a href="join_in.html" style="text-decoration-line: none;
+            color: black;">회원가입</a></span>
 
     </header>
     <section>
         <main id = "top">
             <h2>로그인</h2>
                 <input type="email" id="userName" name="userName" class="input-text" placeholder="이메일 입력" title="아이디 입력">
+                <p class="idalter"></p>
                 <input type="password" id="password" name="password" class="input-text" placeholder="비밀번호 입력" title="비밀번호 입력">
                 <p class="forgot"><a class="wz text">로그인 정보를 잊으셨나요?</a></p>
-        </main>
-        <main id = "middle">
-            <div id = "square_btns">
-                <button type="button" id="btnLogin" class="wz button primary block submit-button" data-event="iam.signin.submit">로그인</button>
-                <button type="button" id = "kakaoLogin">카카오로 시작하기</button>
-                <button type="button" id = "naverLogin">구글로 시작하기</button>
+        
+
+
+
+
+
+
+
+
+
+        <div id="iam-account-app">
+            <div>
+                <div>
+                    <button class="Button_button__3ip2b Button_lg__m4_5e Button_block__2nblq SNSButtonList_kakaoButton__2lTDs SNSButtonList_spacer__38ac5" type="button">
+                        <span>
+                            <span class="Button_children__VGHI5">
+                                <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_kakaoIcon__1s6gw" aria-hidden="true">
+                                    <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z">
+
+                                    </path>
+                                </svg>카카오로 시작하기</span>
+                            </span>
+                        </button>
+                        <button type="button" id="naverLogin"><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
+                            
+                      </svg>구글로 시작하기</button>
+      
+      
+    
+                         
+                </div>
             </div>
-        </main>
+        </div>
+
+
+    </main>
+
+
+
+
+
+
+
 
       
     </section>
@@ -47,6 +85,26 @@
             아직 멈미뭄미 계정이 없나요? <a href="join_in.html" data-return-url="" data-event="iam.signin.goto.signup">회원가입</a>
         </p>
     </footer>
-    
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+$('#userName').keypress(function(){
+    var hobbyCheck = false;
+  var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+  var getCheck= RegExp(/^[A-Za-z]{1}[A-Za-z0-9_-]{9,19}$/);
+  var getName= RegExp(/^[가-힣]+$/);
+  var fmt = RegExp(/^\d{6}[1234]\d{6}$/);
+  var buf = new Array(13);
+
+  
+  if(getCheck.test($("#userName").val())){
+    $('#userName').css('border', '1px solid rgb(245 7 7)');
+    $(".idalter").text("아이디는 숫자포함 10자리까지 가능합니다!");
+    return;
+  }else if(getMail.test($("#userName").val())){
+    $(".idalter").text("이메일을 입력했습니다!");
+    return;
+  }
+});
+</script>
 </html>
