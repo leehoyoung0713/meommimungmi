@@ -1,68 +1,42 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>장례업체</title>
- <link rel="stylesheet" href="./header.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장례업체</title>
+    <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./funeral.css">
     <link rel="stylesheet" href="./footer.css">
     <script src="https://kit.fontawesome.com/5ee2c7b38b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   <div id="page-container">
+    <div id="page-container">
         <main id="main-app">
             <div class="web-header">
                 <div class="web-header-large">
-                    <header>
-                        <!-- 와디즈 좌측 상단 로고 -->
-                        <div id = "logo">       
-                           
-                        </div>
-                        <ul class="container">
-                            <li class="item">펀딩예정</li>
-                            <li class="item">펀딩</li>
-                            <li class="item">스토어</li>
-                            <li class="item">투자</li>
-                            <li class="item">
-                                <div>
-                                    <button class="more">더보기
-                                        <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon" aria-hidden="true">
-                                            <path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="search">
-                            <form class="search_container" method="get" action="/web/wcampaign/search" name="keyword">
-                                <img src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png" class="search_icon"></img>
-                                <input type="search" class = "search_input" placeholder="어떤 프로젝트를 찾고 계신가요?">
-                            </form>
-                            <button id = "join_in" style = "float : right;">회원가입</button>
-                            <button id = "login" style =  "float : right;">로그인</button>
-                        </div> 
-                    </header>
+                	<jsp:include page="./header.jsp"></jsp:include>
                 </div>
             </div>
             <div class="MainWrapper_content__GZkTa">
                 <ul class="RewardMainTab_container__geHTr">
-                    <!-- <li>
-                        <a href="/web/wreward/main" class="RewardMainTab_link___1r2a">
-                            <span>펀딩 홈</span>
-                        </a>
-                    </li> -->
-                    <li class="RewardMainTab_onlyLarge__1q7_V">
-                        <a class="RewardMainTab_link___1r2a RewardMainTab_active__1zRir" href="/web/wreward/category" aria-current="page">
-                            <span>베스트</span>
+                    <li>
+                        <a class="RewardMainTab_link___1r2a" href="/teamproject/animalfeed.jsp">
+                            <span>사료 검색</span>
                         </a>
                     </li>
-                    <!-- <li>
-                        <a href="/web/wreward/global_encore" class="RewardMainTab_link___1r2a">
-                            <span>프리오더</span>
+                    <li>
+                        <a class="RewardMainTab_link___1r2a" href="/teamproject/lostfoundanimal.jsp">
+                            <span>유기동물 찾기</span>
                         </a>
-                    </li> -->
+                    </li>
+                    <li class="RewardMainTab_onlyLarge__1q7_V">
+                        <a class="RewardMainTab_link___1r2a RewardMainTab_active__1zRir" href="/teamproject/funeral.jsp" aria-current="page">
+                            <span>장례업체</span>
+                        </a>
+                    </li>
                 </ul>
                 <div id="image">
                     <img src="https://www.goodbyeangel.co.kr/img/main2.gif" alt="error">
@@ -104,7 +78,7 @@
                                         <div class="CommonCard_container__e_ebQ CommonCard_squareSmall__1Cdkn">
                                             <a href="/web/campaign/detail/54516?_refer_section_st=REWARD_0" class="CardLink_link__1k83H CommonCard_image__vaqkf" aria-hidden="true" tabindex="-1">
                                                 <div class="CommonCard_rect__2wpm4">
-                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.wadiz.kr/wwwwadiz/green002/2019/1201/20191201234946354_54516.jpg/wadiz/format/jpg/quality/80/optimize');"></span>
+                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.imweb.me/upload/S2020060844c46e5f6596d/a47e7ff60709f.png');"></span>
                                                 </div>
                                             </a>
                                             <div class="CommonCard_info__1f4kq">
@@ -112,23 +86,23 @@
                                                     <div class="RewardProjectCard_infoTop__3QR5w">
                                                         <a class="CardLink_link__1k83H" href="/web/campaign/detail/54516?_refer_section_st=REWARD_0">
                                                             <p class="CommonCard_title__1oKJY RewardProjectCard_title__iUtvs">
-                                                                <strong>[5.0점앵콜] 퇴직/이직 전 진짜 내가 하고 싶은 일을 찾는 곳ㅣ사하라</strong>
+                                                                <strong>장례업체ㅣ</strong><strong>씨엘로펫</strong>
                                                             </p>
                                                         </a>
                                                         <div>
-                                                            <span class="RewardProjectCard_category__2muXk">모임</span>
-                                                            <span class="RewardProjectCard_makerName__2q4oH">사하라</span>
+                                                            <span class="RewardProjectCard_category__2muXk">주소</span>
+                                                            <span class="RewardProjectCard_makerName__2q4oH">서울특별시 강남구</span>
                                                         </div>
                                                     </div>
                                                     <div class="RewardProjectCard_gauge__3p9US">
                                                         <span style="width:100%;"></span>
                                                     </div>
-                                                    <span class="RewardProjectCard_percent__3TW4_">805%</span>
-                                                    <span class="RewardProjectCard_amount__2AyJF">8,050,000원</span>
+                                                    <span class="RewardProjectCard_percent__3TW4_">건당</span>
+                                                    <span class="RewardProjectCard_amount__2AyJF">300,000원</span>
                                                     <span class="RewardProjectCard_days__3eece RewardProjectCard_isAchieve__1LcUu">
-                                                        <span class="RewardProjectCard_remainingDay__2TqyN">종료</span>
+                                                        <span class="RewardProjectCard_remainingDay__2TqyN">예약가능여부</span>
                                                         <span class="RewardProjectCard_isAchieve__1LcUu">
-                                                            <em>성공</em>
+                                                            <em>가능</em>
                                                         </span>
                                                     </span>
                                                 </div>
@@ -141,7 +115,7 @@
                                         <div class="CommonCard_container__e_ebQ CommonCard_squareSmall__1Cdkn">
                                             <a href="/web/campaign/detail/54516?_refer_section_st=REWARD_0" class="CardLink_link__1k83H CommonCard_image__vaqkf" aria-hidden="true" tabindex="-1">
                                                 <div class="CommonCard_rect__2wpm4">
-                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.wadiz.kr/wwwwadiz/green002/2019/1201/20191201234946354_54516.jpg/wadiz/format/jpg/quality/80/optimize');"></span>
+                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.imweb.me/upload/S2020060844c46e5f6596d/a47e7ff60709f.png');"></span>
                                                 </div>
                                             </a>
                                             <div class="CommonCard_info__1f4kq">
@@ -149,23 +123,23 @@
                                                     <div class="RewardProjectCard_infoTop__3QR5w">
                                                         <a class="CardLink_link__1k83H" href="/web/campaign/detail/54516?_refer_section_st=REWARD_0">
                                                             <p class="CommonCard_title__1oKJY RewardProjectCard_title__iUtvs">
-                                                                <strong>[5.0점앵콜] 퇴직/이직 전 진짜 내가 하고 싶은 일을 찾는 곳ㅣ사하라</strong>
+                                                                <strong>장례업체ㅣ</strong><strong>씨엘로펫</strong>
                                                             </p>
                                                         </a>
                                                         <div>
-                                                            <span class="RewardProjectCard_category__2muXk">모임</span>
-                                                            <span class="RewardProjectCard_makerName__2q4oH">사하라</span>
+                                                            <span class="RewardProjectCard_category__2muXk">주소</span>
+                                                            <span class="RewardProjectCard_makerName__2q4oH">서울특별시 강남구</span>
                                                         </div>
                                                     </div>
                                                     <div class="RewardProjectCard_gauge__3p9US">
                                                         <span style="width:100%;"></span>
                                                     </div>
-                                                    <span class="RewardProjectCard_percent__3TW4_">805%</span>
-                                                    <span class="RewardProjectCard_amount__2AyJF">8,050,000원</span>
+                                                    <span class="RewardProjectCard_percent__3TW4_">건당</span>
+                                                    <span class="RewardProjectCard_amount__2AyJF">300,000원</span>
                                                     <span class="RewardProjectCard_days__3eece RewardProjectCard_isAchieve__1LcUu">
-                                                        <span class="RewardProjectCard_remainingDay__2TqyN">종료</span>
+                                                        <span class="RewardProjectCard_remainingDay__2TqyN">예약가능여부</span>
                                                         <span class="RewardProjectCard_isAchieve__1LcUu">
-                                                            <em>성공</em>
+                                                            <em>가능</em>
                                                         </span>
                                                     </span>
                                                 </div>
@@ -178,7 +152,7 @@
                                         <div class="CommonCard_container__e_ebQ CommonCard_squareSmall__1Cdkn">
                                             <a href="/web/campaign/detail/54516?_refer_section_st=REWARD_0" class="CardLink_link__1k83H CommonCard_image__vaqkf" aria-hidden="true" tabindex="-1">
                                                 <div class="CommonCard_rect__2wpm4">
-                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.wadiz.kr/wwwwadiz/green002/2019/1201/20191201234946354_54516.jpg/wadiz/format/jpg/quality/80/optimize');"></span>
+                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.imweb.me/upload/S2020060844c46e5f6596d/a47e7ff60709f.png');"></span>
                                                 </div>
                                             </a>
                                             <div class="CommonCard_info__1f4kq">
@@ -186,23 +160,23 @@
                                                     <div class="RewardProjectCard_infoTop__3QR5w">
                                                         <a class="CardLink_link__1k83H" href="/web/campaign/detail/54516?_refer_section_st=REWARD_0">
                                                             <p class="CommonCard_title__1oKJY RewardProjectCard_title__iUtvs">
-                                                                <strong>[5.0점앵콜] 퇴직/이직 전 진짜 내가 하고 싶은 일을 찾는 곳ㅣ사하라</strong>
+                                                                <strong>장례업체ㅣ</strong><strong>씨엘로펫</strong>
                                                             </p>
                                                         </a>
                                                         <div>
-                                                            <span class="RewardProjectCard_category__2muXk">모임</span>
-                                                            <span class="RewardProjectCard_makerName__2q4oH">사하라</span>
+                                                            <span class="RewardProjectCard_category__2muXk">주소</span>
+                                                            <span class="RewardProjectCard_makerName__2q4oH">서울특별시 강남구</span>
                                                         </div>
                                                     </div>
                                                     <div class="RewardProjectCard_gauge__3p9US">
                                                         <span style="width:100%;"></span>
                                                     </div>
-                                                    <span class="RewardProjectCard_percent__3TW4_">805%</span>
-                                                    <span class="RewardProjectCard_amount__2AyJF">8,050,000원</span>
+                                                    <span class="RewardProjectCard_percent__3TW4_">건당</span>
+                                                    <span class="RewardProjectCard_amount__2AyJF">300,000원</span>
                                                     <span class="RewardProjectCard_days__3eece RewardProjectCard_isAchieve__1LcUu">
-                                                        <span class="RewardProjectCard_remainingDay__2TqyN">종료</span>
+                                                        <span class="RewardProjectCard_remainingDay__2TqyN">예약가능여부</span>
                                                         <span class="RewardProjectCard_isAchieve__1LcUu">
-                                                            <em>성공</em>
+                                                            <em>가능</em>
                                                         </span>
                                                     </span>
                                                 </div>
@@ -215,7 +189,7 @@
                                         <div class="CommonCard_container__e_ebQ CommonCard_squareSmall__1Cdkn">
                                             <a href="/web/campaign/detail/54516?_refer_section_st=REWARD_0" class="CardLink_link__1k83H CommonCard_image__vaqkf" aria-hidden="true" tabindex="-1">
                                                 <div class="CommonCard_rect__2wpm4">
-                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.wadiz.kr/wwwwadiz/green002/2019/1201/20191201234946354_54516.jpg/wadiz/format/jpg/quality/80/optimize');"></span>
+                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.imweb.me/upload/S2020060844c46e5f6596d/a47e7ff60709f.png');"></span>
                                                 </div>
                                             </a>
                                             <div class="CommonCard_info__1f4kq">
@@ -223,23 +197,23 @@
                                                     <div class="RewardProjectCard_infoTop__3QR5w">
                                                         <a class="CardLink_link__1k83H" href="/web/campaign/detail/54516?_refer_section_st=REWARD_0">
                                                             <p class="CommonCard_title__1oKJY RewardProjectCard_title__iUtvs">
-                                                                <strong>[5.0점앵콜] 퇴직/이직 전 진짜 내가 하고 싶은 일을 찾는 곳ㅣ사하라</strong>
+                                                                <strong>장례업체ㅣ</strong><strong>씨엘로펫</strong>
                                                             </p>
                                                         </a>
                                                         <div>
-                                                            <span class="RewardProjectCard_category__2muXk">모임</span>
-                                                            <span class="RewardProjectCard_makerName__2q4oH">사하라</span>
+                                                            <span class="RewardProjectCard_category__2muXk">주소</span>
+                                                            <span class="RewardProjectCard_makerName__2q4oH">서울특별시 강남구</span>
                                                         </div>
                                                     </div>
                                                     <div class="RewardProjectCard_gauge__3p9US">
                                                         <span style="width:100%;"></span>
                                                     </div>
-                                                    <span class="RewardProjectCard_percent__3TW4_">805%</span>
-                                                    <span class="RewardProjectCard_amount__2AyJF">8,050,000원</span>
+                                                    <span class="RewardProjectCard_percent__3TW4_">건당</span>
+                                                    <span class="RewardProjectCard_amount__2AyJF">300,000원</span>
                                                     <span class="RewardProjectCard_days__3eece RewardProjectCard_isAchieve__1LcUu">
-                                                        <span class="RewardProjectCard_remainingDay__2TqyN">종료</span>
+                                                        <span class="RewardProjectCard_remainingDay__2TqyN">예약가능여부</span>
                                                         <span class="RewardProjectCard_isAchieve__1LcUu">
-                                                            <em>성공</em>
+                                                            <em>가능</em>
                                                         </span>
                                                     </span>
                                                 </div>
@@ -252,7 +226,7 @@
                                         <div class="CommonCard_container__e_ebQ CommonCard_squareSmall__1Cdkn">
                                             <a href="/web/campaign/detail/54516?_refer_section_st=REWARD_0" class="CardLink_link__1k83H CommonCard_image__vaqkf" aria-hidden="true" tabindex="-1">
                                                 <div class="CommonCard_rect__2wpm4">
-                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.wadiz.kr/wwwwadiz/green002/2019/1201/20191201234946354_54516.jpg/wadiz/format/jpg/quality/80/optimize');"></span>
+                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.imweb.me/upload/S2020060844c46e5f6596d/a47e7ff60709f.png');"></span>
                                                 </div>
                                             </a>
                                             <div class="CommonCard_info__1f4kq">
@@ -260,23 +234,23 @@
                                                     <div class="RewardProjectCard_infoTop__3QR5w">
                                                         <a class="CardLink_link__1k83H" href="/web/campaign/detail/54516?_refer_section_st=REWARD_0">
                                                             <p class="CommonCard_title__1oKJY RewardProjectCard_title__iUtvs">
-                                                                <strong>[5.0점앵콜] 퇴직/이직 전 진짜 내가 하고 싶은 일을 찾는 곳ㅣ사하라</strong>
+                                                                <strong>장례업체ㅣ</strong><strong>씨엘로펫</strong>
                                                             </p>
                                                         </a>
                                                         <div>
-                                                            <span class="RewardProjectCard_category__2muXk">모임</span>
-                                                            <span class="RewardProjectCard_makerName__2q4oH">사하라</span>
+                                                            <span class="RewardProjectCard_category__2muXk">주소</span>
+                                                            <span class="RewardProjectCard_makerName__2q4oH">서울특별시 강남구</span>
                                                         </div>
                                                     </div>
                                                     <div class="RewardProjectCard_gauge__3p9US">
                                                         <span style="width:100%;"></span>
                                                     </div>
-                                                    <span class="RewardProjectCard_percent__3TW4_">805%</span>
-                                                    <span class="RewardProjectCard_amount__2AyJF">8,050,000원</span>
+                                                    <span class="RewardProjectCard_percent__3TW4_">건당</span>
+                                                    <span class="RewardProjectCard_amount__2AyJF">300,000원</span>
                                                     <span class="RewardProjectCard_days__3eece RewardProjectCard_isAchieve__1LcUu">
-                                                        <span class="RewardProjectCard_remainingDay__2TqyN">종료</span>
+                                                        <span class="RewardProjectCard_remainingDay__2TqyN">예약가능여부</span>
                                                         <span class="RewardProjectCard_isAchieve__1LcUu">
-                                                            <em>성공</em>
+                                                            <em>가능</em>
                                                         </span>
                                                     </span>
                                                 </div>
@@ -289,7 +263,7 @@
                                         <div class="CommonCard_container__e_ebQ CommonCard_squareSmall__1Cdkn">
                                             <a href="/web/campaign/detail/54516?_refer_section_st=REWARD_0" class="CardLink_link__1k83H CommonCard_image__vaqkf" aria-hidden="true" tabindex="-1">
                                                 <div class="CommonCard_rect__2wpm4">
-                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.wadiz.kr/wwwwadiz/green002/2019/1201/20191201234946354_54516.jpg/wadiz/format/jpg/quality/80/optimize');"></span>
+                                                    <span class="CommonCard_background__3toTR CommonCard_visible__ABkYx"style="background-image:url('https://cdn.imweb.me/upload/S2020060844c46e5f6596d/a47e7ff60709f.png');"></span>
                                                 </div>
                                             </a>
                                             <div class="CommonCard_info__1f4kq">
@@ -297,23 +271,23 @@
                                                     <div class="RewardProjectCard_infoTop__3QR5w">
                                                         <a class="CardLink_link__1k83H" href="/web/campaign/detail/54516?_refer_section_st=REWARD_0">
                                                             <p class="CommonCard_title__1oKJY RewardProjectCard_title__iUtvs">
-                                                                <strong>[5.0점앵콜] 퇴직/이직 전 진짜 내가 하고 싶은 일을 찾는 곳ㅣ사하라</strong>
+                                                                <strong>장례업체ㅣ</strong><strong>씨엘로펫</strong>
                                                             </p>
                                                         </a>
                                                         <div>
-                                                            <span class="RewardProjectCard_category__2muXk">모임</span>
-                                                            <span class="RewardProjectCard_makerName__2q4oH">사하라</span>
+                                                            <span class="RewardProjectCard_category__2muXk">주소</span>
+                                                            <span class="RewardProjectCard_makerName__2q4oH">서울특별시 강남구</span>
                                                         </div>
                                                     </div>
                                                     <div class="RewardProjectCard_gauge__3p9US">
                                                         <span style="width:100%;"></span>
                                                     </div>
-                                                    <span class="RewardProjectCard_percent__3TW4_">805%</span>
-                                                    <span class="RewardProjectCard_amount__2AyJF">8,050,000원</span>
+                                                    <span class="RewardProjectCard_percent__3TW4_">건당</span>
+                                                    <span class="RewardProjectCard_amount__2AyJF">300,000원</span>
                                                     <span class="RewardProjectCard_days__3eece RewardProjectCard_isAchieve__1LcUu">
-                                                        <span class="RewardProjectCard_remainingDay__2TqyN">종료</span>
+                                                        <span class="RewardProjectCard_remainingDay__2TqyN">예약가능여부</span>
                                                         <span class="RewardProjectCard_isAchieve__1LcUu">
-                                                            <em>성공</em>
+                                                            <em>가능</em>
                                                         </span>
                                                     </span>
                                                 </div>
@@ -321,85 +295,36 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <!-- 3개씩 반복 -->
                             </div>
+                            <!-- page number추가 -->
+                            <div class="board-footer">
+                                <div class="pagination">
+                                    <div class="page">
+                                        <div class="desktop-only">
+                                            <button class="prev-page icon-chevron-left"onclick="movePage(0)" disabled="">
+                                                <span class="text-hidden"><!-- 이전 목록 --></span>
+                                            </button>
+                                            <a href="#" class="current" onclick="movePage(1)">1</a>
+                                            <a href="#" onclick="movePage(2)">2</a>
+                                            <a href="#" onclick="movePage(3)">3</a>
+                                            <a href="#" onclick="movePage(4)">4</a>
+                                            <a href="#" onclick="movePage(5)">5</a>
+                                            <a href="#" onclick="movePage(6)">6</a>
+                                            <button class="next-page icon-chevron-right" onclick="movePage(7)">
+                                                <span class="text-hidden"><!-- 다음 목록 --></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- page number 추가 끝 -->
                         </div>
                     </div>
                 </div>
                 <!-- footer -->
-                <footer class="footer">
-                    <div class="footerMenu_container">
-                        <div class="footer_menu">
-                            <div id="footer_menu_left" class="footer_menu">
-                                <span>정책 · 약관</span>
-                                <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon" aria-hidden="true">
-                                    <path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path>
-                                </svg>   
-                                <span>개인정보처리방침</span>
-                                <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon" aria-hidden="true">
-                                    <path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path>
-                                </svg>
-                            </div>
-                            <div id="footer_menu_right" class="footer_menu">
-                                <span>관리자페이지</span>
-                                <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon" aria-hidden="true">
-                                    <path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer_inner">
-            
-                        <section class="left_section">
-                            <div class="section_title">와디즈 고객센터</div>
-                            <div class="footer_buttons">
-                                <button type="button" class="footer_button">채팅상담하기
-                                    <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon" aria-hidden="true">
-                                        <path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path>
-                                    </svg>
-                                </button>
-            
-                                <a href="" class="footer_a">문의 등록하기
-                                    <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon" aria-hidden="true">
-                                        <path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path>
-                                    </svg>
-            
-                                </a>
-                                <a href="" class="footer_a">도움말 센터 바로가기
-            
-                                    <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon" aria-hidden="true">
-                                        <path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path>
-                                    </svg>
-            
-                                </a>
-                            </div>
-                        </section>
-                        <section class="right_section">
-                            <ul>
-                                <li class="item">와디즈㈜</li>
-                                <li class="item">대표이사</li>
-                                <li class="item">사업자등록번호</li>
-                                <li class="item">통신판매업신고번호</li>
-                                <li>경기 성남시 분당구 판교로 242 PDC A동 402호</li>
-                            </ul>
-                            <div>
-                            <ul>
-                                <li class="item">이메일 상담
-                                    <a href="h.hyeon@gmail.com">h.hyeon@gmail.com</a>
-                                </li>
-                                <li class="item">유선 상담
-                                    <a href="tel:010-6545-3831">010-6545-3831</a>
-                                </li>
-                                <address >© wadiz Co., Ltd.</address>
-                            </ul>
-                            </div>
-                            <div class="footer_p">
-                                <p style="margin-top: 10px;">일부 상품의 경우 와디즈는 통신판매중개자이며 통신판매 당사자가 아닙니다.</p>
-                                <p>해당되는 상품의 경우 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.</p>
-                            </div>
-                        </section>
-                    </div>
-                </footer>
+                <jsp:include page="./footer.jsp"></jsp:include>
             </div>
         </main>
     </div>
