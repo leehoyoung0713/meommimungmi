@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,7 +50,7 @@
                     <div class="wz input">
                         <input id="userName" class="input-text" type="email" name="userName" value="" placeholder="이메일 계정" onkeydown="hitEnterkey(event);">
                     </div>
-                    <em class="helper error">이메일 형식이 올바르지 않습니다.</em>
+                    <em class="helper_error" id = "helper_error">이메일 형식이 올바르지 않습니다.</em>
                 </div>
                 <button id="btnIsJoinedEmail" class="wz primary block button" type="button" onclick="checkEmail()">링크 발송
                 </button>
@@ -59,10 +59,8 @@
         </div>
     </div>
 
-<footer>
-<jsp:include page ="footer.jsp"/>
-</footer>
 
+    <jsp:include page ="footer.jsp"/>
 </body>
-
+<script src="find_password.js"></script>
 </html>
