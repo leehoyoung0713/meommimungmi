@@ -1234,7 +1234,6 @@ button.filterActive {
 
 .reviewCommentGoodBtn .reviewCommentGoodBtnTxt {
     position: relative;
-    top: 0px;
 }
 
 .reviewWritingForm{
@@ -1705,14 +1704,37 @@ label[for='attach'] {
     margin: 0 auto;
 }
 
-.attached::after {
+
+.xButtonActive {
     background-image: url(xButton.png);
     content: "";
     display: flex;
     height: 16px;
     width: 20px;
     background-size: 111%;
-    left: 428px;
-    bottom: -3px;
     position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.filteringStar{
+    font-size: -0.8rem;
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(133, 133, 133);
+    margin-bottom:14px;
+}
+
+.starFilters{
+    top: -1px;
+    position: relative;
+    margin-right: 5px;
+}
+
+.selected .starCountText{
+    color: red;
+}
+
+.starCountWrap.selected{
+    background: rgb(242, 251, 254);
 }
