@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media (min-width:769px){
+@media (min-width:5px){
     /* 전체 */
     body {
        
@@ -1040,7 +1040,6 @@ button.filterActive {
 
 .reviewCommentGoodBtnTxt {
     position: relative;
-    top: -1px;
 }
 
 .reviewWritingForm{
@@ -1290,7 +1289,7 @@ button.filterActive {
 
     .search-filter>.inner {
         margin: 0;
-        height: calc(104vh - 161px);
+        height: calc(100vh - 161px);
         overflow-y: auto;
     }
 
