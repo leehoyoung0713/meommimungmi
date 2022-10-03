@@ -105,6 +105,7 @@ body{
 }
 
 .MymummProfile_editProfile{
+    cursor: pointer;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -412,6 +413,15 @@ a {
     fill: #adb5bd;
 }
 
+.page button:disabled{
+    background-color: none;
+}
+
+.page button{
+    background-color: none;
+}
+
+
 .MymummMenu_menu a:after,
 .MymummMenu_menu button:after{
     display: block;
@@ -446,6 +456,7 @@ body li, body ol, body ul {
 }
 
 .MymummProjectInfo_projectList li a{
+    cursor: pointer;
     padding: 24px 0;
     display: block;
     position: relative;
@@ -578,4 +589,515 @@ element.style {
     height: 112px;
     overflow: hidden;
     box-sizing: border-box;
+}
+
+.MymummList_emptyList{
+    height: 500px;
+    text-align: center;
+    line-height: 500px;
+}
+
+.MymummList_list ul{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.MymummList_list .myPost{
+    padding: 20px 0 0;
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.MymummList_list .myPost{
+    box-sizing: border-box;
+}
+
+.liked i:before{
+    display: inline-block;
+    margin-top: -1px;
+    margin-right: 4px;
+    background-color: #babdc0;
+    width: 2px;
+    height: 2px;
+    vertical-align: middle;
+    content: "";
+}
+
+.MymummList_list .info {
+    padding-bottom: 20px;
+    line-height: 18px;
+    font-size: 13px;
+}
+
+.MymummList_list .title,
+.MymummList_list .place {
+    margin-right: 200px;
+    padding-bottom: 12px;
+    line-height: 28px;
+    font-size: 20px;
+}
+
+.MymummList_list .place {
+    padding-bottom: 0px;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.MymummList_list .liked,
+.MymummList_list .created-at{
+    margin-right: 8px;
+    color: #696f75;
+    font-size: 13px;
+}
+
+.MymummList_list .myPost:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.MymummList_list .review{
+    margin-right: 200px;
+    font-size: 1.15rem;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #212529;
+}
+
+.MymummList_list .myPost .thumb {
+    margin-top: -12px;
+    margin-bottom: 20px;
+    padding-bottom: 108px;
+    width: 144px;
+}
+
+.MymummList_list .myPost .thumb{
+    float: right;
+    background-color: #eaeaea;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.MymummList_list .myPost .reple{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.MyMumm_contents .page {
+    padding: 0 16px 160px;
+    text-align: center;
+    color: #44484b;
+}
+
+.MyMumm_contents .page .pageButton {
+    display: block;
+}
+
+.prev-page {
+    margin-right: 16px;
+    left: 0;
+    position: static;
+    top: 0;
+}
+
+.page .pageButton button {
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 21px;
+}
+
+.prev-page:before,
+.next-page:before {
+    margin-top: -3px;
+    margin: 0;
+}
+
+.icon-chevron-left:before{
+    background-image: url('https://w7.pngwing.com/pngs/265/585/png-transparent-computer-icons-arrow-previous-button-angle-triangle-internet-thumbnail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+}
+.icon-chevron-right:before{
+    background-image: url('https://w7.pngwing.com/pngs/1010/528/png-transparent-black-arrow-computer-icons-caret-next-button-miscellaneous-angle-heart-thumbnail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+}
+
+[class*=icon-]:before {
+    display: inline-block;
+    margin-top: -0.2em;
+    vertical-align: middle;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.page span {
+    display: block;
+    margin-right: 13px;
+    margin-left: 13px;
+}
+
+.text-hidden {
+    display: block;
+    margin-top: -1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.page a.current {
+    color: #34383a;
+    font-weight: 500;
+}
+
+.page a {
+    display: inline-block;
+    width: 32px;
+    line-height: 34px;
+    color: #7c8288;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.next-page {
+    top: 0;
+    margin-left: 16px;
+    position: static;
+    right: 0;
+}
+
+.profileSetting{
+    color: #4a4a4a;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.profileSetting button{
+    cursor: pointer;
+}
+
+.profileSetting h3{
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.profileSetting h5 {
+    margin-bottom: 5px;
+    padding-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.profileSetting .profileimg {
+    position: relative;
+    display: block;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+    background: #000;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileimg em {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: no-repeat center center #fff;
+    background-size: cover;
+}
+
+.profileSetting .setting-profileimg {
+    display: block;
+    text-align: center;
+}
+
+.profileimg-wrap .setting-profileimg button {
+    display: inline-block;
+    padding: 0;
+    margin: 0 5px;
+    font-size: 13px;
+    color: #4a4a4a;
+    line-height: 13px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.setting-profileimg button {
+    display: inline-block;
+    padding: 0;
+    margin: 0 5px;
+    font-size: 13px;
+    color: #4a4a4a;
+    line-height: 13px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.profileSetting h5 {
+    margin-bottom: 5px;
+    padding-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.waccount-wrap .sub-text {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #4a4a4a;
+}
+
+.check-list-wrap {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.check-list-wrap ul li {
+    float: left;
+    width: 50%;
+    margin-bottom: 15px;
+    height: 20px;
+}
+
+.check-list-wrap ul li input[type=checkbox] {
+    display: none;
+}
+
+.check-list-wrap ul li .input-check {
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.check-list-wrap ul li .input-check .button_checked:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-image: url('https://one-ap.amorepacific.com/auth/images/common/btn_check_on.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+
+.changeNick #result{
+    margin: 0px;
+    color: red;
+}
+
+.check-list-wrap ul li .input-check .button_unchecked:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-image: url('https://one-ap.amorepacific.com/auth/images/common/btn_check_off.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+
+.check-list-wrap ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.input-text {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.input-text {
+    margin-right: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 75% !important;
+    padding: 0 17px;
+    margin-bottom: 7px;
+    height: 46px !important;
+    line-height: 45px;
+    font-size: 13px;
+    color: #4a4a4a;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    outline: none;
+}
+
+.input-text:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.duplicate_check{
+    width: 90px;
+    height: 44px;
+    font-size: 13px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    background: #8c8881;
+    border: none;
+    box-sizing: border-box;
+}
+
+.textarea-wrap {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.textarea-wrap textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 0 17px;
+    margin-bottom: 7px;
+    height: 100px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #4a4a4a;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    outline: none;
+    resize: none;
+}
+
+.btn-bottom {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.btn-div2 {
+    width: 100%;
+    padding: 0;
+}
+
+.btn-div2 li:first-child {
+    float: left;
+    width: 49%;
+}
+
+.btn-div2 li:last-child {
+    float: right;
+    width: 49%;
+    padding: 0;
+}
+
+.mm.button.gray {
+    background-color: #90949c;
+    color: #fff;
+    border-color: #90949c;
+}
+
+.mm.button.gray:hover {
+    border-color: #60656a;
+    background-color: #60656a;
+    color: #fff;
+}
+
+.btn-darkgray {
+    display: block;
+    width: 100%;
+    height: 44px;
+    font-size: 13px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    background: #8c8881;
+    border: none;
+    box-sizing: border-box;
+}
+
+.mm.button {
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .2s;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 1.41176em;
+    height: 48px;
+    vertical-align: middle;
+    line-height: 1;
+    color: rgba(0,0,0,.54);
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding-top: 0.07em;
+    text-decoration: none;
+}
+
+.mm.button.primary {
+    background-color: #00c4c4;
+    color: #fff;
+}
+
+.mm.button.primary:hover {
+    border-color: #00b2b2;
+    background-color: #00b2b2;
+    color: #fff;
+}
+
+.mm.button.primary, .mm.button.primary-outline {
+    border-color: #00c4c4;
+}
+
+.btn-mint {
+    display: block;
+    width: 100%;
+    height: 46px;
+    font-size: 13px;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+    background: #23dbab;
+    border: none;
+    box-sizing: border-box;
+}
+
+#uploadProfileImg {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }

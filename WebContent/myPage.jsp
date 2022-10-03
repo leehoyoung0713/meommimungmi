@@ -44,10 +44,7 @@
                                     </div>
                                     <div class="MummProfile_setting">
                                         <p class="MymummLoginMode_loginMode">
-                                            <span class="MymummLoginMode_kakaoIcon">
-                                                <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true"><path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z"></path></svg>
-                                            </span>
-                                            카카오로 로그인 중
+                            
                                         </p>
                                         <a href="/main" class="Button_button Button_md Button_circular Button_block">
                                             <span>
@@ -56,17 +53,21 @@
                                                 </span>
                                             </span>
                                         </a>
+                                        <button type="button" onclick="change()">실험용, 누르면 글 작성수 1</button>
+                                        <button type="button" onclick="loginKakao()">카카오 로그인 시, 아이콘</button>
+                                        <button type="button" onclick="loginMumm()">오리지널 회원일 시, 아이콘</button>
+                                        <button type="button" onclick="loginGoogle()">구글 회원일 시, 아이콘</button>
                                     </div>
                                 </div>
-                                <!-- after -->
+                                <!-- after 릴레이티브 지우기 위한 after요소-->
                                 <div class="MyMumm_contents">
                                     <!-- before, 선 -->
-                                    <div class="MymummSection_section">
+                                    <div class="MymummSection_sectionMenu">
                                         <div class="MymummProject_projectContainer">
                                             <div class="MymummProjectInfo_project">
                                                 <ul class="MymummProjectInfo_projectList">
                                                     <li>
-                                                        <a href="게시글">
+                                                        <a>
                                                             <span>
                                                                 <b>
                                                                     0
@@ -77,19 +78,19 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="작성댓글">
+                                                        <a>
                                                             <span>
                                                                 <!-- before -->
                                                                 <b>
                                                                     0
                                                                     <i></i>
                                                                 </b>
-                                                                구매
+                                                                작성댓글
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="작성리뷰">
+                                                        <a>
                                                             <span>
                                                                 <!-- before -->
                                                                 <b>
@@ -101,7 +102,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="내장소">
+                                                        <a>
                                                             <span>
                                                                 <!-- before -->
                                                                 <b>
@@ -115,7 +116,7 @@
                                                 </ul>
                                                 <ul class="MymummProjectInfo_projectLink">
                                                     <li>
-                                                        <a href="개인정보설정">
+                                                        <a style="cursor: pointer;">
                                                             <span>
                                                                 <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__1w-D1" aria-hidden="true"><path fill="none" d="M0 0h40v40H0z"></path><path fill="none" d="M20 2.8A16.9 16.9 0 0 0 7.19 30.74c2.14-4 7.86-4.6 12.81-4.6s10.67.57 12.81 4.6A16.9 16.9 0 0 0 20 2.8zm5.24 17.51A7.44 7.44 0 0 1 20 22.48a8.52 8.52 0 0 1-1.42-.13 7.39 7.39 0 0 1-5.83-5.83 7.41 7.41 0 0 1 8.71-8.71 7.39 7.39 0 0 1 5.83 5.83 7.47 7.47 0 0 1-2.05 6.67z"></path><path d="M21.44 7.81a7.41 7.41 0 0 0-8.71 8.71 7.39 7.39 0 0 0 5.83 5.83 8.52 8.52 0 0 0 1.42.13 7.41 7.41 0 0 0 1.46-14.67zM6.85 33.41l-.11-.11zM6.42 33l.14.13-.14-.13z"></path><path d="M39 19.72A19 19 0 1 0 6.42 33l.14.14a1.62 1.62 0 0 0 .19.18l.11.11a16.76 16.76 0 0 0 1.35 1.17c.45.36.92.69 1.4 1l.12.07c.46.3.94.58 1.42.83l.17.09c.48.24 1 .47 1.46.67l.2.08c.49.2 1 .37 1.51.53h.2c.51.15 1 .28 1.57.39h.17q.82.15 1.65.24h.12c.58 0 1.16.08 1.75.08s1.17 0 1.75-.08h.12q.82-.09 1.65-.24h.17c.53-.11 1-.24 1.57-.39h.2c.51-.16 1-.33 1.5-.53l.21-.08c.5-.2 1-.43 1.45-.67l.18-.09c.49-.25 1-.53 1.42-.82l.12-.08c.48-.32.95-.65 1.4-1h.05c.47-.37.92-.77 1.35-1.18l.1-.1a1.62 1.62 0 0 0 .19-.18l.14-.13A18.94 18.94 0 0 0 39 19.72zm-6.19 11c-2.14-4-7.86-4.6-12.81-4.6s-10.67.57-12.81 4.6a16.92 16.92 0 1 1 25.62 0z"></path></svg>
                                                                 <span>개인정보 설정</span>
@@ -126,64 +127,453 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="MymummEventBanner_pare">
-                                        <div class="banner_shelterBanner MymummShelterBanner_banner">
+                                    <div class="MymummSection_section">
+                                        <div class="MymummList_emptyList" style="display: none;">
+                                            작성한 게시글이 없습니다.
                                         </div>
-                                        <div class="banner_shelterBanner MymummShelterBanner_banner">
-                                        </div>
-                                        <div class="banner_shelterBanner MymummShelterBanner_banner">
-                                        </div>
-                                        <div class="banner_shelterBanner MymummShelterBanner_banner">
-                                        </div>
-                                        <div class="banner_shelterBanner MymummShelterBanner_banner">
+                                        <div class="MymummList_list" style="display: none;">
+                                            <ul>
+                                                <li>
+                                                    <a class="myPost" href="게시글로_이동">
+                                                        <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211202_104%2F1638421267386XM2Q6_JPEG%2Fupload_20a15f4d3e6c644890971264e59d42ea.jpeg');"></div>
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [게시글 제목]
+                                                            </h3>
+                                                            <span class="liked">
+                                                                추천수
+                                                                <!-- before -->
+                                                                <i>0</i>
+                                                            </span>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="게시글로_이동">
+                                                        <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211202_268%2F1638421266078yh1W8_JPEG%2Fupload_caf5bba3f67adf265886582a8f6171aa.jpeg');"></div>
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [게시글 제목]
+                                                            </h3>
+                                                            <span class="liked">
+                                                                추천수
+                                                                <!-- before -->
+                                                                <i>0</i>
+                                                            </span>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="게시글로_이동">
+                                                        <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f180_180&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA4MTNfMzUg%2FMDAxNjYwMzc2ODM4MzQ5.YYRZvSX64t8VVd0de6zG-cyIWqZbRyWeWTWsDZx585Ug._90kjG3JNfzutL9djY5HnWZjm65FM7i8NykoKiaWYv0g.JPEG%2Fupload_03850f484f6d4c8544c11a192fbb1bf2.jpeg');"></div>
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [게시글 제목]
+                                                            </h3>
+                                                            <span class="liked">
+                                                                추천수
+                                                                <!-- before -->
+                                                                <i>0</i>
+                                                            </span>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="게시글로_이동">
+                                                        <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f180_180&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA4MTNfMzUg%2FMDAxNjYwMzc2ODM4MzQ5.YYRZvSX64t8VVd0de6zG-cyIWqZbRyWeWTWsDZx585Ug._90kjG3JNfzutL9djY5HnWZjm65FM7i8NykoKiaWYv0g.JPEG%2Fupload_03850f484f6d4c8544c11a192fbb1bf2.jpeg');"></div>
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [게시글 제목]
+                                                            </h3>
+                                                            <span class="liked">
+                                                                추천수
+                                                                <!-- before -->
+                                                                <i>0</i>
+                                                            </span>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="게시글로_이동">
+                                                        <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f180_180&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA4MTNfMzUg%2FMDAxNjYwMzc2ODM4MzQ5.YYRZvSX64t8VVd0de6zG-cyIWqZbRyWeWTWsDZx585Ug._90kjG3JNfzutL9djY5HnWZjm65FM7i8NykoKiaWYv0g.JPEG%2Fupload_03850f484f6d4c8544c11a192fbb1bf2.jpeg');"></div>
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [게시글 제목]
+                                                            </h3>
+                                                            <span class="liked">
+                                                                추천수
+                                                                <!-- before -->
+                                                                <i>0</i>
+                                                            </span>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="게시글로_이동">
+                                                        <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f180_180&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA4MTNfMzUg%2FMDAxNjYwMzc2ODM4MzQ5.YYRZvSX64t8VVd0de6zG-cyIWqZbRyWeWTWsDZx585Ug._90kjG3JNfzutL9djY5HnWZjm65FM7i8NykoKiaWYv0g.JPEG%2Fupload_03850f484f6d4c8544c11a192fbb1bf2.jpeg');"></div>
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [게시글 제목]
+                                                            </h3>
+                                                            <span class="liked">
+                                                                추천수
+                                                                <!-- before -->
+                                                                <i>0</i>
+                                                            </span>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                            
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="MymummSection_section">
-                                        <div>
-                                            <div class="MymummOtherMenu_otherMenu">
-                                                <div class="MymummMenu_menu">
-                                                    <a>
-                                                        <strong class="MymummMenu_text">공지사항</strong>
-                                                        <sapn class="MymummMenu_arrowIcon">
-                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__1w-D1" aria-hidden="true"><path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path></svg>
-                                                        </sapn>
+                                        <div class="MymummList_emptyList" style="display: none;">
+                                            작성한 댓글이 없습니다.
+                                        </div>
+                                        <div class="MymummList_list"  style="display: none;">
+                                            <ul>
+                                                <li>
+                                                    <a class="myPost" href="댓글로_이동">
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [댓글 내용]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
                                                         <!-- after -->
                                                     </a>
-                                                </div>
-                                                <div class="MymummMenu_menu">
-                                                    <a>
-                                                        <strong class="MymummMenu_text">이용가이드</strong>
-                                                        <sapn class="MymummMenu_arrowIcon">
-                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__1w-D1" aria-hidden="true"><path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path></svg>
-                                                        </sapn>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="댓글로_이동">
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [댓글 내용]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
                                                         <!-- after -->
                                                     </a>
-                                                </div>
-                                                <div class="MymummMenu_menu">
-                                                    <a>
-                                                        <strong class="MymummMenu_text">문의사항</strong>
-                                                        <sapn class="MymummMenu_arrowIcon">
-                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__1w-D1" aria-hidden="true"><path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path></svg>
-                                                        </sapn>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="댓글로_이동">
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [댓글 내용]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
                                                         <!-- after -->
                                                     </a>
-                                                </div>
-                                                <div class="MymummMenu_menu">
-                                                    <a>
-                                                        <strong class="MymummMenu_text">탈퇴하기</strong>
-                                                        <sapn class="MymummMenu_arrowIcon">
-                                                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__1w-D1" aria-hidden="true"><path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path></svg>
-                                                        </sapn>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="댓글로_이동">
+                                                        <div class="info">
+                                                            <h3 class="title reple">
+                                                                [댓글 내용]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
                                                         <!-- after -->
                                                     </a>
-                                                </div>
-                                            </div>
-                                            
-                                
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="댓글로_이동">
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [댓글 내용]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="댓글로_이동">
+                                                        <div class="info">
+                                                            <h3 class="title">
+                                                                [댓글 내용]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                
+                                            </ul>
                                         </div>
                                     </div>
-                                </div>
-                            <!-- after -->
+                                    <div class="MymummSection_section">
+                                        <div class="MymummList_emptyList" style="display: none;">
+                                            작성한 리뷰가 없습니다.
+                                        </div>
+                                        <div class="MymummList_list" style="display: none;">
+                                            <ul>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [리뷰 장소]
+                                                            </h3>
+                                                            <h3 class="review">[리뷰내용][리뷰내용]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.co…p=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [리뷰 장소]
+                                                            </h3>
+                                                            <h3 class="review">[리뷰내용][리뷰내용]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.co…p=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [리뷰 장소]
+                                                            </h3>
+                                                            <h3 class="review">[리뷰내용][리뷰내용]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.co…p=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [리뷰 장소]
+                                                            </h3>
+                                                            <h3 class="review">[리뷰내용][리뷰내용]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.co…p=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [리뷰 장소]
+                                                            </h3>
+                                                            <h3 class="review">[리뷰내용][리뷰내용]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.co…p=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [리뷰 장소]
+                                                            </h3>
+                                                            <h3 class="review">[리뷰내용][리뷰내용]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="MymummSection_section">
+                                        <div class="MymummList_emptyList" style="display: none;">
+                                            등록된 장소가 없습니다.
+                                        </div>
+                                        <div class="MymummList_list" style="display: none;">
+                                            <ul>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [장소 이름(병원, 가게, 식당)]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [장소 이름(병원, 가게, 식당)]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [장소 이름(병원, 가게, 식당)]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [장소 이름(병원, 가게, 식당)]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [장소 이름(병원, 가게, 식당)]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="myPost" href="리뷰로_이동">
+                                                        <div class="info">
+                                                            <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
+                                                            <h3 class="place">
+                                                                [장소 이름(병원, 가게, 식당)]
+                                                            </h3>
+                                                            <span class="created-at">2022.09.30</span>
+                                                        </div>
+                                                        <!-- after -->
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="page" style="display: none;">
+                                        <div class="pageButton">
+                                            <a class="current" href="#" onclick="movePage(1)">1</a>
+                                            <a href="#" onclick="movePage(2)">2</a>
+                                            <a href="#" onclick="movePage(3)">3</a>
+                                        </div>
+                                    </div>
+                                    <div class="profileSetting" style="display: none;">
+                                        <h3>개인정보 설정</h3>
+                                        <div id="tabContent1" class="tab-content">
+                                            <h5>프로필 사진</h5>
+                                            <div class="profileimg-wrap">
+                                                <button type="button" id="resultProfileImg" class="profileimg" onclick="$('#uploadProfileImg').click();">
+                                                    <em style="background-image: url('https://www.wadiz.kr/resources/static/img/common/img_blank.png');"></em>
+                                                </button>
+                                                <p class="setting-profileimg">
+                                                    <!-- 누르면 span 바꾸기 로 변경됨 -->
+                                                    <button type="button" onclick="$('#uploadProfileImg').click()" id="btn_updatePhoto">프로필 사진 등록</button>
+                                                    <button type="button" onclick="deletePhoto" id="btn_deletePhoto" style="display: none;">삭제</button>
+                                                </p>
+                                            </div>
+                                            <h5>닉네임 변경</h5>
+                                            <div class="changeNick">
+                                                <input type="text" class="input-text" maxlength="50" id="nickName" placeholder="배다빈" value="">
+                                                <span>
+                                                    <button type="button" class="duplicate_check" onclick="checkNick()">중복확인</button>
+                                                </span>
+                                                <p id="result"></p>
+                                            </div>
+                                            <h5>관심 동물</h5>
+                                            <p class="sub-text">관심 동물을 선택해주세요.(중복 가능)</p>
+                                            <div class="check-list-wrap">
+                                                <ul>
+                                                    <li>
+                                                        <input type="checkbox" id="interest_1" name="interestGroup" value="SRV0001_01">
+                                                        <label class="input-check" for="interest_1">
+                                                                <!-- before -->
+                                                            <span class="button_unchecked">강아지</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="interest_2" name="interestGroup" value="SRV0001_02">
+                                                        <label class="input-check" for="interest_2">
+                                                                <!-- before -->
+                                                            <span class="button_unchecked">강아지</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="interest_3" name="interestGroup" value="SRV0001_03">
+                                                        <label class="input-check" for="interest_3">
+                                                                <!-- before -->
+                                                            <span class="button_unchecked">강아지</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="interest_4" name="interestGroup" value="SRV0001_04">
+                                                        <label class="input-check" for="interest_4">
+                                                                <!-- before -->
+                                                            <span class="button_unchecked">강아지</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="interest_5" name="interestGroup" value="SRV0001_05">
+                                                        <label class="input-check" for="interest_5">
+                                                                <!-- before -->
+                                                            <span class="button_unchecked">강아지</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="interest_6" name="interestGroup" value="SRV0001_06">
+                                                        <label class="input-check" for="interest_6">
+                                                                <!-- before -->
+                                                            <span class="button_unchecked">강아지</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <h5>간단한 한 마디로 나를 소개해주세요.</h5>
+                                            <div class="textarea-wrap">
+                                                <textarea id="introduceme" maxlength="80"></textarea>
+                                            </div>
+                                            <div class="btn-bottom">
+                                                <ul class="btn-div2">
+                                                    <li><button type="button" class="mm button gray btn-darkgray" onclick="cancelModify()">취소</button></li>
+                                                    <li><button type="button" class="mm button primary btn-mint" onclick="modify()">확인</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <!-- after 릴레이티브 지우기 위한 after요소-->
                             </div>
                         </div>
                     </div>
@@ -191,6 +581,9 @@
             </div>
         </main>
     </div>
-    	<jsp:include page="footer.jsp"></jsp:include>
+    <input type="file" id="uploadProfileImg" class="file-profileimg" accept="image/*">
+    <jsp:include page="footer.jsp"></jsp:include>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="myPage.js"></script>
 </html>
