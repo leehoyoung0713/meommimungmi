@@ -10,14 +10,11 @@
     <link rel="stylesheet" href="sidenav.css"/>
     <link rel="stylesheet" href="manageUser.css"/>
     <script src="https://kit.fontawesome.com/f8de4bd3ed.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
+    <link rel="stylesheet" href="font_style.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="bootstrap.min.css">
     <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="body">
   <header class="topuser_header">
@@ -36,44 +33,44 @@
       <div>
         <div class="logo">
           <a href="#">멈미뭄미</a>           
-          <a href="#"></i></a>
+          <a href="#"></a>
         </div>
         <div class="menu">
           <ul>
             <li class="active">
             <a href="#" class="active">
-            <div class="gui-icon"><img src="./관리자페이지/icon/dashboard.png"></div>
+            <div class="gui-icon"><img src="../icon/dashboard.png"></div>
             <span>&emsp;대시보드</span>
           </a>
            </li>
 
            <li class="active">
             <a href="#" class="active">
-            <div class="gui-icon"><img src="./관리자페이지/icon/man.png"></div>
+            <div class="gui-icon"><img src="../icon/man.png"></div>
             <span>&emsp;사용자 관리</span>
           </a>
            </li>
            <li class="active">
             <a href="#" class="active">
-            <div class="gui-icon"><img src="./관리자페이지/icon/note-paper.png"></div>
+            <div class="gui-icon"><img src="../icon/note-paper.png"></div>
             <span>&emsp;컨텐츠 관리</span>
           </a>
            </li>
            <li class="active">
             <a href="#" class="active">
-            <div class="gui-icon"><img src="./관리자페이지/icon/megaphone.png"></div>
+            <div class="gui-icon"><img src="../icon/megaphone.png"></div>
             <span>&emsp;마케팅 관리</span>
           </a>
            </li>
            <li class="active">
             <a href="#" class="active">
-            <div class="gui-icon"><img src="./관리자페이지/icon/stasus.png"></div>
+            <div class="gui-icon"><img src="../icon/stasus.png"></div>
             <span>&emsp;통계</span>
           </a>
            </li>
            <li class="active">
             <a href="#" class="active">
-            <div class="gui-icon"><img src="./관리자페이지/icon/shortcut.png"></div>
+            <div class="gui-icon"><img src="../icon/shortcut.png"></div>
             <span>&emsp;사이트 바로가기</span>
           </a>
            </li>
@@ -201,7 +198,7 @@
   </div>
 </div>
 </body>
-<script src="jquery-3.3.1.min.js"></script>
+<script src="../js/jquery-3.3.1.min.js"></script>
     <script src="popper.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <script src="main.js"></script>
