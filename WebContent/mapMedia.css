@@ -98,43 +98,10 @@
         position: relative;
     }
 
-    .pg-search .module:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -1px;
-        right: -100%;
-        left: -100%;
-        height: 1px;
-        background-color: #dbdbdb;
-    }
-
-    .pg-search .module:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -1px;
-        right: -100%;
-        left: -100%;
-        height: 1px;
-        background-color: #dbdbdb;
-    }
 
    /* 왼쪽 필터 */
    .pg-search .search-results .search-options .btn.filter {
         line-height: 24px;
-    }
-
-    .pg-search .search-results .search-options .btn {
-        font-size: 1.125rem;
-    }
-
-    .pg-search .search-results .search-options .btn.filter:before {
-        margin: -2px 12px 0 0;
-        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
-        background-position: -974px -304px;
-        width: 23px;
-        height: 22px;
     }
 
     .pg-search .search-results .search-options .btn:before {
@@ -144,25 +111,9 @@
         vertical-align: middle;
     }
 
-    .pg-search .search-results .search-options .btn.map {
-        display: none;
-    }
-
     .pg-search .search-results .search-options .btn {
-        font-size: 1.125rem;
-    }
-
-    .pg-search .search-results .search-options .btn {
-        font-size: 0.875em;
+        font-size: 1.1em;
         color: #9b9b9b;
-    }
-
-    .pg-search .search-results .search_info .title {
-        font-size: 1.36rem;
-    }
-
-    .RelatedContentSlider__Wrap {
-        display: none;
     }
 
     .RelatedContentSlider__Wrap--Loaded {
@@ -412,109 +363,6 @@
         margin-left: 11px;
     }
 
-    .search-filter {
-        position: absolute;
-        top: 0px;
-        right: 0;
-        left: 0;
-        z-index: 800;
-    }
-
-    .search-filter {
-        overflow-y: auto;
-    }
-
-    .search-filter>.inner {
-        box-sizing: border-box;
-        margin: 0 auto;
-        padding: 0 23px;
-    }
-
-    .search-filter>.inner {
-        margin: 0;
-        height: calc(100vh - 161px);
-        overflow-y: auto;
-    }
-
-    .search-filter .filter-item {
-        padding: 20px 0 30px 0;
-    }
-
-    .search-filter .filter-item input[type=radio]+label {
-        box-sizing: border-box;
-        margin: 0 1.5%;
-        max-width: 275px;
-        width: 45%;
-        font-size: 1.000rem;
-        line-height: 46px;
-        border-radius: 50px;
-    }
-
-    .search-filter .filter-item {
-        padding: 20px 0 30px 0;
-    }
-
-    .search-filter .filter-item .options {
-        top: 18px;
-        right: 0px;
-        font-size: 0.875rem;
-    }
-
-    .search-filter .filter-item>label {
-        font-size: 1.125rem;
-        color: #000000;
-        text-align: left;
-    }
-
-    .reverse .search-filter .filter-item input[type=checkbox].cost+label.cost-zoom {
-        zoom: 0.9;
-    }
-
-    .reverse .search-filter .filter-item input[type=checkbox].cost+label {
-        margin: 0 5px;
-    }
-
-    .search-filter .filter-item input[type=checkbox].cost+label.cost01 {
-        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
-        background-position: -828px -480px;
-        width: 90px;
-        height: 90px;
-    }
-
-    .search-filter .filter-item input[type=checkbox].cost+label {
-        margin: 0 30px;
-        font-size: 1.063rem;
-        line-height: 20px;
-    }
-
-    .search-filter .filter-item input[type=checkbox]+label {
-        position: relative;
-        box-sizing: border-box;
-        max-width: 275px;
-        width: 45%;
-        line-height: 46px;
-        font-size: 1.000rem;
-    }
-
-    .search-filter .filter-item input[type=checkbox].cost+label span {
-        line-height: 20px;
-    }
-
-    .search-filter .filter-item input[type=checkbox]+label span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 90%;
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
 
     .search-filter .connect-mp-app {
         display: none;
@@ -676,17 +524,6 @@
 
     .pg-search .module {
         padding: 30px 0 0 0;
-    }
-
-    .pg-search .module:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -1px;
-        right: -100%;
-        left: -100%;
-        height: 1px;
-        background-color: #dbdbdb;
     }
 
     .pg-search .module>.title {
@@ -1057,7 +894,7 @@ button.filterActive {
     -moz-box-flex: 0;
     -moz-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    flex: 0.1 0 auto;
     display: block;
 }
 
@@ -1203,7 +1040,7 @@ button.filterActive {
 
 .reviewCommentGoodBtnTxt {
     position: relative;
-    top: -13px;
+    top: -1px;
 }
 
 .reviewWritingForm{
@@ -1426,5 +1263,368 @@ button.filterActive {
     margin-left: 8px;
 }
 
+
+}
+
+
+/* 검색 필터 영역 */
+
+@media only screen and (min-width: 769px){
+    .search-filter {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        left: 0;
+        z-index: 800;
+    }
+
+    .search-filter {
+        overflow-y: auto;
+    }
+
+    .search-filter>.inner {
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .search-filter>.inner {
+        margin: 0;
+        height: calc(104vh - 161px);
+        overflow-y: auto;
+    }
+
+    .search-filter .filter-item {
+        padding: 20px 0 30px 0;
+    }
+
+    .search-filter .filter-item input[type=radio]+label {
+        box-sizing: border-box;
+        margin: 0 1.5%;
+        max-width: 275px;
+        width: 45%;
+        font-size: 1.000rem;
+        line-height: 46px;
+        border-radius: 50px;
+    }
+
+    .search-filter .filter-item {
+        padding: 20px 0 30px 0;
+    }
+
+    .search-filter .filter-item .options {
+        top: 18px;
+        right: 0px;
+        font-size: 0.875rem;
+    }
+
+    .search-filter .filter-item>label {
+        font-size: 1.125rem;
+        color: #000000;
+        text-align: left;
+    }
+
+    .reverse .search-filter .filter-item input[type=checkbox].cost+label.cost-zoom {
+        zoom: 0.9;
+    }
+
+    .reverse .search-filter .filter-item input[type=checkbox].cost+label {
+        margin: 0 5px;
+    }
+
+    .reverse .search-filter .filter-item input[type=checkbox].food+label {
+        margin-right: 5%;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label {
+        display: inline-block;
+        margin-right: 68px;
+        width: 105px;
+        font-size: 1.000rem;
+        color: #cbcbcb;
+        text-align: center;
+        border: 0px;
+        border-radius: 0px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label {
+        margin: 0 30px;
+        font-size: 1.063rem;
+        line-height: 20px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label span {
+        line-height: 20px;
+    }
+
+    .search-filter .filter-item input[type=checkbox]+label span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+
+
+    .search-filter .filter-item input[type=checkbox]+label {
+        position: relative;
+        box-sizing: border-box;
+        max-width: 275px;
+        width: 45%;
+        line-height: 46px;
+        font-size: 1.000rem;
+    }
+
+
+
+    .search-filter .filter-item input[type=checkbox]+label.small {
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        line-height: 23px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food01:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -613px -333px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food02:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -613px 0px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food03:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -613px -222px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food04:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -111px -423px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food05:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -502px -222px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food06:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -502px 0px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food07:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -222px -312px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label.food08:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -333px -423px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food+label:before {
+        content: '';
+        display: block;
+        margin: 0 auto;
+    }
+
+    
+
+    .search-filter .filter-item .btn-region-cancel:before {
+        content: '';
+        display: inline-block;
+        margin: -4px 8px 0 0;
+        vertical-align: middle;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -995px -836px;
+        width: 11px;
+        height: 11px;
+    }
+
+    .pg-search .module:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: -100%;
+        left: -100%;
+        height: 1px;
+        background-color: #dbdbdb;
+    }
+
+    .pg-search .search-results .search-options .btn {
+        font-size: 1.125rem;
+    }
+
+    .pg-search .search-results .search-options .btn.filter:before {
+        margin: -2px 12px 0 0;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -974px -304px;
+        width: 23px;
+        height: 22px;
+    }
+
+    .pg-search .search-results .search-options .btn.map {
+        display: none;
+    }
+
+    .pg-search .search-results .search_info .title {
+        font-size: 1.36rem;
+    }
+
+    .RelatedContentSlider__Wrap {
+        display: none;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label.cost01 {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px -480px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost:checked+label.cost01 {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px -384px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost:checked+label.cost02 {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px -288px;
+        width: 95px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label.cost02 {
+        padding-right: 5px;
+        text-indent: -5px;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px -192px;
+        width: 95px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost:checked+label.cost03 {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px 0px;
+        width: 101px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label.cost03 {
+        padding-right: 11px;
+        text-indent: -12px;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -828px -96px;
+        width: 101px;
+        height: 90px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].cost+label.cost04 {
+        padding-right: 15px;
+        text-indent: -15px;
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -111px -700px;
+        width: 105px;
+        height: 90px;
+    }
+    
+    .search-filter .filter-item input[type=checkbox].cost:checked+label.cost04 {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: 0px -700px;
+        width: 105px;
+        height: 90px;
+    }
+
+
+    /* 음식종류 */
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food01:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -613px -111px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food02:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -444px -423px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food03:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -222px -423px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food04:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: 0px -423px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food05:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -502px -111px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food06:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -333px -312px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food07:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: -111px -312px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label.food08:before {
+        background-image: url(https://mp-seoul-image-production-s3.mangoplate.com/web/resources/2018022864551sprites_desktop.png);
+        background-position: 0px -312px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .search-filter .filter-item input[type=checkbox].food:checked+label {
+        color: #ff792a;
+    }
 
 }
