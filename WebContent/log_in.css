@@ -38,8 +38,9 @@ main#top{
     width: 100%;
     max-width: 368px;
     overflow: hidden;
-    height: 286px;
     text-align: center;
+    height: 330px;
+    padding-bottom: 500px;
 }
 
 
@@ -165,13 +166,15 @@ p.forgot{
 }
 
 #naverLogin svg{
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    left: 592px;
-    top: 514px;
+    position: fixed;
+    width: 21px;
+    height: 29px;
+    left: 616px;
+    top: 414px;
     display: block;
     fill: #fff;
+    display: inline-flex;
+    align-items: center;
 }
 
 #circle_btns{
@@ -267,4 +270,97 @@ footer a{
 
 .modalclass_header {
     border: none;
+}
+
+.idalter {
+    display: flex;
+    color: #f66;
+    line-height: 18px;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 8px;
+    /* color: #868e96; */
+}
+
+article, blockquote, body, dd, div, dl, dt, h1, h2, h3, h4, html, li, main, ol, p, section, table, tbody, td, th, thead, tr, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Button_button__3ip2b.Button_lg__m4_5e {
+    padding: 9px 24px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.Button_button__3ip2b.Button_block__2nblq {
+    width: 100%;
+}
+
+button[class*=Button_button] {
+    -webkit-tap-highlight-color: transparent;
+}
+.SNSButtonList_kakaoButton__2lTDs {
+    border-color: #fee500;
+    background-color: #fee500;
+}
+
+.Button_button__3ip2b {
+    position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 9px 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1.43;
+    white-space: nowrap;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.Button_button__3ip2b span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Button_button__3ip2b .Button_children__VGHI5 {
+    vertical-align: top;
+}
+
+.SNSButtonList_appleIcon__e42Y0, .SNSButtonList_googleIcon__1DgBx, .SNSButtonList_kakaoIcon__1s6gw, .SNSButtonList_naverIcon__3TjPM {
+    position: absolute;
+    left: 16px;
+    width: 22px;
+    height: 22px;
+}
+
+.Button_button__3ip2b.Button_lg__m4_5e {
+    padding: 9px 24px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.Button_button__3ip2b.Button_block__2nblq {
+    width: 100%;
+}
+
+.SNSButtonList_spacer__38ac5 {
+    margin-top: 12px;
+
+}
+
+.SNSButtonList_kakaoButton__2lTDs {
+    border-color: #fee500;
+    background-color: #fee500;
 }
