@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <jsp:include page ="header.jsp"/>
+    <jsp:include page ="headerFinal.jsp"/>
     <main>
         <div id="page">
             <div id="app-container">
@@ -535,5 +535,6 @@
     </main>
     <jsp:include page ="footer.jsp"/>
 </body>
+<script src="community.js"></script>
 
 </html>
