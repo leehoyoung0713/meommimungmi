@@ -13,11 +13,12 @@
     <script src="https://kit.fontawesome.com/5ee2c7b38b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <body id="">
     <div id="page-container">
         <div id="wz-header">
             <div class="web-header">
                 <div class="web-header-large">
-                	<jsp:include page="./header.jsp"></jsp:include>
+                    <jsp:include page="./header.jsp"></jsp:include>
 
                 </div>
             </div>
@@ -27,33 +28,22 @@
                 <div class="StoreCollectionVisual_container__kPoxZ">
                     <ul class="RewardMainTab_container__geHTr">
                         <li class="RewardMainTab_onlyLarge__1q7_V">
-                            <a class="RewardMainTab_link___1r2a RewardMainTab_active__1zRir" href="/teamproject/animalfeed.jsp" aria-current="page">
+                            <a class="RewardMainTab_link___1r2a RewardMainTab_active__1zRir" href="./animalfeed.jsp" aria-current="page">
                                 <span>사료 검색</span>
                             </a>
                         </li>
                         <li>
-                            <a class="RewardMainTab_link___1r2a" href="/teamproject/lostfoundanimal.jsp">
+                            <a class="RewardMainTab_link___1r2a" href="./lostfoundanimal.jsp">
                                 <span>유기동물 찾기</span>
                             </a>
                         </li>
                         <li>
-                            <a class="RewardMainTab_link___1r2a" href="/teamproject/funeral.jsp">
+                            <a class="RewardMainTab_link___1r2a" href="./funeral.jsp">
                                 <span>장례업체</span>
                             </a>
                         </li>
                     </ul>
-                    <div class="StoreCollectionVisual_visual__dNWlZ" style="background-image:url('https://blog.kakaocdn.net/dn/bLeCXz/btq6AuA1BVG/NNQTfu6LqQmnzncfMavGIk/img.jpg');">
-                        <form class="ProjectListHead_search__HN3am">
-                            <label for="search-keyword-df741586-8113-43b4-ac98-19be39fc487e">
-                                <div class="ProjectListHead_right__3_Jo1">
-                                <input id="search-keyword-df741586-8113-43b4-ac98-19be39fc487e" class="arrange" type="search" value="">
-                                    <button class="ProjectListHead_find__3HsFc" type="submit" aria-label="검색">
-                                        <!-- <i class="icon searchs"></i> -->
-                                    </button>
-                                </div>
-                            </label>
-                        </form>
-                    </div>
+                    <div class="StoreCollectionVisual_visual__dNWlZ" style="background-image:url('https://blog.kakaocdn.net/dn/bLeCXz/btq6AuA1BVG/NNQTfu6LqQmnzncfMavGIk/img.jpg');"></div>
                     <div class="StoreCollectionVisual_text__3J0Gz">
                         <div class="StoreCollectionVisual_titleBox__2fOPp">
                             <p class="StoreCollectionVisual_title__uPhCG">사료 검색</p>
@@ -85,6 +75,82 @@
                 </div>
                 <div class="RewardMainWrapper_container__2HR7Y RewardMainCategory_container__19OYY">
                     <div class="RewardProjectListApp_container__1ZYeD RewardMainProjectList_listApp__2noRS">
+                        <div class="ProjectListHead_container__rpQ37 RewardProjectListHead_container__2FzIj">
+                            <div class="ProjectListHead_bar__2dyHz">
+                                <!-- <span id="addtitle">최신순</span> -->
+                                <div class="FilterTab_container__2Zmmg" role="group" aria-label="피드 카테고리">
+                                    <div class="FilterTabButton_container__1eoXX">
+                                        <button class="Button_button__341ce Button_tertiaryMint__1fcKK Button_contained__1azJ6 Button_xs__2WEyK FilterTabButton_button__2YDMX" aria-current="page" type="button">
+                                            <span>
+                                                <span class="Button_children__10ESl">
+                                                    전체
+                                                </span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="FilterTabButton_container__1eoXX">
+                                        <button class="Button_button__341ce Button_tertiaryGrey__2nEnb Button_contained__1azJ6 Button_xs__2WEyK FilterTabButton_button__2YDMX" aria-current="page" type="button">
+                                            <span>
+                                                <span class="Button_children__10ESl">
+                                                    강아지
+                                                </span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="FilterTabButton_container__1eoXX">
+                                        <button class="Button_button__341ce Button_tertiaryGrey__2nEnb Button_contained__1azJ6 Button_xs__2WEyK FilterTabButton_button__2YDMX" aria-current="page" type="button">
+                                            <span>
+                                                <span class="Button_children__10ESl">
+                                                    고양이
+                                                </span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="FilterTabButton_container__1eoXX">
+                                        <button class="Button_button__341ce Button_tertiaryGrey__2nEnb Button_contained__1azJ6 Button_xs__2WEyK FilterTabButton_button__2YDMX" aria-current="page" type="button">
+                                            <span>
+                                                <span class="Button_children__10ESl">
+                                                    기타
+                                                </span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <form class="ProjectListHead_search__HN3am">
+                                        <label for="search-keyword-8159eec8-0071-4503-9db3-c73cb45da201">
+                                            <input class="" type="search" id="search-keyword-8159eec8-0071-4503-9db3-c73cb45da201" placeholder="검색" value="">
+                                            <div class="ProjectListHead_right__3_Jo1">
+                                                <button class="ProjectListHead_find__3HsFc" type="submit" aria-label="검색">
+                                                    <i class="icon searchs"></i>
+                                                </button>
+                                            </div>
+                                        </label>
+                                    </form>
+                                </div>
+                                <!-- <div class="SortingSelect_container__8AOZQ ProjectListHead_sorting__2n1WY RewardProjectListHead_fundingSorting__2n0MF">
+                                    전체
+                                    <select class="SortingSelect_select__1etN_" name="status">
+                                        <option value="ALL">전체</option>
+                                        <option value="N">진행중</option>
+                                        <option value="Y">종료된</option>
+                                    </select>
+                                </div>
+                                <div class="SortingSelect_container__8AOZQ ProjectListHead_sorting__2n1WY">
+                                    추천순
+                                    <select class="SortingSelect_select__1etN_" name="order">
+                                        <option value="recommend">추천순</option>
+                                        <option value="popular">인기순</option>
+                                        <option value="amount">펀딩액순</option>
+                                        <option value="closing">마감임박순</option>
+                                        <option value="recent">최신순</option>
+                                        <option value="support">응원참여자순</option>
+                                    </select>
+                                </div>
+                                <div class="ProjectListHead_children__2Y7-F"></div> -->
+                            </div>
+                        </div>
+
+
+
                         <div class="ProjectCardList_container__3Y14k">
                             <div class="ProjectCardList_list__1YBa2">
                                 <div class="ProjectCardList_item__1owJa">
@@ -374,7 +440,68 @@
             </div>
         </main>
     </div>
-    
+
+
+
+
+
+
     <jsp:include page="./footer.jsp"></jsp:include>
+    <!-- 사이트 링크 모달창 -->
+    <!-- <div class="WadizModal_portal__1XfIx">
+        <div class="WadizModal_overlay__TRZ2L ShareModal_overlay__8Tz2m WadizModal_overlayAfterOpen__CwHuy" aria-hidden="true">
+            <div class="WadizModal_content__2JFzt ShareModal_modal__2ptx7 WadizModal_contentAfterOpen__176l7" tabindex="-1" role="dialog" aria-modal="true">
+                <div class="WadizModal_container__gX-0t">
+                    <article class="ShareModal_container__35nu3">
+                        <header class="ShareModal_header__2i4Vx">
+                            <h1 class="ShareModal_title__3RGC4">공유</h1>
+                            <button class="ShareModal_closeButton__2K950" aria-label="Close" data-testid="close-button">
+                                <div class="ShareModal_closeIconWrap__1ftZ0" data-testid="share-modal-close-svg">
+                                    <svg class="withIcon_icon__d0KdI" viewBox="0 0 40 40" focusable="false" role="presentation" aria-hidden="true">
+                                        <path d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </header>
+                        <div class="ShareModal_items__1pTMU">
+                            <div class="ShareTypeButton_container__3OTLY">
+                                <button class="ShareTypeButton_button__2K5qY ShareModal_link__red3N" data-event="">
+                                    <svg class="withIcon_icon__d0KdI" viewBox="0 0 40 40" focusable="false" role="presentation" aria-hidden="true">
+                                        <path d="M33.6 5.2a9 9 0 010 12.7L29 22.5l-.6.5a11 11 0 00-.4-2.4l4.1-4.1a7 7 0 00-9.9-9.9l-4.6 4.6a7 7 0 004.7 11.9 5 5 0 01-.2 2 8.9 8.9 0 01-7.8-5.4 9.1 9.1 0 01-.3-6.5 8.9 8.9 0 012.1-3.4l4.6-4.6a9 9 0 0112.9 0zm-15.7 9.5a5 5 0 00-.2 2 6.9 6.9 0 016.3 4.2 7 7 0 01-1.5 7.7l-5.7 5.7a7 7 0 01-9.9-9.9l5.2-5.2a11 11 0 01-.4-2.4l-.6.5-5.6 5.6a9 9 0 1012.7 12.8l5.7-5.7a8.9 8.9 0 002.1-3.4 9.1 9.1 0 00-.3-6.5 8.9 8.9 0 00-7.8-5.4z"></path>
+                                    </svg>
+                                </button>
+                                <span class="ShareTypeButton_label__3lzHu">링크 복사</span>
+                            </div>
+                            <div class="ShareTypeButton_container__3OTLY">
+                                <button class="ShareTypeButton_button__2K5qY ShareModal_kakao__9Wdez" data-event="">
+                                    <svg class="withIcon_icon__d0KdI" viewBox="0 0 32 32" focusable="false" role="presentation" aria-hidden="true">
+                                        <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z"></path>
+                                    </svg>
+                                </button>
+                                <span class="ShareTypeButton_label__3lzHu">카카오</span>
+                            </div>
+                            <div class="ShareTypeButton_container__3OTLY">
+                                <button class="ShareTypeButton_button__2K5qY ShareModal_facebook__3aw8X" data-event="">
+                                    <svg class="withIcon_icon__d0KdI" viewBox="0 0 48 48" focusable="false" role="presentation" aria-hidden="true">
+                                        <path d="M14.4 19.547h5.673v-5.256a8.559 8.559 0 012.4-6.132c2.618-2.628 6.109-2.3 11.127-1.861v5.913h-3.71a3.374 3.374 0 00-2.29.766 3.514 3.514 0 00-.655 2.3v4.27h6.437l-.873 6.57h-5.564V43.2h-6.872V26.118H14.4v-6.57z"></path>
+                                    </svg>
+                                </button>
+                                <span class="ShareTypeButton_label__3lzHu">페이스북</span>
+                            </div>
+                            <div class="ShareTypeButton_container__3OTLY">
+                                <button class="ShareTypeButton_button__2K5qY ShareModal_twitter__2hAds" data-event="">
+                                    <svg class="withIcon_icon__d0KdI" viewBox="0 0 32 32" focusable="false" role="presentation" aria-hidden="true">
+                                        <path d="M29.36 7.76c-.907.42-1.96.729-3.065.874a5.675 5.675 0 002.334-2.995 11.546 11.546 0 01-3.357 1.308c-1.069-1.067-2.492-1.741-4.073-1.741a5.44 5.44 0 00-5.439 5.518c.003.452.062.893.168 1.314-4.615-.279-8.661-2.495-11.344-5.847-.493.757-.771 1.706-.771 2.72 0 1.882.955 3.54 2.407 4.517a5.244 5.244 0 01-2.489-.642l.029.014v.02a5.442 5.442 0 004.365 5.334L6.72 18.4H5.68c.725 2.184 2.738 3.736 5.117 3.76a10.873 10.873 0 01-6.741 2.32H2.639a15.37 15.37 0 008.399 2.48c10.081 0 15.601-8.32 15.601-15.6v-.72a11.215 11.215 0 002.694-2.838z"></path>
+                                    </svg>
+                                </button>
+                                <span class="ShareTypeButton_label__3lzHu">트위터</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 사이트 링크 모달창 --> -->
 </body>
 </html>
