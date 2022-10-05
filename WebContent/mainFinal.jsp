@@ -29,10 +29,10 @@
                 class="SectionContainerLayout_container__1f8kt RecommendFundingWrap_container__3LDiq RecommendationDesktop_recommendFunding__1dKi1" style='width:762px;padding-left:80px'>
                 <div class="title_contentWrapper__1P-q0 RecommendFundingWrap_title__1b9i3">
                     <div class="RecommendFundingWrap_subTitle__1SaNL">
-                        <h1 style='font-size:28px;margin:5px 0'>취향 맞춤 펀딩 프로젝트</h1><span class="RecommendFundingWrap_description__5xAKe" style="margin-top:5px">지금 함께 만드는 성공</span>
+                        <h1 style='font-size:28px;margin:5px 0'>사료</h1><span class="RecommendFundingWrap_description__5xAKe" style="margin-top:5px">지금 함께 만드는 성공</span>
                     </div>
                     <div class="Tooltip_container__1OVpV RecommendFundingWrap_tooltip__3dL8Q">
-                        <div class="Tooltip_symbol__3cGy0"><span class="AITooltip_icon__wd6n9"></span>
+                        <!-- <div class="Tooltip_symbol__3cGy0"><span class="AITooltip_icon__wd6n9"></span>
                             <div style="display: none;"><svg viewBox="0 0 40 40" focusable="false" role="presentation"
                                     class="withIcon_icon__20lDO Tooltip_tooltipActive__2JjBs" aria-hidden="true">
                                     <path fill="none" d="M0 0h40v40H0z"></path>
@@ -50,7 +50,7 @@
                                         d="M24.34 10A5.75 5.75 0 0020 8.33a5.7 5.7 0 00-6 6h2a3.7 3.7 0 014-4 3.7 3.7 0 014 4A4.29 4.29 0 0122 18l-.7.6a6.51 6.51 0 00-2.3 5.7h2c0-1.9 0-2.6 1.7-4.3l.6-.5a6.28 6.28 0 002.7-5.2 5.73 5.73 0 00-1.66-4.3zM20 26.87a1.8 1.8 0 100 3.6 1.8 1.8 0 100-3.6z">
                                     </path>
                                 </svg></div>
-                        </div>
+                        </div> -->
                         <div class="Tooltip_messagebox__2TW_p" style="width: 235px;">와디즈 AI가 서포터님들의 취향을 분석하여 맞춤 프로젝트를
                             추천해요</div>
                     </div>
@@ -154,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="RecommendFundingWrap_showMoreRecommendWrapOuter__3dGiS"><button
+                <!-- <div class="RecommendFundingWrap_showMoreRecommendWrapOuter__3dGiS"><button
                         data-event="web.main.recommendation.more"
                         class="Button_button__341ce Button_secondary__bK717 Button_startIcon__3du3p RecommendFundingWrap_googleTaggedButton__2mK7y"
                         type="button"><span><svg viewBox="0 0 40 40" focusable="false" role="presentation"
@@ -164,12 +164,12 @@
                                     class="RecommendFundingWrap_fontHighlight__2LEw7">AI </span>추천 더보기<span
                                     class="RecommendFundingWrap_pageNum__1yoDT"><span
                                         class="RecommendFundingWrap_fontHighlight__2LEw7">1</span>/3</span></span></span></button>
-                </div>
+                </div> -->
             </section>
             <section
                 class="SectionContainerLayout_container__1f8kt RankingFundingWrap_container__16_A3 RecommendationDesktop_rankingFunding__2ccRd" style='width:427px;padding-right:80px;float: right;'>
                 <div class="title_contentWrapper__1P-q0 RankingFundingWrap_title__1fllE">
-                    <h1>실시간 랭킹</h1>
+                    <h1>실시간 후기</h1>
                 </div>
                 <div>
                  
@@ -290,7 +290,7 @@
     <div class="Main_wrap__2jKMu">
         <div class="RecommendationDesktop_innerGroup__as4jB Main_innerWrap__7-_Vm">
             <div class="RecommendationFeed_container__MtOmG">
-                <h3 class="RecommendationFeed_title__laFXx">피드</h3>
+                <h3 class="RecommendationFeed_title__laFXx">커뮤니티</h3>
                 <h4 class="RecommendationFeed_subTitle__3VgCT">지금 서포터와 메이커는?👀</h4>
                 <div class="CardTable_container__35uFd RecommendationFeed_cardList__1pFdE"
                     style="width: calc(100% - 0px);">
@@ -680,7 +680,7 @@
         </div>
     </div>
     <div class="Main_wrap__2jKMu">
-        <div class="Main_innerWrap__7-_Vm">
+        <div class="Main_innerWrap__7-_Vm" style='padding-left:80px;'>
             <div class="EarlybirdDesktop_container__1IoRp">
                 <div class="EarlybirdDesktop_wrap__314kI">
                     <div class="title_titleWrapper__1ggAh">

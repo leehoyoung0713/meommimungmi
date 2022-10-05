@@ -25,37 +25,44 @@ var clickNumberPages = document.querySelectorAll(".pageBtnNumber");
 var filterStarFull = "<svg fill='#35C5F0' width='1em' height='1em' preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'><defs><path id='star-path-0' d='M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z'></path><clipPath id='star-clip-0'><rect x='0' y='0' width='24' height='24'></rect></clipPath></defs><use xlink:href='#star-path-0' fill='#DBDBDB'></use><use clip-path='url(#star-clip-0)' xlink:href='#star-path-0'></use></svg>";
 var filterStar = "<svg fill='#35C5F0' width='1em' height='1em'preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'><defs><path id='star-path-114'd='M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z'></path><clipPath id='star-clip-114'><rect x='0' y='0' width='0' height='24'></rect></clipPath></defs><use xlink:href='#star-path-114' fill='#DBDBDB'></use><use clip-path='url(#star-clip-114)'xlink:href='#star-path-114'></use></svg>";
 
+let filterCheck = true;
 
 
 /* 별점순 필터 껐다 켰다 하기 */
 function closeStarFilter() {
-    if($('#popOut').attr('class') == "popOutDisplayNone") {
-        console.log("들어옴");
-        $('#starFilterOption').attr('class','animated-popout drop-down__content share-drop-down production-selling-header__action__modal open open-active');
-        $('#popOut').attr('class', 'popout popout--prepared popout--axis-1 popout--dir-2 popout--cross-dir-2');
-    } else{
+    if(filterCheck){
+            $('#starFilterOption').attr('class','animated-popout drop-down__content share-drop-down production-selling-header__action__modal open open-active');
+            $('#popOut').attr('class', 'popout popout--prepared popout--axis-1 popout--dir-2 popout--cross-dir-2');
+            filterCheck=false;
+    }
+    else{
         $('#starFilterOption').attr('class', 'popout--axis-1 popout--dir-2 share-drop-down filterBtnOff');
         $('#popOut').attr('class', 'popOutDisplayNone');
+        filterCheck=true;
     }
+
+    
 }
 
 /* 별점 필터 누적 */
 $starCountWrap.click(function(){
+    var star="";
+    
     if($(this).attr('class')=="starCountWrap"){
         $(this).attr("class", "starCountWrap select");
         for(var i=0; i<$starCountWrap.length; i++){
             if($starCountWrap[i].className=="starCountWrap select"){
                 
                 for(var j=0; j<5-i;j++){
-                    $filteringStar.append(filterStarFull);
+                    star +=filterStarFull;
                 }
                 if(i!=0){
                     for(var j=0; j<i;j++){
-                        $filteringStar.append(filterStar);
+                        star +=filterStar;
                     }
                 }
                 var countText = $starCountWrap[i].innerText.trim();
-                $filteringStar.append("<span class='starFilters'>" + countText + "</span>");
+                $filteringStar.append("<span class='starFilters'>" + star + countText + "<button type='button' class='starPic'><img src='xButton.png' style='width: 13px;height: 10px;margin-right: 5px;position: relative;top: -3px;'></button></span>");
                 $(this).attr("class", "starCountWrap selected");
                 return;
             }
@@ -67,26 +74,39 @@ $starCountWrap.click(function(){
         for(var i=0; i<$starCountWrap.length; i++){
             if($starCountWrap[i].className=="starCountWrap selected"){
                 for(var j=0; j<5-i;j++){
-                    $filteringStar.append(filterStarFull);
+                    star += filterStarFull;
                 }
                 if(i!=0){
                     for(var j=0; j<i;j++){
-                        $filteringStar.append(filterStar);
+                        star += filterStar;
                     }
                 }
                 var countText = $starCountWrap[i].innerText.trim();
-                $filteringStar.append("<span class='starFilters'>" + countText + "</span>");
+                $filteringStar.append("<span class='starFilters'>" + star + countText + "<button type='button' class='starPic'><img src='xButton.png' style='width: 13px;height: 10px;margin-right: 5px;position: relative;top: -3px;'></button></span>");
+            }
+        }
+    }
+})
+var count=0;
+/* 별 누르면 삭제 */
+$(document).on("click", ".starPic", function(){
+    for(var i=0; i<$('.starPic').length;i++){
+        $('.starPic')[i].className="starPic";
+    }
+    $(this).attr('class', 'starPic check');
+    for(var i=0;i<$('.starPic').length;i++){
+        if($('.starPic')[i].className.includes('check')){
+            var deleteStarText = $('.starFilters')[i].innerText;
+            $('.starFilters')[i].remove();
+        }
+        for(var j=0;j<$('.starCountText').length;j++){
+            if(deleteStarText == $('.starCountText')[j].innerText.trim()){
+                $starCountWrap[j].className='starCountWrap';
             }
         }
     }
 })
 
-
-/* 필터 종료버튼 */
-$cancelButton.click(function(){
-    blackScreen.style.display='none';
-    asideFilter.style.display='none';
-})
 
 /* 필터들 다른 곳 클릭하면 꺼지게 만들기 */
 $(document).mouseup(function (e){
@@ -111,6 +131,11 @@ $btnFilter.click(function(){
     asideFilter.style.display='block';
 })
 
+/* 필터 끝내기 버튼 */
+$cancelButton.click(function(){
+    blackScreen.style.display='none';
+    asideFilter.style.display='none';
+})
 
 
 
@@ -263,11 +288,9 @@ file.addEventListener("change", function(e){
         let url = e.target.result;
         // 이미지 파일인지 아닌지 검사하여 이미지 파일이 아닐 경우 알림창 뜸
         if(url.includes('image')){
-            if(thumbnail.className == "attach"){
-                thumbnail.className = 'attached';
-                thumbnail.style.backgroundImage = "url('" + url + "')";
-                xButton.className='xButtonActive';
-            }
+            thumbnail.className = 'attached';
+            thumbnail.style.backgroundImage = "url('" + url + "')";
+            xButton.className='xButtonActive';
         }else{
             alert("이미지 파일만 업로드 가능합니다.");
         }
@@ -278,7 +301,8 @@ file.addEventListener("change", function(e){
 function xBtn(){
     thumbnail.className = 'attach';
     xButton.className = 'xButton';
-    $("#attach").val("");
+    /* thumbnail.remove(); */
+    thumbnail.style.backgroundImage = "";
 }
  
 
