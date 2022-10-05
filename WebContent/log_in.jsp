@@ -110,6 +110,7 @@ $('#userName').keypress(function(){
     $(".idalter").text("아이디는 숫자포함 10자리까지 가능합니다!");
     return;
   }else if(getMail.test($("#userName").val())){
+	 $('#userName').css('border', '1px solid rgb(245 7 7)');
     $(".idalter").text("이메일을 입력했습니다!");
     return;
   }
