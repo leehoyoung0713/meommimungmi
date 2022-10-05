@@ -17,7 +17,8 @@
         <div id="wz-header">
             <div class="web-header">
                 <div class="web-header-large">
-                <jsp:include page="./header.jsp"></jsp:include>
+                    <jsp:include page="./header.jsp"></jsp:include>
+
                 </div>
             </div>
         </div>
@@ -25,40 +26,57 @@
             <div id="store-app" data-base="/web/store/campaign/">
                 <ul class="RewardMainTab_container__geHTr">
                     <li>
-                        <a class="RewardMainTab_link___1r2a" href="/teamproject/animalfeed.jsp">
+                        <a class="RewardMainTab_link___1r2a" href="./animalfeed.jsp">
                             <span>사료 검색</span>
                         </a>
                     </li>
                     <li class="RewardMainTab_onlyLarge__1q7_V">
-                        <a class="RewardMainTab_link___1r2a RewardMainTab_active__1zRir" href="/teamproject/lostfoundanimal.jsp" aria-current="page">
+                        <a class="RewardMainTab_link___1r2a RewardMainTab_active__1zRir" href="./lostfoundanimal.jsp" aria-current="page">
                             <span>유기동물 찾기</span>
                         </a>
                     </li>
                     <li>
-                        <a class="RewardMainTab_link___1r2a" href="/teamproject/funeral.jsp">
+                        <a class="RewardMainTab_link___1r2a" href="./funeral.jsp">
                             <span>장례업체</span>
                         </a>
                     </li>
                 </ul>
                 <div class="StoreCollectionVisual_container__kPoxZ">
-                    <div class="StoreCollectionVisual_visual__dNWlZ" style="background-image:url('./images/animalfind.gif');">
-                        <form class="ProjectListHead_search__HN3am">
-                            <label for="search-keyword-df741586-8113-43b4-ac98-19be39fc487e">
-                                <div class="ProjectListHead_right__3_Jo1">
-                                <input id="search-keyword-df741586-8113-43b4-ac98-19be39fc487e" class="arrange" type="search" value="">
-                                    <button class="ProjectListHead_find__3HsFc" type="submit" aria-label="검색">
-                                        <!-- <i class="icon searchs"></i> -->
-                                    </button>
-                                </div>
-                            </label>
-                        </form>
-                    </div>
+                    <div class="StoreCollectionVisual_visual__dNWlZ" style="background-image:url('./images/animalfind.gif');"></div>
                 </div>
                 
                 <div class="RewardMainWrapper_container__2HR7Y RewardMainCategory_container__19OYY">
                     <div class="RewardProjectListApp_container__1ZYeD RewardMainProjectList_listApp__2noRS">
+                        <!-- 추가부분 -->
+                        <div class="ProjectListHead_container__rpQ37 RewardProjectListHead_container__2FzIj">
+                            <div class="ProjectListHead_bar__2dyHz">
+                                <span id="addtitle">최신순</span>
+                                <form class="ProjectListHead_search__HN3am">
+                                    <label for="search-keyword-df741586-8113-43b4-ac98-19be39fc487e">
+                                        <input id="search-keyword-df741586-8113-43b4-ac98-19be39fc487e" class="" type="search" placeholder="검색"value="">
+                                        <div class="ProjectListHead_right__3_Jo1">
+                                            <button class="ProjectListHead_find__3HsFc" type="submit" aria-label="검색">
+                                                <i class="icon searchs"></i>
+                                            </button>
+                                        </div>
+                                    </label>
+                                </form>
+                                <div class="SortingSelect_container__8AOZQ ProjectListHead_sorting__2n1WY">
+                                    추천순
+                                    <select name="order" class="SortingSelect_select__1etN_">
+                                        <option value="recommend">추천순</option>
+                                        <option value="popular">인기순</option>
+                                        <option value="amount">펀딩액순</option>
+                                        <option value="closing">마감임박순</option>
+                                        <option value="recent">최신순</option>
+                                        <option value="support">응원참여자순</option>
+                                    </select>
+                                </div>
+                                <div class="ProjectListHead_children__2Y7-F"></div>
+                            </div>
+                        </div>
+                        <!-- 추가부분 -->
                         <div class="ProjectCardList_container__3Y14k">
-                            <h3>최신순</h3>
                             <div class="ProjectCardList_list__1YBa2">
                                 <div class="ProjectCardList_item__1owJa">
                                     <div>
@@ -345,7 +363,7 @@
         </main>
     </div>
 
-	<jsp:include page="./footer.jsp"></jsp:include>
+    <jsp:include page="./footer.jsp"></jsp:include>
     
 </body>
 </html>
