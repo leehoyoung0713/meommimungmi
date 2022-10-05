@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 body {
     font-family: 'Noto Sans KR', sans-serif;
     color: rgba(0, 0, 0, .84);
@@ -455,19 +454,7 @@ div#agreement_check{
 }
 
 
-input[type="checkbox"] {
-    display: inline-block;
-    outline: none;
-    width: 20px;
-    height: 20px;
-    -webkit-appearance: none;
-    position: absolute;
-    cursor: pointer;
-    outline: none !important;
-    border: 1px solid #dde2e6;
-    border-radius: 3px;
-    background: #fff;
-}
+
 
 div#agreement_explanation{
     font: inherit;
@@ -595,14 +582,15 @@ footer a{
     /* text-align: center; */
     position: fixed;
     top: 40%;
-    left: 34%;
-    border-radius: 10px;
-    width: 480px;
+    left: 776px;
+    
+    width: 361px;
     height: 515px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    overflow:auto; width:500px; height:150px;
+    overflow:auto; 
     overflow-x:hidden;
     top: 272px;
+    
 }
 
 .modalclass_hidden {
@@ -649,9 +637,7 @@ footer a{
 }
 
 .checkbox_All {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
+
     margin: 0;
     border: none;
     background-color: transparent;
@@ -727,14 +713,12 @@ footer a{
 .modalclass_contents_midone_one {
     display: block;
     line-height: 1.33;
-    font-size: 15px;
+    font-size: 14px;
     position: relative;
 }
 
 input.modalclass_contents_midone_one_ckeckbox {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
+
     margin: 0;
     border: none;
     background-color: transparent;
@@ -926,7 +910,7 @@ svg:not(:root) {
 .modalclass_contents_midtwo_onelabel {
     display: block;
     line-height: 1.33;
-    font-size: 15px;
+    font-size: 10px;
     position: relative;
 }
 

@@ -24,9 +24,9 @@
             </svg>
             </a>
         </div>
-        <span  id = "login" style = "float : right;"><a href="log_in.jsp" style="text-decoration-line: none;
+        <span  id = "login" style = "float : right;"><a href="log_in.html" style="text-decoration-line: none;
             color: black;">로그인</a></span>
-        <span  id = "join_in" style = "float : right;"><a href="./join_in.jsp" style="text-decoration-line: none;
+        <span  id = "join_in" style = "float : right;"><a href="./join_in.html" style="text-decoration-line: none;
             color: black;">회원가입</a></span>
 
     </header>
@@ -52,8 +52,9 @@
         <div id="iam-account-app">
             <div>
                 <div>
-                
-                <button type="button" id="btnLogin" class="wz button primary block submit-button" data-event="iam.signin.submit">로그인</button>
+
+
+                    <button type="button" id="btnLogin" class="wz button primary block submit-button" data-event="iam.signin.submit">로그인</button>
                     <button class="Button_button__3ip2b Button_lg__m4_5e Button_block__2nblq SNSButtonList_kakaoButton__2lTDs SNSButtonList_spacer__38ac5" type="button">
                         <span>
                             <span class="Button_children__VGHI5">
@@ -65,7 +66,7 @@
                             </span>
                         </button>
                         <button type="button" id="naverLogin" style="background-image: url(구글아이콘.png); background-repeat: no-repeat;
-    background-position: 18px center;"  ><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
+    background-position: 18px center; border: 1px solid #0000003b;"  ><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
                       </svg>구글로 시작하기</button>
       
       
@@ -110,7 +111,6 @@ $('#userName').keypress(function(){
     $(".idalter").text("아이디는 숫자포함 10자리까지 가능합니다!");
     return;
   }else if(getMail.test($("#userName").val())){
-	 $('#userName').css('border', '1px solid rgb(245 7 7)');
     $(".idalter").text("이메일을 입력했습니다!");
     return;
   }

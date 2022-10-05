@@ -27,9 +27,9 @@
 
             </svg>
         </div>
-        <span id="login" style="float : right;"><a href="log_in.jsp" style="text-decoration-line: none;
+        <span id="login" style="float : right;"><a href="log_in.html" style="text-decoration-line: none;
             color: black;">로그인</a></span>
-        <span id="join_in" style="float : right;"><a href="join_in.jsp" style="text-decoration-line: none;
+        <span id="join_in" style="float : right;"><a href="join_in.html" style="text-decoration-line: none;
             color: black;">회원가입</a></span>
     </header>
 
@@ -51,7 +51,7 @@
                       <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z">
                       </path>
                   </svg>카카오로 시작하기</button>
-              <button type="button" id="naverLogin"><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
+              <button type="button" id="naverLogin" style="border: 1px solid #0000003b;"><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
                       <path d="M19.52 5.76v10.32L12.48 5.76H4.8v20.48h7.68V15.92l7.12 10.32h7.6V5.76z"></path>
 
 
@@ -89,7 +89,7 @@
             <div class="label"><label for="아이디">아이디</label></div>
             <div id="email">
                 <div class="input"><input type="email" class="inputId" id="id" placeholder="아이디 입력"></div>
-                <div><button class="overlapCheck">중복확인</button></div>
+                <div><button class="OverlapCheck" style="background-color: #00c4c452; color: rgb(0 0 0 / 44%);">중복확인</button></div>
             </div>
             <p class="idalter" style="position: absolute;"></p>
             <div id="name">
@@ -118,7 +118,7 @@
             </span>
         </span>
     </button>
-                    <input id = "agreement_checkbox" type="checkbox" style="position: absolute;">
+                    <input id = "allterm" type="checkbox" style="position: absolute;" name="allterm">
                     <label for = "agreement_checkbox"></label>
                     <span style="padding-left:15px ;">전체동의</span>
                 </div>
@@ -127,7 +127,7 @@
                 </div>
             </div>
             <div>
-                <button type="button" id="finish" class="wz button primary block submit-button" >완료</button>
+                <button type="button" id="finish" class="wz button primary block submit-button" style="cursor:pointer;">완료</button>
                 
             </div>
 
@@ -143,7 +143,8 @@
     
     <div class="modalclass modalclass_hidden" >
         <div class="modalclass_overlay"></div>
-        <div class="modalclass_content" style="padding-right: 0px; padding-bottom: 0; height: 485px; top: 287px; ">
+        <div class="modalclass_content" style="padding-right: 0px; padding-bottom: 0; height: 567px; top: 136px; width: 312px; padding-right: 20px;
+        padding-bottom: 20px; padding-left: 20px;">
             <button class="modalclassbutton_one" type="button" aria-label="닫기"><svg viewBox="0 0 40 40" focusable="false" role="presentation" class="modalclassbutton_two" aria-hidden="true"><path d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z">
 
             </path>
@@ -155,8 +156,7 @@
         </header>
             <section class="modalclass_content_checkboxAll">
                 <label class="modalcalss_content_checkboxAll_label">
-                    <input type="checkbox" class="checkbox_All">
-                    <span class="Checkbox_icon_All"></span>
+                    <input type="checkbox" class="checkbox_All" id="term">
                     <span class="Checkbox_content_contents">
                         <span>
                             <span class="Checkbox_content_contents_title">전체 동의</span>
@@ -169,8 +169,7 @@
                 <div class="modalclass_contents_midone">
                     <div>
                         <label class="modalclass_contents_midone_one">
-                        <input type="checkbox" class="modalclass_contents_midone_one_ckeckbox">
-                        <span class="modalclass_contents_midone_one_icon"></span>
+                        <input type="checkbox" class="modalclass_contents_midone_one_ckeckbox" name="terms">
                         <span>
                             <div class="modalclass_contents_midone_one_one"><span style="color: black; font-weight: 700;">펀딩 · 스토어 · 회원</span>서비스 가입
                                 <span class="modalclass_contents_midone_one_one_one">(필수)</span>
@@ -1185,8 +1184,7 @@
                     <div class="modalclass_contents_midone">
                         <div>
                             <label class="modalclass_contents_midone_one">
-                            <input type="checkbox" class="modalclass_contents_midone_one_ckeckbox">
-                            <span class="modalclass_contents_midone_one_icon_sososo_one"></span>
+                            <input type="checkbox" class="modalclass_contents_midone_one_ckeckbox" name="terms">
                             <span>
                                 <div class="modalclass_contents_midone_one_one">펀딩 · 스토어 · 회원 이벤트 혜택 알림
                                     <span class="modalclass_contents_midone_one_one_one">(선택)</span>
@@ -1200,969 +1198,6 @@
                         </div>
                     </div>
                     
-                    <div class="modalclass_contents_midone">
-                        <div>
-                            <label class="modalclass_contents_midone_one">
-                            <input type="checkbox" class="modalclass_contents_midone_one_ckeckbox">
-                            <span class="modalclass_contents_midone_one_icon"></span>
-                            <span>
-                                <div class="modalclass_contents_midone_one_one"><span style="color: black; font-weight: 700;">투자</span> 서비스 가입
-                                    <span class="modalclass_contents_midone_one_one_one">(필수)</span>
-                                </div>
-                            </span>
-                        </label>
-                        </div>
-                        <button class="okokokok" aria-label="내용 닫기"><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="kookokoko1111" aria-hidden="true">
-                            <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z">
-                                
-                            </path>
-                        </svg>
-                    </button>
-                    </div>
-                    <div>
-                    <div class="modalclass_contents_midtwo">
-                        <div class="modalclass_contents_midtwo_one">
-                            <div class="modalclass_contents_midtwo_onediv">
-                                <label class="modalclass_contents_midtwo_onelabel">
-                                    <input type="checkbox" class="modalclass_contents_midtwo_oneinput">
-                                    <span class="modalclass_contents_midtwo_onespan"></span>
-                                    <span class="modalclass_contents_midtwo_onespanone">
-                                        <span>
-                                            <div>온라인소액투자중개서비스 이용약관</div>
-                                        </span>
-
-                                    </span>
-
-                                </label>
-                            </div>
-                                <button class="modalclass_contents_midtwo_onebutton_four">내용보기</button>
-                        </div>
-                        <div class="modalclass_contents_midtwo_checkboxopen_four" style="display: none;">
-                            <main class="modalclass_contents_midtwo_checkboxopen_main">
-                                <article class="modalclass_contents_midtwo_checkboxopen_main_artricle">
-                            <h1>온라인소액투자중개서비스 이용약관</h1>
-                            <p>와디즈파이낸스(주)의 온라인소액투자중개서비스 이용약관을 규정합니다.</p>
-                            <div class="update">
-                              <h5>업데이트 노트</h5>
-                              <ul>
-                                <li>본 온라인소액투자중개서비스 이용약관은 2021년 12월 14일부터 시행됩니다.</li>
-                                <li>개정 2021. 12. 14.</li>
-                                <li>개정 2021. 4. 6. <a href="/web/wterms/service_invest/20210406" class="previous-terms" target="_blank">이전 이용약관 보기<i class="icon-chevron-right" aria-hidden="true"></i></a></li>
-                                <li>개정 2019. 9. 16. <a href="/web/wterms/service_invest/20190916" class="previous-terms" target="_blank">이전 이용약관 보기<i class="icon-chevron-right" aria-hidden="true"></i></a></li>
-                                <li>개정 2019. 6. 20. <a href="/web/wterms/service_invest/20190620" class="previous-terms" target="_blank">이전 이용약관 보기<i class="icon-chevron-right" aria-hidden="true"></i></a></li>
-                                <li>개정 2019. 5. 1. <a href="/web/wterms/service_invest/20190501" class="previous-terms" target="_blank">이전 이용약관 보기<i class="icon-chevron-right" aria-hidden="true"></i></a></li>
-                                <li>개정 2019. 1. 23. <a href="/web/wterms/service_invest/20190123" class="previous-terms" target="_blank">이전 이용약관 보기<i class="icon-chevron-right" aria-hidden="true"></i></a></li>
-                                <li>개정 2018. 4. 21. <a href="/web/wterms/service_invest/20180421" class="previous-terms" target="_blank">이전 이용약관 보기<i class="icon-chevron-right" aria-hidden="true"></i></a></li>
-                                <li>개정 2017. 4. 3. <a href="/web/wterms/service_invest/20170403" class="previous-terms" target="_blank">이전 이용약관 보기<i class="icon-chevron-right" aria-hidden="true"></i></a></li>
-                                <li>개정 2016. 11. 14.</li>
-                                <li>시행 2016. 1. 25.</li>
-                                <li>제정 2016. 1. 24.</li>
-                              </ul>
-                            </div>
-                            <ol class="table">
-                              <li><a href="#제1장-총칙">제1장 총칙</a></li>
-                              <li><a href="#제2장-서비스의-이용">제2장 서비스의 이용</a></li>
-                              <li><a href="#제3장-투자정보의-제공-확인-및-의견교환-등">제3장 투자정보의 제공·확인 및 의견교환 등</a></li>
-                              <li><a href="#제4장-청약의-주문-및-접수-등">제4장 청약의 주문 및 접수 등</a></li>
-                              <li><a href="#제5장-모집결과에-따른-증권의-배정-발행-예탁-등">제5장 모집결과에 따른 증권의 배정·발행·예탁 등</a></li>
-                              <li><a href="#제6장-기타">제6장 기타</a></li>
-                              <li><a href="#부칙">부칙</a></li>
-                            </ol>
-                            <hr>
-                            <h2 id="제1장-총칙">제1장 총칙</h2>
-                            <h3>제1조 (목적)</h3>
-                            <p>본 약관은 와디즈파이낸스 주식회사(이하 “회사”)와 회사가 제공하는 온라인소액투자중개(이하 “투자형 크라우드 펀딩”) 서비스를 이용하는 회원 간의 서비스를 이용하는 회원(이하 “회원”) 간의 서비스 이용에 관한 권리·의무 관련 사항을 정함을 그 목적으로 합니다.</p>
-                            <h3>제2조 (용어의 정의)</h3>
-                            <p>본 약관에서 사용하는 용어의 정의는 다음과 같습니다.</p>
-                            <ol>
-                              <li>서비스 : 회원이 전자적 시스템에 접속하여 청약거래 등을 할 수 있게 본 약관에 따라 회사가 제공하는 서비스를 말합니다.</li>
-                              <li>홈페이지 : 본 약관에 따라 회사가 제공하는 서비스가 구현되는 온라인상의 웹페이지(https://www.wadiz.kr)를 말합니다.</li>
-                              <li>발행인 : 회사의 와디즈 회원가입 기본약관(이하 “와디즈 기본약관”)에 따른 회원의 자격을 부여받은 자 중에서 온라인소액투자중개의 방법으로 증권을 발행하려는 자를 말합니다.</li>
-                              <li>청약의 신청 : 회원이 발행인이 발행하는 증권의 배정을 받기 위하여 본 약관에 따른 방법으로 청약의 의사표시를 하는 것을 말합니다.</li>
-                              <li>청약의 철회 : 회원이 청약의 신청 후 청약기간 내에 청약의 의사표시를 철회하는 것을 말합니다</li>
-                              <li>청약모집률 : 발행인이 목표한 모집예정금액을 기준으로 청약의 접수가 완료된 모집금액이 차지하는 비율을 말합니다.</li>
-                              <li>청약증거금관리기관 : 회원이 입금한 청약증거금을 자본시장과 금융투자업에 관한 법률(이하 “자본시장법”)에 따라 예치하여 보관하는 증권금융 또는 은행 등의 기관을 말합니다. </li>
-                              <li>중앙기록관리기관: 회사로부터 발행인과 투자자에 대한 정보를 제공받아 관리하는 기관인 한국예탁결제원을 말합니다. </li>
-                              <li>투자형 크라우드 펀딩 : 자본시장법에 따라 온라인소액투자중개업자를 통하여 발행인이 발행하는 채무증권, 지분증권, 투자계약증권에 관한 모집 또는 사모에 관한 중개행위를 말합니다. </li>
-                              <li>계좌관리기관 : 고객계좌를 관리하는 자로서 주식∙사채 등의 전자등록에 관한 법률 제2조 제7호에서 정하는 자를 말합니다.</li>
-                            </ol>
-                            <h2 id="제2장-서비스의-이용">제2장 서비스의 이용</h2>
-                            <h3>제3조 (서비스의 제공)</h3>
-                            <ol>
-                              <li>회사가 본 약관에 따라 제공하는 서비스의 종류는 다음 각 호와 같습니다.
-                                <ol>
-                                  <li>청약거래서비스  : 청약의 주문 정보에 대한 사실확인, 청약의 접수, 청약 가능 여부 통지, 청약결과 및 배정내역 통보 등</li>
-                                  <li>제1호의 서비스 제공을 위해 필요하거나 이에 부수하는 서비스 </li>
-                                </ol>
-                              </li>
-                              <li>서비스의 이용은 24시간 가능한 것을 원칙으로 합니다. 다만, 이체서비스 이용시간의 제한 등의 사유로 인하여 서비스 이용시간이 변경되는 경우 사전에 홈페이지를 통하여 그 변경 사항을 공지합니다.</li>
-                            </ol>
-                            <h3>제4조 (서비스의 신청)</h3>
-                            <ol>
-                              <li>본 약관 제3조의 서비스를 이용하려는 자는 와디즈 기본약관에 따라 회원의 자격을 취득하여 로그인한 후 서비스 신청을 하여야 합니다.</li>
-                              <li>회사는 회원이 입력한 아이디, 비밀번호가 회사에 등록된 것과 일치할 경우 본 약관에 따른 서비스 신청을 접수합니다. </li>
-                            </ol>
-                            <h3>제5조 (서비스의 이용료 등)</h3>
-                            <p class="terms-text">회사는 온라인소액증권의 청약과 관련하여 별도의 수수료는 징수하지 아니합니다. 다만, 청약증거금 이체 시 이체수수료가 발생할 수 있습니다.</p>
-                            <h2 id="제3장-투자정보의-제공-확인-및-의견교환-등">제3장 투자정보의 제공·확인 및 의견교환 등</h2>
-                            <h3>제6조 (투자정보의 게재 등)</h3>
-                            <ol>
-                              <li>증권의 모집을 시작하기 전에 홈페이지에 발행인이 게재하는 증권의 발행조건, 재무서류, 사업계획서 등 투자판단을 위해 필요한 정보가 게재됩니다. </li>
-                              <li>회사는 제1항에 따라 게재된 정보에 관한 사실을 확인하여야 합니다. </li>
-                              <li>제2항에도 불구하고 회원이 게재된 내용에 의존하여 투자판단을 한 경우 이로부터 발생하는 결과에 대하여 회사는 회사의 고의 또는 과실이 없는 이상 책임을 지지 않습니다. </li>
-                              <li>제1항에도 불구하고 청약기간 중에도 홈페이지에 추가적으로 투자정보가 게재될 수 있습니다.</li>
-                              <li>청약기간의 말일로부터 7일 이내에 발행인이 홈페이지에 게재한 정보 중 투자자의 투자판단에 영향을 미칠 수 있는 중요한 정보를 정정한 경우 그날로부터 7일 후로 청약기간이 연장됩니다.</li>
-                              <li>제14조에 따라 모집결과가 “성공”인 경우 청약기간이 종료한 후에도 매년 1회 재무제표 등 결산 관련 서류가 홈페이지에 게재됩니다.</li>
-                            </ol>
-                            <h3>제7조 (청약의 주문 전 정보 확인 등)</h3>
-                            <ol>
-                              <li>회원은 본 약관에 따른 청약의 주문 전에 제6조에 따라 제공되는 정보뿐만 아니라 청약기간, 증권의 배정조건, 증권매도의 제한 등에 관하여 충분히 숙지한 후 청약의 의사표시를 하여야 합니다.</li>
-                              <li>발행인이 투자자의 유형별로 자격을 제한하거나 배정방법 및 그 기준을 다르게 설정하기를 회사에 요청하는 경우 회사는 그 배정방법과 기준이 합리적이고 명확한 기준에 의한 것인 경우 그 내용을 홈페이지에 게재하며, 이 경우 회원은 위 내용에 따라 증권의 배정을 받는데 제한을 받게 될 수 있습니다.  </li>
-                              <li>회사는 회원이 본 약관에 따른 청약의 주문을 하기 전에 회사로부터 청약대상이 되는 증권에 대한 투자의 위험고지 등에 대하여 회원이 충분히 확인을 하였는지를 전자서명이나 전자우편 등의 방법으로 확인한 후에 청약의 주문을 받을 수 있습니다.</li>
-                              <li>회사는 발행인이 정정 게재를 하는 경우 자본시장법 등 관계법령이 정하는 바에 따라 회원에게 정정 게재 사실을 통지하고 회원의 청약 의사를 재확인합니다. 또한 회사는 회원의 온라인소액투자중개의 위험성에 대한 충분한 이해도를 확인하고 청약을 받아야 하며, 회사는 회원이 재청약 의사를 표시하였는지를 확인하기 전에는 그 청약의 주문을 받을 수 없으며, 이 경우 회원의 기존 청약의 주문 신청은 취소됩니다.</li>
-                            </ol>
-                            <h3>제8조 (투자의견의 교환 등)</h3>
-                            <ol>
-                              <li>회원은 홈페이지에 개설된 게시판을 통해 투자정보에 대한 질의 또는 답변을 게시하는 방법으로 투자의견을 교환할 수 있습니다.</li>
-                              <li>회사는 자신의 홈페이지를 통하여 공개되는 투자자들의 의견을 임의로 삭제하거나 수정하여서는 아니 됩니다. 다만, 다른 법률에 근거가 있는 경우 그러하지 아니합니다. </li>
-                              <li>발행인은 증권의 청약기간의 종료일부터 7일 전까지 회사가 관리하는  홈페이지를 통하여 투자자의 투자판단에 도움을 줄 수 있는 정보를 제공할 수 있습니다.</li>
-                            </ol>
-                            <h2 id="제4장-청약의-주문-및-접수-등">제4장 청약의 주문 및 접수 등</h2>
-                            <h3>제9조 (청약의 주문 신청)</h3>
-                            <ol>
-                              <li>회원이 투자하려는 증권에 대한 청약의 주문을 하기 위하여는 아래와 같은 정보를 회사가 제공하는 양식에 따라 입력하여야 합니다.
-                                <ol>
-                                  <li>회원의 실명(법인인 경우 상호 및 명칭)</li>
-                                  <li>주민등록번호(법인인 경우 법인등록번호·사업자등록번호, 외국인의 경우 외국인등록번호·국내거소신고번호)</li>
-                                  <li>투자자의 유형</li>
-                                  <li>그 밖에 자본시장법 등 관계법령에 따라 온라인소액투자중개에 필요한 투자자 정보 </li>
-                                </ol>
-                              </li>
-                              <li>회사는 청약의 주문을 하려는 회원의 실명인증 및 투자자 본인과의 동일성 확인을 위한 인증절차를 거쳐야 합니다.</li>
-                              <li>회원은 제1항 제3호와 관련하여 홈페이지의 &lt;회원정보란&gt;에서 정한 투자자유형과 다른 유형의 투자자자격으로 청약의 주문을 하려는 경우 청약의 주문 전에 &lt;회원정보란&gt;에서 투자자유형을 사전에 변경하여야 합니다. </li>
-                              <li>회원은 일반투자자가 아닌 경우(소득적격투자자, 전문투자자)에 이에 관한 증빙자료(소득요건 등에 관한 자료, 법인등기부등본 등)를 제출한 후에 청약의 신청이 가능합니다.</li>
-                              <li>회원은 자본시장법 등 관계법령에서 정한 투자한도를 준수하여 청약의 주문을 하여야 합니다. </li>
-                              <li>제2항에 따라 투자자가 제출한 정보는 자본시장법 등 관계법령에 따라 중앙기록관리기관에 제공됩니다. </li>
-                              <li>회사는 청약자의 재산인 청약증거금을 금융회사에 예치 또는 신탁하며, 회사는 회원의 예치 또는 신탁된 청약금을 양도하거나 담보로 제공하지 않습니다.</li>
-                            </ol>
-                            <h3>제10조 (청약의 주문 접수)</h3>
-                            <ol>
-                              <li>회원은 제9조에 따라 정보를 입력하고 실명인증 등 확인절차를 이행한 후 “청약의 주문”을 의미하는 버튼을 클릭하면 청약의 주문이 회사에 신청되며, 이와 같은 청약의 주문 신청을 회사가 접수를 하면 청약의 주문 접수가 완료됩니다. 다만, 회사는 발행인이 합리적이고 명확한 기준에 따라 투자자의 자격 제한을 요청한 경우 그에 따라 청약의 주문 신청에 대한 접수를 제한할 수 있습니다.</li>
-                              <li>회원은 청약의 주문 접수 결과는 전자우편 또는 문자메시지를 통해 통보받게 됩니다.</li>
-                              <li>청약의 주문이 접수되면 홈페이지에 청약모집률이 게시됩니다. 다만, 본 약관에 따라 청약의 철회가 있거나 청약의 주문이 효력이 상실되는 경우에는 청약모집률은 변동될 수 있습니다.</li>
-                              <li>청약의 주문이 접수된 후에 제9조에 따라 입력한 정보에 변동사항이 있는 경우회원은 청약기간이 종료되기 전에 한하여 전자우편 등의 방법으로 통지한 후 변경을 요청할 수 있습니다. </li>
-                            </ol>
-                            <h3>제11조 (청약의 주문 취소 등)</h3>
-                            <ol>
-                              <li>회사는 청약기간이 종료되기 전까지 제9조에 따라 제공받은 정보들의 전부 또는 일부에 대하여 회사 또는 회사가 업무를 위탁한 기관이 정한 절차에 따라 그 진위 여부 또는 유효성에 대한 사실확인절차를 이행하여야 합니다.</li>
-                              <li>회사는 필요한 경우 제1항에 따른 확인절차를 이행하기 위하여 자본시장법 등 관계법령이 허용하는 한도 내에서 중앙기록관리기관 등에 정보조회를 의뢰할 수 있습니다.</li>
-                              <li>회사가 본 조에 따른 사실확인절차를 이행한 결과 제9조에 따라 입력되고 이행되어야 할 전부 또는 일부의 사항들(소득적격투자자 또는 전문투자자 요건, 증권계좌유효성)이 추후 허위로 판명되거나 누락된 경우 또는 입증이 이루어지지 아니하는 경우(증빙자료가 제출되지 않은 경우 포함)(이하 “청약의 주문 취소사유”)에는 청약의 주문이 취소되어 효력이 상실될 수 있습니다.</li>
-                              <li>회원이 청약의 주문을 완료한 후 와디즈 기본약관에 따른 회원의 자격을 상실한 경우에도 해당 청약의 주문 건에 대하여는 청약의 주문이 유효하게 있는 것으로 봅니다.</li>
-                              <li>증권의 모집이 개시된 이후에도 발행회사의 사정 또는 회사와 발행인과의 온라인소액투자중개계약 해지 등 관계법령이 정하는 사유로 인하여 증권의 발행이 취소될 수 있습니다. 이 경우 회원의 청약의 주문 신청의 효력은 상실됩니다.</li>
-                            </ol>
-                            <h3>제12조 (청약의 철회)</h3>
-                            <ol>
-                              <li>회원은 청약기간의 종료 전(본 약관에서 정한 사유로 청약기간이 연장된 경우에는 연장된 청약기간의 종료 전)까지 청약의 의사표시를 철회할 수 있습니다.</li>
-                              <li>회원이 청약증거금을 입금한 후에 제1항에 따라 회원이 청약을 철회를 한 경우, 위 청약증거금을 청약철회신청이 회사에게 도달한 날로부터 지체 없이 회원의 계좌로 반환됩니다. </li>
-                            </ol>
-                            <h3>제13조 (회원탈퇴 등에 대한 조치)</h3>
-                            <p>회원이 청약의 주문을 위해 청약증거금을 입금한 후 청약기간이 종료되기 이전에  탈퇴사유가 발생한 경우에는 회사는 회원에게 이와 같은 사실을 사전에 통지하고 제12조 제2항의 경우와 같이 청약증거금을 반환합니다.</p>
-                            <h2 id="제5장-모집결과에-따른-증권의-배정-발행-예탁-등">제5장 모집결과에 따른 증권의 배정·발행·예탁 등</h2>
-                            <h3>제14조 (모집결과의 게시 및 통보 등)</h3>
-                            <ol>
-                              <li>청약기간이 종료되면 회사는 모집결과를 아래와 같은 기준에 따라 “성공”또는 “실패”로 구분하여 홈페이지에 게시하며, 청약의 접수를 완료한 회원에게 모집결과 및 각 청약의 접수에 대한 증권의 배정내역을 통보합니다.
-                                <ol>
-                                  <li>“성공”: 회원의 청약에 따라 모집된 금액이 발행인이 목표한 모집금액의 80% 이상인 경우</li>
-                                  <li>“실패”: 회원의 청약에 따라 모집된 금액이 발행인이 목표한 모집금액의 80% 미만인 경우</li>
-                                </ol>
-                              </li>
-                              <li>청약기간의 만료일 전 청약된 금액이 모집예정금액을 초과하였을 때에는 발행인의 의사에 따라 당초 목표한 모집금액이 증액될 수 있으며, 이 경우 제6조에 따라 게재되는 정보의 변경이 있게 되면 변경된 사항(모집가액, 모집자금의 사용 목적 등)은 홈페이지에 정정되어 게재됩니다.</li>
-                              <li>제2항에 따라 모집가액이 증액되어 변경됨에 따라 자본시장법 등 관계법령에서 발행인에게 요구하는 회계감사의 단계가 변경되는 경우에는 증액된 금액에 상응하는 회계감사의 기준에 따라 정정된 정보가 게재됩니다.</li>
-                              <li>청약기간의 만료일로부터 7일 이내에 발행인이 정정한 중요 게재정보(모집자금의 사용목적 등)에 대하여 청약기간의 만료일은 정정게재일로부터 7일의 범위 내에서 연기될 수 있습니다.</li>
-                              <li>회사는 청약기간 만료 시 대상증권의 청약 및 발행에 관한 내역을 홈페이지에 게시하고 전자우편 등을 통해 투자자에게 통지하여야 합니다. 통지하는 내역은 다음 각 호와 같다.
-                                <ol>
-                                  <li>전체 투자자의 청약증거금액, 청약수량, 청약 증거금 및 그밖에 증권의 취득에 관한 청약의 세부사항 </li>
-                                  <li>전체 투자자의 청약증거금액이 모집예정금액의 80% 이상인지 여부, 전체 투자자로부터 발행인에게 실제 납입될 증권 대금, 그 밖에 증권의 발행에 관한 세부사항 </li>
-                                  <li>투자한 회원에게 배정된 증권의 가액 및 수량, 납입기일, 그 밖에 증권 배정 및 납입에 관한 사항 </li>
-                                  <li>회사가 청약증거금을 반환하여야 할 경우 그 금액 및 반환일정 등 반환에 관한 사항</li>
-                                </ol>
-                              </li>
-                            </ol>
-                            <h3>제15조 (청약금의 납입 및 반환)</h3>
-                            <ol>
-                              <li>제14조 제1항 제1호에 따라 모집결과가 “성공”인 경우 청약증거금관리기관에 예치되어 있던 청약증거금 전액이 발행인 명의 납입계좌로 납입됩니다.</li>
-                              <li>제14조 제1항 제2호에 따라 모집결과가 “실패”인 경우 회원이 입금한 청약증거금 원금은 청약기간이 종료한 경우 지체 없이 회원의 계좌로 반환됩니다. </li>
-                              <li>제10조, 제11조에 따라 청약의 주문 접수가 되지 않거나 청약의 주문이 효력을 상실한 경우 회원이 입금한 청약증거금은 지체 없이 회원이 회사에 등록한 계좌로 반환됩니다. </li>
-                            </ol>
-                            <h3>제16조 (증권의 발행 및 예탁 등)</h3>
-                            <ol>
-                              <li>제15조 제1항에 따라 청약금이 납입되면 제6조의 게재된 발행조건(변경된 발행조건 포함)에 따라 증권이 발행되어 증권의 배정을 받은 회원 명의가 투자자명부에 등록됨으로써 중앙기록관리기관에 배정받은 증권이 예탁되거나 계좌관리기관에 개설된 회원의 고객계좌에 수량이 기재됨으로써 전자등록되어 발행됩니다.</li>
-                              <li>제1항에 따라 발행 후 예탁된 증권은 의무적으로 중앙기록관리기관에 예탁 또는 의무보유등록되거나 보호예수되며, 회원은 배정받은 증권을 6개월 간 매도하거나 인출 할 수 없습니다. 다만, 관계법령에 따라 예외적으로 매도가 가능한 경우로 인정되는 경우에는 그러하지 아니합니다.</li>
-                            </ol>
-                            <h2 id="제6장-기타">제6장 기타</h2>
-                            <h3>제17조 (권리의 귀속 등)</h3>
-                            <p class="terms-text">회사가 제공하는 서비스(데이터, 소프트웨어, 게시물의 저작권 등)에 관한 권리는 회사에게 귀속됩니다.</p>
-                            <h3>제18조 (불가항력에 따른 면책) </h3>
-                            <p class="terms-text">회사는 천재지변, 전시·사변 또는 이에 준하는 불가항력이라고 인정되는 사유로 인하여 회원에게 발생하는 손해에 대하여 책임을 지지 아니합니다. </p>
-                            <h3>제19조 (약관의 적용 등) </h3>
-                            <ol>
-                              <li>본 약관에서 정하지 아니한 사항에 대해서는 회사의 와디즈 기본약관 및 자본시장법 등 관계법규를 따릅니다. 다만, 관계법규 및 관련약관에 정하는 바가 없으면 일반적인 상관례를 따릅니다.</li>
-                              <li>본 약관에 의한 거래 중 전자금융거래에 관하여는 ‘전자금융거래이용에 관한 기본약관’ 및 전자금융거래법령이 우선 적용됩니다.</li>
-                              <li>회사와 회원 간에 개별적으로 합의한 사항이 이 약관에서 정한 사항과 다를 때에는 그 합의사항을 이 약관에 우선하여 적용됩니다.</li>
-                            </ol>
-                            <h3>제20조 (약관의 게시 및 변경)</h3>
-                            <ol>
-                              <li>회사는 본 약관을 변경하고자 하는 경우 변경내용을 변경되는 약관의 시행일 1개월 전에 회원이 확인할 수 있도록 인터넷 홈페이지 그 밖에 이와 유사한 전자통신매체를 통하여 게시합니다. 다만, 자본시장법 등 관계법령의 제·개정에 따른 제도변경 등으로 약관이 변경되는 경우로서 본문에 따라 안내하기가 어려운 급박하고 부득이한 사정이 있는 경우에는 변경내용을 앞의 문장과 같은 방법으로 개정 약관의 시행일 전에 게시합니다.</li>
-                              <li>회사는 제1항의 변경내용이 회원에게 불리한 것일 때에는 이를 서면 등 회원과 사전에 합의한 방법으로 변경되는 약관의 시행일 1개월 전까지 통지하여야 합니다. 다만, 기존 회원에게 변경 전 내용이 그대로 적용되는 경우 또는 회원이 변경내용에 대한 통지를 받지 아니하겠다는 의사를 명시적으로 표시한 경우에는 그러하지 아니합니다.</li>
-                              <li>회사는 제2항의 통지를 할 경우 "회원은 약관의 변경에 동의하지 아니하는 경우 계약을 해지할 수 있으며, 통지를 받은 날로부터 변경되는 약관의 시행일 전의 영업일까지 계약해지의 의사표시를 하지 아니한 경우에는 변경에 동의한 것으로 본다"라는 취지의 내용을 통지하여야 합니다.</li>
-                              <li>회원이 제3항의 통지를 받은 날로부터 변경되는 약관의 시행일 전의 영업일까지 계약해지의 의사표시를 하지 아니하는 경우에는 변경에 동의한 것으로 봅니다.</li>
-                              <li>회사는 본 약관을 회사의 인터넷 홈페이지 그 밖에 이와 유사한 전자통신매체에 게시하여 회사의 영업점에 청약자가 확인할 수 있도록 마련해 두거나 게시하여 청약자가 요구할 경우 이를 교부하여야 하며, 회원이 약관을 확인하고 다운로드(화면출력 포함)받을 수 있도록 하여야 합니다.</li>
-                            </ol>
-                            <h3>제21조 (준거법 등)</h3>
-                            <ol>
-                              <li>본 약관의 해석 및 적용에 관하여는 대한민국법을 적용합니다.</li>
-                              <li>본 약관에 의한 거래와 관련하여 발생된 분쟁에 대하여 회사와 회원 사이에 소송의 필요가 생긴 경우에는 그 관할법원은 민사소송법이 정한 바에 따릅니다.</li>
-                            </ol>
-                            <h2 id="부칙">부칙</h2>
-                            <p>제1조(시행일) 본 약관은 2021년 12월 14일부터 시행합니다.</p>
-                          </article>
-                          </main>
-                        </div>
-                        <div class="modalclass_contents_midtwo_one">
-                            <div class="modalclass_contents_midtwo_onediv">
-                                <label class="modalclass_contents_midtwo_onelabel">
-                                    <input type="checkbox" class="modalclass_contents_midtwo_oneinput">
-                                    <span class="modalclass_contents_midtwo_onespan"></span>
-                                    <span class="modalclass_contents_midtwo_onespanone">
-                                        <span>
-                                            <div>가상예치계좌 발급 및 예치금 신탁</div>
-                                        </span>
-
-                                    </span>
-
-                                </label>
-                            </div>
-                                <button class="modalclass_contents_midtwo_onebutton_five">내용보기</button>
-                        </div>
-                        <div class="modalclass_contents_midtwo_checkboxopen_five" style="display: none;">
-                            <main class="modalclass_contents_midtwo_checkboxopen_main">
-                            <article class="modalclass_contents_midtwo_checkboxopen_main_artricle">
-                              <p>회원은 본 약관에 동의함으로써 와디즈 투자회원으로 가입 등록을 하게 되며, 홈페이지에서 투자금액을 정함으로써 투자에 참여할 수 있습니다. 그 투자금액은 회원의 보호를 위하여 별도의 관리기관인 주식회사 신한은행(이하 '수탁자')에 신탁됩니다. 구체적으로 회사는 회원에게 위 투자금액의 입금을 청구할 수 있는 채권(이하 '예치금 교부채권')을 수탁자에게 신탁합니다. 그에 따라 회원이 투자 서비스 이용약관에 따른 청약의 접수를 하기 위해서는 본 약관에 따라 회사가 발급한 주식회사 신한은행에 개설된 수탁자 명의의 회원 전용계좌(이하 “가상예치계좌”)에 투자하려는 금융투자상품의 청약증거금 이상의 자금을 입금해 놓아야 합니다.</p>
-                              <p>회원이 홈페이지에서 금융투자상품에 대하여 청약의 신청을 하여 접수가 완료된 경우에는 투자 서비스 이용약관에 따라 그 청약증거금이 수탁자에 신탁되어 청약증거금 상당의 금액을 가상예치계좌에서 인출할 수 없습니다. 따라서 회원은 회원의 가상예치계좌에 입금되어 있는 자금 중 청약의 접수가 완료된 금융투자상품에 대한 청약증거금을 제외한 나머지 자금에 대하여는 홈페이지의 다른 금융투자상품에 청약의 접수를 하는데 활용할 수 있으며, 이러한 자금은 언제든지 인출할 수 있습니다. 또한 회원은 투자 개인정보처리방침에 따라 동의한 범위 내에서 회원의 정보를 회사와 수탁자에게 제공됩니다. 이에 회원은 위 예치금 교부채권의 신탁에 관한 사항을 승낙하고, 그에 따라 예치금을 수탁자 명의의 가상예치계좌에 입금할 것임을 확인합니다.</p>
-                            </article>
-                            </main>
-                        </div>
-                        <div class="modalclass_contents_midtwo_one">
-                            <div class="modalclass_contents_midtwo_onediv">
-                                <label class="modalclass_contents_midtwo_onelabel">
-                                    <input type="checkbox" class="modalclass_contents_midtwo_oneinput">
-                                    <span class="modalclass_contents_midtwo_onespan"></span>
-                                    <span class="modalclass_contents_midtwo_onespanone">
-                                        <span>
-                                            <div>개인정보 수집 및 이용 동의</div>
-                                        </span>
-
-                                    </span>
-
-                                </label>
-                            </div>
-                                <button class="modalclass_contents_midtwo_onebutton_six">내용보기</button>
-                        </div>
-                        <div class="modalclass_contents_midtwo_checkboxopen_six" style="display: none;">
-                            <main class="modalclass_contents_midtwo_checkboxopen_main">
-                                <article class="modalclass_contents_midtwo_checkboxopen_main_artricle">
-                            <h1>개인정보 수집 및 이용 동의</h1>
-                            <p>와디즈파이낸스 주식회사가 제공하는 서비스에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 이용 목적, 보유 및 이용 기간을 안내 드리오니 확인 후 동의하여 주시기 바랍니다.</p>
-                        
-                            <h2>1. 수집하는 개인정보</h2>
-                            <ol style="margin-left:1.4em">
-                                <li>
-                                    회사는 서비스 가입 및 이용 등을 위해 아래와 같은 개인정보를 수집합니다.
-                                    <div class="scroll-table">
-                                        <table style="min-width:600px;table-layout: fixed;">
-                                            <thead>
-                                            <tr>
-                                                <th>서비스명</th>
-                                                <th>개인정보 항목</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>공통</td>
-                                                <td>
-                                                    <p>전자금융거래법 제21조(안전성의 확보 의무) 및 제22조(전자금융거래기록의 생성 및 보존)에 의거 청약 거래 시 고객PC 정보를 수집</p>
-                                                    <p>전자금융거래의 오류확인 및 정정 등을 위해 수집하는 개인정보 항목 : 고객아이디, 접속일시, 고객PC정보 (IP Address, HDD Serial, MAC Address, Gateway IP, Gateway MAC), 개인방화벽 설정, 운영체제 종류, 방화벽 설정, 원격접속 설정, 브라우저 버전, 키보드 타입)</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>투자하기 서비스(투자자)</td>
-                                                <td>이름, 닉네임, 이메일주소, 비밀번호, 신분증 확인을 통한 고유식별정보(주민등록번호, 외국인등록번호, 운전면허번호) 및 성별, 계좌번호, 연락처, 주소, 기기 정보(IP, 모바일 광고식별자), CI(연계정보)</td>
-                                            </tr>
-                                            <tr>
-                                                <td>투자하기 서비스(발행인)</td>
-                                                <td>
-                                                    <ul>
-                                                        &lt;기본 메이커&gt;
-                                                        <li>대표자 정보(대표자명, 대표전화, 이메일), 관리자 정보(이름, 직급, 휴대폰 번호), 팀멤버(이름, 직급,  SNS주소(선택))</li>
-                                                        <li>법인등기부등본을 통한 대표자 이름, 주민등록번호, 주소</li>
-                                                    </ul>
-                                                    <ul>
-                                                        &lt;계약 체결을 위한 제출 서류&gt;
-                                                        <li>고유번호증 상의 정보, 제출 통장 사본 상의 정보, 사용인감계 및 인감증명서</li>
-                                                        <li>필요시 대리인 정보(이름, 주민등록번호, 주소)</li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>고객센터 상담</td>
-                                                <td>회원 정보, 서비스 이용 내역</td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </li>
-                                <li>
-                                    회사는 회원의 기본적인 인권 침해 우려가 있는 민감한 개인정보는 수집하지 않음. 다만 이용자의 적법한 동의가 있거나 법령의 규정에 의한 경우는 예외
-                                </li>
-                            </ol>
-                        
-                            <h2>개인정보 이용 목적</h2>
-                            <ol style="margin-left:1.4em">
-                                <li>홈페이지 회원관리 : 회원제 서비스 이용 등에 따른 본인확인, 개인식별, 불량회원의 부정 이용방지와 비인가 사용방지, 가입의사 확인, 가입 및 가입횟수 제한, 고지사항 전달, 상담처리 등</li>
-                                <li>회사가 제공하는 서비스 이용</li>
-                                <li>설문조사와 이벤트를 위한 이용</li>
-                                <li>컨텐츠 및 회원 맞춤형 서비스 제공, 서비스 구매 및 요금결제, 금융거래 본인인증 및 금융 서비스, 상품 주문에 따른 배송 서비스</li>
-                                <li>신규서비스(콘텐츠) 개발 및 특화, 이벤트 등 광고성 정보 전달, 통계학적 특성에 따른 서비스 제공 및 광고 게재, 접속 빈도 파악, 회원의 서비스 이용에 대한 통계</li>
-                                <li>금융사고 조사, 기타 법령상 의무이행 등</li>
-                            </ol>
-                        
-                            <h2>개인정보 보유 및 이용 기간</h2>
-                            <p>이용자는 회원가입시 개인정보의 수집·이용 및 제공에 대해 동의한 내용은 언제든지 회원탈퇴 등의 방법을 통해 철회하실 수 있습니다. 또한, 수집 및 이용목적이 달성되거나 동의를 얻은 개인정보의 보유·이용 기간이 종료한 경우 지체 없이 파기하는 것을 원칙으로 합니다. 다만, 자본시장과 금융투자업에 관한 법률 등 다른 법률에 따라 개인정보를 보존해야 하는 경우에는 그러하지 아니하며, 귀하가 회원가입 등을 위해 입력하신 정보는 내부 방침 및 기타 관련법령에 따라 일정기간 저장 후 파기될 수 있습니다. 이때 일정기간 저장된 개인정보는 법률에 의한 경우가 아니고서는 동의 받지 아니한 다른 목적으로 이용되지 않습니다.</p>
-                            <ol>
-                                <li>
-                                    회사 내부 방침에 의한 정보보유 사유
-                                    <ul>
-                                        <li>
-                                            이메일주소, 휴대전화번호, 광고성정보 수신 동의 여부
-                                            <ul>
-                                                <li>보존 이유 : 불량회원의 부정이용방지와 비인가 사용방지, 서비스 이용의 혼선 방지 및 분쟁 발생 시 감독기관 소명</li>
-                                                <li>보존 기간 : 1년</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    관계법령에 의한 정보보유 사유
-                                    <div class="scroll-table">
-                                        <table style="min-width:600px;table-layout: fixed;">
-                                            <thead>
-                                            <tr>
-                                                <th>해당 내용</th>
-                                                <th>관련 법 조항</th>
-                                                <th>보존 년한</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>표시/광고에 관한 기록</td>
-                                                <td>전자상거래등에서의 소비자보호에 관한 법률</td>
-                                                <td>6개월</td>
-                                            </tr>
-                                            <tr>
-                                                <td>계약 또는 청약철회 등에 관한 기록</td>
-                                                <td>전자상거래등에서의 소비자보호에 관한 법률</td>
-                                                <td>5년</td>
-                                            </tr>
-                                            <tr>
-                                                <td>대금결제 및 재화 등의 공급에 관한 기록</td>
-                                                <td>전자상거래등에서의 소비자보호에 관한 법률</td>
-                                                <td>5년</td>
-                                            </tr>
-                                            <tr>
-                                                <td>소비자의 불만 또는 분쟁처리에 관한 기록</td>
-                                                <td>전자상거래등에서의 소비자보호에 관한 법률</td>
-                                                <td>3년</td>
-                                            </tr>
-                                            <tr>
-                                                <td>금융투자업 영위와 관련한 자료 (청약의 권유 관련 자료 등)</td>
-                                                <td>자본시장과 금융투자업에 관한 법률 시행령</td>
-                                                <td>10년 (자료별 상이)</td>
-                                            </tr>
-                                            <tr>
-                                                <td>거래정보등의 제공내용 기록 관리</td>
-                                                <td>금융실명거래 및 비밀보장에 관한 법률</td>
-                                                <td>5년</td>
-                                            </tr>
-                                            <tr>
-                                                <td>전자금융 거래에 대한 기록</td>
-                                                <td>전자금융거래법</td>
-                                                <td>5년</td>
-                                            </tr>
-                                            <tr>
-                                                <td>웹 사이트 방문에 관한 기록</td>
-                                                <td>통신비밀보호법</td>
-                                                <td>3개월</td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </li>
-                            </ol>
-                        
-                            <h2>장기 미이용 회원 개인정보 분리 보관</h2>
-                            <ol>
-                                <li>
-                                    관련 법령에 의거하여 장기 미이용 회원의 계정을 휴면 상태로 전환하고 개인정보를 암호화하여 분리 보관합니다.
-                                    <ul>
-                                        <li>관련 법령 : 개인정보보호법제39조의6 및 동법 시행령 제48조의5</li>
-                                        <li>휴면 회원 : 서비스를 1년이상 이용하지 않음에 따라 휴면 상태로 전환된 회원</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    아래의 경우에 해당하는 경우 회원의 권익보호를 위하여 휴면 상태로 전환되지 않습니다.
-                                    <ul>
-                                        <li>회사가 제공하는 각종 멤버십 서비스에 가입하여 이용기간이 종료되지 않은 회원</li>
-                                        <li>와디즈 계좌에 잔금이 남아있는 회원</li>
-                                        <li>W9 가입 후 유효기간이 만료되지 않은 회원</li>
-                                        <li>투자에 참여하여 와디즈의 서비스를 제공받고 있는 중인 회원</li>
-                                    </ul>
-                                </li>
-                                <li>휴면 상태 전환 30일 전까지 휴면 예정 회원에게 휴면 전환 예정일, 별도 분리 보관되는 사실 및 개인정보 항목이 이메일을 통해 사전 안내됩니다. 해당 통지 수단에 대한 정보가 부재 또는 오류인 경우에는 홈페이지 공지사항 게시로 대체됩니다.</li>
-                                <li>휴면 예정 회원이 사전 안내된 휴면 전환 예정일 이전에 로그인 하시는 경우에는 휴면 상태로 전환되지 않고 기존과 같이 서비스를 이용하실 수 있습니다.</li>
-                                <li>휴면 상태로 전환된 사실은 메일을 통해 휴면 회원에게 안내됩니다.</li>
-                                <li>휴면 회원은 사용했던 계정으로 로그인하여 서비스를 재이용함으로써 일반회원으로 전환될 수 있습니다.</li>
-                                <li>휴면 회원의 개인정보는 4년간 별도 분리 보관 후 삭제됩니다.</li>
-                            </ol>
-                        </article>
-                    </main>
-                </div>
-                <div class="modalclass_contents_midtwo_one">
-                    <div class="modalclass_contents_midtwo_onediv">
-                        <label class="modalclass_contents_midtwo_onelabel">
-                            <input type="checkbox" class="modalclass_contents_midtwo_oneinput">
-                            <span class="modalclass_contents_midtwo_onespan"></span>
-                            <span class="modalclass_contents_midtwo_onespanone">
-                                <span>
-                                    <div>제3자 제공 동의</div>
-                                </span>
-
-                            </span>
-
-                        </label>
-                    </div>
-                        <button class="modalclass_contents_midtwo_onebutton_seven">내용보기</button>
-                </div>
-                <div class="modalclass_contents_midtwo_checkboxopen_seven" style="display: none;">
-                    <main class="modalclass_contents_midtwo_checkboxopen_main">
-                        <article class="modalclass_contents_midtwo_checkboxopen_main_artricle">
-                    <h1>개인정보 제3자 제공 동의서</h1>
-                    <p>와디즈파이낸스 주식회사는 제3자 서비스와의 연결을 위해서 아래와 같이 이용자의 개인정보를 제공하고 있습니다. 제공받는 자, 제공 항목, 제공 목적, 제공받는 자의 보유 기간을 안내 드리오니 확인 후 동의하여 주시기 바랍니다.</p>
-                
-                    <h2>제3자 제공 현황</h2>
-                    <ol>
-                        <li>
-                            회사는 서비스 가입 및 이용 등을 위해 아래와 같은 개인정보를 수집합니다.회사가 제3자에게 제공하는 이용자 개인정보
-                            <div class="scroll-table">
-                                <table style="min-width:600px;table-layout:fixed;">
-                                    <thead>
-                                        <tr>
-                                            <th>제공받는 자</th>
-                                            <th>제공 항목</th>
-                                            <th>제공 목적</th>
-                                            <th>보유 기간</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td style="font-size: 14px;font-weight: bold;">와디즈(주)</td>
-                                            <td>회원식별정보, 서비스 이용내역(투자, 스타트업 찾기, W9)</td>
-                                            <td style="font-size: 14px;font-weight: bold;">통합회원서비스 제공</td>
-                                            <td style="font-size: 14px;font-weight: bold;">개인정보의 제공 목적 달성 시까지</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="font-size: 14px;font-weight: bold;">발행인</td>
-                                            <td>성명, 주민등록번호(사업자번호), 이메일, 휴대폰번호, 증권계좌번호, 가상계좌번호, 출금은행계좌번호 투자자실명번호구분(주민번호, 법인등록번호, 조합고유번호, 투자자실명번호(법인등록번호), 계좌확인실명번호(사업자등록번호. 투자자실명번호), 투자자성명, 투자자유형(일반, 소득요건충족, 전문, 연고자, 계약전문), 청약금액,청약수량, 위탁사번호,위탁사계좌일련번호, 위탁사계좌분류코드(자기분, 투자자분), 위탁계좌번호, 증권계좌 정보</td>
-                                            <td style="font-size: 14px;font-weight: bold;">자본시장과 금융투자업에 관한 법률 등 관계법령에 따라 온라인 소액투자중개업자가 증권발행기업, 한국예탁결제원, 한국증권금융, 기업은행, 신한은행 등 예치 (또는 신탁) 기관에 제공하는 투자자 정보의 제공, 조회 및 예치(또는 신탁)금액의 수령(교부)채권 보호를 위한 신탁시스템 이용 제공</td>
-                                            <td style="font-size: 14px;font-weight: bold;">5년 보존 후 파기(거래정보등의 제공내용 기록관리내용은 금융실명거래 및 비밀보장에 관한 법률에 따라 5년 보존 후 파기</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="font-size: 14px;font-weight: bold;">한국예탁결제원</td>
-                                            <td>계좌개설자번호, 계좌개설일련번호, 요청일련번호, 요청구분코드(청약, 투자자유형확인청약, 청약취소, 위탁계좌정보통보), 발행인사업자등록번호/법인번호/주민등록번호, 증권구분(채권, 주식),종목코드, 청약개시일/청약종료일, 투자자실명번호구분(주민번호, 법인등록번호, 조합고유번호, 외국인여권, 외국인투자등록증, 외국인등록증, 투자자실명번호(법인등록번호), 계좌확인실명번호(사업자등록번호. 투자자실명번호), 투자자성명, 이메일, 휴대폰번호, 투자자유형(일반, 소득요건충족, 전문, 연고자, 계약전문), 청약금액,청약수량, 위탁사번호,위탁사계좌일련번호, 위탁사계좌분류코드(자기분, 투자자분), 위탁계좌번호, 증권계좌 정보, 가상계좌번호, 출금은행계좌번호</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="font-size: 14px;font-weight: bold;">청약증거금예치기관(신한은행, 기업은행, 한국증권금융)</td>
-                                            <td>거래구분, 대출식별번호, 총대출금, 취급수수료,대출실행일자,대출만기일자,대출자고객아이디,대출자고객명, 주민등록번호(사업자번호), 이메일, 휴대폰번호, 가상계좌번호,대출입금계좌정보,투자자일련번호, 투자자고객아이디,원리금수취권번호,투자금액,투자자건수,이체은행코드,이체계좌번호,이체계좌성명,이체금액,수수료,이체계좌통장메모, 지급계좌통장메모,자금성격,지급거래번호</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="font-size: 14px;font-weight: bold;">(사)한국엔젤투자협회, 중소벤처기업부(또는 투자기업 소재지 관할 지방중소벤처기업청), 중소기업기술정보진흥원</td>
-                                            <td>투자자 개인정보(성명, 생년월일, 성별, 주소, 전화번호), 투자내용(투자기업명, 투자금액 및 청약수량, 투자일자, 투자기업 사업자등록번호 및 법인등록번호, 증권구분(채권, 주식), 증권발행일자)</td>
-                                            <td style="font-size: 14px;font-weight: bold;">소득공제를 위한 투자확인서 발급을 위한 투자자 확인 및 통계 작성 등</td>
-                                            <td style="font-size: 14px;font-weight: bold;">제공된 날부터 제공된 목적을 달성할 때까지 보유·이용되며 보유목 적 달성시 또는 정보주체가 개인정보 삭제를 요청할 경우 지체 없이 파기. 단, 거래 종료일 후에는 금융사고 조사, 분쟁해결, 민원처리, 법령상 의무이행 만을 위하 여 보유․이용되며 기간은 10년(공공기록물 관리에 관한 법률 시행령)</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </li>
-                        <li>
-                            동의없이 제공하는 예외 사항
-                            <ul>
-                                <li>관련 통계법 등에 따라 통계작성·학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 알아볼 수 없는 형태로 가공하여 제공하는 경우</li>
-                                <li>금융실명거래및비밀보장에관한법률, 신용정보의이용및보호에관한법률, 전기통신기본법, 전기통신사업법, 지방세법, 소비자보호법, 한국은행법, 형사소송법 등 법률에 특별한 규정이 있는 경우</li>
-                                <li>정부기관(준정부기관 포함)이나 법원의 명령에 의하여 개인정보를 제공하는 경우</li>
-                                <li>기타 관계법령에서 정한 절차에 따른 요청이 있는 경우</li>
-                            </ul>
-                        </li>
-                    </ol>
-                    <p>회사는 예외 사항의 경우에도 정보 제공 내용을 이용자에게 고지하는 것을 원칙으로 하며 본래 수집과 이용 목적에 반하여 무분별하게 제공되지 않도록 최대한 노력하겠습니다.</p>
-                </article>
-            </main>
-            </div>
-            <div class="modalclass_contents_midone">
-                <div>
-                    <label class="modalclass_contents_midone_one">
-                    <input type="checkbox" class="modalclass_contents_midone_one_ckeckbox">
-                    <span class="modalclass_contents_midone_one_icon_sososo_two"></span>
-                    <span>
-                        <div class="modalclass_contents_midone_one_one">투자 이벤트 혜택 알림
-                            <span class="modalclass_contents_midone_one_one_one">(선택)</span>
-
-
-                        </div>
-                    </span>
-                </label>
-                <em class="HelperMessage_helperMessage__1n6rg Checkbox_message__36m3d Checkbox_sm__3-W4Q">투자 서비스 이벤트·할인 혜택 등에 대한 정보를 이메일, 앱 알림(앱 사용시)으로 받아볼 수 있습니다. (동의 철회 시까지)
-
-                </em>
-                </div>
-            </div>
-        </div>
-        <div>
-        <div class="modalclass_contents_midone">
-            <div>
-                <label class="modalclass_contents_midone_one">
-                <input type="checkbox" class="modalclass_contents_midone_one_ckeckbox">
-                <span class="modalclass_contents_midone_one_icon_sososo_three"></span>
-                <span>
-                    <div class="modalclass_contents_midone_one_one"><span style="color: black; font-weight: 700;">스타트업 찾기</span>서비스 가입
-                        <span class="modalclass_contents_midone_one_one_one">(선택)</span>
-                    </div>
-                </span>
-            </label>
-            </div>
-            <button class="okokokok" aria-label="내용 닫기"><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="kookokoko1111" aria-hidden="true">
-                <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z">
-                    
-                </path>
-            </svg>
-        </button>
-        </div>
-    <div class="modalclass_contents_midtwo">
-        <div class="modalclass_contents_midtwo_one">
-            <div class="modalclass_contents_midtwo_onediv">
-                <label class="modalclass_contents_midtwo_onelabel">
-                    <input type="checkbox" class="modalclass_contents_midtwo_oneinput">
-                    <span class="modalclass_contents_midtwo_onespan"></span>
-                    <span class="modalclass_contents_midtwo_onespanone">
-                        <span>
-                            <div>스타트업 찾기 서비스 이용약관</div>
-                        </span>
-
-                    </span>
-
-                </label>
-            </div>
-                <button class="modalclass_contents_midtwo_onebutton_eight">내용보기</button>
-        </div>
-        <div class="modalclass_contents_midtwo_checkboxopen_eight" style="display: none;">
-            <main class="modalclass_contents_midtwo_checkboxopen_main">
-                <article class="modalclass_contents_midtwo_checkboxopen_main_artricle">
-            <h1>스타트업 찾기 서비스 이용약관</h1>
-            <p>와디즈 스타트업 찾기 서비스의 이용과 관련하여 필요한 사항을 규정합니다.</p>
-            <div class="update">
-                <h5>업데이트 노트</h5>
-                <ul>
-                    <li>본 운영정책은 2022년 2월 15일부터 시행됩니다.</li>
-                    <li>개정 2021.12.21</li>
-                    <li>개정 2021.12.14 <a href="/web/wterms/service_wstartup/20211214" class="previous-terms" target="_blank">이전 이용약관 보기<i class="icon-chevron-right" aria-hidden="true"></i></a></li>
-                    <li>제정 2020.04.17 <a href="/web/wterms/service_wstartup/20200417" class="previous-terms" target="_blank">이전 이용약관 보기<i class="icon-chevron-right" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-            <ol class="table">
-                <li><a href="#1-제1조-목적">1. 제1조(목적)</a></li>
-                <li><a href="#2-제2조-용어의정의">2. 제2조 (용어의 정의)</a></li>
-                <li><a href="#3-제3조-서비스-제공">3. 제3조 (서비스의 제공)</a></li>
-                <li><a href="#4-제4조-서비스-신청">4. 제4조 (서비스의 신청)</a></li>
-                <li><a href="#5-제5조-서비스-이용료">5. 제5조 (서비스의 이용료 등)</a></li>
-                <li><a href="#6-제6조-회원-이용계약-해지">6. 제6조 (회원의 이용계약 해지 등)</a></li>
-                <li><a href="#7-제7조-면책">7. 제7조 (면책)</a></li>
-                <li><a href="#8-제8조-권리의-귀속">8. 제8조 (권리의 귀속 등)</a></li>
-                <li><a href="#9-제9조-약관의-적용">9. 제9조 (약관의 적용 등)</a></li>
-                <li><a href="#10-제10조-약관게시-변경">10. 제10조 (약관의 게시 및 변경)</a></li>
-                <li><a href="#11-제11조-기타">11. 제11조 (기타)</a></li>
-                <li><a href="#12-제12조-준거법-재판관할">12. 제12조 (준거법 및 재판관할)</a></li>
-                <li><a href="#부칙">부칙</a></li>
-            </ol>
-            <hr style="margin-bottom: 0px;">
-        
-            <h2 id="1-제1조-목적">제1조 (목적)</h2>
-            <p>본 약관은 와디즈파이낸스 주식회사(이하 “회사”)와 회사가 제공하는 ‘스타트업 찾기’ 서비스(이하 “서비스”)를 이용하는 회원(이하 “회원”)간의 서비스 이용에 관한 권리⋅의무, 책임의 범위 등 제반사항과 그 세부사항을 정함을 목적으로 합니다. 본 약관에서 정하지 아니한 사항은 와디즈 회원가입⋅약관을 따릅니다.</p>
-        
-            <h2 id="2-제2조-용어의정의">제2조 (용어의 정의)</h2>
-            <ol class="orderlist1">
-                <li>본 약관에서 사용되는 용어의 의미는 다음 각 호와 같습니다.
-                    <ol class="orderlist">
-                        <li>서비스: 회원이 전자적 시스템에 접속하여 이용하는 회사가 제공하는 ‘스타트업 찾기’의 모든 서비스를 의미합니다.</li>
-                        <li>홈페이지: 본 약관에 따라 회사가 제공하는 서비스가 구현되는 온라인상의 웹페이지(https://www.wadiz.kr)를 말합니다.</li>
-                        <li>앱: 구글, 애플 앱스토어를 통해서 다운로드 받을 수 있는 회사가 제공하는 모바일 어플리케이션(wadiz)을 말합니다.</li>
-                        <li>기관투자자: 회사의 와디즈 회원가입 약관(이하 “와디즈 기본약관”)에 따른 회원의 자격을 부여받은 자 중에서 회사가 정한 방식과 절차에 따른 별도의 인증 단계를 거쳐 창업투자회사, 엑셀러레이터, 인큐베이터, 신기술사업금융회사, 엔젤투자자(전문, 적격), 개인투자조합(GP, LP), 투자와 관련된 각종 정부기관등 투자와 관련된 기업(Corporate Venture Capital(CVC) 포함) 및 단체의 대표 및 임직원 임을 인증 받은 회원을 말합니다.</li>
-                        <li>기업: 회사의 회원가입 약관에 따른 회원의 자격을 부여받은 자 중에서 사업자등록번호가 있는 개인사업자, 법인사업자인 스타트업을 의미합니다.</li>
-                    </ol>
-                </li>
-                <li>전항에 기재된 용어 이외에 사용되는 모든 용어는 본 약관에서 달리 정하지 않는 한 사이트의 약관 및 운영정책에서 사용된 용어와 같은 의미로 해석합니다.</li>
-            </ol>
-        
-            <h2 id="3-제3조-서비스-제공">제3조 (서비스의 제공)</h2>
-            <p>회사가 본 약관에 따라 제공하는 서비스의 종류는 다음 각 호와 같습니다.</p>
-            <ol class="orderlist">
-                <li>검색 서비스: 필터, 카테고리를 통한 기업 검색 서비스</li>
-                <li>위 각 호의 서비스 제공을 위해 필요하거나 이에 부수하는 서비스</li>
-            </ol>
-        
-            <h2 id="4-제4조-서비스-신청">제4조 (서비스의 신청)</h2>
-            <ol class="orderlist1">
-                <li>본 약관 제3조의 서비스를 이용하려는 자는 와디즈 기본약관에 따라 회원의 자격을 취득하여 로그인한 후 서비스 이용신청을 하여야 합니다.</li>
-                <li>회사는 회원이 입력한 아이디,비밀번호가 회사에 등록된 것과 일치할 경우 본 약관에 따른 서비스 신청을 승낙합니다.</li>
-                <li>기관투자자 회원 서비스 이용을 신청하는 경우, 회사는 사실 확인을 위하여 이용신청자에게 명함을 포함한 증빙자료의 제출을 요청할 수 있으며, 이용신청자는 이에 따라 증빙자료를 제출하여야 합니다.</li>
-                <li>제3항에 대하여 회사는 다음 각 호의 어느 하나에 해당하는 이용신청에 대하여는 승낙을 하지 않을 수 있습니다.
-                    <ol class="orderlist">
-                        <li>이용신청자가 이전에 본 약관에 의하여 회원자격을 상실한 적이 있는 경우(회사의 회원 재가입 승낙을 얻은 경우 제외)</li>
-                        <li>이용신청자가 본 약관에 의하여 이전에 회사로부터 서비스 이용제한 조치를 받은 상태에서 이용계약을 해지하고 다시 이용신청을 한 경우</li>
-                        <li>실명이 아니거나 타인의 명의를 이용하여 이용신청을 한 경우</li>
-                        <li>이용신청 시 필요한 정보를 입력하지 않거나 허위의 정보를 기재한 경우</li>
-                        <li>요청받은 증빙자료를 제출하지 않은 경우</li>
-                        <li>사회의 안녕과 질서,미풍양속을 저해할 우려가 있는 경우</li>
-                        <li>타인의 서비스 이용을 방해하거나 그 정보를 도용하는 등 전자상거래 질서를 위협할 우려가 있는 경우</li>
-                        <li>위법 또는 부당한 목적으로 이용신청을 한 경우</li>
-                    </ol>
-                </li>
-            </ol>
-        
-            <h2 id="5-제5조-서비스-이용료">제5조 (서비스의 이용료 등)</h2>
-            <p>회사는 본 약관에 따라 서비스를 이용하는 회원에게 별도의 수수료를 징수하지 않습니다.</p>
-        
-            <h2 id="6-제6조-회원-이용계약-해지">제6조 (회원의 이용계약 해지 등)</h2>
-            <ol class="orderlist1">
-                <li>회원이 서비스 중단을 원하여 회사의 와디즈 기본약관에 따라 회원탈퇴신청을 한 경우 이용계약 해지의 의사표시를 한 것으로 보며, 회사에 해지의 의사표시가 도달한 때에 이용계약의 해지효력이 발생합니다.</li>
-                <li>제1항에도 불구하고 회원이 개별약관에 따라 부가서비스를 이용하고 있는 경우에는 당해 서비스에 관한 개별약관 또는 회사의 안내에 따라 필요한 절차를 거쳐야 합니다.</li>
-                <li>회원이 제1항과 제2항에 따라 이용계약을 해지할 경우, 관계법령 및 개인정보처리방침에 따라 회사가 회원정보를 보유하는 경우를 제외하고는 회원의 모든 데이터는 소멸됩니다. 다만, 이 경우에도 타인에 의해 담기, 스크랩 등이 되어 재게시되거나, 공용게시판에 등록된 게시물 등은 삭제되지 않을 수 있습니다.</li>
-                <li>회사는 회원에게 제4조 제4항의 사유가 발생한 사실을 알게 된 경우 즉시 해당 회원과의 이용계약을 해지할 수 있으며, 이로 인한 모든 손실과 법적 분쟁에 대한 책임은 해당 회원에게 있습니다.</li>
-            </ol>
-        
-            <h2 id="7-제7조-면책">제7조 (면책)</h2>
-            <ol class="orderlist1">
-                <li>회사는 앱 또는 홈페이지를 통하여 기업의 일반적인 정보를 제공합니다.이에 회사는 기업에게 별도의 경영 자문을 제공하지 않습니다.또한 회사는 기업가치 등 투자조건을 정하거나 투자 자체를 주선,대리하지 않습니다.따라서 회원간 투자에 관하여 발생하는 법적 분쟁에 대한 책임은 회원이 단독으로 부담합니다.</li>
-                <li>홈페이지와 앱에 게재된 정보,자료,사실 등의 진실성,정확성,신뢰성은 회사가 보장하지 않습니다.게시한 자료의 활용 여부는 회원 각자의 책임과 판단에 맡겨져 있으며,그로 인해 야기되는 결과에 대해 회사는 일체의 책임을 지지 않습니다.</li>
-                <li>회사는 회원 간 및 회원과 제3자간에 서비스를 매개로 발생한 분쟁에 대해 개입할 의무가 없습니다.회사는 서비스 이용과 관련하여 회원의 고의 또는 과실로 인하여 회원 또는 제3자에게 발생한 손해에 대하여 책임을 부담하지 않습니다.다만,관련법령에서 달리 규정하고 있는 사항이 있으면 그에 따릅니다.</li>
-                <li>회사는 천재지변,전시·사변 또는 이에 준하는 불가항력이라고 인정되는 사유로 인하여 회원에게 발생하는 손해에 대하여 책임을 지지 아니합니다.</li>
-            </ol>
-        
-            <h2 id="8-제8조-권리의-귀속">제8조 (권리의 귀속 등)</h2>
-            <p>회사가 제공하는 서비스(데이터,소프트웨어,게시물의 저작권 등)에 관한 권리는 회사에게 귀속됩니다.</p>
-        
-            <h2 id="9-제9조-약관의-적용">제9조 (약관의 적용 등)</h2>
-            <ol class="orderlist1">
-                <li>본 약관에서 정하지 아니한 사항에 대해서는 회사의 와디즈 기본약관 및 전자상거래 등에서의 소비자 보호에 관한 법률,소비자피해보상규정,약관의 규제 에 관한 법률,전자문서 및 전자거래기본법,전자금융거래법,전자서명법,정보통신망 이용촉진 및 정보보호 등에 관한 법률,방문판매 등에 관한 법률,소비자기본법 등 관계법규를 따릅니다.다만,관계법규 및 관련약관에 정하는 바가 없으면 일반적인 상관례를 따릅니다.</li>
-                <li>회사와 회원 간에 개별적으로 합의한 사항이 본 약관에서 정한 사항과 다를 때에는 그 합의사항을 본 약관에 우선하여 적용됩니다.</li>
-            </ol>
-        
-            <h2 id="10-제10조-약관게시-변경">제10조 (약관의 게시 및 변경)</h2>
-            <ol class="orderlist1">
-                <li>회사는 본 약관을 변경하고자 하는 경우 변경내용을 변경되는 약관의 시행일 7일 전에 회원이 확인할 수 있도록 인터넷 홈페이지, 앱 그 밖에 이와 유사한 전자통신매체를 통하여 게시합니다.다만,관계법령의 제·개정에 따른 제도변경 등으로 약관이 변경되는 경우로서 본문에 따라 안내하기가 어려운 급박하고 부득이한 사정이 있는 경우에는 변경내용을 앞의 문장과 같은 방법으로 개정 약관의 시행일 전에 게시합니다.</li>
-                <li>회사는 제1항의 변경내용이 회원에게 불리한 것일 때에는 이를 서면 등 회원과 사전에 합의한 방법으로 변경되는 약관의 시행일 1개월 전까지 통지하여야 합니다.다만,기존 회원에게 변경 전 내용이 그대로 적용되는 경우 또는 회원이 변경내용에 대한 통지를 받지 아니하겠다는 의사를 명시적으로 표시한 경우에는 그러하지 아니합니다.</li>
-                <li>회사는 제1항 공지 및 제2항의 통지를 할 경우 "회원은 약관의 변경에 동의하지 아니하는 경우 계약을 해지할 수 있으며,통지를 받은 날로부터 변경되는 약관의 시행일 전의 영업일까지 계약해지의 의사표시를 하지 아니한 경우에는 변경에 동의한 것으로 본다"라는 취지의 내용을 명시하여야 합니다.</li>
-                <li>회원이 제1항 공지 및 제2항의 통지를 받은 날로부터 변경되는 약관의 시행일 전의 영업일까지 계약해지의 의사표시를 하지 아니하는 경우에는 변경에 동의한 것으로 봅니다. </li>
-                <li>회사는 본 약관을 회사의 홈페이지 그 밖에 이와 유사한 전자통신매체에 게시하여 회사의 영업점에 회원이 확인할 수 있도록 마련해 두거나 게시하여 회원이 요구할 경우 이를 교부하여야 하며,회원이 약관을 확인하고 다운로드(화면출력 포함)받을 수 있도록 하여야 합니다.</li>
-            </ol>
-        
-            <h2 id="11-제11조-기타">제11조 (기타)</h2>
-            <ol class="orderlist1">
-                <li>본 약관에 규정되지 않은 사항과 계약 내용의 해석에 관한 문제에 대해서는 기업과 회사가 상호 협의하여 처리합니다.단,협의 불성립시는 상관례 및 관련법규에 따르며,본 계약의 일부 조항이 구속력이 없거나 무효인 것으로 판단될 경우에도 나머지 조항은 그대로 유효하며, 무효인 조항도 법의 한도에서 최대한 효력을 가질 수 있도록 해석합니다.</li>
-                <li>당사자 일방은 상대방의 사전 서면 동의 없이 본 약관 상의 지위,권리 또는 의무의 전부 또는 일부를 제3자에게 양도,담보제공 하거나 처분 등의 행위를 할 수 없습니다.</li>
-            </ol>
-        
-            <h2 id="12-제12조-준거법-재판관할">제12조 (준거법 및 재판관할)</h2>
-            <ol class="orderlist1">
-                <li>회사와 기업간 제기된 소송은 대한민국법을 준거법으로 합니다.</li>
-                <li>회사와 기업간 발생한 분쟁에 관한 소송은 제소 당시의 회사의 본점 주소지를 관할하는 지방법원의 관할로 합니다.</li>
-            </ol>
-        
-            <h2 id="부칙">부칙</h2>
-            <p>제1조(시행일) 본 약관은 2022년 2월 15일부터 시행합니다.</p>
-        </article>
-    </main>
-</div>
-<div class="modalclass_contents_midtwo_one">
-    <div class="modalclass_contents_midtwo_onediv">
-        <label class="modalclass_contents_midtwo_onelabel">
-            <input type="checkbox" class="modalclass_contents_midtwo_oneinput">
-            <span class="modalclass_contents_midtwo_onespan"></span>
-            <span class="modalclass_contents_midtwo_onespanone">
-                <span>
-                    <div>개인정보 수집 및 이용 동의</div>
-                </span>
-
-            </span>
-
-        </label>
-    </div>
-        <button class="modalclass_contents_midtwo_onebutton_nine">내용보기</button>
-</div>
-<div class="modalclass_contents_midtwo_checkboxopen_nine" style="display: none;">
-    <main class="modalclass_contents_midtwo_checkboxopen_main">
-        <article class="modalclass_contents_midtwo_checkboxopen_main_artricle">
-    <h1>개인정보 수집 및 이용 동의</h1>
-    <p>와디즈파이낸스 주식회사가 제공하는 서비스에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 이용 목적, 보유 및 이용 기간을 안내 드리오니 확인 후 동의하여 주시기 바랍니다.</p>
-
-    <h2>1. 수집하는 개인정보</h2>
-    <ol style="margin-left:1.4em">
-        <li>
-            회사는 서비스 가입 및 이용 등을 위해 아래와 같은 개인정보를 수집합니다.
-            <div class="scroll-table">
-                <table style="min-width:600px;table-layout: fixed;">
-                    <thead>
-                    <tr>
-                        <th>서비스명</th>
-                        <th>개인정보 항목</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>공통</td>
-                        <td>
-                            <p>전자금융거래법 제21조(안전성의 확보 의무) 및 제22조(전자금융거래기록의 생성 및 보존)에 의거 청약 거래 시 고객PC 정보를 수집</p>
-                            <p>전자금융거래의 오류확인 및 정정 등을 위해 수집하는 개인정보 항목 : 고객아이디, 접속일시, 고객PC정보 (IP Address, HDD Serial, MAC Address, Gateway IP, Gateway MAC), 개인방화벽 설정, 운영체제 종류, 방화벽 설정, 원격접속 설정, 브라우저 버전, 키보드 타입)전자금융거래의 오류확인 및 정정 등을 위해 수집하는 개인정보 항목 : 고객아이디, 접속일시, 고객PC정보 (IP Address, HDD Serial, MAC Address, Gateway IP, Gateway MAC), 개인방화벽 설정, 운영체제 종류, 방화벽 설정, 원격접속 설정, 브라우저 버전, 키보드 타입)</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>스타트업 찾기 서비스</td>
-                        <td>대표자 정보(이름, 연락처, 이메일), 관리자 정보(이름, 소속, 휴대폰 번호)</td>
-                    </tr>
-                    <tr>
-                        <td>고객센터 상담</td>
-                        <td>회원 정보, 서비스 이용 내역</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </li>
-        <li>
-            회사는 회원의 기본적인 인권 침해 우려가 있는 민감한 개인정보는 수집하지 않음. 다만 이용자의 적법한 동의가 있거나 법령의 규정에 의한 경우는 예외
-        </li>
-    </ol>
-
-    <h2>개인정보 이용 목적</h2>
-    <ol style="margin-left:1.4em">
-        <li>홈페이지 회원관리 : 회원제 서비스 이용 등에 따른 본인확인, 개인식별, 불량회원의 부정 이용방지와 비인가 사용방지, 가입의사 확인, 가입 및 가입횟수 제한, 고지사항 전달, 상담처리 등</li>
-        <li>회사가 제공하는 서비스 이용</li>
-        <li>설문조사와 이벤트를 위한 이용</li>
-        <li>컨텐츠 및 회원 맞춤형 서비스 제공, 서비스 구매 및 요금결제, 금융거래 본인인증 및 금융 서비스, 상품 주문에 따른 배송 서비스</li>
-        <li>신규서비스(콘텐츠) 개발 및 특화, 이벤트 등 광고성 정보 전달, 통계학적 특성에 따른 서비스 제공 및 광고 게재, 접속 빈도 파악, 회원의 서비스 이용에 대한 통계</li>
-        <li>금융사고 조사, 기타 법령상 의무이행 등</li>
-    </ol>
-
-    <h2>개인정보 보유 및 이용 기간</h2>
-    <p>이용자는 회원가입시 개인정보의 수집·이용 및 제공에 대해 동의한 내용은 언제든지 회원탈퇴 등의 방법을 통해 철회하실 수 있습니다. 또한, 수집 및 이용목적이 달성되거나 동의를 얻은 개인정보의 보유·이용 기간이 종료한 경우 지체 없이 파기하는 것을 원칙으로 합니다. 다만, 자본시장과 금융투자업에 관한 법률 등 다른 법률에 따라 개인정보를 보존해야 하는 경우에는 그러하지 아니하며, 귀하가 회원가입 등을 위해 입력하신 정보는 내부 방침 및 기타 관련법령에 따라 일정기간 저장 후 파기될 수 있습니다. 이때 일정기간 저장된 개인정보는 법률에 의한 경우가 아니고서는 동의 받지 아니한 다른 목적으로 이용되지 않습니다.</p>
-    <ol style="margin-left:1.4em">
-        <li>
-            회사 내부 방침에 의한 정보보유 사유
-            <ul>
-                <li>
-                    이메일주소, 휴대전화번호, 광고성정보 수신 동의 여부
-                    <ul>
-                        <li>보존 이유 : 불량회원의 부정이용방지와 비인가 사용방지, 서비스 이용의 혼선 방지 및 분쟁 발생 시 감독기관 소명</li>
-                        <li>보존 기간 : 1년</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>
-            관계법령에 의한 정보보유 사유
-            <div class="scroll-table">
-                <table style="min-width:600px;table-layout: fixed;">
-                    <thead>
-                    <tr>
-                        <th>해당 내용</th>
-                        <th>관련 법 조항</th>
-                        <th>보존 년한</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>표시/광고에 관한 기록</td>
-                        <td>전자상거래등에서의 소비자보호에 관한 법률</td>
-                        <td>6개월</td>
-                    </tr>
-                    <tr>
-                        <td>계약 또는 청약철회 등에 관한 기록</td>
-                        <td>전자상거래등에서의 소비자보호에 관한 법률</td>
-                        <td>5년</td>
-                    </tr>
-                    <tr>
-                        <td>대금결제 및 재화 등의 공급에 관한 기록</td>
-                        <td>전자상거래등에서의 소비자보호에 관한 법률</td>
-                        <td>5년</td>
-                    </tr>
-                    <tr>
-                        <td>소비자의 불만 또는 분쟁처리에 관한 기록</td>
-                        <td>전자상거래등에서의 소비자보호에 관한 법률</td>
-                        <td>3년</td>
-                    </tr>
-                    <tr>
-                        <td>금융투자업 영위와 관련한 자료 (청약의 권유 관련 자료 등)</td>
-                        <td>자본시장과 금융투자업에 관한 법률 시행령</td>
-                        <td>10년 (자료별 상이)</td>
-                    </tr>
-                    <tr>
-                        <td>거래정보등의 제공내용 기록 관리</td>
-                        <td>금융실명거래 및 비밀보장에 관한 법률</td>
-                        <td>5년</td>
-                    </tr>
-                    <tr>
-                        <td>전자금융 거래에 대한 기록</td>
-                        <td>전자금융거래법</td>
-                        <td>5년</td>
-                    </tr>
-                    <tr>
-                        <td>웹 사이트 방문에 관한 기록</td>
-                        <td>통신비밀보호법</td>
-                        <td>3개월</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </li>
-    </ol>
-
-    <h2>장기 미이용 회원 개인정보 분리 보관</h2>
-    <ol style="margin-left:1.4em">
-        <li>
-            관련 법령에 의거하여 장기 미이용 회원의 계정을 휴면 상태로 전환하고 개인정보를 암호화하여 분리 보관합니다.
-            <ul>
-                <li>관련 법령 : 개인정보보호법제39조의6 및 동법 시행령 제48조의5</li>
-                <li>휴면 회원 : 서비스를 1년이상 이용하지 않음에 따라 휴면 상태로 전환된 회원</li>
-            </ul>
-        </li>
-        <li>
-            아래의 경우에 해당하는 경우 회원의 권익보호를 위하여 휴면 상태로 전환되지 않습니다.
-            <ul>
-                <li>회사가 제공하는 각종 멤버십 서비스에 가입하여 이용기간이 종료되지 않은 회원</li>
-                <li>와디즈 계좌에 잔금이 남아있는 회원</li>
-                <li>W9 가입 후 유효기간이 만료되지 않은 회원</li>
-                <li>투자에 참여하여 와디즈의 서비스를 제공받고 있는 중인 회원</li>
-            </ul>
-        </li>
-        <li>휴면 상태 전환 30일 전까지 휴면 예정 회원에게 휴면 전환 예정일, 별도 분리 보관되는 사실 및 개인정보 항목이 이메일을 통해 사전 안내됩니다. 해당 통지 수단에 대한 정보가 부재 또는 오류인 경우에는 홈페이지 공지사항 게시로 대체됩니다.</li>
-        <li>휴면 예정 회원이 사전 안내된 휴면 전환 예정일 이전에 로그인 하시는 경우에는 휴면 상태로 전환되지 않고 기존과 같이 서비스를 이용하실 수 있습니다.</li>
-        <li>휴면 상태로 전환된 사실은 메일을 통해 휴면 회원에게 안내됩니다.</li>
-        <li>휴면 회원은 사용했던 계정으로 로그인하여 서비스를 재이용함으로써 일반회원으로 전환될 수 있습니다.</li>
-        <li>휴면 회원의 개인정보는 4년간 별도 분리 보관 후 삭제됩니다.</li>
-    </ol>
-</article>
-</main>
-</div>
-<div class="modalclass_contents_midtwo_one">
-    <div class="modalclass_contents_midtwo_onediv">
-        <label class="modalclass_contents_midtwo_onelabel">
-            <input type="checkbox" class="modalclass_contents_midtwo_oneinput">
-            <span class="modalclass_contents_midtwo_onespan"></span>
-            <span class="modalclass_contents_midtwo_onespanone">
-                <span>
-                    <div>제3자 제공 동의</div>
-                </span>
-
-            </span>
-
-        </label>
-    </div>
-        <button class="modalclass_contents_midtwo_onebutton_ten">내용보기</button>
-</div>
-<div class="modalclass_contents_midtwo_checkboxopen_ten" style="display: none;">
-    <main class="modalclass_contents_midtwo_checkboxopen_main">
-        <article class="modalclass_contents_midtwo_checkboxopen_main_artricle">
-    <h1>개인정보 제3자 제공 동의서</h1>
-    <p>와디즈파이낸스 주식회사는 제3자 서비스와의 연결을 위해서 아래와 같이 이용자의 개인정보를 제공하고 있습니다. 제공받는 자, 제공 항목, 제공 목적, 제공받는 자의 보유 기간을 안내 드리오니 확인 후 동의하여 주시기 바랍니다.</p>
-
-    <h2>제3자 제공 현황</h2>
-    <ol style="margin-left:1.4em">
-        <li>
-            회사는 서비스 가입 및 이용 등을 위해 아래와 같은 개인정보를 수집합니다. 회사가 제3자에게 제공하는 이용자 개인정보
-            <div class="scroll-table">
-                <table style="min-width:600px;table-layout:fixed;">
-                    <thead>
-                        <tr>
-                            <th>제공받는 자</th>
-                            <th>제공 항목</th>
-                            <th>제공 목적</th>
-                            <th>보유 기간</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="font-size: 14px;font-weight: bold;">와디즈(주)</td>
-                            <td>회원식별정보, 서비스 이용내역(투자, 스타트업 찾기, W9)</td>
-                            <td style="font-size: 14px;font-weight: bold;">통합회원서비스 제공</td>
-                            <td style="font-size: 14px;font-weight: bold;">개인정보의 제공 목적 달성 시까지</td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: 14px;font-weight: bold;">투자·구매·제휴 희망 기업</td>
-                            <td>이름 또는 닉네임, 휴대폰 번호, 소속, 직책</td>
-                            <td style="font-size: 14px;font-weight: bold;">문의 내용에 대한 답변</td>
-                            <td style="font-size: 14px;font-weight: bold;">12개월</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </li>
-        <li>
-            동의없이 제공하는 예외 사항
-            <ul>
-                <li>관련 통계법 등에 따라 통계작성·학술연구 또는 시장조사를 위하여 필요한 경우로서 특정 개인을 알아볼 수 없는 형태로 가공하여 제공하는 경우</li>
-                <li>금융실명거래및비밀보장에관한법률, 신용정보의이용및보호에관한법률, 전기통신기본법, 전기통신사업법, 지방세법, 소비자보호법, 한국은행법, 형사소송법 등 법률에 특별한 규정이 있는 경우</li>
-                <li>정부기관(준정부기관 포함)이나 법원의 명령에 의하여 개인정보를 제공하는 경우</li>
-                <li>기타 관계법령에서 정한 절차에 따른 요청이 있는 경우</li>
-            </ul>
-        </li>
-    </ol>
-    <p>회사는 예외 사항의 경우에도 정보 제공 내용을 이용자에게 고지하는 것을 원칙으로 하며 본래 수집과 이용 목적에 반하여 무분별하게 제공되지 않도록 최대한 노력하겠습니다.</p>
-</article>
-</main>
-</div>
-<div class="modalclass_contents_midone">
-    <div>
-        <label class="modalclass_contents_midone_one">
-        <input type="checkbox" class="modalclass_contents_midone_one_ckeckbox">
-        <span class="modalclass_contents_midone_one_icon_sososo_four"></span>
-        <span>
-            <div class="modalclass_contents_midone_one_one">스타트업 찾기 이벤트 혜택 알림
-                <span class="modalclass_contents_midone_one_one_one">(선택)</span>
-
-
-            </div>
-        </span>
-    </label>
-    <em class="HelperMessage_helperMessage__1n6rg Checkbox_message__36m3d Checkbox_sm__3-W4Q">스타트업 찾기 서비스 이벤트·할인 혜택 등에 대한 정보를 이메일, 앱 알림(앱 사용시)으로 받아볼 수 있습니다. (동의 철회 시까지)</em>
-    </div>
-</div>
-    </div>
-    </div>
-        </div>
-        <p class="TermsConfirmBody_notice__3lqSF">·선택 동의를 거부해도 펀딩 서비스(투자, 스타트업찾기 제외) 이용이 가능합니다.</p>
-
-            </div>
 
 
 
@@ -2174,11 +1209,62 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
+  const $all = $("#term");
+  const $terms = $("#terms");
+
+	
+  $(document).ready(function() {
+    $("#term").click(function() {
+      if($("#term").is(":checked")) $("input[name=terms]").prop("checked", true);
+      else $("input[name=terms]").prop("checked", false);
+      if($("#term").is(":checked")) $("#allterm").prop("checked", true);
+      else $("#allterm").prop("checked", false);
+    });
+  
+    $("input[name=terms]").click(function() {
+      var total = $("input[name=terms]").length;
+      var checked = $("input[name=terms]:checked").length;
+  
+      if(total != checked) $("#term").prop("checked", false);
+      else $("#term").prop("checked", true); 
+    });
+    $("#allterm").click(function() {
+      if($("#allterm").is(":checked")) $("#term").prop("checked", true);
+      else $("input[name=terms]").prop("checked", false);
+      if($("#term").is(":checked")) $("#allterm").prop("checked", true);
+      else $("#term").prop("checked", false);
+    });
+  });
+  
+
+
+  $(document).ready(function() {
+    $('.OverlapCheck').attr('disabled', 'disabled');
+    $('.inputId').on('input', function() {
+        if ($(this).val() !== '') {
+          $('.OverlapCheck').css('background-color', '#00c4c4');
+          $('.OverlapCheck').css('color', '#fff');
+          $('.OverlapCheck').removeAttr("disabled");
+        }
+        else {
+          $('.OverlapCheck').css('background-color', '#00c4c452');
+          $('.OverlapCheck').css('color', 'rgb(0 0 0 / 44%)');
+            $('.OverlapCheck').attr('disabled', 'disabled');
+            
+        }
+    });
+  });
+
+
+
 $('.modalclassbutton_one').click(function(){
+  $('.FirstBenefitPopper_firstBenefitPopper__1dKmf').css({"display":"block"});
+  checktwo = true;
     $(".modalclass").fadeOut();
 });
-
+var checkModal = false;
 var check = true;
+var checktwo = true;
 $(function(){ 
 
     $('#agreement_checkbox').click(function(){
@@ -2194,132 +1280,27 @@ $(function(){
       });
 
     $("Button.Button_button__3ip2b").click(function(){
+      if(checktwo){
+      $('.FirstBenefitPopper_firstBenefitPopper__1dKmf').css({"display":"none"});
+      checktwo = false;
+      }
       $(".modalclass").fadeIn();
     });
     
     $(".modalclass_del").click(function(){
-        
+      
        if(!checkModal) {
            $('#agreement_checkbox').css({"background":"url(icons8-검사-확인란-30.png)"});
            $('#agreement_checkbox').css({"background-size":"100%"});
            check = false;
        }
-        
+
+       if(!checktwo) {
+        $('.FirstBenefitPopper_firstBenefitPopper__1dKmf').css({"display":"block"});
+        checktwo = true;
+       }
       $(".modalclass").fadeOut();
     });
-    var checkModal = true;
-    $('.Checkbox_icon_All').click(function(){
-        if(!checkModal){
-            $('.Checkbox_icon_All').css("background", "White");
-            $('.modalclass_contents_midone_one_icon').css("background", "White");
-            $('.modalclass_contents_midone_one_icon_sososo_one').css("background", "White");
-            $('.modalclass_contents_midone_one_icon_sososo_two').css("background", "White");
-            $('.modalclass_contents_midone_one_icon_sososo_three').css("background", "White");
-            $('.modalclass_contents_midone_one_icon_sososo_four').css("background", "White");
-            $('.modalclass_contents_midtwo_onespan').css("background", "White");
-            checkModal = true;
-            
-            return;
-        }
-        $('.Checkbox_icon_All').css({"background":"url(icons8-검사-확인란-30.png)"});
-           $('.Checkbox_icon_All').css({"background-size":"100%"});
-           $('.modalclass_contents_midone_one_icon').css({"background":"url(icons8-검사-확인란-30.png)"});
-           $('.modalclass_contents_midone_one_icon').css({"background-size":"100%"});
-           $('.modalclass_contents_midone_one_icon_sososo_one').css({"background":"url(icons8-검사-확인란-30.png)"});
-           $('.modalclass_contents_midone_one_icon_sososo_one').css({"background-size":"100%"});
-           $('.modalclass_contents_midone_one_icon_sososo_two').css({"background":"url(icons8-검사-확인란-30.png)"});
-           $('.modalclass_contents_midone_one_icon_sososo_two').css({"background-size":"100%"});
-           $('.modalclass_contents_midone_one_icon_sososo_three').css({"background":"url(icons8-검사-확인란-30.png)"});
-           $('.modalclass_contents_midone_one_icon_sososo_three').css({"background-size":"100%"});
-           $('.modalclass_contents_midone_one_icon_sososo_four').css({"background":"url(icons8-검사-확인란-30.png)"});
-           $('.modalclass_contents_midone_one_icon_sososo_four').css({"background-size":"100%"});
-           $('.modalclass_contents_midtwo_onespan').css({"background":"url(icons8-검사-확인란-30.png)"});
-           $('.modalclass_contents_midtwo_onespan').css({"background-size":"100%"});
-           checkModal = false;
-           
-
-    });
-    var checkModalicon = true;
-    $('.modalclass_contents_midone_one_icon').click(function(){
-        if(!checkModalicon){
-        $('.modalclass_contents_midone_one_icon').css("background", "White");
-        $('.modalclass_contents_midtwo_onespan').css("background", "White");
-        checkModalicon = true;
-        if(!checkModal){
-            $('.Checkbox_icon_All').css("background", "White");
-        }
-
-            return;
-        }
-        $('.modalclass_contents_midone_one_icon').css({"background":"url(icons8-검사-확인란-30.png)"});
-    $('.modalclass_contents_midone_one_icon').css({"background-size":"100%"});
-    $('.modalclass_contents_midtwo_onespan').css({"background":"url(icons8-검사-확인란-30.png)"});
-    $('.modalclass_contents_midtwo_onespan').css({"background-size":"100%"});
-    checkModalicon = false;
-    });
-
-    var checkModaliconsosoOne = true;
-    
-    $('.modalclass_contents_midone_one_icon_sososo_one').click(function(){
-        if(!checkModaliconsosoOne) {
-            $('.modalclass_contents_midone_one_icon_sososo_one').css("background", "White");
-            checkModaliconsosoOne = true;
-            if(!checkModal){
-                $('.Checkbox_icon_All').css("background", "White");
-            }
-            return
-        }
-        $('.modalclass_contents_midone_one_icon_sososo_one').css({"background":"url(icons8-검사-확인란-30.png)"});
-    $('.modalclass_contents_midone_one_icon_sososo_one').css({"background-size":"100%"});
-    checkModaliconsosoOne = false;
-    });
-
-    var checkModaliconsosoTwo = true;
-    $('.modalclass_contents_midone_one_icon_sososo_two').click(function(){
-        if(!checkModaliconsosoTwo) {
-            $('.modalclass_contents_midone_one_icon_sososo_two').css("background", "White");
-            checkModaliconsosoTwo = true;
-            if(!checkModal){
-                $('.Checkbox_icon_All').css("background", "White");
-            }
-            return
-        }
-        $('.modalclass_contents_midone_one_icon_sososo_two').css({"background":"url(icons8-검사-확인란-30.png)"});
-    $('.modalclass_contents_midone_one_icon_sososo_two').css({"background-size":"100%"});
-    checkModaliconsosoTwo = false;
-    });
-
-    var checkModaliconsosoThree = true;
-    $('.modalclass_contents_midone_one_icon_sososo_three').click(function(){
-        if(!checkModaliconsosoThree) {
-            $('.modalclass_contents_midone_one_icon_sososo_three').css("background", "White");
-            checkModaliconsosoThree = true;
-            if(!checkModal){
-                $('.Checkbox_icon_All').css("background", "White");
-            }
-            return
-        }
-        $('.modalclass_contents_midone_one_icon_sososo_three').css({"background":"url(icons8-검사-확인란-30.png)"});
-    $('.modalclass_contents_midone_one_icon_sososo_three').css({"background-size":"100%"});
-    checkModaliconsosoThree = false;
-    });
-
-    var checkModaliconsosoFour = true;
-    $('.modalclass_contents_midone_one_icon_sososo_four').click(function(){
-        if(!checkModaliconsosoFour) {
-            $('.modalclass_contents_midone_one_icon_sososo_four').css("background", "White");
-            checkModaliconsosoFour = true;
-            if(!checkModal){
-                $('.Checkbox_icon_All').css("background", "White");
-            }
-            return
-        }
-        $('.modalclass_contents_midone_one_icon_sososo_four').css({"background":"url(icons8-검사-확인란-30.png)"});
-    $('.modalclass_contents_midone_one_icon_sososo_four').css({"background-size":"100%"});
-    checkModaliconsosoFour = false;
-    });
-    
-    
   });
   
   var ine = true;
@@ -2503,17 +1484,19 @@ var fmt = RegExp(/^\d{6}[1234]\d{6}$/);
 var buf = new Array(13);
 
 if(getCheck.test($("#id").val())){
-  
+  $('.idalter').css('color', 'rgb(245 7 7)');
 $('#id').css('border', '1px solid rgb(245 7 7)');
 $(".idalter").text("아이디는 숫자포함 10자리까지 가능합니다!");
 $("#id").val("");
 $("#id").focus();
+
 return;
 }else if(getMail.test($("#id").val())){
-  
+  $('.idalter').css('color', 'rgb(245 7 7)');
 $(".idalter").text("이메일을 입력했습니다!");
 $("#id").val("");
 $("#id").focus();
+
 return;
 }
 
@@ -2524,22 +1507,12 @@ return;
 
 
 
-$(document).ready(function() {
-  $('.overlapCheck').attr('disabled', 'disabled');
-  $('.inputId').on('input', function() {
-      if ($(this).val() !== '') {
-          $('.overlapCheck').removeAttr("disabled");
-          $('.overlapCheck').css('background-color', '#c4a800');
-      }
-      else {
-          $('.overlapCheck').attr('disabled', 'disabled');
-          $('.overlapCheck').css('background-color', '#00c4c4');
-      }
-  });
-});
 
-$('.overlapCheck').click(function(){
-  alert("중복검사완료!");
+
+$('.OverlapCheck').click(function(){
+  $('#id').css('border', '1px solid #00c4c4');
+  $('.idalter').css('color', '#00c4c4');
+  $(".idalter").text("사용가능한 아이디 입니다!");
 }); 
 
 $('#finish').click(function(){
