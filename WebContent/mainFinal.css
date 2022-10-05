@@ -3518,7 +3518,7 @@ screen and (min-width:769px) and (min-resolution:2dppx) {
 .RecommendationFeed_container__MtOmG .RecommendationFeed_title__laFXx {
     line-height: 30px;
     letter-spacing: -.6px;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 700;
     font-style: normal;
     color: #212529
@@ -3607,7 +3607,8 @@ screen and (min-width:769px) and (min-resolution:2dppx) {
 .RecommendationDesktop_container__3RLMb .RecommendationDesktop_innerGroup__as4jB {
     display: flex;
     margin: 0 auto;
-    width: 100%
+    width: 100%;
+    padding-left: 80px;
 }
 
 .RecommendationDesktop_container__3RLMb .RecommendationDesktop_recommendFunding__1dKi1 {
@@ -7662,13 +7663,14 @@ screen and (min-width:769px) and (min-resolution:2dppx) {
 @forward "min";
 
 .RecommendationFeed_container__MtOmG {
-    width: 100%
+    width: 100%;
+    padding-left : 80px;
 }
 
 .RecommendationFeed_container__MtOmG .RecommendationFeed_title__laFXx {
     line-height: 30px;
     letter-spacing: -.6px;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 700;
     font-style: normal;
     color: #212529
@@ -8634,13 +8636,14 @@ screen and (min-width:769px) and (min-resolution:2dppx) {
 .Main_innerWrap__7-_Vm {
     margin: 0 auto;
     width: 100%;
-    max-width: 1440px
+    max-width: 1440px;
 }
 
 /*# sourceMappingURL=12.444c957e.chunk.css.map */
 
 .RecommendationFeed_title__laFXx {
     margin-bottom: 0;
+    margin-top:40px;
 }
 
 .RecommendationFeed_subTitle__3VgCT {
@@ -18979,5 +18982,20 @@ screen and (-webkit-min-device-pixel-ratio:2) {
 
 /*# sourceMappingURL=common.css?7df0a58c.map */
 .SectionContainerLayout_container__1f8kt {
+	padding-left:80px !important;
     display: inline-block;
+    margin-top:40px !important;
+}
+
+
+@media screen and (min-width: 769px){
+.SectionContainerLayout_container__1f8kt {
+    padding-right: 80px;
+    padding-left: 80px;
+}
+}
+
+.title_title__2rv2M{
+	margin-top:40px;
+	
 }
