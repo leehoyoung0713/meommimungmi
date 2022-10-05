@@ -338,8 +338,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
 <script src="chartDemo.js"></script>
 <script src="jquery-3.3.1.min.js"></script>
-    <script src="popper.min.js"></script>
-    <script src="bootstrap.min.js"></script>
-    <script src="main.js"></script>
-    <script src="owl.carousel.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="main.js"></script>
+<script src="owl.carousel.min.js"></script>
 </html>
