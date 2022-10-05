@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
-@media (min-width:769px){
+@media (max-width:1890px){
+    .myLocationMap{
+        display:none;
+    }
+}
+
+@media (min-width:5px){
     /* 전체 */
     body {
        
@@ -483,6 +489,7 @@
     }
 
     .pg-search.reverse .column-side .column-module {
+    	width: 761px;
         padding-bottom: 32px;
         overflow: hidden;
     }
@@ -1040,7 +1047,6 @@ button.filterActive {
 
 .reviewCommentGoodBtnTxt {
     position: relative;
-    top: -1px;
 }
 
 .reviewWritingForm{
@@ -1269,7 +1275,7 @@ button.filterActive {
 
 /* 검색 필터 영역 */
 
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 5px){
     .search-filter {
         position: absolute;
         top: 0px;
@@ -1290,7 +1296,7 @@ button.filterActive {
 
     .search-filter>.inner {
         margin: 0;
-        height: calc(104vh - 161px);
+        height: calc(100vh - 161px);
         overflow-y: auto;
     }
 

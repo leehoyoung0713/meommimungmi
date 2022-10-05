@@ -10,22 +10,26 @@
         rel="stylesheet">
     <link rel="stylesheet" href="join_in.css">
 </head>
+
 <body>
        
     <header>
         <!-- 멈미뭄미 좌측 상단 로고 -->
 
         <div id="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="85" height="25" viewBox="0 0 85 25">
-                <path fill="#1D2129" fill-rule="nonzero"
+        <a href="mainpage.jsp">
+            <svg xmlns="http://www.w3.org/2000/svg"  width="85" height="25" viewBox="0 0 85 25">
+            
+                <path fill="#1D2129" fill-rule="nonzero" 
                     d="M58.49 2.23h2.11v21.29H59a1.73 1.73 0 0 1-1.62-1.16 9 9 0 0 1-10.93-.28 7.48 7.48 0 0 1-2.75-6.29 7.65 7.65 0 0 1 12.79-5.07V4.23a2 2 0 0 1 2-2zm-6.3 18.62a4.36 4.36 0 0 0 4.16-4.52 4.19 4.19 0 1 0-8.35 0 4.36 4.36 0 0 0 4.19 4.52zM42 23.52h-1.52a1.73 1.73 0 0 1-1.64-1.16 9 9 0 0 1-10.93-.28 7.48 7.48 0 0 1-2.75-6.29A7.65 7.65 0 0 1 38 10.72a2 2 0 0 1 1.9-1.79H42v14.59zm-8.41-2.67h.02a4.35 4.35 0 0 0 4.15-4.52 4.35 4.35 0 0 0-4.17-4.51 4.35 4.35 0 0 0-4.17 4.51 4.36 4.36 0 0 0 4.17 4.52zM83.47 8.94v2.11l-7.07 9.06h7.06v3.47h-13v-2.1l7.08-9.07h-6.62v-1.47a2 2 0 0 1 2-2h10.55zM65.86 7.3a2.48 2.48 0 1 1 0-4.96 2.48 2.48 0 0 1 0 4.96zM21.21 8.94h4.14l-4.86 14.59h-4.15l-3.21-9.36-3.21 9.36H5.77L.92 8.94h4.13L8 18l2.5-7.74a2 2 0 0 1 1.86-1.34h2.9l3 9.08 2.95-9.06zm42.65 14.59l-.04-12.59a2 2 0 0 1 2-2h2.11v14.59h-4.07z">
                 </path>
+                </a>
 
             </svg>
         </div>
-        <span id="login" style="float : right;"><a href="log_in.html" style="text-decoration-line: none;
+        <span id="login" style="float : right;"><a href="log_in.jsp" style="text-decoration-line: none;
             color: black;">로그인</a></span>
-        <span id="join_in" style="float : right;"><a href="join_in.html" style="text-decoration-line: none;
+        <span id="join_in" style="float : right;"><a href="join_in.jsp" style="text-decoration-line: none;
             color: black;">회원가입</a></span>
     </header>
 
@@ -37,8 +41,8 @@
               <div class="FirstBenefitPopper_content__2XS-G">
                   <span class="FirstBenefitPopper_giftIcon__1RCpf"></span>
 
-                  
-                  <span class="FirstBenefitPopper_text__3hDUb">와디즈가 처음이라면? <strong>최대 2만원 혜택</strong>
+                
+                  <span class="FirstBenefitPopper_text__3hDUb">멈미뭄미가 처음이라면?
                   </span>
               </div>
           </div>
@@ -81,16 +85,16 @@
         <div class="SignUpIntroApp_divider__24Rgj"></div>
         <div id="email_join_in">
 
-            <h3>이메일 간편가입</h3>
-            <div class="label"><label for="아이디">이메일</label></div>
+            <h3>아이디 간편가입</h3>
+            <div class="label"><label for="아이디">아이디</label></div>
             <div id="email">
-                <div class="input"><input type="email" class="inputId" id="id" placeholder="이메일 입력"></div>
-                <div><button>인증하기</button></div>
+                <div class="input"><input type="email" class="inputId" id="id" placeholder="아이디 입력"></div>
+                <div><button class="overlapCheck">중복확인</button></div>
             </div>
-            <p class="idalter"></p>
+            <p class="idalter" style="position: absolute;"></p>
             <div id="name">
                 <div class="label"><label for="이름">이름</label></div>
-                <div class="input"><input type="text" placeholder="이름 입력"></div>
+                <div class="input"><input type="text" placeholder="이름 입력" class="namecheck"></div>
             </div>
 
             <div id="password">
@@ -114,7 +118,7 @@
             </span>
         </span>
     </button>
-                    <input id = "agreement_checkbox" type="checkbox">
+                    <input id = "agreement_checkbox" type="checkbox" style="position: absolute;">
                     <label for = "agreement_checkbox"></label>
                     <span style="padding-left:15px ;">전체동의</span>
                 </div>
@@ -123,7 +127,7 @@
                 </div>
             </div>
             <div>
-                <button type="button" id="finish" class="wz button primary block submit-button" data-event="iam.signin.submit" disabled>완료</button>
+                <button type="button" id="finish" class="wz button primary block submit-button" >완료</button>
                 
             </div>
 
@@ -139,7 +143,7 @@
     
     <div class="modalclass modalclass_hidden" >
         <div class="modalclass_overlay"></div>
-        <div class="modalclass_content" style="padding-right: 0px; padding-bottom: 0; height: 350px;">
+        <div class="modalclass_content" style="padding-right: 0px; padding-bottom: 0; height: 485px; top: 287px; ">
             <button class="modalclassbutton_one" type="button" aria-label="닫기"><svg viewBox="0 0 40 40" focusable="false" role="presentation" class="modalclassbutton_two" aria-hidden="true"><path d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z">
 
             </path>
@@ -2489,7 +2493,7 @@ $('.modalclass_contents_midtwo_onebutton_ten').click(function(){
   console.log($id);
 
 });
-
+var buttonOverlapCheck = false;
 $('.inputId').keypress(function(){
 var hobbyCheck = false;
 var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
@@ -2498,14 +2502,15 @@ var getName= RegExp(/^[가-힣]+$/);
 var fmt = RegExp(/^\d{6}[1234]\d{6}$/);
 var buf = new Array(13);
 
-
 if(getCheck.test($("#id").val())){
+  
 $('#id').css('border', '1px solid rgb(245 7 7)');
 $(".idalter").text("아이디는 숫자포함 10자리까지 가능합니다!");
 $("#id").val("");
 $("#id").focus();
 return;
 }else if(getMail.test($("#id").val())){
+  
 $(".idalter").text("이메일을 입력했습니다!");
 $("#id").val("");
 $("#id").focus();
@@ -2515,5 +2520,46 @@ return;
 
 
 });
+
+
+
+
+$(document).ready(function() {
+  $('.overlapCheck').attr('disabled', 'disabled');
+  $('.inputId').on('input', function() {
+      if ($(this).val() !== '') {
+          $('.overlapCheck').removeAttr("disabled");
+          $('.overlapCheck').css('background-color', '#c4a800');
+      }
+      else {
+          $('.overlapCheck').attr('disabled', 'disabled');
+          $('.overlapCheck').css('background-color', '#00c4c4');
+      }
+  });
+});
+
+$('.overlapCheck').click(function(){
+  alert("중복검사완료!");
+}); 
+
+$('#finish').click(function(){
+
+  if($('.namecheck').val() === ''){
+    alert("이름을 입력하세요!");
+    return;
+  }
+
+  if($('#oioioio111').val() === ''){
+    alert("비밀번호를 입력하세요!");
+    return;
+  }
+
+  if(!check == false){
+    alert("전체동의를 클릭하세요!");
+    return;
+  }
+
+  alert("가입확인 완료!");
+  }); 
 </script>
 </html>
