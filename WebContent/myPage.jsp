@@ -114,19 +114,20 @@
                                                         </a>
                                                     </li>
                                                 </ul>
-                                                <ul class="MymummProjectInfo_projectLink">
-                                                    <li>
-                                                        <a style="cursor: pointer;">
-                                                            <span>
-                                                                <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__1w-D1" aria-hidden="true"><path fill="none" d="M0 0h40v40H0z"></path><path fill="none" d="M20 2.8A16.9 16.9 0 0 0 7.19 30.74c2.14-4 7.86-4.6 12.81-4.6s10.67.57 12.81 4.6A16.9 16.9 0 0 0 20 2.8zm5.24 17.51A7.44 7.44 0 0 1 20 22.48a8.52 8.52 0 0 1-1.42-.13 7.39 7.39 0 0 1-5.83-5.83 7.41 7.41 0 0 1 8.71-8.71 7.39 7.39 0 0 1 5.83 5.83 7.47 7.47 0 0 1-2.05 6.67z"></path><path d="M21.44 7.81a7.41 7.41 0 0 0-8.71 8.71 7.39 7.39 0 0 0 5.83 5.83 8.52 8.52 0 0 0 1.42.13 7.41 7.41 0 0 0 1.46-14.67zM6.85 33.41l-.11-.11zM6.42 33l.14.13-.14-.13z"></path><path d="M39 19.72A19 19 0 1 0 6.42 33l.14.14a1.62 1.62 0 0 0 .19.18l.11.11a16.76 16.76 0 0 0 1.35 1.17c.45.36.92.69 1.4 1l.12.07c.46.3.94.58 1.42.83l.17.09c.48.24 1 .47 1.46.67l.2.08c.49.2 1 .37 1.51.53h.2c.51.15 1 .28 1.57.39h.17q.82.15 1.65.24h.12c.58 0 1.16.08 1.75.08s1.17 0 1.75-.08h.12q.82-.09 1.65-.24h.17c.53-.11 1-.24 1.57-.39h.2c.51-.16 1-.33 1.5-.53l.21-.08c.5-.2 1-.43 1.45-.67l.18-.09c.49-.25 1-.53 1.42-.82l.12-.08c.48-.32.95-.65 1.4-1h.05c.47-.37.92-.77 1.35-1.18l.1-.1a1.62 1.62 0 0 0 .19-.18l.14-.13A18.94 18.94 0 0 0 39 19.72zm-6.19 11c-2.14-4-7.86-4.6-12.81-4.6s-10.67.57-12.81 4.6a16.92 16.92 0 1 1 25.62 0z"></path></svg>
-                                                                <span>개인정보 설정</span>
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
                                             </div>
                                         </div>
                                     </div>
+                                    <button class="btn_close" onclick="closeSection()" style="display: none;">닫기</button>
+                                    <ul class="MymummProjectInfo_projectLink">
+                                        <li>
+                                            <a style="cursor: pointer;">
+                                                <span>
+                                                    <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__1w-D1" aria-hidden="true"><path fill="none" d="M0 0h40v40H0z"></path><path fill="none" d="M20 2.8A16.9 16.9 0 0 0 7.19 30.74c2.14-4 7.86-4.6 12.81-4.6s10.67.57 12.81 4.6A16.9 16.9 0 0 0 20 2.8zm5.24 17.51A7.44 7.44 0 0 1 20 22.48a8.52 8.52 0 0 1-1.42-.13 7.39 7.39 0 0 1-5.83-5.83 7.41 7.41 0 0 1 8.71-8.71 7.39 7.39 0 0 1 5.83 5.83 7.47 7.47 0 0 1-2.05 6.67z"></path><path d="M21.44 7.81a7.41 7.41 0 0 0-8.71 8.71 7.39 7.39 0 0 0 5.83 5.83 8.52 8.52 0 0 0 1.42.13 7.41 7.41 0 0 0 1.46-14.67zM6.85 33.41l-.11-.11zM6.42 33l.14.13-.14-.13z"></path><path d="M39 19.72A19 19 0 1 0 6.42 33l.14.14a1.62 1.62 0 0 0 .19.18l.11.11a16.76 16.76 0 0 0 1.35 1.17c.45.36.92.69 1.4 1l.12.07c.46.3.94.58 1.42.83l.17.09c.48.24 1 .47 1.46.67l.2.08c.49.2 1 .37 1.51.53h.2c.51.15 1 .28 1.57.39h.17q.82.15 1.65.24h.12c.58 0 1.16.08 1.75.08s1.17 0 1.75-.08h.12q.82-.09 1.65-.24h.17c.53-.11 1-.24 1.57-.39h.2c.51-.16 1-.33 1.5-.53l.21-.08c.5-.2 1-.43 1.45-.67l.18-.09c.49-.25 1-.53 1.42-.82l.12-.08c.48-.32.95-.65 1.4-1h.05c.47-.37.92-.77 1.35-1.18l.1-.1a1.62 1.62 0 0 0 .19-.18l.14-.13A18.94 18.94 0 0 0 39 19.72zm-6.19 11c-2.14-4-7.86-4.6-12.81-4.6s-10.67.57-12.81 4.6a16.92 16.92 0 1 1 25.62 0z"></path></svg>
+                                                    <span>개인정보 설정</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <div class="MymummSection_section">
                                         <div class="MymummList_emptyList" style="display: none;">
                                             작성한 게시글이 없습니다.
@@ -134,7 +135,7 @@
                                         <div class="MymummList_list" style="display: none;">
                                             <ul>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="게시글로_이동">
                                                         <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211202_104%2F1638421267386XM2Q6_JPEG%2Fupload_20a15f4d3e6c644890971264e59d42ea.jpeg');"></div>
                                                         <div class="info">
                                                             <h3 class="title">
@@ -151,7 +152,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="게시글로_이동">
                                                         <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211202_268%2F1638421266078yh1W8_JPEG%2Fupload_caf5bba3f67adf265886582a8f6171aa.jpeg');"></div>
                                                         <div class="info">
                                                             <h3 class="title">
@@ -168,7 +169,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="게시글로_이동">
                                                         <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f180_180&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA4MTNfMzUg%2FMDAxNjYwMzc2ODM4MzQ5.YYRZvSX64t8VVd0de6zG-cyIWqZbRyWeWTWsDZx585Ug._90kjG3JNfzutL9djY5HnWZjm65FM7i8NykoKiaWYv0g.JPEG%2Fupload_03850f484f6d4c8544c11a192fbb1bf2.jpeg');"></div>
                                                         <div class="info">
                                                             <h3 class="title">
@@ -185,7 +186,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="게시글로_이동">
                                                         <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f180_180&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA4MTNfMzUg%2FMDAxNjYwMzc2ODM4MzQ5.YYRZvSX64t8VVd0de6zG-cyIWqZbRyWeWTWsDZx585Ug._90kjG3JNfzutL9djY5HnWZjm65FM7i8NykoKiaWYv0g.JPEG%2Fupload_03850f484f6d4c8544c11a192fbb1bf2.jpeg');"></div>
                                                         <div class="info">
                                                             <h3 class="title">
@@ -202,7 +203,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="게시글로_이동">
                                                         <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f180_180&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA4MTNfMzUg%2FMDAxNjYwMzc2ODM4MzQ5.YYRZvSX64t8VVd0de6zG-cyIWqZbRyWeWTWsDZx585Ug._90kjG3JNfzutL9djY5HnWZjm65FM7i8NykoKiaWYv0g.JPEG%2Fupload_03850f484f6d4c8544c11a192fbb1bf2.jpeg');"></div>
                                                         <div class="info">
                                                             <h3 class="title">
@@ -219,7 +220,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="게시글로_이동">
                                                         <div class="thumb" style="background-image: url('https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f180_180&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA4MTNfMzUg%2FMDAxNjYwMzc2ODM4MzQ5.YYRZvSX64t8VVd0de6zG-cyIWqZbRyWeWTWsDZx585Ug._90kjG3JNfzutL9djY5HnWZjm65FM7i8NykoKiaWYv0g.JPEG%2Fupload_03850f484f6d4c8544c11a192fbb1bf2.jpeg');"></div>
                                                         <div class="info">
                                                             <h3 class="title">
@@ -246,7 +247,7 @@
                                         <div class="MymummList_list"  style="display: none;">
                                             <ul>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="댓글로_이동">
                                                         <div class="info">
                                                             <h3 class="title">
                                                                 [댓글 내용]
@@ -268,7 +269,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="댓글로_이동">
                                                         <div class="info">
                                                             <h3 class="title">
                                                                 [댓글 내용]
@@ -279,7 +280,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="댓글로_이동">
                                                         <div class="info">
                                                             <h3 class="title reple">
                                                                 [댓글 내용]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -290,7 +291,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="댓글로_이동">
                                                         <div class="info">
                                                             <h3 class="title">
                                                                 [댓글 내용]
@@ -301,7 +302,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="community.jsp">
+                                                    <a class="myPost" href="댓글로_이동">
                                                         <div class="info">
                                                             <h3 class="title">
                                                                 [댓글 내용]
@@ -322,7 +323,7 @@
                                         <div class="MymummList_list" style="display: none;">
                                             <ul>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -335,7 +336,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.co…p=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -348,7 +349,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.co…p=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -361,7 +362,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.co…p=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -374,7 +375,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.co…p=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -387,7 +388,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.co…p=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -410,7 +411,7 @@
                                         <div class="MymummList_list" style="display: none;">
                                             <ul>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -422,7 +423,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -434,7 +435,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -446,7 +447,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -458,7 +459,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -470,7 +471,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="myPost" href="map.jsp">
+                                                    <a class="myPost" href="리뷰로_이동">
                                                         <div class="info">
                                                             <div class="thumb" style="background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/460278_1601069724370749.jpg?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80');"></div>
                                                             <h3 class="place">
@@ -582,6 +583,20 @@
         </main>
     </div>
     <input type="file" id="uploadProfileImg" class="file-profileimg" accept="image/*">
+    <!-- class = "alertify-o-cover" -->
+    <div id="alertify-o-cover" class="alertify-o-cover alertify-o-cover-hidden"></div>
+    <!-- class = "alerrify-o alertify-o-confirm" -->
+    <section id="alertify-o" class="alertify-o alertify-o-hide alertify-o-hidden">
+        <a id="alertify-o-resetFocusBack" class="alertify-o-resetFocus" href="#">Reset Focus</a>
+        <article class="alertify-o-inner">
+            <p class="alertify-o-message" style="font-size:15px;padding-top:2px;">취소 시, 설정하신 프로필 정보가 적용되지 않습니다.<br>취소하시겠습니까?</p>
+            <nav class="alertify-o-buttons">
+                <button class="alertify-o-button alertify-o-button-cancel" id="alertify-o-cancel">취소</button>
+                <button class="alertify-o-button alertify-o-button-ok" id="alertify-o-ok">확인</button>
+            </nav>
+        </article>
+        <a id="alertify-o-resetFocusBack" class="alertify-o-resetFocus" href="#">Reset Focus</a>
+    </section>
     <jsp:include page="footer.jsp"></jsp:include>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
