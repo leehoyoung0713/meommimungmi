@@ -23,11 +23,13 @@ $(".MymummProjectInfo_projectList li a").eq(0).on('click', function(){
     if($('.MymummSection_section').eq(0).find('.MymummList_emptyList').css('display') != 'none' || $('.MymummSection_section').eq(0).find('.MymummList_list').css('display') != 'none'){
         $('.MymummSection_section').children().css('display', 'none');
         $('.page').css('display', 'none');
+        $('.btn_close').css('display', 'none');
     }
     else{
         $('.MymummSection_section').children().css('display', 'none');
         ($('.MymummProjectInfo_projectList li a span b').eq(0).text() == 0 ? $('.MymummSection_section').eq(0).find('.MymummList_emptyList') : $('.MymummSection_section').eq(0).find('.MymummList_list')).css('display', '');
         $('.page').css('display', ($('.MymummProjectInfo_projectList li a span b').eq(0).text() == 0 ? 'none' : ''));
+        $('.btn_close').css('display', '');
     }
     
 });
@@ -36,11 +38,13 @@ $(".MymummProjectInfo_projectList li a").eq(1).on('click', function(){
     if($('.MymummSection_section').eq(1).find('.MymummList_emptyList').css('display') != 'none' || $('.MymummSection_section').eq(1).find('.MymummList_list').css('display') != 'none'){
         $('.MymummSection_section').children().css('display', 'none');
         $('.page').css('display', 'none');
+        $('.btn_close').css('display', 'none');
     }
     else{
         $('.MymummSection_section').children().css('display', 'none');
         ($('.MymummProjectInfo_projectList li a span b').eq(1).text() == 0 ? $('.MymummSection_section').eq(1).find('.MymummList_emptyList') : $('.MymummSection_section').eq(1).find('.MymummList_list')).css('display', '');
         $('.page').css('display', ($('.MymummProjectInfo_projectList li a span b').eq(1).text() == 0 ? 'none' : ''));
+        $('.btn_close').css('display', '');
     }
 });
 $(".MymummProjectInfo_projectList li a").eq(2).on('click', function(){
@@ -48,11 +52,13 @@ $(".MymummProjectInfo_projectList li a").eq(2).on('click', function(){
     if($('.MymummSection_section').eq(2).find('.MymummList_emptyList').css('display') != 'none' || $('.MymummSection_section').eq(2).find('.MymummList_list').css('display') != 'none'){
         $('.MymummSection_section').children().css('display', 'none');
         $('.page').css('display', 'none');
+        $('.btn_close').css('display', 'none');
     }
     else{
         $('.MymummSection_section').children().css('display', 'none');
         ($('.MymummProjectInfo_projectList li a span b').eq(2).text() == 0 ? $('.MymummSection_section').eq(2).find('.MymummList_emptyList') : $('.MymummSection_section').eq(2).find('.MymummList_list')).css('display', '');
         $('.page').css('display', ($('.MymummProjectInfo_projectList li a span b').eq(2).text() == 0 ? 'none' : ''));
+        $('.btn_close').css('display', '');
     }
 });
 $(".MymummProjectInfo_projectList li a").eq(3).on('click', function(){
@@ -60,31 +66,35 @@ $(".MymummProjectInfo_projectList li a").eq(3).on('click', function(){
     if($('.MymummSection_section').eq(3).find('.MymummList_emptyList').css('display') != 'none' || $('.MymummSection_section').eq(3).find('.MymummList_list').css('display') != 'none'){
         $('.MymummSection_section').children().css('display', 'none');
         $('.page').css('display', 'none');
+        $('.btn_close').css('display', 'none');
     }
     else{
         $('.MymummSection_section').children().css('display', 'none');
         ($('.MymummProjectInfo_projectList li a span b').eq(3).text() == 0 ? $('.MymummSection_section').eq(3).find('.MymummList_emptyList') : $('.MymummSection_section').eq(3).find('.MymummList_list')).css('display', '');
         $('.page').css('display', ($('.MymummProjectInfo_projectList li a span b').eq(3).text() == 0 ? 'none' : ''));
+        $('.btn_close').css('display', '');
     }
 });
 
-$('.MymummProjectInfo_projectLink li a').on('click', function(){
-    if($('.profileSetting').css('display') == 'none'){
-        $('.page').css('display', 'none');
-        $('.MymummSection_section').children().css('display', 'none');
-        $('.profileSetting').css('display', '');
-    }else{
-        $('.profileSetting').css('display', 'none');
-    }
-});
+// $('.MymummProjectInfo_projectLink li a').on('click', function(){
+//     if($('.profileSetting').css('display') == 'none'){
+//         $('.page').css('display', 'none');
+//         $('.MymummSection_section').children().css('display', 'none');
+//         $('.profileSetting').css('display', '');
+//     }else{
+//         $('.profileSetting').css('display', 'none');
+//     }
+// });
 
 $('.MymummProfile_editProfile').on('click', function(){
     if($('.profileSetting').css('display') == 'none'){
         $('.page').css('display', 'none');
+        $('.btn_close').css('display', '');
         $('.MymummSection_section').children().css('display', 'none');
         $('.profileSetting').css('display', '');
     }else{
         $('.profileSetting').css('display', 'none');
+        $('.btn_close').css('display', 'none');
     }
 });
 
@@ -125,11 +135,55 @@ function loginMumm(){
     $('.MymummLoginMode_loginMode').append(mumm); 
 }
 
-function cancelModify(){
+/* 프로필 변경 확인 */
+var cancel = $('#alertify-o-cancel');
 
+
+function modify() {
+    $('.alertify-o-message').text('프로필 설정이 성공적으로 변경되었습니다.')
+    $('#alertify-o-cancel').detach();
+    $('#alertify-o-cover').attr('class', 'alertify-o-cover');
+    $('#alertify-o').attr('class', 'alertify-o alertify-o-confirm');
+}   
+
+
+/* 프로필 변경 취소 */
+function cancelModify(){
+    $('.alertify-o-message').html('취소 시, 설정하신 프로필 정보가 적용되지 않습니다. <br> 취소하시겠습니까?')
+    $('#alertify-o-cover').attr('class', 'alertify-o-cover');
+    $('#alertify-o').attr('class', 'alertify-o alertify-o-confirm');
+}
+/* 변경 취소 시, 확인&취소 */
+$('#alertify-o-cancel').on('click', function(){
+    $('#alertify-o-cover').attr('class', 'alertify-o-cover alertify-o-cover-hidden');
+    $('#alertify-o').attr('class', 'alertify-o alertify-o-hide alertify-o-hidden');
+});
+/* 유효성 검사 추가 */
+$('#alertify-o-ok').on('click', function(){
+/*     if($()) */
+
+    $('#alertify-o-cover').attr('class', 'alertify-o-cover alertify-o-cover-hidden');
+    $('#alertify-o').attr('class', 'alertify-o alertify-o-hide alertify-o-hidden');
+
+
+    setTimeout(function(){
+        location.reload();
+    }, 500);
+    // $('#alertify-o').detach();
+    // $('#alertify-o-cover').detach();
+
+});
+
+/* 섹션 닫기 버튼 */
+function closeSection(){
+    $('.page').css('display', 'none');
+    $('.profileSetting').css('display', 'none');
+    $('.MymummSection_section').children().css('display', 'none');
+    $('.btn_close').css('display', 'none');
 }
 
 
+/* css만 구현, 이동은 추가해야함 */
 function movePage(number){
     var $pageNumber = $('.pageButton a');
 
@@ -142,3 +196,4 @@ function movePage(number){
         }
     }
 }
+

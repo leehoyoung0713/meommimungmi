@@ -23,17 +23,17 @@
             <div class="MainWrapper_content__GZkTa">
                 <ul class="RewardMainTab_container__geHTr">
                     <li>
-                        <a class="RewardMainTab_link___1r2a" href="/teamproject/animalfeed.jsp">
+                        <a class="RewardMainTab_link___1r2a" href="./animalfeed.jsp">
                             <span>사료 검색</span>
                         </a>
                     </li>
                     <li>
-                        <a class="RewardMainTab_link___1r2a" href="/teamproject/lostfoundanimal.jsp">
+                        <a class="RewardMainTab_link___1r2a" href="./lostfoundanimal.jsp">
                             <span>유기동물 찾기</span>
                         </a>
                     </li>
                     <li class="RewardMainTab_onlyLarge__1q7_V">
-                        <a class="RewardMainTab_link___1r2a RewardMainTab_active__1zRir" href="/teamproject/funeral.jsp" aria-current="page">
+                        <a class="RewardMainTab_link___1r2a RewardMainTab_active__1zRir" href="./funeral.jsp" aria-current="page">
                             <span>장례업체</span>
                         </a>
                     </li>

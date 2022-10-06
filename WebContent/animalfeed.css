@@ -288,51 +288,19 @@ body a {
 .StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_title__3VYXn,.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_subText__3RNiJ{
 	font-weight:600;
 }
-/* 검색,아이템 리스트 추가스타일 */
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
-	display: inline-block;
-	margin-right: -5px;
-	border-right: 0;
-	width: auto;
-	vertical-align: bottom;
-	position: relative;
-}
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am label {
-	display: block;
-}
+/* 아이템 리스트 추가스타일 */
 input::placeholder {
 	color: #b5bcc3;
 	font-weight: bold;
-}
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
-	float: left;
-	padding: 10px 34px 10px 16px;
-	width: 100%;
-	line-height: 24px;
-	font-size: 15px;
-	-webkit-appearance: none;
 }
 input {
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_right__3_Jo1 {
-	position: absolute;
-	top: -10px;
-	right: 0;
-	background: none;
-}
+
 div {
 	display: block;
-}
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::after, .ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::before {
-	display: none;
-}
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
-	width: 44px;
-	height: 44px;
-	font-size: 18px;
 }
 button {
 	background-color: transparent;
@@ -373,37 +341,6 @@ button {
 }
 em, i {
 	font-style: normal;
-}
-.ProjectListHead_search__HN3am{
-	/* 좌측,상단에 표시되서 위치 조정을 위하여 속성을 추가하였다. */
-	position:absolute;
-	top:40%;
-	left:50%;
-	transform: translate(-50%, -50%);
-}
-
-.ProjectListHead_right__3_Jo1{
-	position:relative;
-	display:inline-block;/* 검색창과 돋보기 버튼이 층으로 나누어져 속성을 변경함 */
-	height:30px;
-}
-.ProjectListHead_right__3_Jo1 input{
-	padding-right:30px;
-	width:300px;
-	height:40px;
-	border-radius:8px;
-}
-.ProjectListHead_right__3_Jo1 .ProjectListHead_find__3HsFc{
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: inherit;
-  background: url('https://cdn-icons-png.flaticon.com/512/149/149852.png') center center no-repeat;
-  background-size: 80%;
-  border: none;
-  outline: none;
-  cursor: pointer;
 }
 /* 검색 추가스타일 끝 */
 /* 아이템리스트 추가스타일 */
@@ -560,10 +497,6 @@ em, i {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.arrange{
-	outline:none;
-	font-size:24px;
-}
 /* page number추가 */
 .board-footer .pagination {
 	display: block;
@@ -685,6 +618,404 @@ ul {
 }
 
 /* main > div > ul 스타일 추가 끝 */
+/* 검색,드롭다운리스트 추가 */
+.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz {
+	display: flex;
+	border-top: 1px solid rgba(0,0,0,.1);
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	box-sizing: border-box;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz .ProjectListHead_title__2pv8I {
+	display: none;
+	font-size: 24px;
+	font-weight: 700;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
+	position: relative;
+	border-right: 1px solid rgba(0,0,0,.1);
+	width: 100%;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am label {
+	display: block;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
+	float: left;
+	padding: 10px 34px 10px 16px;
+	width: 600px;/* 크기에 맞춰서 검색바를 늘려야 되서 100%->600px로 변경 */
+	line-height: 24px;
+	font-size: 15px;
+	-webkit-appearance: none;
+	
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_right__3_Jo1 {
+	position: absolute;
+	top: -10px;
+	right: 0;
+	background: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::after, .ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::before {
+	display: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
+	width: 44px;
+	height: 44px;
+	font-size: 18px;
+}
+.icon-search::before, i.icon.search::before, i.wadizicon.wa-search::before {
+	content: "\f002";
+	font: var(--fa-font-solid);
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::after {
+	display: block;
+	top: 0;
+	right: 0;
+	background-image: linear-gradient(90deg,transparent,#fff 80%);
+	width: 12px;
+	content: "";
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::before {
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	transform: rotate(90deg);
+	z-index: 1;
+	margin-top: -9px !important;
+	color: rgba(0,0,0,.54);
+	font-size: 18px;
+	display: inline-block;
+	margin-top: -.2em;
+	vertical-align: middle;
+	text-transform: none;
+	line-height: 1;
+	/* font-family: wadizicon !important; */
+	font-weight: 400;
+	/* -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; */
+	font-style: normal;
+	font-variant: normal;
+	/* speak: none; */
+	content: "\f0d7";
+	font: var(--fa-font-solid);
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY {
+	position: relative;
+	z-index: 1;
+	box-shadow: inset -1px 0 rgba(0,0,0,.1);
+	padding-right: 16px;
+	padding-left: 38px;
+	height: 44px;
+	line-height: 44px;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+.SortingSelect_container__8AOZQ {
+	display: inline-block;
+	position: relative;
+	line-height: 24px;
+	color: rgba(0,0,0,.87);
+	font-size: 15px;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY select {
+	position: absolute;
+	left: 0;
+	z-index: 10;
+	overflow: hidden;
+	line-height: 44px;
+	-webkit-appearance: none;
+}
+.SortingSelect_container__8AOZQ .SortingSelect_select__1etN_ {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	line-height: 24px;
+	font-size: 15px;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY select {
+	line-height: 44px;
+}
+#addtitle{
+    font-size:24px;
+    font-weight:600;
+    float:left;
+}
+input:focus{outline:none;}
+/* 검색,드롭다운리스트 추가 끝*/
+/* 사이트 모달창 추가 */
+.WadizModal_portal__1XfIx {
+	display: block;
+	position: relative;
+	height: 0;
+}
+.ShareModal_overlay__8Tz2m {
+	z-index: 9998 !important;
+}
+.WadizModal_overlayAfterOpen__CwHuy {
+	background: rgba(0,0,0,.6);
+}
+.WadizModal_overlay__TRZ2L {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: .2s ease-in;
+	transition-property: background;
+	z-index: 20000;
+	background: transparent;
+	text-align: center;
+}
+.WadizModal_content__2JFzt::before {
+	transform: translateY(0);
+	margin: 7px;
+	border-radius: 2.5px;
+	background: hsla(0,0%,100%,.5);
+	width: 50px;
+	height: 5px;
+	content: "";
+}
+.ShareModal_modal__2ptx7 {
+	overflow: auto;
+}
+.WadizModal_contentAfterOpen__176l7 {
+	transform: translateY(0);
+	transition-timing-function: ease-in;
+	transition-delay: 0ms;
+}
+.WadizModal_content__2JFzt {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	transform: translateY(105%);
+	transition: .25s ease-out 50ms;
+	transition-property: transform;
+	outline: none;
+	padding-top: 10px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	pointer-events: none;
+}
+.WadizModal_container__gX-0t {
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	box-shadow: 0 -2px 6px rgba(0,0,0,.4);
+	background: #fff;
+	width: 100%;
+	max-height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	text-align: left;
+	pointer-events: auto;
+}
+.ShareModal_container__35nu3 {
+	position: relative;
+	padding: 22px 24px 40px;
+	text-align: center;
+}
+.ShareModal_container__35nu3 .ShareModal_header__2i4Vx {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 32px;
+}
+.ShareModal_container__35nu3 .ShareModal_header__2i4Vx .ShareModal_title__3RGC4 {
+	color: #212529;
+	line-height: 28px;
+	letter-spacing: -.6px;
+	font-size: 18px;
+	font-weight: 700;
+	font-style: normal;
+}
+.ShareModal_container__35nu3 .ShareModal_header__2i4Vx .ShareModal_closeButton__2K950 {
+	cursor: pointer;
+}
+.ShareModal_container__35nu3 .ShareModal_header__2i4Vx .ShareModal_closeIconWrap__1ftZ0 svg {
+	width: 24px;
+	height: 24px;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU {
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	overflow: auto;
+}
+.ShareTypeButton_container__3OTLY {
+	display: inline-block;
+	text-align: center;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_link__red3N {
+	background-color: #adb5bd;
+}
+.ShareTypeButton_container__3OTLY .ShareTypeButton_button__2K5qY {
+	position: relative;
+	margin-bottom: 4px;
+	border-radius: 100%;
+	width: 64px;
+	height: 64px;
+	vertical-align: top;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_link__red3N svg {
+	fill: #fff;
+	pointer-events: none;
+}
+.ShareTypeButton_container__3OTLY .ShareTypeButton_button__2K5qY svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 24px;
+	height: 24px;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_kakao__9Wdez {
+	background-color: #ffcd00;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_kakao__9Wdez svg {
+	fill: #3f2626;
+	pointer-events: none;
+}
+.ShareTypeButton_container__3OTLY .ShareTypeButton_label__3lzHu {
+	display: block;
+	color: #495057;
+	line-height: 18px;
+	letter-spacing: 0;
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_facebook__3aw8X {
+	background-color: #304d8a;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_facebook__3aw8X svg {
+	fill: #fff;
+	pointer-events: none;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_twitter__2hAds {
+	background-color: #00aced;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_twitter__2hAds svg {
+	fill: #fff;
+	pointer-events: none;
+}
+/* 사이트 모달창 추가 끝 */
+/* 카테고리 버튼 추가 */
+.FilterTab_container__2Zmmg {
+	margin-top: 20px;
+	display: inline-flex;
+	width: 100%;
+	overflow: auto;
+	-webkit-tap-highlight-color: transparent;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.FilterTab_container__2Zmmg {
+	margin-top: 20px;
+	display: inline-flex;
+	width: 100%;
+	overflow: auto;
+	-webkit-tap-highlight-color: transparent;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.FilterTabButton_container__1eoXX:first-child {
+	margin-left: 16px;
+}
+.FilterTabButton_container__1eoXX {
+	margin-right: 8px;
+	margin-bottom: 24px;
+	cursor: pointer;
+}
+.Button_button__341ce.Button_tertiaryMint__1fcKK.Button_contained__1azJ6 {
+	border-color: #e7f9f9;
+	background-color: #e7f9f9;
+	color: #00a2a2;
+}
+.FilterTabButton_container__1eoXX .FilterTabButton_button__2YDMX {
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding: 8px;
+	border: none;
+}
+.Button_button__341ce.Button_xs__2WEyK {
+	padding: 4px 12px;
+	line-height: 1.5;
+	font-size: 12px;
+}
+.Button_button__341ce {
+	position: relative;
+	transition-property: background-color,border-color,color,opacity;
+	transition-duration: .15s;
+	border: 1px solid #cdd3d8;
+	border-radius: 3px;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 9px 16px;
+	vertical-align: middle;
+	text-decoration: none;
+	line-height: 1.43;
+	white-space: nowrap;
+	color: #495057;
+	font-size: 14px;
+	font-weight: 500;
+	box-sizing: border-box !important;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+}
+.FilterTab_container__2Zmmg span {
+	line-height: 20px;
+	letter-spacing: 0;
+	font-size: 14px;
+	font-weight: 400;
+	font-style: normal;
+	font-weight: 500;
+	font-family: Noto Sans KR;
+}
+.Button_button__341ce span {
+	display: inline-flex;
+	align-items: center;
+	vertical-align: top;
+}
+.Button_button__341ce.Button_tertiaryGrey__2nEnb.Button_contained__1azJ6 {
+	border-color: #f2f4f6;
+	background-color: #f2f4f6;
+	color: #495057;
+}
+
+/* 카테고리 버튼 추가 끝 */
+
+/* 기능 추가 */
+.Button_button__341ce.Button_tertiaryGrey__2nEnb.Button_contained__1azJ6:hover{
+	border-color: #e7f9f9;
+	background-color: #e7f9f9;
+	color: #00a2a2;
+}
+/* 기능 추가 끝 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -705,26 +1036,51 @@ ul {
 		height: 80px;
 	}
 }
+
+/* 사이트 모달창 추가 */
+@media screen and (min-width:767px){
+	.WadizModal_overlay__TRZ2L {
+		transition-duration: .25s;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		
+	}
+	.WadizModal_content__2JFzt::before {
+		content: none;
+	}
+	.WadizModal_content__2JFzt {
+		display: block;
+		transform: translateY(0);
+		padding-top: 5%;
+		padding-bottom: 5%;
+		height: auto;
+	}
+	.WadizModal_contentAfterOpen__176l7 > .WadizModal_container__gX-0t {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	.WadizModal_container__gX-0t {
+		display: inline-block;
+		position: relative;
+		transform: translateY(5%);
+		transition: .25s ease-out 50ms;
+		transition-property: transform,opacity;
+		opacity: 0;
+		margin: 0 auto;
+		border-radius: 0;
+		box-shadow: 0 2px 6px rgba(0,0,0,.4);
+		width: auto;
+		max-height: none;
+		overflow-x: visible;
+		overflow-y: visible;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+/* 사이트 모달창 추가 끝 */
 @media screen and (min-width:769px){
 	/* 검색 추가스타일 */
-	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
-		display: inline-block;
-		margin-right: -5px;
-		border-right: 0;
-		width: auto;
-		vertical-align: bottom;
-	}
-	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
-		transition: opacity .25s;
-		/* opacity: 0; */
-		padding-top: 6px;
-		padding-bottom: 6px;
-		outline: none;
-	}
-	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
-		width: 36px;
-		height: 36px;
-	}
+
 	/* 검색 추가스타일 끝 */
 
 	/* 아이템 리스트 추가스타일 */
@@ -832,6 +1188,125 @@ ul {
 		display: block;
 	}
 	/* main > div > ul 스타일 추가 끝 */
+	/* 검색,드롭다운리스트 추가 */
+	.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz {
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		border-top: 0;
+		padding-right: 0;
+		padding-bottom: 8px;
+		padding-left: 0;
+		width: 100%;
+		text-align: center;/* 검색바 중앙에 위치시키기 위해 right->center수정 */
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz .ProjectListHead_title__2pv8I {
+		display: block;
+		position: absolute;
+		bottom: 12px;
+		left: 0;
+		line-height: 32px;
+		font-size: 24px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
+		display: inline-block;
+		/* margin-right: -5px; 밑의 스크롤바 없애기 위해 속성 제거*/
+		border-right: 0;
+		/* width: auto; 검색창 오른쪽으로 맞추기 위해 속성 제거 */
+		vertical-align: bottom;
+		padding-right:0px;
+		margin:0 auto;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
+		transition: opacity .25s;
+		/* opacity: 0; */
+		padding-top:6px;
+		padding-bottom:6px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
+		width: 36px;
+		height: 36px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::after {
+		display: none;
+	}
+	.RewardProjectListHead_container__2FzIj .RewardProjectListHead_fundingSorting__2n0MF::before {
+		display: inline-block;
+		margin-top: -.2em;
+		vertical-align: middle;
+		text-transform: none;
+		line-height: 1;
+		/* font-family: wadizicon !important; */
+		font-weight: 400;
+		/* -webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale; */
+		font-style: normal;
+		font-variant: normal;
+		/* speak: none; */
+		content: "\f0d7";
+		font: var(--fa-font-solid);
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::before {
+		display: inline-block;
+		margin-top: -.2em;
+		vertical-align: middle;
+		text-transform: none;
+		line-height: 1;
+		/* font-family: wadizicon !important; */
+		font-weight: 400;
+		/* -webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale; */
+		font-style: normal;
+		font-variant: normal;
+		/* speak: none; */
+		content: "\f0d7";
+		font: var(--fa-font-solid);
+		right: 0;
+		left: auto;
+		transform: rotate(0);
+		margin-top: -6px !important;
+		font-size: 12px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY {
+		display: inline-block;
+		margin-left: 24px;
+		box-shadow: none;
+		padding-right: 18px;
+		padding-left: 0;
+		min-width: auto;
+		height: 36px;
+		vertical-align: bottom;
+		line-height: 36px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY select {
+		padding-right: 16px;
+		padding-left: 0;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz > .ProjectListHead_children__2Y7-F {
+		display: inline;
+	}
+	/* 검색,드롭다운리스트 추가 끝*/
+
+	/* 사이트 모달창 추가 */
+	.ShareModal_modal__2ptx7 > div {
+		border-radius: 16px;
+	}
+	.ShareModal_container__35nu3 {
+		min-width: 560px;
+	}
+	.ShareModal_container__35nu3 .ShareModal_items__1pTMU {
+		justify-content: center;
+	}
+	.ShareModal_container__35nu3 .ShareModal_items__1pTMU > div {
+		margin-right: 24px;
+	}
+	.ShareModal_container__35nu3 .ShareModal_items__1pTMU > div:last-child {
+		margin-right: 0;
+	}
+	/* 사이트 모달창 추가 끝 */
+	/* 카테고리 버튼 추가 */
+
+	/* 카테고리 버튼 추가 끝 */
 }
 @media screen and (min-width:1097px){
     .web-header {
@@ -895,4 +1370,15 @@ ul {
 		padding-right: 0;
 	}
 	/* main > div > ul 스타일 추가 끝 */
+
+	/* 검색,드롭다운리스트 추가 */
+	
+	/* 검색,드롭다운리스트 추가 끝*/
+
+	/* 사이트 모달창 추가 */
+
+	/* 사이트 모달창 추가 끝 */
+	/* 카테고리 버튼 추가 */
+	
+	/* 카테고리 버튼 추가 끝 */
 }

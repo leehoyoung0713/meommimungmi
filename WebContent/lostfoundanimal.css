@@ -83,7 +83,7 @@ article, main, section {
 .Collection_rootContainer__1O8QU .Collection_cardListContainer__2Yqjw {
 	display: flex;
 	flex-direction: column;
-	/* align-items: center; �씠誘몄�媛� �옉�븘吏��뒗 臾몄젣 �븣臾몄뿉 �닔�젙 */ 
+	/* align-items: center; 이미지가 작아지는 문제 때문에 수정 */ 
 	justify-content: center;
 	margin-top: 64px;
 }
@@ -102,7 +102,7 @@ article, main, section {
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
-	text-decoration:none;/* a�깭洹몄쓽 諛묒쨪 �냽�꽦�씠 �긽�냽�릺�꽌 諛묒쨪 �뾾�븷�뒗 �냽�꽦�쓣 異붽��븿 */
+	text-decoration:none;/* a태그의 밑줄 속성이 상속되서 밑줄 없애는 속성을 추가함 */
 }
 .wz.container, body a {
 	color: rgba(0,0,0,.84);
@@ -288,52 +288,25 @@ body a {
 .StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_title__3VYXn,.StoreCard_item__30rS1 .StoreCard_contentContainer__udbh- .StoreCard_subText__3RNiJ{
 	font-weight:600;
 }
-/* 寃��깋,�븘�씠�뀥 由ъ뒪�듃 異붽��뒪���씪 */
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
-	display: inline-block;
-	margin-right: -5px;
-	border-right: 0;
-	width: auto;
-	vertical-align: bottom;
-	position: relative;
-}
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am label {
-	display: block;
-}
+/* 검색,아이템 리스트 추가스타일 */
+
+
 input::placeholder {
 	color: #b5bcc3;
 	font-weight: bold;
 }
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
-	float: left;
-	padding: 10px 34px 10px 16px;
-	width: 100%;
-	line-height: 24px;
-	font-size: 15px;
-	-webkit-appearance: none;
-}
+
 input {
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_right__3_Jo1 {
-	position: absolute;
-	top: -10px;
-	right: 0;
-	background: none;
-}
+
 div {
 	display: block;
 }
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::after, .ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::before {
-	display: none;
-}
-.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
-	width: 44px;
-	height: 44px;
-	font-size: 18px;
-}
+
+
 button {
 	background-color: transparent;
 	margin: 0;
@@ -374,39 +347,13 @@ button {
 em, i {
 	font-style: normal;
 }
-.ProjectListHead_search__HN3am{
-	/* 醫뚯륫,�긽�떒�뿉 �몴�떆�릺�꽌 �쐞移� 議곗젙�쓣 �쐞�븯�뿬 �냽�꽦�쓣 異붽��븯���떎. */
-	position:absolute;
-	top:60%;
-	left:50%;
-	transform: translate(-50%, -50%);
-}
 
-.ProjectListHead_right__3_Jo1{
-	position:relative;
-	display:inline-block;/* 寃��깋李쎄낵 �룍蹂닿린 踰꾪듉�씠 痢듭쑝濡� �굹�늻�뼱�졇 �냽�꽦�쓣 蹂�寃쏀븿 */
-	height:30px;
-}
-.ProjectListHead_right__3_Jo1 input{
-	padding-right:30px;
-	width:300px;
-	height:40px;
-	border-radius:8px;
-}
-.ProjectListHead_right__3_Jo1 .ProjectListHead_find__3HsFc{
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: inherit;
-  background: url('https://cdn-icons-png.flaticon.com/512/149/149852.png') center center no-repeat;
-  background-size: 80%;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-/* 寃��깋 異붽��뒪���씪 �걹 */
-/* �븘�씠�뀥由ъ뒪�듃 異붽��뒪���씪 */
+
+
+
+
+/* 검색 추가스타일 끝 */
+/* 아이템리스트 추가스타일 */
 .RewardMainCategory_container__19OYY {
 	display: block;
 	position: relative;
@@ -560,11 +507,7 @@ em, i {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.arrange{
-	outline:none;
-	font-size:24px;
-}
-/* page number異붽� */
+/* page number추가 */
 .board-footer .pagination {
 	display: block;
 	position: relative;
@@ -634,8 +577,8 @@ a, a:active, a:hover, a:visited {
 	padding: 0 16px 160px;
 	text-align: center;
 }
-/* page number異붽� �걹 */
-/* main > div > ul �뒪���씪 異붽� */
+/* page number추가 끝 */
+/* main > div > ul 스타일 추가 */
 .RewardMainTab_container__geHTr {
 	display: flex;
 	position: -webkit-sticky;
@@ -684,7 +627,122 @@ ul {
 	font-weight: 700;
 }
 
-/* main > div > ul �뒪���씪 異붽� �걹 */
+/* main > div > ul 스타일 추가 끝 */
+/* 검색 드롭다운리스트 추가 */
+.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz {
+	display: flex;
+	border-top: 1px solid rgba(0,0,0,.1);
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	box-sizing: border-box;
+}
+#addtitle {
+	font-size: 24px;
+	font-weight: 600;
+	float: left;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
+	display: inline-block;
+	margin-right: -5px;
+	border-right: 0;
+	width: auto;
+	vertical-align: bottom;
+	position: relative;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am label {
+	display: block;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
+	float: left;
+	padding: 10px 34px 10px 16px;
+	width: 100%;
+	line-height: 24px;
+	font-size: 15px;
+	-webkit-appearance: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_right__3_Jo1 {
+	position: absolute;
+	top: -10px;
+	right: 0;
+	background: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::after, .ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc::before {
+	display: none;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
+	width: 44px;
+	height: 44px;
+	font-size: 18px;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::after {
+	display: block;
+	top: 0;
+	right: 0;
+	background-image: linear-gradient(90deg,transparent,#fff 80%);
+	width: 12px;
+	content: "";
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::before {
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	transform: rotate(90deg);
+	z-index: 1;
+	margin-top: -9px !important;
+	color: rgba(0,0,0,.54);
+	font-size: 18px;
+	display: inline-block;
+	margin-top: -.2em;
+	vertical-align: middle;
+	text-transform: none;
+	line-height: 1;
+	/* font-family: wadizicon !important; */
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	content: "\f0d7";
+	font: var(--fa-font-solid);
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY {
+	position: relative;
+	z-index: 1;
+	box-shadow: inset -1px 0 rgba(0,0,0,.1);
+	padding-right: 16px;
+	padding-left: 38px;
+	height: 44px;
+	line-height: 44px;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+.SortingSelect_container__8AOZQ {
+	display: inline-block;
+	position: relative;
+	line-height: 24px;
+	color: rgba(0,0,0,.87);
+	font-size: 15px;
+}
+.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY select {
+	position: absolute;
+	left: 0;
+	z-index: 10;
+	overflow: hidden;
+	line-height: 44px;
+	-webkit-appearance: none;
+}
+.SortingSelect_container__8AOZQ .SortingSelect_select__1etN_ {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	line-height: 24px;
+	font-size: 15px;
+}
+
+/* 검색 드롭다운리스트 추가 끝 */
 
 
 
@@ -700,36 +758,18 @@ ul {
 
 
 
-
-/* �븘�씠�뀥 由ъ뒪�듃 異붽��뒪���씪 �걹 */
+/* 아이템 리스트 추가스타일 끝 */
 @media screen and (min-width:360px){
 	.RewardProjectCard_infoTop__3QR5w {
 		height: 80px;
 	}
 }
 @media screen and (min-width:769px){
-	/* 寃��깋 異붽��뒪���씪 */
-	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
-		display: inline-block;
-		margin-right: -5px;
-		border-right: 0;
-		width: auto;
-		vertical-align: bottom;
-	}
-	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
-		transition: opacity .25s;
-		/* opacity: 0; */
-		padding-top: 6px;
-		padding-bottom: 6px;
-		outline: none;
-	}
-	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
-		width: 36px;
-		height: 36px;
-	}
-	/* 寃��깋 異붽��뒪���씪 �걹 */
+	/* 검색 추가스타일 */
+	
+	/* 검색 추가스타일 끝 */
 
-	/* �븘�씠�뀥 由ъ뒪�듃 異붽��뒪���씪 */
+	/* 아이템 리스트 추가스타일 */
 	.RewardMainCategory_container__19OYY {
 		z-index: auto;
 		margin-top: 0;
@@ -789,8 +829,8 @@ ul {
 	.RewardProjectCard_info__3JFub .RewardProjectCard_category__2muXk, .RewardProjectCard_info__3JFub .RewardProjectCard_makerName__2q4oH {
 		font-size: 13px;
 	}
-	/* �븘�씠�뀥 由ъ뒪�듃 異붽��뒪���씪 �걹 */
-	/* page number異붽� */
+	/* 아이템 리스트 추가스타일 끝 */
+	/* page number추가 */
 	.board-footer .pagination {
 		display: inline-block;
 		margin: 40px auto 21px;
@@ -811,8 +851,8 @@ ul {
 	.board-footer .pagination .next-page {
 		margin-left: 16px;
 	}
-	/* page number異붽� �걹 */
-	/* main > div > ul �뒪���씪 異붽� */
+	/* page number추가 끝 */
+	/* main > div > ul 스타일 추가 */
 	.RewardMainTab_container__geHTr {
 		position: relative !important;
 		top: auto !important;
@@ -832,7 +872,79 @@ ul {
 	.RewardMainTab_container__geHTr .RewardMainTab_onlyLarge__1q7_V {
 		display: block;
 	}
-	/* main > div > ul �뒪���씪 異붽� �걹 */
+	/* main > div > ul 스타일 추가 끝 */
+	/* 검색 드롭다운리스트 추가 */
+	.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz {
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		border-top: 0;
+		padding-right: 0;
+		padding-bottom: 8px;
+		padding-left: 0;
+		width: 100%;
+		text-align: right;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am {
+		display: inline-block;
+		margin-right: -5px;
+		border-right: 0;
+		width: auto;
+		vertical-align: bottom;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
+		transition: opacity .25s;
+		/* opacity: 0; */
+		padding-top: 6px;
+		padding-bottom: 6px;
+		outline: none;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am .ProjectListHead_find__3HsFc {
+		width: 36px;
+		height: 36px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::after {
+		display: none;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY::before {
+		display: inline-block;
+		margin-top: -.2em;
+		vertical-align: middle;
+		text-transform: none;
+		line-height: 1;
+		/* font-family: wadizicon !important; */
+		font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-style: normal;
+		font-variant: normal;
+		content: "\f0d7";
+		font: var(--fa-font-solid);
+		right: 0;
+		left: auto;
+		transform: rotate(0);
+		margin-top: -6px !important;
+		font-size: 12px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY {
+		display: inline-block;
+		margin-left: 24px;
+		box-shadow: none;
+		padding-right: 18px;
+		padding-left: 0;
+		min-width: auto;
+		height: 36px;
+		vertical-align: bottom;
+		line-height: 36px;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_sorting__2n1WY select {
+		padding-right: 16px;
+		padding-left: 0;
+	}
+	.ProjectListHead_container__rpQ37 .ProjectListHead_bar__2dyHz > .ProjectListHead_children__2Y7-F {
+		display: inline;
+	}
+	/* 검색 드롭다운리스트 추가 끝 */
 }
 @media screen and (min-width:1097px){
     .web-header {
@@ -846,7 +958,7 @@ ul {
 		margin: -56px auto 0;
 		border-radius: 24px;
 		box-shadow: 0 8px 32px 0 rgba(10,22,70,.04),0 8px 8px 0 rgba(10,22,70,.04);
-		/* padding: 56px 170px; �뼇履쎄퉴吏� 梨꾩슦�뒗 臾몄젣 �븣臾몄뿉 醫뚯슦 �뙣�뵫170px �뾾�븷�뒗 嫄몃줈 �닔�젙�븿 */
+		/* padding: 56px 170px; 양쪽까지 채우는 문제 때문에 좌우 패딩170px 없애는 걸로 수정함 */
 		padding:56px;
 		max-width: 1140px;
 		text-align: center;
@@ -873,14 +985,14 @@ ul {
 		flex-direction: row;
 		justify-content: space-between;
 	}
-	/* �븘�씠�뀥 由ъ뒪�듃 異붽��뒪���씪 */
+	/* 아이템 리스트 추가스타일 */
 
-	/* �븘�씠�뀥 由ъ뒪�듃 異붽��뒪���씪 �걹 */
+	/* 아이템 리스트 추가스타일 끝 */
 
-	/* page number異붽� */
+	/* page number추가 */
 
-	/* page number異붽� �걹 */
-	/* main > div > ul �뒪���씪 異붽� */
+	/* page number추가 끝 */
+	/* main > div > ul 스타일 추가 */
 	.RewardMainTab_container__geHTr {
 		justify-content: center;
 		padding: 0 80px;
@@ -896,5 +1008,8 @@ ul {
 		margin-right: 0;
 		padding-right: 0;
 	}
-	/* main > div > ul �뒪���씪 異붽� �걹 */
+	/* main > div > ul 스타일 추가 끝 */
+	/* 검색 드롭다운리스트 추가 */
+
+	/* 검색 드롭다운리스트 추가 끝 */
 }
