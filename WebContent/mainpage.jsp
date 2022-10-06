@@ -7,7 +7,7 @@
 <title>메인</title>
 </head>
 <body>
-	<jsp:include page = 'headerFinal.jsp'/>
+	<jsp:include page = 'header.jsp'/>
 	<jsp:include page = 'banner.jsp'/>  
 	<jsp:include page = 'mainFinal.jsp'/>  
 	<jsp:include page = 'footer.jsp'/>  

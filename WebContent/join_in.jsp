@@ -1214,27 +1214,30 @@
 
 	
   $(document).ready(function() {
-    $("#term").click(function() {
-      if($("#term").is(":checked")) $("input[name=terms]").prop("checked", true);
-      else $("input[name=terms]").prop("checked", false);
-      if($("#term").is(":checked")) $("#allterm").prop("checked", true);
-      else $("#allterm").prop("checked", false);
-    });
-  
-    $("input[name=terms]").click(function() {
-      var total = $("input[name=terms]").length;
-      var checked = $("input[name=terms]:checked").length;
-  
-      if(total != checked) $("#term").prop("checked", false);
-      else $("#term").prop("checked", true); 
-    });
-    $("#allterm").click(function() {
-      if($("#allterm").is(":checked")) $("#term").prop("checked", true);
-      else $("input[name=terms]").prop("checked", false);
-      if($("#term").is(":checked")) $("#allterm").prop("checked", true);
-      else $("#term").prop("checked", false);
-    });
-  });
+	    $("#term").click(function() {
+	      if($("#term").is(":checked")) $("input[name=terms]").prop("checked", true);
+	      else $("input[name=terms]").prop("checked", false);
+	      if($("#term").is(":checked")) $("#allterm").prop("checked", true);
+	      else $("#allterm").prop("checked", false);
+	    });
+	  
+	    $("input[name=terms]").click(function() {
+	      var total = $("input[name=terms]").length;
+	      var checked = $("input[name=terms]:checked").length;
+	  
+	      if(total != checked) $("#term").prop("checked", false);
+	      else $("#term").prop("checked", true); 
+
+	      if(total != checked) $("#allterm").prop("checked", false);
+	      else $("#allterm").prop("checked", true); 
+	    });
+	    $("#allterm").click(function() {
+	      if($("#allterm").is(":checked")) $("#term").prop("checked", true);
+	      else $("input[name=terms]").prop("checked", false);
+	      if($("#term").is(":checked")) $("#allterm").prop("checked", true);
+	      else $("#term").prop("checked", false);
+	    });
+	  });
   
 
 
