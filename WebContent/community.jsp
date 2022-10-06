@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <jsp:include page ="header.jsp"/>
+<jsp:include page="./header.jsp"/>
     <main>
         <div id="page">
             <div id="app-container">
@@ -165,6 +165,40 @@
                         <div class="FeedCardList_container__13rc1">
                             <div class="FeedCardList_list__2yOEy" aria-label="피드 리스트">
                                 <div class="FeedCard_container__2vyLX">
+                                    <!-- 글 작성 div -->
+
+                                    <textarea name="feedMainWriting" id="feedMainWriting" cols="30" rows="10"placeholder="내 반려동물을 자랑해주세요!"></textarea>
+                                    <div><!-- 사진 첨부 -->
+                                        <div class="ImageUploader_container__2FM0D">
+                                            <div class="ImageUploader_contentWrap__1P_48">
+                                                <div class="ImageUploader_button__FPX_Y" id = "addPhotoButton"><svg viewBox="0 0 32 32"
+                                                        focusable="false" role="presentation"
+                                                        class="withIcon_icon__2l2ds ImageUploader_addIcon__1tond"
+                                                        aria-hidden="true" style="width: 24px; height: 24px;">
+                                                        <path d="M20.8 16.8a4.8 4.8 0 1 1-9.6 0 4.8 4.8 0 0 1 9.6 0z">
+                                                        </path>
+                                                        <path
+                                                            d="M22.4 6.4L20 3.2h-8L9.6 6.4h-8v20.8h28.8V6.4zM16 23.2c-3.535 0-6.4-2.865-6.4-6.4s2.865-6.4 6.4-6.4 6.4 2.865 6.4 6.4-2.865 6.4-6.4 6.4z">
+                                                        </path>
+                                                    </svg><span>0/3</span>
+                                                    <input type="file" class="realUpload" id = "realUpload" accept="image/*" required multiple style="display: none;">
+                                                    <div
+                                                        class="StaticPopper_container__3fEN8 ImageUploader_popper__3yY05">
+                                                        <div>누구보다 소중한 나의 반려동물<br>맘껏 자랑해주세요!</div>
+                                                        <div
+                                                            class="StaticPopper_arrow__3okBO ImageUploader_popperArrow__21T9p">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ImageUploader_imageContainer__2QUb6"
+                                                    style="transform: translateX(0px);"></div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                    <div class="FeedCard_divider__3V9EP"></div>
+                                </div>
+                                <div class="FeedCard_container__2vyLX">
                                     <section class="FeedCard_header__3R2hC"><a
                                             href="/web/wmypage/myprofile/fundinglist/1496989203"
                                             class="FeedCard_leftPanel__wkbbV">
@@ -239,8 +273,8 @@
                                     </a>
                                     <div class="FeedCard_divider__3V9EP"></div>
                                 </div>
-                               
-                               
+
+
                                 <div class="FeedCard_container__2vyLX">
                                     <section class="FeedCard_header__3R2hC"><a
                                             href="/web/wmypage/myprofile/fundinglist/1152357015"
@@ -284,6 +318,8 @@
                                                         d="M24.52 5A4.52 4.52 0 1020 9.57 4.53 4.53 0 0024.52 5zm0 30A4.52 4.52 0 1020 39.48 4.53 4.53 0 0024.52 35zm0-15A4.52 4.52 0 1020 24.52 4.53 4.53 0 0024.52 20z">
                                                     </path>
                                                 </svg></button></div>
+
+
                                     </section>
                                     <div class="FeedCard_reviewImage__3HK8Q">
                                         <div class="FeedCard_imageWrap__hiMPd">
@@ -533,7 +569,70 @@
 
         </div>
     </main>
-    <jsp:include page ="footer.jsp"/>
+    <div class="modal">
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+            <button class="report">신고하기</button>
+            <button class="close">닫기</button>
+        </div>
+    </div>
+
+    <div class="ReactModalPortal">
+        <div class="ReactModal__Overlay ReactModal__Overlay--after-open ConfirmModal_overlay__2vouq waffle__modal__overlay"
+            style="background-color: rgba(0, 0, 0, 0.3);">
+            <div class="ReactModal__Content ReactModal__Content--after-open ConfirmModal_confirmModal__2-l3c ConfirmModal_sizeSm__1n8FQ"
+                tabindex="-1" role="dialog" aria-modal="true">
+                <div class="ConfirmModal_header__2yOEU"><button class="ConfirmModal_closeIconWrapper__2-lWO"><svg
+                            viewBox="0 0 40 40" focusable="false" role="presentation"
+                            class="withIcon_icon__34s31 ConfirmModal_closeIcon__3DABU" aria-hidden="true">
+                            <path
+                                d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z">
+                            </path>
+                        </svg></button></div>
+                <div title="신고하기" class="ConfirmModal_title__2I2A3">신고하기</div>
+                <div class="ConfirmModal_content__nIMXh ConfirmModal_hasTitle__2YXj0">
+                    <div class="ReportInfoModal_modalContainer__2478m">
+                        <p class="ReportInfoModal_message__1B5M3"><span><svg viewBox="0 0 32 32" focusable="false"
+                                    role="presentation" class="withIcon_icon__20lDO ReportInfoModal_mailOIcon__2DVsC"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M1.6 5.6v20.8h28.8V5.6zm26.88 1.6L16 17.84 3.52 7.2zm.32 17.6H3.2V9.04L16 19.92 28.8 9.04z">
+                                    </path>
+                                </svg>info@wadiz.kr</span></p>
+                        <p class="ReportInfoModal_message__1B5M3">이 계정을 신고하는 이유를 이메일로 보내주세요.</p>
+                        <p class="ReportInfoModal_example__QiCuc"><span>예)</span>타인을 모욕, 명예훼손하는 내용이 있어요.<br>개인정보를 침해하는
+                            내용이 있어요.<br>차별, 음란, 범죄, 욕설 등 부적절한 내용이 있어요.</p>
+                        <h5>아래 신고 접수 사항을 반드시 적어주세요.</h5>
+                        <ol>
+                            <li><span>1. 신고인 아이디 <var>(필수)</var></span></li>
+                            <li><span>2. 게시물 작성자 아이디 <var>(필수)</var></span></li>
+                            <li><span>3. 프로젝트 이름 또는 URL <var>(필수)</var></span></li>
+                        </ol>
+                        <p class="ReportInfoModal_message__1B5M3">※신고인의 정보 및 신고 내용은 안전하게 보호되며 외부에 제공되지 않습니다.</p><a
+                            target="_blank" href="/web/wterms/community"
+                            class="Button_button__mRXZC ReportInfoModal_button__2znb1"><span><span
+                                    class="Button_children__3HY2l">커뮤니티 정책 보기<svg viewBox="0 0 40 40" focusable="false"
+                                        role="presentation"
+                                        class="withIcon_icon__20lDO ReportInfoModal_openLinkIcon__1OXNo"
+                                        aria-hidden="true">
+                                        <path d="M31.42 35.84h-27V8.4h14.76v-2H2.42v31.44h31V22.55h-2v13.29z"></path>
+                                        <path
+                                            d="M37.32 15.41l-.01-13-12.99.01v2l9.72-.01-18.19 19.42 1.46 1.37 18-19.22.01 9.43h2z">
+                                        </path>
+                                    </svg></span></span></a>
+                    </div>
+                </div>
+                <div class="ConfirmModal_footer__3cVb6">
+                    <div class="ConfirmModal_buttonGroup__un3r5"><button
+                            class="Button_button__mRXZC Button_tertiaryGrey__3jfPY Button_contained__k9pMW Button_lg__22YWj ConfirmModal_negativeButton__2KirX"
+                            type="button"><span><span class="Button_children__3HY2l">닫기</span></span></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <jsp:include page="./footer.jsp"/>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="community.js"></script>
 
 </html>

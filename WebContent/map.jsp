@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="map.css">
+<title>지도 검색</title>
 <link rel="stylesheet" href="mapMedia.css">
+<link rel="stylesheet" href="map.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -22,6 +22,7 @@
                         <!-- 검색 식당 목록 -->
                         <section class="module search-results short-bottom">
                             <div class="search_info">
+
                                 <div class="search-options"
                                     ng-class="{is_empty_result: search_result_list.length === 0}">
                                     <button class="btn filter"
@@ -68,7 +69,6 @@
                                         <div class="list-restaurant-item" data-subcusine_code="2">
                                             <figure class="restaurant-item">
                                                 <div class="thumb">
-
                                                     <img class="center-croping lazy"
                                                         alt="농민백암왕순대 사진 - 서울시 강남구 역삼동 830-9"
                                                         data-original="https://images.mypetlife.co.kr/content/uploads/2021/10/19151330/corgi-g1a1774f95_1280-1024x682.jpg?fit=around|359:240&amp;crop=359:240;*,*&amp;output-format=jpg&amp;output-quality=80"
@@ -1864,1416 +1864,1431 @@
             </div>
 
             <div class="column-side">
-                <!-- 지도 -->
-                <div class="map-container_wrap">
-                    <button class="btn-map ng-binding" ng-click="change_map_mode()">지도 작게</button>
-                </div>
+                
+                    <!-- 지도 -->
+                    <div class="map-container_wrap">
+                        <button class="btn-map ng-binding" ng-click="change_map_mode()">지도 작게</button>
+                    </div>
 
-                <div class="inner">
-                    <div class="column-module">
-                        <pagination-type-mobile page="page" last-page="last_page" is-active-first-button="page > 2"
-                            is-active-next-button="last_page > page &amp;&amp; max_page > page"
-                            is-active-prev-button="page > 1" on-click-first="handleClickFirstPaginationButton"
-                            on-click-next="handleClickNextPaginationButton"
-                            on-click-prev="handleClickPrevPaginationButton" class="ng-isolate-scope">
-                            <div class="PaginationTypeNextPrev">
-                                <div class="PaginationTypeNextPrev__Wrap">
-                                    <button class="PaginationTypeNextPrev__Button PaginationTypeNextPrev__FirstButton"
-                                        ng-click="handleClickFirstButton()"
-                                        ng-class="{'PaginationTypeNextPrev__FirstButton--Active': isActiveFirstButton}">
-                                    </button>
-
-                                    <button class="PaginationTypeNextPrev__Button PaginationTypeNextPrev__PrevButton"
-                                        ng-click="handleClickPrevButton()"
-                                        ng-class="{'PaginationTypeNextPrev__PrevButton--Active': isActivePrevButton}">
-                                    </button>
-
-                                    <span class="PaginationTypeNextPrev__Page ng-binding">1</span>
-
-                                    <button
-                                        class="PaginationTypeNextPrev__Button PaginationTypeNextPrev__NextButton PaginationTypeNextPrev__NextButton--Active"
-                                        ng-click="handleClickNextButton()"
-                                        ng-class="{'PaginationTypeNextPrev__NextButton--Active': isActiveNextButton}">
-                                    </button>
-                                </div>
-                            </div>
-                        </pagination-type-mobile>
-
-                        <!-- 리뷰 점수 -->
-
-                        <div class="reviewScoreWrap">
-                            <div class="reviewScore">
-                                <div class="leftReviewScore">
-                                    <span class="starIcon">
-                                        <svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
-                                            viewBox="0 0 24 24">
-                                            <defs>
-                                                <path id="star-path-0"
-                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                </path>
-                                                <clipPath id="star-clip-0">
-                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                </clipPath>
-                                            </defs>
-                                            <use xlink:href="#star-path-0" fill="#DBDBDB"></use>
-                                            <use clip-path="url(#star-clip-0)" xlink:href="#star-path-0"></use>
-                                        </svg>
-                                        <svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
-                                            viewBox="0 0 24 24">
-                                            <defs>
-                                                <path id="star-path-0"
-                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                </path>
-                                                <clipPath id="star-clip-0">
-                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                </clipPath>
-                                            </defs>
-                                            <use xlink:href="#star-path-0" fill="#DBDBDB"></use>
-                                            <use clip-path="url(#star-clip-0)" xlink:href="#star-path-0"></use>
-                                        </svg>
-                                        <svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
-                                            viewBox="0 0 24 24">
-                                            <defs>
-                                                <path id="star-path-0"
-                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                </path>
-                                                <clipPath id="star-clip-0">
-                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                </clipPath>
-                                            </defs>
-                                            <use xlink:href="#star-path-0" fill="#DBDBDB"></use>
-                                            <use clip-path="url(#star-clip-0)" xlink:href="#star-path-0"></use>
-                                        </svg>
-                                        <svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
-                                            viewBox="0 0 24 24">
-                                            <defs>
-                                                <path id="star-path-0"
-                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                </path>
-                                                <clipPath id="star-clip-0">
-                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                </clipPath>
-                                            </defs>
-                                            <use xlink:href="#star-path-0" fill="#DBDBDB"></use>
-                                            <use clip-path="url(#star-clip-0)" xlink:href="#star-path-0"></use>
-                                        </svg>
-                                        <svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
-                                            viewBox="0 0 24 24">
-                                            <defs>
-                                                <path id="star-path-0"
-                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                </path>
-                                                <clipPath id="star-clip-0">
-                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                </clipPath>
-                                            </defs>
-                                            <use xlink:href="#star-path-0" fill="#DBDBDB"></use>
-                                            <use clip-path="url(#star-clip-0)" xlink:href="#star-path-0"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="badge">4.9</span>
-                                </div>
-                                <div class="rightReviewScoreWrap">
-                                    <div class="rightReviewScore">
-                                        <div class="production-review-feed__header-v2__stars__avg__container">
-                                            <div
-                                                class="production-review-feed__header-v2__stars__avg__label label_selected">
-                                                5점
-                                            </div>
-                                            <div class="production-review-feed__header-v2__stars__avg__bar">
-                                                <div class="production-review-feed__header-v2__stars__avg__bar__bg">
-
-                                                </div>
-                                                <div class="production-review-feed__header-v2__stars__avg__bar__color"
-                                                    style="width: 89.1304%;"></div>
-                                            </div>
-                                            <div
-                                                class="production-review-feed__header-v2__stars__avg__number label_selected">
-                                                41</div>
-                                        </div>
-
-                                        <div class="production-review-feed__header-v2__stars__avg__container">
-                                            <div class="production-review-feed__header-v2__stars__avg__label">4점</div>
-                                            <div class="production-review-feed__header-v2__stars__avg__bar">
-                                                <div class="production-review-feed__header-v2__stars__avg__bar__bg">
-                                                </div>
-                                                <div class="production-review-feed__header-v2__stars__avg__bar__color"
-                                                    style="width: 8.69565%;"></div>
-                                            </div>
-                                            <div class="production-review-feed__header-v2__stars__avg__number">4</div>
-                                        </div>
-                                        <div class="production-review-feed__header-v2__stars__avg__container">
-                                            <div class="production-review-feed__header-v2__stars__avg__label">3점</div>
-                                            <div class="production-review-feed__header-v2__stars__avg__bar">
-                                                <div class="production-review-feed__header-v2__stars__avg__bar__bg">
-                                                </div>
-                                                <div class="production-review-feed__header-v2__stars__avg__bar__color"
-                                                    style="width: 2.17391%;"></div>
-                                            </div>
-                                            <div class="production-review-feed__header-v2__stars__avg__number">1</div>
-                                        </div>
-                                        <div class="production-review-feed__header-v2__stars__avg__container">
-                                            <div class="production-review-feed__header-v2__stars__avg__label">2점</div>
-                                            <div class="production-review-feed__header-v2__stars__avg__bar">
-                                                <div class="production-review-feed__header-v2__stars__avg__bar__bg">
-                                                </div>
-                                                <div class="production-review-feed__header-v2__stars__avg__bar__color"
-                                                    style="width: 0%;"></div>
-                                            </div>
-                                            <div class="production-review-feed__header-v2__stars__avg__number">0</div>
-                                        </div>
-                                        <div class="production-review-feed__header-v2__stars__avg__container">
-                                            <div class="production-review-feed__header-v2__stars__avg__label">1점</div>
-                                            <div class="production-review-feed__header-v2__stars__avg__bar">
-                                                <div class="production-review-feed__header-v2__stars__avg__bar__bg">
-                                                </div>
-                                                <div class="production-review-feed__header-v2__stars__avg__bar__color"
-                                                    style="width: 0%;"></div>
-                                            </div>
-                                            <div class="production-review-feed__header-v2__stars__avg__number">0</div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="myLocationMap">
+                        <div class="myLocation">
+                            <button class="myLocationTitle">현재 내 위치</button>
                         </div>
+                    </div>
 
-                        <div class="reviewFilter">
-                            <div class="reviewFilterWrap">
-                                <div class="reviewFilterUpper">
-                                    <div class="reviewFilterRight">
-                                        <button class="bestReview reviewSecond timeReview filterActive" type="button"
-                                            aria-pressed="true" id="bestReview">
-                                            베스트순
-                                        </button>
-                                        <button class="bestReview reviewSecond timeReview" type="button"
-                                            aria-pressed="true" id="recentReview">
-                                            최신순
-                                        </button>
-                                        <button class="bestReview reviewSecond filterPhoto" type="button"
-                                            aria-pressed="true" id="filterPhoto">
-                                            <svg class="icon" width="18" height="18" viewBox="0 0 18 18"
-                                                preserveAspectRatio="xMidYMid meet">
-                                                <path fill="currentColor"
-                                                    d="M15.821 3a.67.67 0 0 1 .679.672v10.656a.67.67 0 0 1-.679.672H2.18a.67.67 0 0 1-.679-.672V3.672c0-.375.3-.672.679-.672H15.82zm-.679 1.344H2.858v8.14L7.01 7.781c.094-.125.284-.125.394 0l2.321 2.657c.048.046.063.109.048.156l-.3 1.375c-.016.11.11.172.173.094l2.369-2.579a.202.202 0 0 1 .284 0l2.842 3.094V4.344zm-2.526 3.61a1.1 1.1 0 0 1-1.105-1.095 1.1 1.1 0 0 1 1.105-1.093 1.1 1.1 0 0 1 1.105 1.093 1.1 1.1 0 0 1-1.105 1.094z">
-                                                </path>
-                                            </svg>
-                                            사진리뷰
-                                        </button>
+                    <div class="inner">
+                        <section class="column-side-left">
+                            <div class="column-module">
+                                <pagination-type-mobile page="page" last-page="last_page" is-active-first-button="page > 2"
+                                    is-active-next-button="last_page > page &amp;&amp; max_page > page"
+                                    is-active-prev-button="page > 1" on-click-first="handleClickFirstPaginationButton"
+                                    on-click-next="handleClickNextPaginationButton"
+                                    on-click-prev="handleClickPrevPaginationButton" class="ng-isolate-scope">
+                                    <div class="PaginationTypeNextPrev">
+                                        <div class="PaginationTypeNextPrev__Wrap">
+                                            <button class="PaginationTypeNextPrev__Button PaginationTypeNextPrev__FirstButton"
+                                                ng-click="handleClickFirstButton()"
+                                                ng-class="{'PaginationTypeNextPrev__FirstButton--Active': isActiveFirstButton}">
+                                            </button>
+
+                                            <button class="PaginationTypeNextPrev__Button PaginationTypeNextPrev__PrevButton"
+                                                ng-click="handleClickPrevButton()"
+                                                ng-class="{'PaginationTypeNextPrev__PrevButton--Active': isActivePrevButton}">
+                                            </button>
+
+                                            <span class="PaginationTypeNextPrev__Page ng-binding">1</span>
+
+                                            <button
+                                                class="PaginationTypeNextPrev__Button PaginationTypeNextPrev__NextButton PaginationTypeNextPrev__NextButton--Active"
+                                                ng-click="handleClickNextButton()"
+                                                ng-class="{'PaginationTypeNextPrev__NextButton--Active': isActiveNextButton}">
+                                            </button>
+                                        </div>
                                     </div>
+                                </pagination-type-mobile>
 
-                                    <div class="reviewFilterLeft">
-                                        <div class="filterBtnWrap" onclick="closeStarFilter()">
-                                            <div class="filterOptionBtn">
-                                                별점
-                                                <svg class="icon" width="12" height="12" viewBox="0 0 12 12"
-                                                    fill="currentColor" preserveAspectRatio="xMidYMid meet">
-                                                    <path
-                                                        d="M6.069 6.72l4.123-3.783 1.216 1.326-5.32 4.881L.603 4.273l1.196-1.346z">
-                                                    </path>
+                                <!-- 리뷰 점수 -->
+
+                                <div class="reviewScoreWrap">
+                                    <div class="reviewScore">
+                                        <div class="leftReviewScore">
+                                            <span class="starIcon">
+                                                <svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                                    viewBox="0 0 24 24">
+                                                    <defs>
+                                                        <path id="star-path-0"
+                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                        </path>
+                                                        <clipPath id="star-clip-0">
+                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                    <use xlink:href="#star-path-0" fill="#DBDBDB"></use>
+                                                    <use clip-path="url(#star-clip-0)" xlink:href="#star-path-0"></use>
                                                 </svg>
-                                                <div id="popOut" class="popout popout--prepared popout--axis-1 popout--dir-2 popout--cross-dir-2"
-                                                    data-popout="true"
-                                                    style="position: absolute; z-index: 1000; top: 29px; right: 9.0156px;">
-                                                    <div id="starFilterOption" class="filterBtnOff">
-                                                        <div class="share-drop-down__content css-1q9dafi e11jpdq02">
-                                                            <div class="starCountWrap">
-                                                                <button type="button" class="css-3t2wtg e11jpdq01">
-                                                                    <span class="starCount">
-                                                                        <span class="reviewWriterInfoTotalStar">
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="starCountText">
-                                                                            (41개)
-                                                                        </span>
-                                                                    </span>
-                                                                </button>
-                                                            </div>
-
-
-                                                            <div class="starCountWrap">
-                                                                <button type="button" class="css-3t2wtg e11jpdq01">
-                                                                    <span class="starCount">
-                                                                        <span class="reviewWriterInfoTotalStar">
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-2702"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-2702">
-                                                                                        <rect x="0" y="0" width="0"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-2702"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-2702)"
-                                                                                    xlink:href="#star-path-2702"></use>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="starCountText">
-                                                                            (4개)
-                                                                        </span>
-                                                                    </span>
-                                                                </button>
-                                                            </div>
-
-
-
-                                                            <div class="starCountWrap">
-                                                                <button type="button" class="css-3t2wtg e11jpdq01">
-                                                                    <span class="starCount">
-                                                                        <span class="reviewWriterInfoTotalStar">
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-2702"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-2702">
-                                                                                        <rect x="0" y="0" width="0"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-2702"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-2702)"
-                                                                                    xlink:href="#star-path-2702"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-2702"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-2702">
-                                                                                        <rect x="0" y="0" width="0"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-2702"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-2702)"
-                                                                                    xlink:href="#star-path-2702"></use>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="starCountText">
-                                                                            (1개)
-                                                                        </span>
-                                                                    </span>
-                                                                </button>
-                                                            </div>
-
-
-                                                            <div class="starCountWrap">
-                                                                <button type="button" class="css-3t2wtg e11jpdq01">
-                                                                    <span class="starCount">
-                                                                        <span class="reviewWriterInfoTotalStar">
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-2702"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-2702">
-                                                                                        <rect x="0" y="0" width="0"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-2702"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-2702)"
-                                                                                    xlink:href="#star-path-2702"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-2702"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-2702">
-                                                                                        <rect x="0" y="0" width="0"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-2702"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-2702)"
-                                                                                    xlink:href="#star-path-2702"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-2702"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-2702">
-                                                                                        <rect x="0" y="0" width="0"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-2702"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-2702)"
-                                                                                    xlink:href="#star-path-2702"></use>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="starCountText">
-                                                                            (0개)
-                                                                        </span>
-                                                                    </span>
-                                                                </button>
-                                                            </div>
-
-
-
-                                                            <div class="starCountWrap">
-                                                                <button type="button" class="css-3t2wtg e11jpdq01">
-                                                                    <span class="starCount">
-                                                                        <span class="reviewWriterInfoTotalStar">
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-140"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-140">
-                                                                                        <rect x="0" y="0" width="24"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-140"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-140)"
-                                                                                    xlink:href="#star-path-140"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-2702"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-2702">
-                                                                                        <rect x="0" y="0" width="0"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-2702"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-2702)"
-                                                                                    xlink:href="#star-path-2702"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-2702"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-2702">
-                                                                                        <rect x="0" y="0" width="0"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-2702"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-2702)"
-                                                                                    xlink:href="#star-path-2702"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-2702"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-2702">
-                                                                                        <rect x="0" y="0" width="0"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-2702"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-2702)"
-                                                                                    xlink:href="#star-path-2702"></use>
-                                                                            </svg>
-                                                                            <svg fill="#35C5F0" width="1em" height="1em"
-                                                                                preserveAspectRatio="xMidYMid meet"
-                                                                                viewBox="0 0 24 24">
-                                                                                <defs>
-                                                                                    <path id="star-path-2702"
-                                                                                        d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                                    </path>
-                                                                                    <clipPath id="star-clip-2702">
-                                                                                        <rect x="0" y="0" width="0"
-                                                                                            height="24"></rect>
-                                                                                    </clipPath>
-                                                                                </defs>
-                                                                                <use xlink:href="#star-path-2702"
-                                                                                    fill="#DBDBDB"></use>
-                                                                                <use clip-path="url(#star-clip-2702)"
-                                                                                    xlink:href="#star-path-2702"></use>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="starCountText">
-                                                                            (0개)
-                                                                        </span>
-                                                                    </span>
-                                                                </button>
-                                                            </div>
-
+                                                <svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                                    viewBox="0 0 24 24">
+                                                    <defs>
+                                                        <path id="star-path-0"
+                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                        </path>
+                                                        <clipPath id="star-clip-0">
+                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                    <use xlink:href="#star-path-0" fill="#DBDBDB"></use>
+                                                    <use clip-path="url(#star-clip-0)" xlink:href="#star-path-0"></use>
+                                                </svg>
+                                                <svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                                    viewBox="0 0 24 24">
+                                                    <defs>
+                                                        <path id="star-path-0"
+                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                        </path>
+                                                        <clipPath id="star-clip-0">
+                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                    <use xlink:href="#star-path-0" fill="#DBDBDB"></use>
+                                                    <use clip-path="url(#star-clip-0)" xlink:href="#star-path-0"></use>
+                                                </svg>
+                                                <svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                                    viewBox="0 0 24 24">
+                                                    <defs>
+                                                        <path id="star-path-0"
+                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                        </path>
+                                                        <clipPath id="star-clip-0">
+                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                    <use xlink:href="#star-path-0" fill="#DBDBDB"></use>
+                                                    <use clip-path="url(#star-clip-0)" xlink:href="#star-path-0"></use>
+                                                </svg>
+                                                <svg fill="#35C5F0" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                                    viewBox="0 0 24 24">
+                                                    <defs>
+                                                        <path id="star-path-0"
+                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                        </path>
+                                                        <clipPath id="star-clip-0">
+                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                    <use xlink:href="#star-path-0" fill="#DBDBDB"></use>
+                                                    <use clip-path="url(#star-clip-0)" xlink:href="#star-path-0"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="badge">4.9</span>
+                                        </div>
+                                        <div class="rightReviewScoreWrap">
+                                            <div class="rightReviewScore">
+                                                <div class="production-review-feed__header-v2__stars__avg__container">
+                                                    <div
+                                                        class="production-review-feed__header-v2__stars__avg__label label_selected">
+                                                        5점
+                                                    </div>
+                                                    <div class="production-review-feed__header-v2__stars__avg__bar">
+                                                        <div class="production-review-feed__header-v2__stars__avg__bar__bg">
 
                                                         </div>
+                                                        <div class="production-review-feed__header-v2__stars__avg__bar__color"
+                                                            style="width: 89.1304%;"></div>
+                                                    </div>
+                                                    <div
+                                                        class="production-review-feed__header-v2__stars__avg__number label_selected">
+                                                        41</div>
+                                                </div>
+
+                                                <div class="production-review-feed__header-v2__stars__avg__container">
+                                                    <div class="production-review-feed__header-v2__stars__avg__label">4점</div>
+                                                    <div class="production-review-feed__header-v2__stars__avg__bar">
+                                                        <div class="production-review-feed__header-v2__stars__avg__bar__bg">
+                                                        </div>
+                                                        <div class="production-review-feed__header-v2__stars__avg__bar__color"
+                                                            style="width: 8.69565%;"></div>
+                                                    </div>
+                                                    <div class="production-review-feed__header-v2__stars__avg__number">4</div>
+                                                </div>
+                                                <div class="production-review-feed__header-v2__stars__avg__container">
+                                                    <div class="production-review-feed__header-v2__stars__avg__label">3점</div>
+                                                    <div class="production-review-feed__header-v2__stars__avg__bar">
+                                                        <div class="production-review-feed__header-v2__stars__avg__bar__bg">
+                                                        </div>
+                                                        <div class="production-review-feed__header-v2__stars__avg__bar__color"
+                                                            style="width: 2.17391%;"></div>
+                                                    </div>
+                                                    <div class="production-review-feed__header-v2__stars__avg__number">1</div>
+                                                </div>
+                                                <div class="production-review-feed__header-v2__stars__avg__container">
+                                                    <div class="production-review-feed__header-v2__stars__avg__label">2점</div>
+                                                    <div class="production-review-feed__header-v2__stars__avg__bar">
+                                                        <div class="production-review-feed__header-v2__stars__avg__bar__bg">
+                                                        </div>
+                                                        <div class="production-review-feed__header-v2__stars__avg__bar__color"
+                                                            style="width: 0%;"></div>
+                                                    </div>
+                                                    <div class="production-review-feed__header-v2__stars__avg__number">0</div>
+                                                </div>
+                                                <div class="production-review-feed__header-v2__stars__avg__container">
+                                                    <div class="production-review-feed__header-v2__stars__avg__label">1점</div>
+                                                    <div class="production-review-feed__header-v2__stars__avg__bar">
+                                                        <div class="production-review-feed__header-v2__stars__avg__bar__bg">
+                                                        </div>
+                                                        <div class="production-review-feed__header-v2__stars__avg__bar__color"
+                                                            style="width: 0%;"></div>
+                                                    </div>
+                                                    <div class="production-review-feed__header-v2__stars__avg__number">0</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reviewFilter">
+                                    <div class="reviewFilterWrap">
+                                        <div class="reviewFilterUpper">
+                                            <div class="reviewFilterRight">
+                                                <button class="bestReview reviewSecond timeReview filterActive" type="button"
+                                                    aria-pressed="true" id="bestReview">
+                                                    베스트순
+                                                </button>
+                                                <button class="bestReview reviewSecond timeReview" type="button"
+                                                    aria-pressed="true" id="recentReview">
+                                                    최신순
+                                                </button>
+                                                <button class="bestReview reviewSecond filterPhoto" type="button"
+                                                    aria-pressed="true" id="filterPhoto">
+                                                    <svg class="icon" width="18" height="18" viewBox="0 0 18 18"
+                                                        preserveAspectRatio="xMidYMid meet">
+                                                        <path fill="currentColor"
+                                                            d="M15.821 3a.67.67 0 0 1 .679.672v10.656a.67.67 0 0 1-.679.672H2.18a.67.67 0 0 1-.679-.672V3.672c0-.375.3-.672.679-.672H15.82zm-.679 1.344H2.858v8.14L7.01 7.781c.094-.125.284-.125.394 0l2.321 2.657c.048.046.063.109.048.156l-.3 1.375c-.016.11.11.172.173.094l2.369-2.579a.202.202 0 0 1 .284 0l2.842 3.094V4.344zm-2.526 3.61a1.1 1.1 0 0 1-1.105-1.095 1.1 1.1 0 0 1 1.105-1.093 1.1 1.1 0 0 1 1.105 1.093 1.1 1.1 0 0 1-1.105 1.094z">
+                                                        </path>
+                                                    </svg>
+                                                    사진리뷰
+                                                </button>
+                                            </div>
+
+                                            <div class="reviewFilterLeft">
+                                                <div class="filterBtnWrap" onclick="closeStarFilter()">
+                                                    <div class="filterOptionBtn">
+                                                        별점
+                                                        <svg class="icon" width="12" height="12" viewBox="0 0 12 12"
+                                                            fill="currentColor" preserveAspectRatio="xMidYMid meet">
+                                                            <path
+                                                                d="M6.069 6.72l4.123-3.783 1.216 1.326-5.32 4.881L.603 4.273l1.196-1.346z">
+                                                            </path>
+                                                        </svg>
+                                                        <div id="popOut" class="popout popout--prepared popout--axis-1 popout--dir-2 popout--cross-dir-2"
+                                                            data-popout="true"
+                                                            style="position: absolute; z-index: 1000; top: 29px; right: 9.0156px;">
+                                                            <div id="starFilterOption" class="filterBtnOff">
+                                                                <div class="share-drop-down__content css-1q9dafi e11jpdq02">
+                                                                    <div class="starCountWrap">
+                                                                        <button type="button" class="css-3t2wtg e11jpdq01">
+                                                                            <span class="starCount">
+                                                                                <span class="reviewWriterInfoTotalStar">
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                </span>
+                                                                                <span class="starCountText">
+                                                                                    (41개)
+                                                                                </span>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
 
 
+                                                                    <div class="starCountWrap">
+                                                                        <button type="button" class="css-3t2wtg e11jpdq01">
+                                                                            <span class="starCount">
+                                                                                <span class="reviewWriterInfoTotalStar">
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-2702"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-2702">
+                                                                                                <rect x="0" y="0" width="0"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-2702"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-2702)"
+                                                                                            xlink:href="#star-path-2702"></use>
+                                                                                    </svg>
+                                                                                </span>
+                                                                                <span class="starCountText">
+                                                                                    (4개)
+                                                                                </span>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+
+
+
+                                                                    <div class="starCountWrap">
+                                                                        <button type="button" class="css-3t2wtg e11jpdq01">
+                                                                            <span class="starCount">
+                                                                                <span class="reviewWriterInfoTotalStar">
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-2702"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-2702">
+                                                                                                <rect x="0" y="0" width="0"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-2702"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-2702)"
+                                                                                            xlink:href="#star-path-2702"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-2702"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-2702">
+                                                                                                <rect x="0" y="0" width="0"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-2702"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-2702)"
+                                                                                            xlink:href="#star-path-2702"></use>
+                                                                                    </svg>
+                                                                                </span>
+                                                                                <span class="starCountText">
+                                                                                    (1개)
+                                                                                </span>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+
+
+                                                                    <div class="starCountWrap">
+                                                                        <button type="button" class="css-3t2wtg e11jpdq01">
+                                                                            <span class="starCount">
+                                                                                <span class="reviewWriterInfoTotalStar">
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-2702"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-2702">
+                                                                                                <rect x="0" y="0" width="0"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-2702"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-2702)"
+                                                                                            xlink:href="#star-path-2702"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-2702"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-2702">
+                                                                                                <rect x="0" y="0" width="0"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-2702"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-2702)"
+                                                                                            xlink:href="#star-path-2702"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-2702"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-2702">
+                                                                                                <rect x="0" y="0" width="0"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-2702"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-2702)"
+                                                                                            xlink:href="#star-path-2702"></use>
+                                                                                    </svg>
+                                                                                </span>
+                                                                                <span class="starCountText">
+                                                                                    (0개)
+                                                                                </span>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+
+
+
+                                                                    <div class="starCountWrap">
+                                                                        <button type="button" class="css-3t2wtg e11jpdq01">
+                                                                            <span class="starCount">
+                                                                                <span class="reviewWriterInfoTotalStar">
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-140"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-140">
+                                                                                                <rect x="0" y="0" width="24"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-140"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-140)"
+                                                                                            xlink:href="#star-path-140"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-2702"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-2702">
+                                                                                                <rect x="0" y="0" width="0"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-2702"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-2702)"
+                                                                                            xlink:href="#star-path-2702"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-2702"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-2702">
+                                                                                                <rect x="0" y="0" width="0"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-2702"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-2702)"
+                                                                                            xlink:href="#star-path-2702"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-2702"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-2702">
+                                                                                                <rect x="0" y="0" width="0"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-2702"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-2702)"
+                                                                                            xlink:href="#star-path-2702"></use>
+                                                                                    </svg>
+                                                                                    <svg fill="#35C5F0" width="1em" height="1em"
+                                                                                        preserveAspectRatio="xMidYMid meet"
+                                                                                        viewBox="0 0 24 24">
+                                                                                        <defs>
+                                                                                            <path id="star-path-2702"
+                                                                                                d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                                            </path>
+                                                                                            <clipPath id="star-clip-2702">
+                                                                                                <rect x="0" y="0" width="0"
+                                                                                                    height="24"></rect>
+                                                                                            </clipPath>
+                                                                                        </defs>
+                                                                                        <use xlink:href="#star-path-2702"
+                                                                                            fill="#DBDBDB"></use>
+                                                                                        <use clip-path="url(#star-clip-2702)"
+                                                                                            xlink:href="#star-path-2702"></use>
+                                                                                    </svg>
+                                                                                </span>
+                                                                                <span class="starCountText">
+                                                                                    (0개)
+                                                                                </span>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+
+
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        
-
-                        <!-- 리뷰 코멘트들 -->
-                        <div class="reviewList">
-                            <div class="reviewItemContainer">
-                                <article class="reviewItem">
-                                    <div class="reviewWriter">
-                                        <a href="">
-                                            <img src="https://image.ohou.se/image/central_crop/bucketplace-v2-development/uploads-users-profile_images1586186036_567578.jpeg/80/80"
-                                                class="writerImage">
-                                        </a>
-                                        <div class="reviewWriterInfo">
-                                            <p class="writerInfoId">choreania</p>
-                                            <div class="reviewWriterInfoBottomWrap">
-                                                <div class="reviewWriterInfoStarWrap" type="button">
-                                                    <span class="reviewWriterInfoTotalStar">
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <span class="reviewWriterInfoDate">
-                                                    2022.09.29
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="reviewItemImage">
-                                        <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=144&h=144&c=c&webp=1"
-                                            srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=240&h=240&c=c&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=320&h=320&c=c&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=480&h=480&c=c&webp=1 3x"
-                                            class="reviewItemImageBtn">
-                                    </button>
-                                    <p class="reviewComment">
-                                        아직 안써봤지만 그래도 좋을것같아서 기대됩니다!
-                                    </p>
-                                    <div class="reviewCommentGood">
-                                        <button type="button" class="reviewCommentGoodBtn">
-                                            <div class="reviewCommentGoodBtnTxt">
-                                                도움이 돼요
-                                            </div>
-                                        </button>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-
-
-
-                        <div class="reviewList">
-                            <div class="reviewItemContainer">
-                                <article class="reviewItem">
-                                    <div class="reviewWriter">
-                                        <a href="">
-                                            <img src="https://image.ohou.se/image/central_crop/bucketplace-v2-development/uploads-users-profile_images1586186036_567578.jpeg/80/80"
-                                                class="writerImage">
-                                        </a>
-                                        <div class="reviewWriterInfo">
-                                            <p class="writerInfoId">choreania</p>
-                                            <div class="reviewWriterInfoBottomWrap">
-                                                <div class="reviewWriterInfoStarWrap" type="button">
-                                                    <span class="reviewWriterInfoTotalStar">
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <span class="reviewWriterInfoDate">
-                                                    2022.09.29
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="reviewItemImage">
-                                        <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=144&h=144&c=c&webp=1"
-                                            srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=240&h=240&c=c&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=320&h=320&c=c&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=480&h=480&c=c&webp=1 3x"
-                                            class="reviewItemImageBtn">
-                                    </button>
-                                    <p class="reviewComment">
-                                        아직 안써봤지만 그래도 좋을것같아서 기대됩니다!
-                                    </p>
-                                    <div class="reviewCommentGood">
-                                        <button type="button" class="reviewCommentGoodBtn">
-                                            <div class="reviewCommentGoodBtnTxt">
-                                                도움이 돼요
-                                            </div>
-                                        </button>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-
-
-                        <div class="reviewList">
-                            <div class="reviewItemContainer">
-                                <article class="reviewItem">
-                                    <div class="reviewWriter">
-                                        <a href="">
-                                            <img src="https://image.ohou.se/image/central_crop/bucketplace-v2-development/uploads-users-profile_images1586186036_567578.jpeg/80/80"
-                                                class="writerImage">
-                                        </a>
-                                        <div class="reviewWriterInfo">
-                                            <p class="writerInfoId">choreania</p>
-                                            <div class="reviewWriterInfoBottomWrap">
-                                                <div class="reviewWriterInfoStarWrap" type="button">
-                                                    <span class="reviewWriterInfoTotalStar">
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <span class="reviewWriterInfoDate">
-                                                    2022.09.29
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="reviewItemImage">
-                                        <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=144&h=144&c=c&webp=1"
-                                            srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=240&h=240&c=c&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=320&h=320&c=c&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=480&h=480&c=c&webp=1 3x"
-                                            class="reviewItemImageBtn">
-                                    </button>
-                                    <p class="reviewComment">
-                                        아직 안써봤지만 그래도 좋을것같아서 기대됩니다!
-                                    </p>
-                                    <div class="reviewCommentGood">
-                                        <button type="button" class="reviewCommentGoodBtn">
-                                            <div class="reviewCommentGoodBtnTxt">
-                                                도움이 돼요
-                                            </div>
-                                        </button>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-
-
-                        <div class="reviewList">
-                            <div class="reviewItemContainer">
-                                <article class="reviewItem">
-                                    <div class="reviewWriter">
-                                        <a href="">
-                                            <img src="https://image.ohou.se/image/central_crop/bucketplace-v2-development/uploads-users-profile_images1586186036_567578.jpeg/80/80"
-                                                class="writerImage">
-                                        </a>
-                                        <div class="reviewWriterInfo">
-                                            <p class="writerInfoId">choreania</p>
-                                            <div class="reviewWriterInfoBottomWrap">
-                                                <div class="reviewWriterInfoStarWrap" type="button">
-                                                    <span class="reviewWriterInfoTotalStar">
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <span class="reviewWriterInfoDate">
-                                                    2022.09.29
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="reviewItemImage">
-                                        <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=144&h=144&c=c&webp=1"
-                                            srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=240&h=240&c=c&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=320&h=320&c=c&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=480&h=480&c=c&webp=1 3x"
-                                            class="reviewItemImageBtn">
-                                    </button>
-                                    <p class="reviewComment">
-                                        아직 안써봤지만 그래도 좋을것같아서 기대됩니다!
-                                    </p>
-                                    <div class="reviewCommentGood">
-                                        <button type="button" class="reviewCommentGoodBtn">
-                                            <div class="reviewCommentGoodBtnTxt">
-                                                도움이 돼요
-                                            </div>
-                                        </button>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-
-
-                        <div class="reviewList">
-                            <div class="reviewItemContainer">
-                                <article class="reviewItem">
-                                    <div class="reviewWriter">
-                                        <a href="">
-                                            <img src="https://image.ohou.se/image/central_crop/bucketplace-v2-development/uploads-users-profile_images1586186036_567578.jpeg/80/80"
-                                                class="writerImage">
-                                        </a>
-                                        <div class="reviewWriterInfo">
-                                            <p class="writerInfoId">choreania</p>
-                                            <div class="reviewWriterInfoBottomWrap">
-                                                <div class="reviewWriterInfoStarWrap" type="button">
-                                                    <span class="reviewWriterInfoTotalStar">
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                        <svg fill="#35C5F0" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                                            <defs>
-                                                                <path id="star-path-140"
-                                                                    d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
-                                                                </path>
-                                                                <clipPath id="star-clip-140">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                </clipPath>
-                                                            </defs>
-                                                            <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
-                                                            <use clip-path="url(#star-clip-140)"
-                                                                xlink:href="#star-path-140"></use>
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <span class="reviewWriterInfoDate">
-                                                    2022.09.29
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="reviewItemImage">
-                                        <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=144&h=144&c=c&webp=1"
-                                            srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=240&h=240&c=c&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=320&h=320&c=c&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=480&h=480&c=c&webp=1 3x"
-                                            class="reviewItemImageBtn">
-                                    </button>
-                                    <p class="reviewComment">
-                                        아직 안써봤지만 그래도 좋을것같아서 기대됩니다!
-                                    </p>
-                                    <div class="reviewCommentGood">
-                                        <button type="button" class="reviewCommentGoodBtn">
-                                            <div class="reviewCommentGoodBtnTxt">
-                                                도움이 돼요
-                                            </div>
-                                        </button>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-
-
-                        <!-- 리뷰 작성 -->
-                        <div class="attachWrap">
-                            <label for="attach">
-                                <div class="attach">
-                                </div>
-                            </label>
-                        </div>
-                        <div class="reviewWritingSection">
-                            <div class="review-modal__section">
-                                <div class="review-modal__form__star__wrap">
-                                    <div class="review-modal__form__star">
-                                        <div class="review-modal__form__star__label">별점</div>
-                                        <div class="review-modal__form__star__value">
-                                            <ul class="rating-input">
-                                                <li>
-                                                    <label class="rating-input__star" aria-label="별점 1점">
-                                                        <input type="radio" value="1">
-                                                        <svg class="star" fill="currentColor" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
-                                                            <path fill-rule="evenodd"
-                                                                d="M18 30.7l-9 3.8c-1.5.7-2.6-.2-2.5-1.8l.8-9.7L1 15.6c-1-1.3-.6-2.6 1-3l9.5-2.2 5-8.3c1-1.5 2.3-1.5 3.1 0l5 8.3 9.6 2.2c1.6.4 2 1.7 1 3L28.7 23l.8 9.7c.1 1.6-1 2.5-2.5 1.8l-9-3.8z">
-                                                            </path>
-                                                        </svg>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="rating-input__star" aria-label="별점 2점">
-                                                        <input type="radio" value="2">
-                                                        <svg class="star" fill="currentColor" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
-                                                            <path fill-rule="evenodd"
-                                                                d="M18 30.7l-9 3.8c-1.5.7-2.6-.2-2.5-1.8l.8-9.7L1 15.6c-1-1.3-.6-2.6 1-3l9.5-2.2 5-8.3c1-1.5 2.3-1.5 3.1 0l5 8.3 9.6 2.2c1.6.4 2 1.7 1 3L28.7 23l.8 9.7c.1 1.6-1 2.5-2.5 1.8l-9-3.8z">
-                                                            </path>
-                                                        </svg>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="rating-input__star" aria-label="별점 3점">
-                                                        <input type="radio" value="3">
-                                                        <svg class="star" fill="currentColor" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
-                                                            <path fill-rule="evenodd"
-                                                                d="M18 30.7l-9 3.8c-1.5.7-2.6-.2-2.5-1.8l.8-9.7L1 15.6c-1-1.3-.6-2.6 1-3l9.5-2.2 5-8.3c1-1.5 2.3-1.5 3.1 0l5 8.3 9.6 2.2c1.6.4 2 1.7 1 3L28.7 23l.8 9.7c.1 1.6-1 2.5-2.5 1.8l-9-3.8z">
-                                                            </path>
-                                                        </svg>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="rating-input__star" aria-label="별점 4점">
-                                                        <input type="radio" value="4">
-                                                        <svg class="star" fill="currentColor" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
-                                                            <path fill-rule="evenodd"
-                                                                d="M18 30.7l-9 3.8c-1.5.7-2.6-.2-2.5-1.8l.8-9.7L1 15.6c-1-1.3-.6-2.6 1-3l9.5-2.2 5-8.3c1-1.5 2.3-1.5 3.1 0l5 8.3 9.6 2.2c1.6.4 2 1.7 1 3L28.7 23l.8 9.7c.1 1.6-1 2.5-2.5 1.8l-9-3.8z">
-                                                            </path>
-                                                        </svg>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="rating-input__star" aria-label="별점 5점">
-                                                        <input type="radio" value="5">
-                                                        <svg class="star" fill="currentColor" width="1em" height="1em"
-                                                            preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
-                                                            <path fill-rule="evenodd"
-                                                                d="M18 30.7l-9 3.8c-1.5.7-2.6-.2-2.5-1.8l.8-9.7L1 15.6c-1-1.3-.6-2.6 1-3l9.5-2.2 5-8.3c1-1.5 2.3-1.5 3.1 0l5 8.3 9.6 2.2c1.6.4 2 1.7 1 3L28.7 23l.8 9.7c.1 1.6-1 2.5-2.5 1.8l-9-3.8z">
-
-                                                            </path>
-                                                        </svg></label>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                
+                                <!-- 필터 들어갈 공간 -->
+                                <div class="filteringStarWrap">
+                                    <div class="filteringStar">
                                     </div>
                                 </div>
-                            </div>
-
-                            <form class="reviewWritingForm">
-                                <img class="userProfileImg"
-                                    src="https://image.ohou.se/i/bucketplace-v2-development/uploads/default_images/avatar.png?gif=1&w=36&webp=1"
-                                    srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/default_images/avatar.png?gif=1&w=72&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/default_images/avatar.png?gif=1&w=72&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/default_images/avatar.png?gif=1&w=144&webp=1 3x">
 
 
-                                <div class="userCommentWrap">
-                                    <div class="userCommentForm">
-                                        <div class="userCommentFormReal">
-                                            <input type="text" class="userCommentWritingSector"
-                                                placeholder="후기를 남겨보세요.">
-                                            <div class="commentPhoto">
-                                                <label class="cameraImg" for="attach">
-                                                    <img src="camera.PNG">
-                                                    <input type="file" id="attach" class="cameraImgWrap" style="display:none;">
-                                                    </input>
-                                                </label>
+                                <!-- 리뷰 코멘트들 -->
+                                <div class="reviewList">
+                                    <div class="reviewItemContainer">
+                                        <article class="reviewItem">
+                                            <div class="reviewWriter">
+                                                <a href="">
+                                                    <img src="https://image.ohou.se/image/central_crop/bucketplace-v2-development/uploads-users-profile_images1586186036_567578.jpeg/80/80"
+                                                        class="writerImage">
+                                                </a>
+                                                <div class="reviewWriterInfo">
+                                                    <p class="writerInfoId">choreania</p>
+                                                    <div class="reviewWriterInfoBottomWrap">
+                                                        <div class="reviewWriterInfoStarWrap" type="button">
+                                                            <span class="reviewWriterInfoTotalStar">
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                        <span class="reviewWriterInfoDate">
+                                                            2022.09.29
+                                                        </span>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <button type="button" class="reviewItemImage">
+                                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=144&h=144&c=c&webp=1"
+                                                    srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=240&h=240&c=c&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=320&h=320&c=c&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=480&h=480&c=c&webp=1 3x"
+                                                    class="reviewItemImageBtn">
+                                            </button>
+                                            <p class="reviewComment">
+                                                아직 안써봤지만 그래도 좋을것같아서 기대됩니다!
+                                            </p>
+                                            <div class="reviewCommentGood">
+                                                <button type="button" class="reviewCommentGoodBtn">
+                                                    <div class="reviewCommentGoodBtnTxt">
+                                                        도움이 돼요
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
 
-                                            <button type="submit" class="putComment">입력</button>
+
+
+                                <div class="reviewList">
+                                    <div class="reviewItemContainer">
+                                        <article class="reviewItem">
+                                            <div class="reviewWriter">
+                                                <a href="">
+                                                    <img src="https://image.ohou.se/image/central_crop/bucketplace-v2-development/uploads-users-profile_images1586186036_567578.jpeg/80/80"
+                                                        class="writerImage">
+                                                </a>
+                                                <div class="reviewWriterInfo">
+                                                    <p class="writerInfoId">choreania</p>
+                                                    <div class="reviewWriterInfoBottomWrap">
+                                                        <div class="reviewWriterInfoStarWrap" type="button">
+                                                            <span class="reviewWriterInfoTotalStar">
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                        <span class="reviewWriterInfoDate">
+                                                            2022.09.29
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="reviewItemImage">
+                                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=144&h=144&c=c&webp=1"
+                                                    srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=240&h=240&c=c&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=320&h=320&c=c&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=480&h=480&c=c&webp=1 3x"
+                                                    class="reviewItemImageBtn">
+                                            </button>
+                                            <p class="reviewComment">
+                                                아직 안써봤지만 그래도 좋을것같아서 기대됩니다!
+                                            </p>
+                                            <div class="reviewCommentGood">
+                                                <button type="button" class="reviewCommentGoodBtn">
+                                                    <div class="reviewCommentGoodBtnTxt">
+                                                        도움이 돼요
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+
+
+                                <div class="reviewList">
+                                    <div class="reviewItemContainer">
+                                        <article class="reviewItem">
+                                            <div class="reviewWriter">
+                                                <a href="">
+                                                    <img src="https://image.ohou.se/image/central_crop/bucketplace-v2-development/uploads-users-profile_images1586186036_567578.jpeg/80/80"
+                                                        class="writerImage">
+                                                </a>
+                                                <div class="reviewWriterInfo">
+                                                    <p class="writerInfoId">choreania</p>
+                                                    <div class="reviewWriterInfoBottomWrap">
+                                                        <div class="reviewWriterInfoStarWrap" type="button">
+                                                            <span class="reviewWriterInfoTotalStar">
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                        <span class="reviewWriterInfoDate">
+                                                            2022.09.29
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="reviewItemImage">
+                                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=144&h=144&c=c&webp=1"
+                                                    srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=240&h=240&c=c&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=320&h=320&c=c&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=480&h=480&c=c&webp=1 3x"
+                                                    class="reviewItemImageBtn">
+                                            </button>
+                                            <p class="reviewComment">
+                                                아직 안써봤지만 그래도 좋을것같아서 기대됩니다!
+                                            </p>
+                                            <div class="reviewCommentGood">
+                                                <button type="button" class="reviewCommentGoodBtn">
+                                                    <div class="reviewCommentGoodBtnTxt">
+                                                        도움이 돼요
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+
+
+                                <div class="reviewList">
+                                    <div class="reviewItemContainer">
+                                        <article class="reviewItem">
+                                            <div class="reviewWriter">
+                                                <a href="">
+                                                    <img src="https://image.ohou.se/image/central_crop/bucketplace-v2-development/uploads-users-profile_images1586186036_567578.jpeg/80/80"
+                                                        class="writerImage">
+                                                </a>
+                                                <div class="reviewWriterInfo">
+                                                    <p class="writerInfoId">choreania</p>
+                                                    <div class="reviewWriterInfoBottomWrap">
+                                                        <div class="reviewWriterInfoStarWrap" type="button">
+                                                            <span class="reviewWriterInfoTotalStar">
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                        <span class="reviewWriterInfoDate">
+                                                            2022.09.29
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="reviewItemImage">
+                                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=144&h=144&c=c&webp=1"
+                                                    srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=240&h=240&c=c&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=320&h=320&c=c&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=480&h=480&c=c&webp=1 3x"
+                                                    class="reviewItemImageBtn">
+                                            </button>
+                                            <p class="reviewComment">
+                                                아직 안써봤지만 그래도 좋을것같아서 기대됩니다!
+                                            </p>
+                                            <div class="reviewCommentGood">
+                                                <button type="button" class="reviewCommentGoodBtn">
+                                                    <div class="reviewCommentGoodBtnTxt">
+                                                        도움이 돼요
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+
+
+                                <div class="reviewList">
+                                    <div class="reviewItemContainer">
+                                        <article class="reviewItem">
+                                            <div class="reviewWriter">
+                                                <a href="">
+                                                    <img src="https://image.ohou.se/image/central_crop/bucketplace-v2-development/uploads-users-profile_images1586186036_567578.jpeg/80/80"
+                                                        class="writerImage">
+                                                </a>
+                                                <div class="reviewWriterInfo">
+                                                    <p class="writerInfoId">choreania</p>
+                                                    <div class="reviewWriterInfoBottomWrap">
+                                                        <div class="reviewWriterInfoStarWrap" type="button">
+                                                            <span class="reviewWriterInfoTotalStar">
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                                <svg fill="#35C5F0" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                                    <defs>
+                                                                        <path id="star-path-140"
+                                                                            d="M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z">
+                                                                        </path>
+                                                                        <clipPath id="star-clip-140">
+                                                                            <rect x="0" y="0" width="24" height="24"></rect>
+                                                                        </clipPath>
+                                                                    </defs>
+                                                                    <use xlink:href="#star-path-140" fill="#DBDBDB"></use>
+                                                                    <use clip-path="url(#star-clip-140)"
+                                                                        xlink:href="#star-path-140"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                        <span class="reviewWriterInfoDate">
+                                                            2022.09.29
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="reviewItemImage">
+                                                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=144&h=144&c=c&webp=1"
+                                                    srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=240&h=240&c=c&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=320&h=320&c=c&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/cards/snapshots/166443833118377189.jpeg?gif=1&w=480&h=480&c=c&webp=1 3x"
+                                                    class="reviewItemImageBtn">
+                                            </button>
+                                            <p class="reviewComment">
+                                                아직 안써봤지만 그래도 좋을것같아서 기대됩니다!
+                                            </p>
+                                            <div class="reviewCommentGood">
+                                                <button type="button" class="reviewCommentGoodBtn">
+                                                    <div class="reviewCommentGoodBtnTxt">
+                                                        도움이 돼요
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+
+
+                                <!-- 리뷰 작성 -->
+                                <div class="attachWrap">
+                                    <!-- 첨부파일 이미지 공간 -->
+                                    <div class="xButton" onclick="xBtn()"></div>
+                                    <label for="attach">
+                                        <div class="attach"></div>
+                                    </label>
+                                </div>
+                                <div class="reviewWritingSection">
+                                    <div class="review-modal__section">
+                                        <div class="review-modal__form__star__wrap">
+                                            <div class="review-modal__form__star">
+                                                <div class="review-modal__form__star__label">별점</div>
+                                                <div class="review-modal__form__star__value">
+                                                    <ul class="rating-input">
+                                                        <li>
+                                                            <label class="rating-input__star" aria-label="별점 1점">
+                                                                <input type="radio" value="1">
+                                                                <svg class="star" fill="currentColor" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M18 30.7l-9 3.8c-1.5.7-2.6-.2-2.5-1.8l.8-9.7L1 15.6c-1-1.3-.6-2.6 1-3l9.5-2.2 5-8.3c1-1.5 2.3-1.5 3.1 0l5 8.3 9.6 2.2c1.6.4 2 1.7 1 3L28.7 23l.8 9.7c.1 1.6-1 2.5-2.5 1.8l-9-3.8z">
+                                                                    </path>
+                                                                </svg>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="rating-input__star" aria-label="별점 2점">
+                                                                <input type="radio" value="2">
+                                                                <svg class="star" fill="currentColor" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M18 30.7l-9 3.8c-1.5.7-2.6-.2-2.5-1.8l.8-9.7L1 15.6c-1-1.3-.6-2.6 1-3l9.5-2.2 5-8.3c1-1.5 2.3-1.5 3.1 0l5 8.3 9.6 2.2c1.6.4 2 1.7 1 3L28.7 23l.8 9.7c.1 1.6-1 2.5-2.5 1.8l-9-3.8z">
+                                                                    </path>
+                                                                </svg>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="rating-input__star" aria-label="별점 3점">
+                                                                <input type="radio" value="3">
+                                                                <svg class="star" fill="currentColor" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M18 30.7l-9 3.8c-1.5.7-2.6-.2-2.5-1.8l.8-9.7L1 15.6c-1-1.3-.6-2.6 1-3l9.5-2.2 5-8.3c1-1.5 2.3-1.5 3.1 0l5 8.3 9.6 2.2c1.6.4 2 1.7 1 3L28.7 23l.8 9.7c.1 1.6-1 2.5-2.5 1.8l-9-3.8z">
+                                                                    </path>
+                                                                </svg>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="rating-input__star" aria-label="별점 4점">
+                                                                <input type="radio" value="4">
+                                                                <svg class="star" fill="currentColor" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M18 30.7l-9 3.8c-1.5.7-2.6-.2-2.5-1.8l.8-9.7L1 15.6c-1-1.3-.6-2.6 1-3l9.5-2.2 5-8.3c1-1.5 2.3-1.5 3.1 0l5 8.3 9.6 2.2c1.6.4 2 1.7 1 3L28.7 23l.8 9.7c.1 1.6-1 2.5-2.5 1.8l-9-3.8z">
+                                                                    </path>
+                                                                </svg>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="rating-input__star" aria-label="별점 5점">
+                                                                <input type="radio" value="5">
+                                                                <svg class="star" fill="currentColor" width="1em" height="1em"
+                                                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M18 30.7l-9 3.8c-1.5.7-2.6-.2-2.5-1.8l.8-9.7L1 15.6c-1-1.3-.6-2.6 1-3l9.5-2.2 5-8.3c1-1.5 2.3-1.5 3.1 0l5 8.3 9.6 2.2c1.6.4 2 1.7 1 3L28.7 23l.8 9.7c.1 1.6-1 2.5-2.5 1.8l-9-3.8z">
+                                                                    </path>
+                                                                </svg>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
-                                </div>
-                        </div>
-                        </form>
-                        <ul class="commentPageNumber">
-                            <!-- 이전 페이지 버튼 -->
-                            <li class="beforePageArrow firstPage" id="beforePageArrow">
-                                <button class="pageBtn beforePageBtn" type="button">
-                                    <svg width="1em" height="1em" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M6 19.692L8.25 22 18 12 8.25 2 6 4.308 13.5 12z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </li>
-                            <li><button class="pageBtnNumber clickNumber">1</button></li>
-                            <li><button class="pageBtnNumber"">2</button></li>
-                            <li><button class="pageBtnNumber">3</button></li>
-                            <li><button class="pageBtnNumber">4</button></li>
-                            <li><button class="pageBtnNumber">5</button></li>
-                            <li><button class="pageBtnNumber">6</button></li>
-                            <li><button class="pageBtnNumber">7</button></li>
-                            <li><button class="pageBtnNumber">8</button></li>
-                            <li><button class="pageBtnNumber">9</button></li>
-                            <li><button class="pageBtnNumber">10</button></li>
+                                    <form class="reviewWritingForm">
+                                        <img class="userProfileImg"
+                                            src="https://image.ohou.se/i/bucketplace-v2-development/uploads/default_images/avatar.png?gif=1&w=36&webp=1"
+                                            srcset="https://image.ohou.se/i/bucketplace-v2-development/uploads/default_images/avatar.png?gif=1&w=72&webp=1 1.5x,https://image.ohou.se/i/bucketplace-v2-development/uploads/default_images/avatar.png?gif=1&w=72&webp=1 2x,https://image.ohou.se/i/bucketplace-v2-development/uploads/default_images/avatar.png?gif=1&w=144&webp=1 3x">
 
-                            <!-- 다음 페이지 버튼 -->
-                            <li class="afterPageArrow">
-                                <button class="pageBtn afterPageBtn" type="button">
-                                    <svg width="1em" height="1em" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M6 19.692L8.25 22 18 12 8.25 2 6 4.308 13.5 12z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </li>
-                        </ul>
+
+                                        <div class="userCommentWrap">
+                                            <div class="userCommentForm">
+                                                <div class="userCommentFormReal">
+                                                    <input type="text" class="userCommentWritingSector"
+                                                        placeholder="후기를 남겨보세요.">
+                                                    <div class="commentPhoto">
+                                                        <label class="cameraImg" for="attach">
+                                                            <img src="camera.PNG">
+                                                            <input type="file" id="attach" class="cameraImgWrap" style="display:none;">
+                                                            </input>
+                                                        </label>
+                                                    </div>
+
+                                                    <button type="submit" class="putComment" onclick="regist()">입력</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </form>
+                        </section>
+                            <ul class="commentPageNumber">
+                                <!-- 이전 페이지 버튼 -->
+                                <li class="beforePageArrow firstPage" id="beforePageArrow">
+                                    <button class="pageBtn beforePageBtn" type="button">
+                                        <svg width="1em" height="1em" viewBox="0 0 24 24">
+                                            <path fill="currentColor" d="M6 19.692L8.25 22 18 12 8.25 2 6 4.308 13.5 12z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li><button class="pageBtnNumber clickNumber">1</button></li>
+                                <li><button class="pageBtnNumber"">2</button></li>
+                                <li><button class="pageBtnNumber">3</button></li>
+                                <li><button class="pageBtnNumber">4</button></li>
+                                <li><button class="pageBtnNumber">5</button></li>
+                                <li><button class="pageBtnNumber">6</button></li>
+                                <li><button class="pageBtnNumber">7</button></li>
+                                <li><button class="pageBtnNumber">8</button></li>
+                                <li><button class="pageBtnNumber">9</button></li>
+                                <li><button class="pageBtnNumber">10</button></li>
+
+                                <!-- 다음 페이지 버튼 -->
+                                <li class="afterPageArrow">
+                                    <button class="pageBtn afterPageBtn" type="button">
+                                        <svg width="1em" height="1em" viewBox="0 0 24 24">
+                                            <path fill="currentColor" d="M6 19.692L8.25 22 18 12 8.25 2 6 4.308 13.5 12z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </article>
     </main>
