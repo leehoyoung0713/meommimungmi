@@ -65,7 +65,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
       :root {
         --swiper-theme-color: white;
@@ -119,11 +119,11 @@
     <!-- Swiper -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="banner/image1.png" alt=""></div>
+        <div class="swiper-slide"><img src="banner/banner1.png" alt=""></div>
         <div class="swiper-slide"><img src="banner/image2.png" alt=""></div>
         <div class="swiper-slide"><img src="banner/image3.png" alt=""></div>
         <div class="swiper-slide"><img src="banner/image4.png" alt=""></div>
-        <div class="swiper-slide"><img src="banner/image5.png" alt=""></div>
+        <div class="swiper-slide"><img src="banner/banner1.png" alt=""></div>
         <div class="swiper-slide"><img src="banner/image6.png" alt=""></div>
         <div class="swiper-slide"><img src="banner/image7.png" alt=""></div>
         <div class="swiper-slide"><img src="banner/image8.png" alt=""></div>

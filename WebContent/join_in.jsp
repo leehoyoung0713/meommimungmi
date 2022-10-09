@@ -8,31 +8,20 @@
 <link rel="icon" type="image/x-icon" href="diolpit5.ico">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://static.wadiz.kr/static/web/wui.css?e5a9644b">
+<link rel="stylesheet" href="https://static.wadiz.kr/static/web/css/vendor.5f64dbd5.chunk.css">
+<link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.css?7df0a58c">
+<link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.css?56abc884">
+<link href="https://cdn.wadiz.kr/resources/static/css/wlayout.css?v=201803151400" rel="stylesheet">
+<link rel="stylesheet" href="https://static.wadiz.kr/account/main.1b0cd3eb.css">
+<link rel="stylesheet" href="https://static.wadiz.kr/static/iam/main.f99e3b76.css">
+<link rel="stylesheet" href="https://static.wadiz.kr/static/floating-buttons/main.0b5e20dd.css">
     <link rel="stylesheet" href="join_in.css">
 </head>
 
 <body>
        
-    <header>
-        <!-- 멈미뭄미 좌측 상단 로고 -->
-
-        <div id="logo">
-        <a href="mainpage.jsp">
-            <svg xmlns="http://www.w3.org/2000/svg"  width="85" height="25" viewBox="0 0 85 25">
-            
-                <path fill="#1D2129" fill-rule="nonzero" 
-                    d="M58.49 2.23h2.11v21.29H59a1.73 1.73 0 0 1-1.62-1.16 9 9 0 0 1-10.93-.28 7.48 7.48 0 0 1-2.75-6.29 7.65 7.65 0 0 1 12.79-5.07V4.23a2 2 0 0 1 2-2zm-6.3 18.62a4.36 4.36 0 0 0 4.16-4.52 4.19 4.19 0 1 0-8.35 0 4.36 4.36 0 0 0 4.19 4.52zM42 23.52h-1.52a1.73 1.73 0 0 1-1.64-1.16 9 9 0 0 1-10.93-.28 7.48 7.48 0 0 1-2.75-6.29A7.65 7.65 0 0 1 38 10.72a2 2 0 0 1 1.9-1.79H42v14.59zm-8.41-2.67h.02a4.35 4.35 0 0 0 4.15-4.52 4.35 4.35 0 0 0-4.17-4.51 4.35 4.35 0 0 0-4.17 4.51 4.36 4.36 0 0 0 4.17 4.52zM83.47 8.94v2.11l-7.07 9.06h7.06v3.47h-13v-2.1l7.08-9.07h-6.62v-1.47a2 2 0 0 1 2-2h10.55zM65.86 7.3a2.48 2.48 0 1 1 0-4.96 2.48 2.48 0 0 1 0 4.96zM21.21 8.94h4.14l-4.86 14.59h-4.15l-3.21-9.36-3.21 9.36H5.77L.92 8.94h4.13L8 18l2.5-7.74a2 2 0 0 1 1.86-1.34h2.9l3 9.08 2.95-9.06zm42.65 14.59l-.04-12.59a2 2 0 0 1 2-2h2.11v14.59h-4.07z">
-                </path>
-                </a>
-
-            </svg>
-        </div>
-        <span id="login" style="float : right;"><a href="log_in.html" style="text-decoration-line: none;
-            color: black;">로그인</a></span>
-        <span id="join_in" style="float : right;"><a href="join_in.html" style="text-decoration-line: none;
-            color: black;">회원가입</a></span>
-    </header>
-
+   
     <main>
         <!-- 간편 로그인 -->
         <div id="easy_join_in">
@@ -51,11 +40,11 @@
                       <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z">
                       </path>
                   </svg>카카오로 시작하기</button>
-              <button type="button" id="naverLogin" style="border: 1px solid #0000003b;"><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
+              <button type="button" id="naverLogin" style="border: 1px solid #9e9c9c3b;"><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
                       <path d="M19.52 5.76v10.32L12.48 5.76H4.8v20.48h7.68V15.92l7.12 10.32h7.6V5.76z"></path>
 
 
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20">
                         <defs>
                             <path id="a" d="M0 0h348v46H0z"></path>
                         </defs>
@@ -85,11 +74,11 @@
         <div class="SignUpIntroApp_divider__24Rgj"></div>
         <div id="email_join_in">
 
-            <h3>아이디 간편가입</h3>
+            <h3 style="font-size:18.72px;font-weight:bold">아이디 간편가입</h3>
             <div class="label"><label for="아이디">아이디</label></div>
             <div id="email">
-                <div class="input"><input type="email" class="inputId" id="id" placeholder="아이디 입력"></div>
-                <div><button class="OverlapCheck" style="background-color: #00c4c452; color: rgb(0 0 0 / 44%);">중복확인</button></div>
+                <div class="input" style="width:70%"><input type="email" class="inputId" id="id" placeholder="아이디 입력"></div>
+                <div><button class="OverlapCheck" style="background-color: #ff914d; color: #fff; font-weight:400);">중복확인</button></div>
             </div>
             <p class="idalter" style="position: absolute;"></p>
             <div id="name">
@@ -109,41 +98,41 @@
             </div>
 
             <div id = "agreement">
-                <div id = "agreement_check" style="margin-top: 24px;">
-                    <button class="Button_button__3ip2b Button_text__3Q5QV Button_iconOnly__fOIQf iconButton SignUpAllCheckTermsCheckbox_termsMoreButton__wal9S" id="Button_button__3ip2b2" type="button">
-                        <span>
+                <div id = "agreement_check" style="margin-top: 24px; align-items:center;">
+                    <button class="Button_button__3ip2b Button_text__3Q5QV Button_iconOnly__fOIQf iconButton SignUpAllCheckTermsCheckbox_termsMoreButton__wal9S" id="Button_button__3ip2b2" type="button" style="position: relative; left: 328px;">
+                      <span>
                             <span class="Button_children__VGHI5">
                                 <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P" aria-hidden="true">
                                     <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z">
-            </span>
+            </path></svg></span>
         </span>
     </button>
                     <input id = "allterm" type="checkbox" style="position: absolute;" name="allterm">
                     <label for = "agreement_checkbox"></label>
-                    <span style="padding-left:15px ;">전체동의</span>
+                    <span >전체동의</span>
                 </div>
-                <div id = "agreement_explanation" style="padding-left:15px ;">
+                <div id = "agreement_explanation" >
                 회원 서비스(필수), 이벤트·혜택알림 동의(선택)
                 </div>
             </div>
             <div>
-                <button type="button" id="finish" class="wz button primary block submit-button" style="cursor:pointer;">완료</button>
+                <button type="button" id="finish" class="wz button primary block submit-button" style="cursor:pointer;background-color:#ff914d">완료</button>
                 
             </div>
 
-            <img alt="멈미뭄미 상담 버튼" src="https://cf.channel.io/pub-file/22503/5fd6fd874e7f9156515f/group-4-copy.png" width="60" height="60" class="Launcherstyled__Image-ch-front__sc-oef45p-4 gzwqUH">
+            <img id='inqueryImg' alt="멈미뭄미 상담 버튼" src="https://cf.channel.io/pub-file/22503/5fd6fd874e7f9156515f/group-4-copy.png" width="60" height="60" class="Launcherstyled__Image-ch-front__sc-oef45p-4 gzwqUH">
 
-
-    </main>
-    <footer>
-        <p>
+        <p class="footer_p">
             이미 멈미뭄미 계정이 있나요?&nbsp&nbsp; <a href="log_in.html" data-return-url="" data-event="iam.signin.goto.signup">로그인</a>
         </p>
-    </footer>
-    
+    </main>
+    	<div class="WadizModal_portal__JMa0C">
+    	
+    	
+    	</div>
     <div class="modalclass modalclass_hidden" >
         <div class="modalclass_overlay"></div>
-        <div class="modalclass_content" style="padding-right: 0px; padding-bottom: 0; height: 567px; top: 136px; width: 312px; padding-right: 20px;
+        <div class="modalclass_content" style="padding-right: 0px; padding-bottom: 0; left:38.5%; padding-right: 20px;
         padding-bottom: 20px; padding-left: 20px;">
             <button class="modalclassbutton_one" type="button" aria-label="닫기"><svg viewBox="0 0 40 40" focusable="false" role="presentation" class="modalclassbutton_two" aria-hidden="true"><path d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z">
 
@@ -151,8 +140,8 @@
         </svg>
     </button>
             <header class="modalclass_header">
-            <h1>약관확인</h1>
-            <p class="modalclass_content_title">약관에 동의하셔야 해당 서비스를 이용 가능합니다.</p>
+            <h1 style="font-size:28px;margin-top:16px;margin-bottom:8px;font-weight:bold;">약관확인</h1>
+            <p class="modalclass_content_title" style="font-size:14px;">약관에 동의하셔야 해당 서비스를 이용 가능합니다.</p>
         </header>
             <section class="modalclass_content_checkboxAll">
                 <label class="modalcalss_content_checkboxAll_label">
@@ -1245,12 +1234,16 @@
     $('.OverlapCheck').attr('disabled', 'disabled');
     $('.inputId').on('input', function() {
         if ($(this).val() !== '') {
-          $('.OverlapCheck').css('background-color', '#00c4c4');
+        /*   $('.OverlapCheck').css('background-color', '#00c4c4'); */
+         $('.OverlapCheck').css('background-color', '#ff914d'); 
           $('.OverlapCheck').css('color', '#fff');
           $('.OverlapCheck').removeAttr("disabled");
         }
         else {
-          $('.OverlapCheck').css('background-color', '#00c4c452');
+        	
+         $('.OverlapCheck').css('background-color', '#ff914d'); 
+         $('.OverlapCheck').css('opacity','1');
+        /*   $('.OverlapCheck').css('background-color', '#00c4c452'); */
           $('.OverlapCheck').css('color', 'rgb(0 0 0 / 44%)');
             $('.OverlapCheck').attr('disabled', 'disabled');
             

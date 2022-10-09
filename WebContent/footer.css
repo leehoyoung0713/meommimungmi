@@ -196,7 +196,7 @@ li{
 }
 
 .right_section{
-    padding: 40px 0 80px 0;
+    padding: 40px 0 80px 10px;
     line-height: 20px;
     letter-spacing: 0;
     font-size: 14px;
@@ -313,4 +313,21 @@ address{
     font-weight: bold !important;
     font-style: normal;
     font-size: 13px;
+}
+
+@media only screen and (min-width: 1700px) and (max-width: 1980px) {
+   #footer_menu_left {
+    display: inline;
+    position: relative;
+    top: 8px;
+    margin-left: 246.5px;
+}
+
+#footer_menu_right {
+    display: inline;
+    position: relative;
+    top: 8px;
+    margin-right: 239.5px;
+}
+	
 }

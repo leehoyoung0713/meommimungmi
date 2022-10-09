@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.css?7df0a58c">
     <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.css?6cd504ed">
     <link rel="stylesheet" href="https://static.wadiz.kr/main/main.5619fb79.css">
-
     <link rel="stylesheet" href="https://static.wadiz.kr/static/floating-buttons/main.0b5e20dd.css">
 </head>
 <style>
@@ -23,14 +22,15 @@
 	    border: 1px solid #ff914d !important;
 }
 </style>
+
 <body>
     <div class="web-header">
         <div class="web-header-large">
             <header class="header-wrapper">
                 <div class="header-container">
                     <h1 class="wadiz-logo"><a href="/"><span class="label">와디즈</span>
-                    <img alt="" src="banner/logo.png" width="95" height="30">
-                    </a></h1>
+                            <img alt="" src="banner/logo.png" width="95" height="30">
+                        </a></h1>
                     <ul class="GNBDesktop_container__3X3Cg">
                         <li class="GNBDesktop_item__H8bay"><a class="GNBDesktop_link__1AP6q"
                                 href="/web/wreward/comingsoon"><span>펀딩예정</span></a></li>
@@ -166,12 +166,66 @@
                                     name="keyword" class="SearchInputForm_input__2SZMG" autocomplete="off" value="">
                             </form>
                         </div>
-                        <div class="HeaderDesktop_user__3zGmM">
+                        <!--  <div class="HeaderDesktop_user__3zGmM">
                             <div class="User_container__bqVd2"><button type="button"
                                     class="User_btnSign__1URTs">로그인</button><button data-event="iam.signup"
                                     class="User_btnSign__1URTs">회원가입</button></div>
+                        </div> -->
+                        <!--           <div class="Header_notification">
+                            <div>
+                                <div class="notification_button_container">
+                                    <button class="NotificationButton_btnNotification__2fRCj">
+                                        <i class="icon notifications-o NotificationButton_icon__3bvJj"></i> 
+                                    </button>
+                                </div>
+                            </div>
+
                         </div>
 
+                        <div class="User_container__bqVd2">
+                        </div>
+ -->
+                        <div class="HeaderDesktop_notificationContainer__1iRey">
+                            <div>
+                                <div class="NotificationButton_container__2nhhV"><button
+                                        class="NotificationButton_btnNotification__2fRCj" aria-label="알림"><i
+                                            class="icon notifications-o NotificationButton_icon__3bvJj"
+                                            aria-hidden="true"></i></button></div>
+                                <div class="NotificationPopover_container__3nC48">
+                                    <div class="NotificationPopover_content__7-LLx">
+                                        <div class="NotificationList_container__NsGVu">
+                                            <div class="NotificationList_listContainer__1bWY1"><button type="button"
+                                                    class="NotificationListItem_listItem__1jcZ0"><span
+                                                        class="Avatar_wrap__2thmY NotificationListItem_avatar__12BqJ"
+                                                        style="width: 35px; height: 35px;"><span
+                                                            class="Avatar_picture__16i7U Avatar_visible__puBaI"
+                                                            style="background-image: -webkit-image-set(url(&quot;https://cdn.wadiz.kr/resources/static/img/common/profile_wadiz.png/wadiz/thumbnail/35/format/jpg/quality/95/&quot;) 1x, url(&quot;https://cdn.wadiz.kr/resources/static/img/common/profile_wadiz.png/wadiz/thumbnail/70/format/jpg/quality/95/&quot;) 2x);"></span></span>
+                                                    <div class="NotificationListItem_info__1prWn">
+                                                        <p class="NotificationListItem_title__1gq8W">
+                                                            <strong>h.hyeoniya</strong>님의 카카오 친구가 와디즈를 이용하는지 확인해 보고 취향도
+                                                            알아봐요!
+                                                        </p>
+                                                        <p class="NotificationListItem_time__1-UA5">5분 전</p>
+                                                    </div>
+                                                </button></div><a class="NotificationList_btnLink__3BUqf"
+                                                href="/web/wmypage/notification">알림 전체보기<i class="icon chevron-right"
+                                                    aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="HeaderDesktop_user__3zGmM">
+                            <div class="User_container__bqVd2"><button type="button" class="User_btnAvatar__2Mui-"
+                                    aria-label="마이 와디즈">
+                                    <div><span class="Avatar_wrap__2thmY" style="width: 32px; height: 32px;"><span
+                                                class="Avatar_picture__16i7U"></span></span></div>
+                                </button></div>
+                        </div>
+
+
+
+                        <div class="Header_loginprofile"></div>
                     </div>
                 </div>
             </header>
@@ -181,24 +235,35 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
-var $moreContent = $(".MoreMenuDesktop_container__1I6Al");
-var $moreButton = $(".GNBDesktop_link__1AP6q");
-var check = -1;
-var $moreSVG = $(".GNBDesktop_more__39gyV").children();
+    var $moreContent = $(".MoreMenuDesktop_container__1I6Al");//더보기창전체
+    var $moreButton = $(".GNBDesktop_link__1AP6q");//더보기 버튼
+    var $moreSVG = $(".GNBDesktop_more__39gyV").children();//더보기 우측 화살표
+    var check = -1;
+    var $header_notification = $('div.HeaderDesktop_notificationContainer__1iRey');//알림종모양 div
+    var $header_notification_container = $('.NotificationPopover_container__3nC48');//알림 창 전체 div
+    var headerCheck = -1;
+    //알림종 모양 클릭했을때
+    $header_notification.click(function () {
+        headerCheck *= -1;
+        if (headerCheck > 0) {
+            $header_notification_container.addClass('NotificationContainer_active__E29z7')
+        } else {
+            $header_notification_container.removeClass('NotificationContainer_active__E29z7')
+        }
 
-$moreButton.click(function () {
-    check *= -1;
-	 $moreSVG.attr('style',check>0? 'transform : rotate(270deg) !important':'transform : rotate(90deg) !important');
-	 if(check>0){
-	 $moreContent.addClass('MoreMenuDesktop_isOpened__17yOy');
-	 }else{
-	 $moreContent.removeClass('MoreMenuDesktop_isOpened__17yOy');
-	 }
+    })
+    //더보기 버튼 클릭했을때
+    $moreButton.click(function () {
+        check *= -1;
+        $moreSVG.attr('style', check > 0 ? 'transform : rotate(270deg) !important' : 'transform : rotate(90deg) !important');
+        if (check > 0) {
+            $moreContent.addClass('MoreMenuDesktop_isOpened__17yOy');
+        } else {
+            $moreContent.removeClass('MoreMenuDesktop_isOpened__17yOy');
+        }
 
-})
-
-
-
+    })
 </script>
+
 
 </html>

@@ -21,12 +21,32 @@
 
 
 </head>
-
+<style>
+	.Pagination_active__3Lx2R{
+		color:#ff914d !important;
+	}
+	
+	.Pagination_container__28uaq .Pagination_pageList__KyPel .Pagination_listItem__1atqr.Pagination_active__3Lx2R button{
+	color:#ff914d !important;
+	}
+	
+	
+	.mainPageHohyeon:after {
+    position: absolute !important;
+    top: -40px !important;
+    bottom: -40px !important;
+    right: 0 !important;
+    background-color: #f0f2f5 !important;
+    width: 1px !important;
+    content: "" !important;
+}
+	
+</style>
 <body>
     <div class="Main_wrap__2jKMu">
         <div class="RecommendationDesktop_innerGroup__as4jB Main_innerWrap__7-_Vm">
             <section
-                class="SectionContainerLayout_container__1f8kt RecommendFundingWrap_container__3LDiq RecommendationDesktop_recommendFunding__1dKi1" style='width:762px;padding-left:80px'>
+                class="SectionContainerLayout_container__1f8kt RecommendFundingWrap_container__3LDiq RecommendationDesktop_recommendFunding__1dKi1 mainPageHohyeon" style='width:945px;padding-left:80px;padding-right:80px;'>
                 <div class="title_contentWrapper__1P-q0 RecommendFundingWrap_title__1b9i3">
                     <div class="RecommendFundingWrap_subTitle__1SaNL">
                         <h1 style='font-size:28px;margin:5px 0'>사료</h1><span class="RecommendFundingWrap_description__5xAKe" style="margin-top:5px">지금 함께 만드는 성공</span>
@@ -167,7 +187,7 @@
                 </div> -->
             </section>
             <section
-                class="SectionContainerLayout_container__1f8kt RankingFundingWrap_container__16_A3 RecommendationDesktop_rankingFunding__2ccRd" style='width:427px;padding-right:80px;float: right;'>
+                class="SectionContainerLayout_container__1f8kt RankingFundingWrap_container__16_A3 RecommendationDesktop_rankingFunding__2ccRd" style='width:427px;padding-right:80px;float: right;padding-left:0!important'>
                 <div class="title_contentWrapper__1P-q0 RankingFundingWrap_title__1fllE">
                     <h1>실시간 후기</h1>
                 </div>
@@ -289,13 +309,13 @@
 
     <div class="Main_wrap__2jKMu">
         <div class="RecommendationDesktop_innerGroup__as4jB Main_innerWrap__7-_Vm">
-            <div class="RecommendationFeed_container__MtOmG">
+            <div class="RecommendationFeed_container__MtOmG" style="padding-right:80px">
                 <h3 class="RecommendationFeed_title__laFXx">커뮤니티</h3>
                 <h4 class="RecommendationFeed_subTitle__3VgCT">지금 서포터와 메이커는?👀</h4>
                 <div class="CardTable_container__35uFd RecommendationFeed_cardList__1pFdE"
                     style="width: calc(100% - 0px);">
                     <div aria-hidden="true" class="CardTable_itemContainer__rldOs"
-                        style="width: calc((33.3333% - 32px + 10.6667px) - 0.01px); margin-left: 0px; margin-right: 16px; margin-bottom: 16px;">
+                        style="width: calc((33.3333% - 32px + 10.6667px) - 0.01px); margin-left: 0px; margin-right: 0px; margin-bottom: 16px;">
                         <a class="RecommendationFeedCard_container__34sfZ"
                             href="/web/campaign/detail/147782?_refer_section_st=feed_0" data-ec-list="피드"
                             data-ec-id="147782" data-ec-name="[기능8개,소재4개]순식간에 내신발을 편하게 해주는 발침대깔창,미끄럼NO"
@@ -328,7 +348,7 @@
                         </a>
                     </div>
                     <div aria-hidden="true" class="CardTable_itemContainer__rldOs"
-                        style="width: calc((33.3333% - 32px + 10.6667px) - 0.01px); margin-left: 16px; margin-right: 16px; margin-bottom: 16px;">
+                        style="width: calc((33.3333% - 32px + 10.6667px) - 0.01px); margin-left: 28.5px; margin-right: 28.5px; margin-bottom: 16px;">
                         <a class="RecommendationFeedCard_container__34sfZ"
                             href="/web/campaign/detail/160639?_refer_section_st=feed_1" data-ec-list="피드"
                             data-ec-id="160639" data-ec-name="[미국 FDA 동물용 의약외품 등록] 반려동물 피부 전용 센텔라 연고"
@@ -396,7 +416,7 @@
                         </a>
                     </div>
                     <div aria-hidden="true" class="CardTable_itemContainer__rldOs"
-                        style="width: calc((33.3333% - 32px + 10.6667px) - 0.01px); margin-left: 0px; margin-right: 16px; margin-bottom: 0px;">
+                        style="width: calc((33.3333% - 32px + 10.6667px) - 0.01px); margin-left: 0px; margin-right: 0px; margin-bottom: 0px;">
                         <a class="RecommendationFeedCard_container__34sfZ"
                             href="/web/campaign/detail/156965?_refer_section_st=feed_3" data-ec-list="피드"
                             data-ec-id="156965" data-ec-name="붙이면 주름관리 끝! 완벽밀착 투명패치로 24시간 주름케어" data-ec-category="뷰티"
@@ -434,7 +454,7 @@
                         </a>
                     </div>
                     <div aria-hidden="true" class="CardTable_itemContainer__rldOs"
-                        style="width: calc((33.3333% - 32px + 10.6667px) - 0.01px); margin-left:16px; margin-right: 16px; margin-bottom: 0px;">
+                        style="width: calc((33.3333% - 32px + 10.6667px) - 0.01px); margin-left:28.5px; margin-right: 28.5px; margin-bottom: 0px;">
                         <a class="RecommendationFeedCard_container__34sfZ"
                             href="/web/campaign/detail/147380?_refer_section_st=feed_4" data-ec-list="피드"
                             data-ec-id="147380" data-ec-name="[계면활성제 NO] 99.5%천연오일로 만든 친환경 생분해 시트" data-ec-category="뷰티"
@@ -525,16 +545,16 @@
                 </div>
                 <div class="RecommendationFeed_footer__15DI0"><button
                         class="Button_button__341ce Button_tertiaryGrey__2nEnb Button_contained__1azJ6 Button_lg__3yP9R RecommendationFeed_viewMoreButton__3J1D5"
-                        type="button"><span><span class="Button_children__10ESl">피드 더보기</span></span></button></div>
+                        type="button"><span><span class="Button_children__10ESl">커뮤니티 더보기</span></span></button></div>
             </div>
         </div>
     </div>
 
     <div class="Main_wrap__2jKMu">
-        <div class="RecommendationDesktop_innerGroup__as4jB Main_innerWrap__7-_Vm">
+        <div class="RecommendationDesktop_innerGroup__as4jB Main_innerWrap__7-_Vm" style="padding-right:36px">
             <section class="SectionContainerLayout_container__1f8kt LikableFundingWrap_container__3mzG6 undefined">
                 <div class="title_contentWrapper__1P-q0 LikableFundingWrap_title__qXo4b">
-                    <h1>회원님이 <strong>좋아할</strong> 프로젝트</h1>
+                    <h1>회원님이 <strong style="color:#ff914d">좋아하는</strong> 친구목록</h1>
                 </div>
                 <div class="LikableFundingWrap_wrap__1ZPJw">
                     <ul class="LikableFundingWrap_cardList__aExBc">
@@ -658,7 +678,7 @@
                     </a></div>
             </section>
             <section
-                class="SectionContainerLayout_container__1f8kt VisualBanner_container__3MB_0 Ads_visualBanner__fYh_g">
+                class="SectionContainerLayout_container__1f8kt VisualBanner_container__3MB_0 Ads_visualBanner__fYh_g" style="margin-left:0 !important">
                 <div><a href="https://www.wadiz.kr/web/wevent/wadiz_welcomecoupon?_refer_section_st=MM1_5"
                         class="banner_imageBanner__3x6lO">
                         <article>
@@ -679,12 +699,12 @@
             </section>
         </div>
     </div>
-    <div class="Main_wrap__2jKMu">
-        <div class="Main_innerWrap__7-_Vm" style='padding-left:80px;'>
+    <div class="Main_wrap__2jKMu Main_wrap__2jKMuEnd">
+        <div class="Main_innerWrap__7-_Vm" style='padding-left:80px; padding-bottom:40px;padding-right:80px;'>
             <div class="EarlybirdDesktop_container__1IoRp">
                 <div class="EarlybirdDesktop_wrap__314kI">
                     <div class="title_titleWrapper__1ggAh">
-                        <h1 class="title_title__2rv2M">얼리버드</h1>
+                        <h1 class="title_title__2rv2M">유기견</h1>
                         <p>먼저 참여하는 분들께 드리는 얼리버드 혜택</p>
                     </div>
                     <div class="Pagination_container__28uaq EarlybirdDesktop_pagination__1CGN5">
@@ -809,5 +829,36 @@
     </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+   var  $mainPageinnerMoreButton = $('.Button_button__341ce');
+   var $uliList = $('.Pagination_listItem__1atqr');
+   //더보기 버튼 mouseover밑 out 이벤트
+    $mainPageinnerMoreButton.mouseover(function () {
+        $mainPageinnerMoreButton.css('background-color', '#dde2e6')
+    })
+    $mainPageinnerMoreButton.mouseout(function () {
+        $mainPageinnerMoreButton.css('background-color', '#f2f4f6')
+    })
+    
+    //얼리버드 페이지 클릭시 색상 변환
+    $uliList.click(function () {
+        $uliList.each((i, item) => {
+            if ($uliList.eq(i).hasClass('Pagination_active__3Lx2R')) {
+                $uliList.eq(i).removeClass('Pagination_active__3Lx2R')
+            }
+        })
+        $(this).addClass('Pagination_active__3Lx2R');
+    })
+
+    
+    
+
+    
+    
+    
+    
+
+</script>
 
 </html>
