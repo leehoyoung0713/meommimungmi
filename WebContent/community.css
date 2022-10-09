@@ -10,7 +10,6 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     color: rgba(0, 0, 0, .84);
     width: 100%;
-
 }
 
 article, blockquote, body, dd, div, dl, dt, h1, h2, h3, h4, html, li, main, ol, p, section, table, tbody, td, th, thead, tr, ul {
@@ -472,7 +471,6 @@ dd {
     color: #495057;
     font-size: 14px;
     font-weight: 500;
-    -webkit-appearance: none;
     -webkit-font-smoothing: antialiased;
 
 }
@@ -518,7 +516,6 @@ dd {
     font-size: 14px;
     font-weight: 500;
     box-sizing: border-box !important;
-    -webkit-appearance: none;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -699,7 +696,6 @@ body a {
     font-size: 14px;
     font-weight: 500;
     box-sizing: border-box!important;
-    -webkit-appearance: none;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -957,20 +953,23 @@ a{
 
 .Button_button__341ce.Button_primary__2Xc2p.Button_contained__1azJ6{
     margin-bottom: 57px;
+    
 }
 
 .modal{
-    visibility: hidden; 
+    visibility: hidden;
     font-family: 'Noto Sans KR', sans-serif;
-    position: fixed;
-    top:0;
-    left: 0;
+    position: relative;
+    top: -240px;
+    left: -169px;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
+    display: inline-block;
     align-items: center;
 }
+
+
+
 .modal_overlay{
     font: inherit;
     background-color: rgba(0, 0, 0, 0.6);
@@ -981,15 +980,22 @@ a{
 
 .modal_content {
     width: 180px;
-    border-radius: 16px;
+    border-radius: 8px;
     height: 100px;
     font-size: 16px;
     font-weight: 500;
     border: 1px solid #babdc0;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 15%);
     z-index: 2;
-    position: relative;
+    position: absolute;
+    top: 248px;
+    right: -328px;
     text-align: center;
+    background: white;
+}
+
+button.report:hover, button.close:hover{
+    background-color: #babdc0;
 }
 
 .report_modal{
@@ -1259,7 +1265,6 @@ a.Button_button__mRXZC {
     font-size: 14px;
     font-weight: 500;
     box-sizing: border-box!important;
-    -webkit-appearance: none;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -1311,7 +1316,7 @@ a.Button_button__mRXZC {
 border: 2px solid rgb(242, 244, 246);
 border-radius: 5px;
 background-color: #fff;
-margin-bottom: 20px;
+margin-bottom: 10px;
 padding:20px;
 font-size: 15px;
 }
@@ -1322,14 +1327,21 @@ font-size: 15px;
 color: rgb(154 154 154);
 }
 
+.ImageUploader_contentWrap__1P_48{
+    display: grid;
+    grid-template-columns: 100px 320px 90px;
+    gap: 5px;
+}
+
+
 .ImageUploader_container__2FM0D .ImageUploader_button__FPX_Y {
     line-height: 18px;
     letter-spacing: 0;
     font-size: 12px;
     font-weight: 400;
     font-style: normal;
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     border-radius: 4px;
     border: 1px solid #dde2e6;
     display: inline-flex;
@@ -1350,8 +1362,35 @@ color: rgb(154 154 154);
 }
 
 .ImageUploader_container__2FM0D .ImageUploader_button__FPX_Y .ImageUploader_popper__3yY05 {
-    left: calc(100% + 13px);
+    left: calc(100% + 340px);
+    top:46px;
 }
+
+.image-preview{
+    border-radius: 3px;
+    border: 1px solid #dde2e6;
+    border-style: dashed;
+    width: 310px;
+    height: 100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 5px;
+}
+
+.deleteBtn{
+    width: 100%;
+    height: 37px;
+    border-radius: 3px;
+    color: white;
+    font-size: 13px;
+}
+
+.uploadBeforeText {
+    visibility:visible;
+}
+
+
 
 .StaticPopper_container__3fEN8 {
     line-height: 18px;
@@ -1388,3 +1427,77 @@ color: rgb(154 154 154);
     background-color: #fff;
 }
 
+
+.replyShow {
+    color:#CCCCCC;
+}
+
+.replyWrap {
+    margin-top:20px;
+    font-size: 13px;
+    font-style:inherit;
+
+}
+.replyContents{
+    display: flex;
+    font-size: 12px;
+    margin-bottom:15px;
+}
+
+.replyId {
+    font-weight:700;
+}
+
+.replyComment{
+    margin-left: 15px;
+}
+
+.replyWriting{
+    margin-top: 15px;
+    border: solid 1px #e2e2e2;
+    width: 100%;
+    border-radius: 15px;
+    height: 44px;
+    position:relative;
+}
+
+.realReply {
+    padding: 10px;
+    padding-left: 15px;
+    background: transparent;
+    width: 100%;
+    flex-grow: 1;
+    resize:vertical;
+    max-width: 100%
+}
+
+input:focus {outline: none;}
+
+.realReply::placeholder{
+    font-weight:400;
+}
+
+.replyEnter{
+    position: absolute;
+    color: #0074cc;
+    right: 13px;
+    line-height: 2.8;
+    font-weight: 500;
+    z-index:2;
+    background:white;
+}
+
+.replyEnter:hover{
+    color:#09426d;
+}
+
+.replyAlarmOff{
+    display:none;
+}
+
+.replyAlarmOn{
+    font-size: 12px;
+    color:red;
+    margin-top:5px;
+    margin-left: 2px;
+}
