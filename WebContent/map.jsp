@@ -12,7 +12,7 @@
 <body>
 <jsp:include page ="header.jsp"/>
 
-    <main class="pg-search ng-scope reverse" ng-controller="mp20_search_result_controller" data-keyword="강남역">
+     <main class="pg-search ng-scope reverse" ng-controller="mp20_search_result_controller" data-keyword="강남역">
         <article class="contents">
             <div class="black_screen" id="blackScreen" style="display:none;"></div>
             <div class="column-wrapper">
@@ -1218,60 +1218,33 @@
                                 </ul>
                             </div>
 
-                            <div class="paging-container" ng-hide="!search_result_list.length &amp;&amp; !ajaxing">
-                                <p class="paging">
-                                    <a href="#" return false;"
-                                        ng-repeat="paging in get_paging_array(search_all_count) | limitTo: max_page track by $index"
-                                        ng-class="{selected: $index + 1 == page}" ng-click="get_next_page($index + 1)"
-                                        class="ng-binding ng-scope leftPage selected">1
-                                    </a>
-                                    <a href="#" return false;"
-                                        ng-repeat="paging in get_paging_array(search_all_count) | limitTo: max_page track by $index"
-                                        ng-class="{selected: $index + 1 == page}" ng-click="get_next_page($index + 1)"
-                                        class="ng-binding ng-scope leftPage">2
-                                    </a>
-                                    <a href="#" return false;"
-                                        ng-repeat="paging in get_paging_array(search_all_count) | limitTo: max_page track by $index"
-                                        ng-class="{selected: $index + 1 == page}" ng-click="get_next_page($index + 1)"
-                                        class="ng-binding ng-scope leftPage">3
-                                    </a>
-                                    <a href="#" return false;"
-                                        ng-repeat="paging in get_paging_array(search_all_count) | limitTo: max_page track by $index"
-                                        ng-class="{selected: $index + 1 == page}" ng-click="get_next_page($index + 1)"
-                                        class="ng-binding ng-scope leftPage">4
-                                    </a>
-                                    <a href="#" return false;"
-                                        ng-repeat="paging in get_paging_array(search_all_count) | limitTo: max_page track by $index"
-                                        ng-class="{selected: $index + 1 == page}" ng-click="get_next_page($index + 1)"
-                                        class="ng-binding ng-scope leftPage">5
-                                    </a>
-                                    <a href="#" return false;"
-                                        ng-repeat="paging in get_paging_array(search_all_count) | limitTo: max_page track by $index"
-                                        ng-class="{selected: $index + 1 == page}" ng-click="get_next_page($index + 1)"
-                                        class="ng-binding ng-scope leftPage">6
-                                    </a>
-                                    <a href="#" return false;"
-                                        ng-repeat="paging in get_paging_array(search_all_count) | limitTo: max_page track by $index"
-                                        ng-class="{selected: $index + 1 == page}" ng-click="get_next_page($index + 1)"
-                                        class="ng-binding ng-scope leftPage">7
-                                    </a>
-                                    <a href="#" return false;"
-                                        ng-repeat="paging in get_paging_array(search_all_count) | limitTo: max_page track by $index"
-                                        ng-class="{selected: $index + 1 == page}" ng-click="get_next_page($index + 1)"
-                                        class="ng-binding ng-scope leftPage">8
-                                    </a>
-                                    <a href="#" return false;"
-                                        ng-repeat="paging in get_paging_array(search_all_count) | limitTo: max_page track by $index"
-                                        ng-class="{selected: $index + 1 == page}" ng-click="get_next_page($index + 1)"
-                                        class="ng-binding ng-scope leftPage">9
-                                    </a>
-                                    <a href="#" return false;"
-                                        ng-repeat="paging in get_paging_array(search_all_count) | limitTo: max_page track by $index"
-                                        ng-class="{selected: $index + 1 == page}" ng-click="get_next_page($index + 1)"
-                                        class="ng-binding ng-scope leftPage">10
-                                    </a>
-
-                                </p>
+                            <div class="paging-container" style="margin-top: 15px;" ng-hide="!search_result_list.length &amp;&amp; !ajaxing">
+                                <ul class="commentPageNumber">
+                                    <!-- 이전 페이지 버튼 -->
+                                    <li class="beforePageArrowLeft firstPage" id="beforePageArrowLeft">
+                                        <button class="pageBtn beforePageBtnLeft" type="button">
+                                            <svg width="1em" height="1em" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M6 19.692L8.25 22 18 12 8.25 2 6 4.308 13.5 12z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                    <li><button class="pageBtnNumberLeft clickNumber">1</button></li>
+                                    <li><button class="pageBtnNumberLeft">2</button></li>
+                                    <li><button class="pageBtnNumberLeft">3</button></li>
+                                    <li><button class="pageBtnNumberLeft">4</button></li>
+                                    <li><button class="pageBtnNumberLeft">5</button></li>
+    
+                                    <!-- 다음 페이지 버튼 -->
+                                    <li class="afterPageArrowLeft">
+                                        <button class="pageBtn afterPageBtnLeft" type="button">
+                                            <svg width="1em" height="1em" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M6 19.692L8.25 22 18 12 8.25 2 6 4.308 13.5 12z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                </ul>
                             </div>
 
                             <div class="search_result_empty_message ng-hide"
@@ -1877,7 +1850,7 @@
                     </div>
 
                     <div class="inner">
-                        <section class="column-side-left">
+                        <section class="column-side-left" style="width:100%">
                             <div class="column-module">
                                 <pagination-type-mobile page="page" last-page="last_page" is-active-first-button="page > 2"
                                     is-active-next-button="last_page > page &amp;&amp; max_page > page"
@@ -2065,7 +2038,7 @@
                                                         <path fill="currentColor"
                                                             d="M15.821 3a.67.67 0 0 1 .679.672v10.656a.67.67 0 0 1-.679.672H2.18a.67.67 0 0 1-.679-.672V3.672c0-.375.3-.672.679-.672H15.82zm-.679 1.344H2.858v8.14L7.01 7.781c.094-.125.284-.125.394 0l2.321 2.657c.048.046.063.109.048.156l-.3 1.375c-.016.11.11.172.173.094l2.369-2.579a.202.202 0 0 1 .284 0l2.842 3.094V4.344zm-2.526 3.61a1.1 1.1 0 0 1-1.105-1.095 1.1 1.1 0 0 1 1.105-1.093 1.1 1.1 0 0 1 1.105 1.093 1.1 1.1 0 0 1-1.105 1.094z">
                                                         </path>
-                                                    </svg>
+                                                    </svg><div class=""></div>
                                                     사진리뷰
                                                 </button>
                                             </div>
@@ -2591,8 +2564,7 @@
                                 
                                 <!-- 필터 들어갈 공간 -->
                                 <div class="filteringStarWrap">
-                                    <div class="filteringStar">
-                                    </div>
+                                    <div class="filteringStar"></div>
                                 </div>
 
 
