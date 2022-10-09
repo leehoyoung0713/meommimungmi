@@ -2,6 +2,8 @@ const $reviewFilterOrderPhoto = $(".filterPhoto");
 const $timeReview = $(".timeReview");
 const $page = $("#p.paging");
 const $beforePageBtn = $(".beforePageBtn");
+const $beforePageBtnLeft = $(".beforePageBtnLeft");
+const $clickNumberPagesLeft = $(".pageBtnNumberLeft");
 const $ratingInputStar = $(".rating-input__star");
 const $starCountWrap = $(".starCountWrap");
 const $reviewCommentGoodBtn = $(".reviewCommentGoodBtn");
@@ -11,6 +13,8 @@ const $costFilter = $(".cost");
 const $foodFilter = $(".food");
 const $cancelButton = $(".cancel");
 const $userRegist = $(".userCommentWritingSector");
+const $blackPic = $(".blackPic");
+const $starFilters = $(".starFilters");
 
 const file = document.querySelector("input[type='file']");
 const photoImg = document.querySelector(".commentPhoto");
@@ -22,6 +26,7 @@ const asideFilter = document.getElementById("asideFilter");
 const $filteringStar = $(".filteringStar");
 
 var clickNumberPages = document.querySelectorAll(".pageBtnNumber");
+var clickNumberPagesLeft = document.querySelectorAll(".pageBtnNumberLeft");
 var filterStarFull = "<svg fill='#35C5F0' width='1em' height='1em' preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'><defs><path id='star-path-0' d='M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z'></path><clipPath id='star-clip-0'><rect x='0' y='0' width='24' height='24'></rect></clipPath></defs><use xlink:href='#star-path-0' fill='#DBDBDB'></use><use clip-path='url(#star-clip-0)' xlink:href='#star-path-0'></use></svg>";
 var filterStar = "<svg fill='#35C5F0' width='1em' height='1em'preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'><defs><path id='star-path-114'd='M11.9996 19.7201L6.32294 22.1251C5.5626 22.4472 5.005 22.0311 5.0755 21.2188L5.60855 15.0767L1.5671 10.421C1.02579 9.79745 1.24924 9.13855 2.04358 8.95458L8.04973 7.56354L11.2287 2.28121C11.6545 1.57369 12.3502 1.5826 12.7706 2.28121L15.9496 7.56354L21.9557 8.95458C22.7602 9.1409 22.9667 9.8053 22.4322 10.421L18.3907 15.0767L18.9238 21.2188C18.9952 22.0414 18.4271 22.4432 17.6764 22.1251L11.9996 19.7201Z'></path><clipPath id='star-clip-114'><rect x='0' y='0' width='0' height='24'></rect></clipPath></defs><use xlink:href='#star-path-114' fill='#DBDBDB'></use><use clip-path='url(#star-clip-114)'xlink:href='#star-path-114'></use></svg>";
 
@@ -40,8 +45,6 @@ function closeStarFilter() {
         $('#popOut').attr('class', 'popOutDisplayNone');
         filterCheck=true;
     }
-
-    
 }
 
 /* 별점 필터 누적 */
@@ -50,6 +53,7 @@ $starCountWrap.click(function(){
     
     if($(this).attr('class')=="starCountWrap"){
         $(this).attr("class", "starCountWrap select");
+        console.log($('.filteringStar').children.length);
         for(var i=0; i<$starCountWrap.length; i++){
             if($starCountWrap[i].className=="starCountWrap select"){
                 
@@ -62,7 +66,7 @@ $starCountWrap.click(function(){
                     }
                 }
                 var countText = $starCountWrap[i].innerText.trim();
-                $filteringStar.append("<span class='starFilters'>" + star + countText + "<button type='button' class='starPic'><img src='xButton.png' style='width: 13px;height: 10px;margin-right: 5px;position: relative;top: -3px;'></button></span>");
+                $filteringStar.append("<span class='starFilters'><span class='hoverStar'>" + star + countText + "</span><button type='button' class='starPic'><img src='xButton.png' style='width: 20px;height: 15px;margin-right: 5px;position: relative;opacity: 75%;'></button></span>");
                 $(this).attr("class", "starCountWrap selected");
                 return;
             }
@@ -82,18 +86,19 @@ $starCountWrap.click(function(){
                     }
                 }
                 var countText = $starCountWrap[i].innerText.trim();
-                $filteringStar.append("<span class='starFilters'>" + star + countText + "<button type='button' class='starPic'><img src='xButton.png' style='width: 13px;height: 10px;margin-right: 5px;position: relative;top: -3px;'></button></span>");
+                $filteringStar.append("<span class='starFilters'><span class='hoverStar'>" + star + countText + "</span><button type='button' class='starPic'><img src='xButton.png' style='width: 15px;height: 15px;margin-right: 5px;position: relative;opacity: 75%;'></button></span>");
             }
         }
     }
 })
-var count=0;
+
+
 /* 별 누르면 삭제 */
-$(document).on("click", ".starPic", function(){
+$(document).on("click", ".hoverStar", function(){
     for(var i=0; i<$('.starPic').length;i++){
         $('.starPic')[i].className="starPic";
     }
-    $(this).attr('class', 'starPic check');
+    $(this).next().attr('class', 'starPic check');
     for(var i=0;i<$('.starPic').length;i++){
         if($('.starPic')[i].className.includes('check')){
             var deleteStarText = $('.starFilters')[i].innerText;
@@ -105,6 +110,35 @@ $(document).on("click", ".starPic", function(){
             }
         }
     }
+})
+
+$(document).on("click", ".starPic", function(){
+    for(var i=0; i<$('.starPic').length;i++){
+        $('.starPic')[i].className="starPic";
+    }
+    $(this).attr('class', 'starPic check');
+    for(var i=0;i<$('.starPic').length;i++){
+        if($('.starPic')[i].className.includes('check')){
+            var deleteStarText = $('.starFilters')[i].innerText;
+            console.log(deleteStarText);
+            $('.starFilters')[i].remove();
+        }
+        for(var j=0;j<$('.starCountText').length;j++){
+            if(deleteStarText == $('.starCountText')[j].innerText.trim()){
+                $starCountWrap[j].className='starCountWrap';
+            }
+        }
+    }
+})
+
+$(document).on("mouseover", ".hoverStar", function(){
+    $(this).css('opacity','30%');
+    $(this).next().css('visibility', 'visible');
+})
+
+$(document).on("mouseleave", ".hoverStar", function(){
+    $(this).css('opacity','100%');
+    $(this).next().css('visibility', 'hidden');
 })
 
 
@@ -129,6 +163,7 @@ $(document).mouseup(function (e){
 $btnFilter.click(function(){
     blackScreen.style.display='block';
     asideFilter.style.display='block';
+    document.body.style.overflowY='hidden';
 })
 
 /* 필터 끝내기 버튼 */
@@ -193,27 +228,21 @@ $timeReview.click(function () {
 })
 
 
-/* 왼쪽 검색 페이지 하단 댓글 번호 */
 
-$('a').click(function () {
-    $('a').removeClass("selected");
-    $(this).addClass("selected");
-});
-
-
-/* 후기 페이지 하단 댓글 번호 */
+/* 오른쪽 페이지 하단 댓글 번호 */
 $('li button.pageBtnNumber').click(function () {
-    $('li button').removeClass("clickNumber");
+    $('li button.pageBtnNumber').removeClass("clickNumber");
     $(this).addClass("clickNumber");
     /* 후기페이지 1페이지일 경우 이전으로 가기 버튼 없애기 */
-    if ($('li button')[1].className.includes("clickNumber")) {
+    if ($('li button.pageBtnNumber')[0].className.includes("clickNumber")) {
         document.getElementById('beforePageArrow').className += ' firstPage';
     } else {
         document.getElementById('beforePageArrow').className = 'beforePageArrow';
     }
 });
 
-/* 페이지 화살표로 이동하기(뒤로) */
+
+/* 오른쪽 페이지 화살표로 이동하기(뒤로) */
 $('.afterPageBtn').click(function(){
     document.getElementById('beforePageArrow').className = 'beforePageArrow';
     if(clickNumberPages[9].className != "pageBtnNumber clickNumber"){
@@ -227,16 +256,60 @@ $('.afterPageBtn').click(function(){
     }
 })
 
-/* 페이지 화살표로 이동하기(앞으로) */
+/* 오른쪽 화살표로 이동하기(앞으로) */
 $('.beforePageBtn').click(function(){
-    
-    if(clickNumberPages[0].className != "pageBtnNumber clickNumber"){
+    if(clickNumberPages[9].className != "pageBtnNumber clickNumber"){
         for(var i=0; i < clickNumberPages.length; i++){
             if(clickNumberPages[i].className.includes("clickNumber")){
                 clickNumberPages[i].className = "pageBtnNumber";
                 clickNumberPages[i-1].className = "pageBtnNumber clickNumber";
                 if((i-1)==0){
                     document.getElementById('beforePageArrow').className = 'beforePageArrow firstPage';
+                }
+                return;
+            }
+        }
+    }
+})
+
+
+
+/* 왼쪽 페이지 하단 댓글 번호 */
+$('li button.pageBtnNumberLeft').click(function () {
+    $('li button.pageBtnNumberLeft').removeClass("clickNumber");
+    $(this).addClass("clickNumber");
+    /* 후기페이지 1페이지일 경우 이전으로 가기 버튼 없애기 */
+    if ($('li button.pageBtnNumberLeft')[0].className.includes("clickNumber")) {
+        document.getElementById('beforePageArrowLeft').className += ' firstPage';
+    } else {
+        document.getElementById('beforePageArrowLeft').className = 'beforePageArrowLeft';
+    }
+});
+
+
+/* 왼쪽 페이지 화살표로 이동하기(뒤로) */
+$('.afterPageBtnLeft').click(function(){
+    document.getElementById('beforePageArrowLeft').className = 'beforePageArrowLeft';
+    if(clickNumberPagesLeft[4].className != "pageBtnNumberLeft clickNumber"){
+        for(var i=0; i < clickNumberPagesLeft.length; i++){
+            if(clickNumberPagesLeft[i].className.includes("clickNumber")){
+                clickNumberPagesLeft[i].className = "pageBtnNumberLeft";
+                clickNumberPagesLeft[i+1].className = "pageBtnNumberLeft clickNumber";
+                return;
+            }
+        }
+    }
+})
+
+/* 왼쪽 화살표로 이동하기(앞으로) */
+$('.beforePageBtnLeft').click(function(){
+    if(clickNumberPagesLeft[0].className != "pageBtnNumberLeft clickNumber"){
+        for(var i=0; i < clickNumberPagesLeft.length; i++){
+            if(clickNumberPagesLeft[i].className.includes("clickNumber")){
+                clickNumberPagesLeft[i].className = "pageBtnNumberLeft";
+                clickNumberPagesLeft[i-1].className = "pageBtnNumberLeft clickNumber";
+                if((i-1)==0){
+                    document.getElementById('beforePageArrowLeft').className = 'beforePageArrowLeft firstPage';
                 }
                 return;
             }
@@ -255,7 +328,6 @@ $ratingInputStar.mouseover(function () {
     for (var i = 0; i < $ratingInputStar.length; i++) {
         $(this).attr("class", "rating-input__star suggested");
         if ($ratingInputStar[i].className.includes("suggested")) {
-            console.log(i);
             for (var j = 0; j < i + 1; j++) {
                 $ratingInputStar[j].className = "rating-input__star suggested";
             }

@@ -30,11 +30,6 @@ button {
 main{
     margin-top: 15px;
 }
-
-section {
-    display: block;
-}
-
 .connect-mp-app {
     position: relative;
     margin-top: 45px;
@@ -269,7 +264,7 @@ img {
     vertical-align: top;
 }
 
-article, aside, canvas, details, figcaption, figure, footer, header, nav, menu, nav, main {
+article, aside, canvas, details, figcaption, figure, footer, header, nav, menu, nav, section, main {
     display: block;
 }
 
@@ -439,7 +434,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, nav, menu, 
 .search-filter .filter-item .options {
     position: absolute;
     top: 19px;
-    right: 5px;
+    right: 40px;
     font-size: 0.750rem;
     color: #9b9b9b;
 }
@@ -871,7 +866,8 @@ i.searchIcon {
     border-right: 1px solid #ededed;
     position: relative;
     margin: 7px 0 4px 0;
-    bottom: -15px;
+    bottom: 2px;
+    line-height: 65px;
 }
 
 .starIcon {
@@ -1345,7 +1341,7 @@ button.filterActive {
 }
 
 .commentPhoto {
-    display: -webkit-box;
+display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -1355,6 +1351,8 @@ button.filterActive {
     align-items: center;
     height: 24px;
     padding: 10px 0;
+    bottom: -9px;
+    position: relative;
 }
 
 .cameraImgWrap {
@@ -1441,16 +1439,16 @@ label[for='attach'] div.attached{
     margin-right:10px;
 }
 
-.beforePageArrow.firstPage{
+.beforePageArrow.firstPage, .beforePageArrowLeft.firstPage {
     visibility:hidden;
 }
 
 
-.beforePageBtn>svg {
+.beforePageBtn>svg, .beforePageBtnLeft>svg {
     transform: rotate(180deg);
 }
 
-.pageBtnNumber {
+.pageBtnNumber, .pageBtnNumberLeft {
     display: block;
     min-width: 26px;
     margin: 0 2px;
@@ -1468,11 +1466,13 @@ label[for='attach'] div.attached{
     cursor: pointer;
 }
 
-.pageBtnNumber.clickNumber{
+.pageBtnNumber.clickNumber, .pageBtnNumberLeft.clickNumber{
     background-color: #35c5f0;
     color: #fff;
     text-decoration: none;
 }
+
+
 
 .afterPageArrow {
     margin-left: 8px;
@@ -1689,8 +1689,6 @@ label[class='cameraImg'] div{
 
 label[for='attach'] {
     cursor: pointer;
-    bottom: -10px;
-    position: relative;
 }
 
 
@@ -1716,12 +1714,16 @@ label[for='attach'] {
     background-image: url(xButton.png);
     content: "";
     display: flex;
-    height: 16px;
-    width: 20px;
-    background-size: 111%;
+    height: 17px;
+    width: 12px;
+    background-size: 100%;
     position: relative;
     float: right;
     cursor: pointer;
+    margin-right: 7px;
+    margin-top: 5px;
+    background-repeat: no-repeat;
+    left: -2px;
 }
 
 .filteringStar{
@@ -1733,8 +1735,17 @@ label[for='attach'] {
 }
 
 .starFilters{
-    top: -1px;
     position: relative;
+    cursor:pointer;
+    margin-right: 22px;
+}
+
+
+
+
+
+.deletePic {
+    pointer-events:none;
 }
 
 .selected .starCountText{
@@ -1745,9 +1756,15 @@ label[for='attach'] {
     background: rgb(242, 251, 254);
 }
 
-.starPic{
+.starPic {
     cursor: pointer;
+    position: relative;
+    top: 1px;
+    left: -60px;
+    visibility:hidden;
 }
+
+
 
 .myLocationMap {
     float: left;
@@ -1759,11 +1776,10 @@ label[for='attach'] {
 }
 
 .myLocation{
-	height: 22.5rem;
+    height: 25rem;
     background-color: rgb(255, 236, 236);
     position: relative;
     max-width: 1890px;
-    bottom: -42px;
 }
 
 .myLocationTitle{
