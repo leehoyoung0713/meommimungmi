@@ -66,6 +66,7 @@ article, main, section {
 	width: 1em;
 	height: 1em;
 	fill: currentColor;
+	z-index:9992;
 }
 .StoreCollectionVisual_container__kPoxZ .StoreCollectionVisual_description__1iWKX {
 	line-height: 28px;
@@ -334,8 +335,8 @@ button {
 	line-height: 1;
 	/* font-family: wadizicon !important; */
 	font-weight: 400;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	/* -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; */
 	font-style: normal;
 	font-variant: normal;
 }
@@ -641,7 +642,7 @@ ul {
 .ProjectListHead_container__rpQ37 .ProjectListHead_search__HN3am input {
 	float: left;
 	padding: 10px 34px 10px 16px;
-	width: 600px;/* 크기에 맞춰서 검색바를 늘려야 되서 100%->600px로 변경 */
+	width: 750px;/* 크기에 맞춰서 검색바를 늘려야 되서 100%->750px로 변경 */
 	line-height: 24px;
 	font-size: 15px;
 	-webkit-appearance: none;
@@ -744,165 +745,7 @@ ul {
 }
 input:focus{outline:none;}
 /* 검색,드롭다운리스트 추가 끝*/
-/* 사이트 모달창 추가 */
-.WadizModal_portal__1XfIx {
-	display: block;
-	position: relative;
-	height: 0;
-}
-.ShareModal_overlay__8Tz2m {
-	z-index: 9998 !important;
-}
-.WadizModal_overlayAfterOpen__CwHuy {
-	background: rgba(0,0,0,.6);
-}
-.WadizModal_overlay__TRZ2L {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	transition: .2s ease-in;
-	transition-property: background;
-	z-index: 20000;
-	background: transparent;
-	text-align: center;
-}
-.WadizModal_content__2JFzt::before {
-	transform: translateY(0);
-	margin: 7px;
-	border-radius: 2.5px;
-	background: hsla(0,0%,100%,.5);
-	width: 50px;
-	height: 5px;
-	content: "";
-}
-.ShareModal_modal__2ptx7 {
-	overflow: auto;
-}
-.WadizModal_contentAfterOpen__176l7 {
-	transform: translateY(0);
-	transition-timing-function: ease-in;
-	transition-delay: 0ms;
-}
-.WadizModal_content__2JFzt {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-	transform: translateY(105%);
-	transition: .25s ease-out 50ms;
-	transition-property: transform;
-	outline: none;
-	padding-top: 10px;
-	width: 100%;
-	height: 100%;
-	box-sizing: border-box;
-	pointer-events: none;
-}
-.WadizModal_container__gX-0t {
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
-	box-shadow: 0 -2px 6px rgba(0,0,0,.4);
-	background: #fff;
-	width: 100%;
-	max-height: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-	text-align: left;
-	pointer-events: auto;
-}
-.ShareModal_container__35nu3 {
-	position: relative;
-	padding: 22px 24px 40px;
-	text-align: center;
-}
-.ShareModal_container__35nu3 .ShareModal_header__2i4Vx {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 32px;
-}
-.ShareModal_container__35nu3 .ShareModal_header__2i4Vx .ShareModal_title__3RGC4 {
-	color: #212529;
-	line-height: 28px;
-	letter-spacing: -.6px;
-	font-size: 18px;
-	font-weight: 700;
-	font-style: normal;
-}
-.ShareModal_container__35nu3 .ShareModal_header__2i4Vx .ShareModal_closeButton__2K950 {
-	cursor: pointer;
-}
-.ShareModal_container__35nu3 .ShareModal_header__2i4Vx .ShareModal_closeIconWrap__1ftZ0 svg {
-	width: 24px;
-	height: 24px;
-}
-.ShareModal_container__35nu3 .ShareModal_items__1pTMU {
-	display: inline-flex;
-	justify-content: space-between;
-	width: 100%;
-	overflow: auto;
-}
-.ShareTypeButton_container__3OTLY {
-	display: inline-block;
-	text-align: center;
-}
-.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_link__red3N {
-	background-color: #adb5bd;
-}
-.ShareTypeButton_container__3OTLY .ShareTypeButton_button__2K5qY {
-	position: relative;
-	margin-bottom: 4px;
-	border-radius: 100%;
-	width: 64px;
-	height: 64px;
-	vertical-align: top;
-}
-.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_link__red3N svg {
-	fill: #fff;
-	pointer-events: none;
-}
-.ShareTypeButton_container__3OTLY .ShareTypeButton_button__2K5qY svg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 24px;
-	height: 24px;
-}
-.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_kakao__9Wdez {
-	background-color: #ffcd00;
-}
-.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_kakao__9Wdez svg {
-	fill: #3f2626;
-	pointer-events: none;
-}
-.ShareTypeButton_container__3OTLY .ShareTypeButton_label__3lzHu {
-	display: block;
-	color: #495057;
-	line-height: 18px;
-	letter-spacing: 0;
-	font-size: 12px;
-	font-weight: 400;
-	font-style: normal;
-}
-.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_facebook__3aw8X {
-	background-color: #304d8a;
-}
-.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_facebook__3aw8X svg {
-	fill: #fff;
-	pointer-events: none;
-}
-.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_twitter__2hAds {
-	background-color: #00aced;
-}
-.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_twitter__2hAds svg {
-	fill: #fff;
-	pointer-events: none;
-}
-/* 사이트 모달창 추가 끝 */
+
 /* 카테고리 버튼 추가 */
 .FilterTab_container__2Zmmg {
 	margin-top: 20px;
@@ -996,9 +839,196 @@ input:focus{outline:none;}
 	background-color: #e7f9f9;
 	color: #00a2a2;
 }
+.Button_button__341ce.Button_tertiaryMint__1fcKK.Button_contained__1azJ6{
+	border-color: #e7f9f9;
+	background-color: #e7f9f9;
+	color: #00a2a2;
+}
 /* 기능 추가 끝 */
 
+/* 사이트 모달창 추가 */
+.WadizModal_portal__1XfIx {
+	display: block;/* 모달창 숨기기 위해 block->none으로 표시 */
+	position: relative;
+	height: 0;
+	visibility:hidden;
+}
+.ShareModal_overlay__8Tz2m {
+	z-index: 9998 !important;
+}
+.WadizModal_overlayAfterOpen__CwHuy {
+	background: rgba(0,0,0,.6);
+}
+.WadizModal_overlay__TRZ2L {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: .2s ease-in;
+	transition-property: background;
+	z-index: 20000;
+	/* background: transparent; */
+	text-align: center;
+}
+.WadizModal_content__2JFzt::before {
+	transform: translateY(0);
+	margin: 7px;
+	border-radius: 2.5px;
+	background: hsla(0,0%,100%,.5);
+	width: 50px;
+	height: 5px;
+	content: "";
+}
+.ShareModal_modal__2ptx7 {
+	overflow: auto;
+}
+.WadizModal_contentAfterOpen__176l7 {
+	transform: translateY(0);
+	transition-timing-function: ease-in;
+	transition-delay: 0ms;
+}
+.WadizModal_content__2JFzt {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	transform: translateY(105%);
+	transition: .25s ease-out 50ms;
+	transition-property: transform;
+	outline: none;
+	padding-top: 10px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	pointer-events: none;
+}
+.WadizModal_container__gX-0t {
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	box-shadow: 0 -2px 6px rgba(0,0,0,.4);
+	background: #fff;
+	width: 100%;
+	max-height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	text-align: left;
+	pointer-events: auto;
+	z-index:9999;
+}
+.ShareModal_container__35nu3 {
+	position: relative;
+	padding: 22px 24px 40px;
+	text-align: center;
+}
+.ShareModal_container__35nu3 .ShareModal_header__2i4Vx {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 32px;
+}
+.ShareModal_container__35nu3 .ShareModal_header__2i4Vx .ShareModal_title__3RGC4 {
+	color: #212529;
+	line-height: 28px;
+	letter-spacing: -.6px;
+	font-size: 18px;
+	font-weight: 700;
+	font-style: normal;
+}
+.ShareModal_container__35nu3 .ShareModal_header__2i4Vx .ShareModal_closeButton__2K950 {
+	cursor: pointer;
+}
+.ShareModal_container__35nu3 .ShareModal_header__2i4Vx .ShareModal_closeIconWrap__1ftZ0 svg {
+	width: 24px;
+	height: 24px;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU {
+	display: inline-flex;
+	justify-content: space-between;
+	width: 100%;
+	overflow: auto;
+}
+.ShareTypeButton_container__3OTLY {
+	display: inline-block;
+	text-align: center;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_link__red3N {
+	background-color: #adb5bd;
+}
+.ShareTypeButton_container__3OTLY .ShareTypeButton_button__2K5qY {
+	position: relative;
+	margin-bottom: 4px;
+	border-radius: 100%;
+	width: 64px;
+	height: 64px;
+	vertical-align: top;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_link__red3N svg {
+	fill: #fff;
+	pointer-events: none;
+}
+.ShareTypeButton_container__3OTLY .ShareTypeButton_button__2K5qY svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 24px;
+	height: 24px;
+}
+.ShareTypeButton_container__3OTLY .ShareTypeButton_label__3lzHu {
+	display: block;
+	color: #495057;
+	line-height: 18px;
+	letter-spacing: 0;
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_kakao__9Wdez {
+	background-color: #ffcd00;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_kakao__9Wdez svg {
+	fill: #3f2626;
+	pointer-events: none;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_facebook__3aw8X {
+	background-color: #304d8a;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_facebook__3aw8X svg {
+	fill: #fff;
+	pointer-events: none;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_twitter__2hAds {
+	background-color: #00aced;
+}
+.ShareModal_container__35nu3 .ShareModal_items__1pTMU .ShareModal_twitter__2hAds svg {
+	fill: #fff;
+	pointer-events: none;
+}
+body, button, input, select, textarea {
+	/* font-family: Roboto,Noto Sans KR,-apple-system,Dotum,sans-serif; */
+	font-weight: 400;
+}
 
+/* 사이트 모달창 추가 끝 */
+/* url link popup창 추가 screen:769px*/
+
+/* .ToastContainer_container__98N9u{
+	animation:linkpopup 5s linear 1s infinite alternate;
+}
+@keyframes linkpopup{
+	0% {top:-80px;opacity:0;}
+	15%{top:0px; opacity:0.5;}
+	20%,100%{top:40px; opacity:1;}
+	85%{top:0px ;opacity:0.5;}
+	100%{top:-80px;opacity:0;}
+} */
+/* url link popup창 추가 끝 screen:769px*/
+
+/* url link popup창 추가 screen:1097px*/
+
+/* url link popup창 추가 끝 screen:1097px*/
 
 
 
@@ -1044,7 +1074,6 @@ input:focus{outline:none;}
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		
 	}
 	.WadizModal_content__2JFzt::before {
 		content: none;
@@ -1287,6 +1316,9 @@ input:focus{outline:none;}
 	}
 	/* 검색,드롭다운리스트 추가 끝*/
 
+	/* 카테고리 버튼 추가 */
+
+	/* 카테고리 버튼 추가 끝 */
 	/* 사이트 모달창 추가 */
 	.ShareModal_modal__2ptx7 > div {
 		border-radius: 16px;
@@ -1300,13 +1332,53 @@ input:focus{outline:none;}
 	.ShareModal_container__35nu3 .ShareModal_items__1pTMU > div {
 		margin-right: 24px;
 	}
-	.ShareModal_container__35nu3 .ShareModal_items__1pTMU > div:last-child {
-		margin-right: 0;
+	.ToastContainer_container__98N9u {
+		display: flex;
+		position: fixed;
+		top: -20px;
+		right: 0;
+		left: 0;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		z-index: 9999;
+		width: 370px;
+		pointer-events: none;
+		background-color:#212529;
+		border-radius :20px;
+		height:50px;
+		display:hidden;
+		font-weight:800;
+		margin: 0 auto;
+		margin-top:20px;
+		visibility:hidden;
+		opacity:1;
+	}
+	.Toast_container__1G4tm.Toast_showMobile__FtbbC {
+		animation-name: Toast_showm__2yGc9;
+		animation-duration: .35s;
+		animation-timing-function: cubic-bezier(.08,.95,.16,1);
+	}
+	.Toast_container__1G4tm {
+		position: absolute;
+		top: 0;
+		margin-top: 12px;
+		border-radius: 8px;
+		background-color: #212529;
+		padding: 16px;
+		width: 343px;
+		box-sizing: border-box;
+	}
+	.Toast_content__2vDRT {
+		line-height: 20px;
+		letter-spacing: 0;
+		font-size: 14px;
+		font-weight: 600;
+		font-style: normal;
+		color: #fff;
+		pointer-events: all;
 	}
 	/* 사이트 모달창 추가 끝 */
-	/* 카테고리 버튼 추가 */
-
-	/* 카테고리 버튼 추가 끝 */
 }
 @media screen and (min-width:1097px){
     .web-header {
@@ -1368,6 +1440,52 @@ input:focus{outline:none;}
 	.RewardMainTab_container__geHTr > li:last-child {
 		margin-right: 0;
 		padding-right: 0;
+	}
+	.ToastContainer_container__98N9u2 {
+		display: flex;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		left: 0;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		z-index: 9999;
+		width: 370px;
+		pointer-events: none;
+		background-color:#212529;
+		border-radius :20px;
+		height:50px;
+		display:hidden;
+		font-weight:800;
+		margin: 0 auto;
+		margin-top:20px;
+		visibility:hidden;
+		opacity:1;
+	}
+	.Toast_container__1G4tm2.Toast_showMobile__FtbbC2 {
+		animation-name: Toast_showm__2yGc9;
+		animation-duration: .35s;
+		animation-timing-function: cubic-bezier(.08,.95,.16,1);
+	}
+	.Toast_container__1G4tm2 {
+		position: absolute;
+		top: 0;
+		margin-top: 12px;
+		border-radius: 8px;
+		background-color: #212529;
+		padding: 16px;
+		width: 343px;
+		box-sizing: border-box;
+	}
+	.Toast_content__2vDRT2 {
+		line-height: 20px;
+		letter-spacing: 0;
+		font-size: 14px;
+		font-weight: 600;
+		font-style: normal;
+		color: #fff;
+		pointer-events: all;
 	}
 	/* main > div > ul 스타일 추가 끝 */
 
