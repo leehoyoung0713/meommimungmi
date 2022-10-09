@@ -1,23 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>장례업체</title>
-    <link rel="stylesheet" href="./header.css">
-    <link rel="stylesheet" href="./funeral.css">
-    <link rel="stylesheet" href="./footer.css">
-    <script src="https://kit.fontawesome.com/5ee2c7b38b.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<title>장례 업체</title>
+<link rel="stylesheet" href="./header.css">
+<link rel="stylesheet" href="./funeral.css">
+<link rel="stylesheet" href="./footer.css">
+<script src="https://kit.fontawesome.com/5ee2c7b38b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="page-container">
         <main id="main-app">
             <div class="web-header">
                 <div class="web-header-large">
-                	<jsp:include page="./header.jsp"></jsp:include>
+                    <jsp:include page="./header.jsp"/>
                 </div>
             </div>
             <div class="MainWrapper_content__GZkTa">
@@ -58,14 +56,14 @@
                                     </label>
                                 </form>
                                 <div class="SortingSelect_container__8AOZQ ProjectListHead_sorting__2n1WY">
-                                    추천순
-                                    <select name="order" class="SortingSelect_select__1etN_">
-                                        <option value="recommend">추천순</option>
-                                        <option value="popular">인기순</option>
-                                        <option value="amount">펀딩액순</option>
-                                        <option value="closing">마감임박순</option>
-                                        <option value="recent">최신순</option>
-                                        <option value="support">응원참여자순</option>
+                                    <span>추천순</span>
+                                    <select name="order" id="orders" class="SortingSelect_select__1etN_">
+                                        <option class="opts" value="recommend">추천순</option>
+                                        <option class="opts" value="popular">인기순</option>
+                                        <option class="opts" value="amount">펀딩액순</option>
+                                        <option class="opts" value="closing">마감임박순</option>
+                                        <option class="opts" value="recent">최신순</option>
+                                        <option class="opts" value="support">응원참여자순</option>
                                     </select>
                                 </div>
                                 <div class="ProjectListHead_children__2Y7-F"></div>
@@ -303,16 +301,16 @@
                                 <div class="pagination">
                                     <div class="page">
                                         <div class="desktop-only">
-                                            <button class="prev-page icon-chevron-left"onclick="movePage(0)" disabled="">
+                                            <button class="prev-page icon-chevron-left">
                                                 <span class="text-hidden"><!-- 이전 목록 --></span>
                                             </button>
-                                            <a href="#" class="current" onclick="movePage(1)">1</a>
-                                            <a href="#" onclick="movePage(2)">2</a>
-                                            <a href="#" onclick="movePage(3)">3</a>
-                                            <a href="#" onclick="movePage(4)">4</a>
-                                            <a href="#" onclick="movePage(5)">5</a>
-                                            <a href="#" onclick="movePage(6)">6</a>
-                                            <button class="next-page icon-chevron-right" onclick="movePage(7)">
+                                            <a href="javascript:void(0);" class="current">1</a>
+                                            <a href="javascript:void(0);">2</a>
+                                            <a href="javascript:void(0);">3</a>
+                                            <a href="javascript:void(0);">4</a>
+                                            <a href="javascript:void(0);">5</a>
+                                            <a href="javascript:void(0);">6</a>
+                                            <button class="next-page icon-chevron-right">
                                                 <span class="text-hidden"><!-- 다음 목록 --></span>
                                             </button>
                                         </div>
@@ -324,9 +322,11 @@
                     </div>
                 </div>
                 <!-- footer -->
-                <jsp:include page="./footer.jsp"></jsp:include>
+                <jsp:include page="./footer.jsp"/>
             </div>
         </main>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="./funeral.js"></script>
 </html>
