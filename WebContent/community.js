@@ -5,22 +5,18 @@ var showAllButton = document.getElementsByClassName('Button_button__341ce Button
 var reportButton = "<div class = 'modal' ><div class = 'modal_overlay'></div><div class = 'modal_content'><button class = 'report'>신고하기</button><button class = 'close'>닫기</button></div></div>"
 var temp = 0;
 var count = 0;
-console.log(tabButton);
-console.log(followButton);
-console.log(followButtonBelow);
+
 
 for (var i = 0; i < tabButton.length; i++) {
     tabButton[i].addEventListener('click', clickTab);
 }
 
 function clickTab() {
-
     if (temp == 0) {
         this.style.background = "#e7f9f9";
         this.style.border = "#e7f9f9";
         this.firstChild.style.color = "#00a2a2";
         temp++;
-        console.log(temp)
     }
     else {
         for (var i = 0; i < tabButton.length; i++) {
@@ -71,6 +67,12 @@ function clickFollowButton() {
     }
 }
 
+// 게시글 도시락 버튼 클릭
+const $moreBtn = $(".FeedCard_moreWrap__1AsqH");
+
+
+
+
 showAllButton[0].addEventListener("mouseover", function () {
     this.style.background = "rgb(0, 162, 162)";
     this.style.border = "rgb(0, 162, 162)";
@@ -81,50 +83,11 @@ showAllButton[0].addEventListener("mouseout", function () {
 })
 
 
- console.log($(".FeedCard_moreWrap__1AsqH"));
- console.log($(".FeedCard_moreWrap__1AsqH"));
- var modal = document.getElementsByClassName('modal')[0];
- var modalClose = document.getElementsByClassName('close');
- var modalReport = document.getElementsByClassName('ReactModalPortal')[0];
- var modalReportClose = document.getElementsByClassName('Button_button__mRXZC Button_tertiaryGrey__3jfPY Button_contained__k9pMW Button_lg__22YWj ConfirmModal_negativeButton__2KirX')[0]
 
- console.log(modal);
- console.log(modalReport);
- for (let index = 0; index < $(".FeedCard_moreWrap__1AsqH").length; index++) {
-    console.log($(".FeedCard_moreWrap__1AsqH")[index])
-    $(".FeedCard_moreWrap__1AsqH")[index].addEventListener('click', function(){
-        modal.style.visibility = "visible";
-    });
- }
-
-
-
- for(index = 0; index <$(".close").length; index++){
-    $(".close")[index].addEventListener('click', function(){
-        modal.style.visibility = "hidden";
-    });
- }
-
-
- for(index = 0; index <$(".report").length; index++){
-    $(".report")[index].addEventListener('click', function(){
-        modal.style.visibility = "hidden";
-        modalReport.style.visibility = "visible";
-
-    });
- }
-
- for(index = 0; index <$(".Button_button__mRXZC.Button_tertiaryGrey__3jfPY.Button_contained__k9pMW.Button_lg__22YWj.ConfirmModal_negativeButton__2KirX").length; index++){
-    $(".Button_button__mRXZC.Button_tertiaryGrey__3jfPY.Button_contained__k9pMW.Button_lg__22YWj.ConfirmModal_negativeButton__2KirX")[index].addEventListener('click', function(){
-        modalReport.style.visibility = "hidden";
-    });
- }
  
 
  const realUpload = document.querySelector('#realUpload');
  const upload = document.querySelector('#addPhotoButton');
- console.log(realUpload);
- console.log(upload)
 
  upload.addEventListener('click', () => realUpload.click());
 
