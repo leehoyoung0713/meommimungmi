@@ -4,12 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인</title>
+<title>h.hyeoniya_main</title>
 </head>
 <body>
-	<jsp:include page = 'header.jsp'/>
+<%-- <jsp:include page = 'header.jsp'/> --%>
+ 	<jsp:include page = 'header_MainLogin.jsp'/>
+	
 	<jsp:include page = 'banner.jsp'/>  
 	<jsp:include page = 'mainFinal.jsp'/>  
 	<jsp:include page = 'footer.jsp'/>  
+	
 </body>
 </html>

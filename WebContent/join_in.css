@@ -6,16 +6,7 @@ body {
     letter-spacing: -.02em;
 }
 
-header {
-    margin-top: 14px;
-    border-bottom: 1px solid #f0f2f5;
-    padding-bottom: 11px;
-}
 
-div#logo {
-    display: inline-block;
-    margin-left: 112px;
-}
 
 span#join_in {
     position: absolute;
@@ -164,9 +155,10 @@ span#login {
 #naverLogin svg {
     position: absolute;
     width: 36px;
-    left: 32px;
+    left: 25px;
     display: block;
     fill: #fff;
+    top: 214px;
 }
 
 #circle_btns {
@@ -240,7 +232,7 @@ span#login {
     height: 20px;
 }
 
-img {
+#inqueryImg {
     position: fixed;
     right: 18px;
     bottom: 40px;
@@ -362,6 +354,7 @@ div#name .label {
     -webkit-font-smoothing: antialiased;
 }
 #password input {
+	
     font: inherit;
     position: relative;
     margin: 0 auto 0;
@@ -377,7 +370,6 @@ div#name .label {
     outline: none;
     border: 1px solid #dde2e6;
     border-radius: 3px;
-    background-color: #fff;
     color: #212529;
     line-height: 28px;
     letter-spacing: -.3px;
@@ -390,6 +382,7 @@ div#name .label {
 
 #email_join_in #email {
     display: flex;
+    justify-content: space-between;
 }
 
 #email button {
@@ -423,8 +416,8 @@ div#name .label {
     position: absolute;
     width: 46px;
     height: 22px;
-    top: 297px;
-    left: 318px;
+    top: 288px;
+    left: 325px;
     fill:rgb(173, 181, 189);
 }
 
@@ -470,9 +463,6 @@ div#agreement_explanation{
     display: block;
     margin: 39px 0 0;
     font-size: 16px;
-    border: 1px solid rgba(0,0,0,.15);
-    border-color: #00c4c4;
-    border-radius: 3px;
     background-color: #00c4c4;
     color: #fff;
     font-weight: 500;
@@ -481,14 +471,11 @@ div#agreement_explanation{
     height: 48px;
     padding-top: 0.07em;
     text-decoration: none;
-    opacity: .45;
+    border:0;
+    opacity: 0.8;
 }
-img{
-    position: fixed;
-    right: 18px;
-    bottom: 40px;
-}
-footer p{
+
+.footer_p{
     display: block;
     text-align: center;
     font-family: inherit;
@@ -498,8 +485,8 @@ footer p{
     padding-bottom : 96px;
     margin-bottom : 0px;
 }
-footer a{
-    color : #00c4c4;
+.footer_p a{
+    color : #ff914d;
 }
 
 .SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsMoreButton__wal9S{
@@ -605,7 +592,8 @@ footer a{
     border: 1px solid rgba(0,0,0,.15);
     border-color: #00c4c4;
     border-radius: 3px;
-    background-color: #00c4c4;
+ /*    background-color: #00c4c4; */
+ background-color:#ff914d;
     color: #fff;
     font-weight: 500;
     width: 100%;
@@ -614,6 +602,9 @@ footer a{
     padding-top: 0.07em;
     text-decoration: none;
     opacity: .45;
+    margin: 0 ;
+    margin-top: 14px;
+    border:0;
 }
 
 .modalclass_content_title {
@@ -634,6 +625,7 @@ footer a{
     cursor: pointer;
     padding: 14px 16px;
     position: relative;
+    margin: 5px 0;
 }
 
 .checkbox_All {
@@ -848,7 +840,8 @@ input.modalclass_contents_midone_one_ckeckbox {
 }
 
 .modalclass_contents_midone_one_one_one {
-    color: #00b2b2;
+    /* color: #00b2b2; */
+    color:#ff914d;
     display: inline-block;
 }
 
@@ -880,7 +873,7 @@ input.modalclass_contents_midone_one_ckeckbox {
     fill: currentColor;
 }
 
-svg:not(:root) {
+.Button_children__VGHI5 svg:not(:root) {
     overflow: hidden;
 }
 .modalclass_contents_midtwo {
@@ -888,8 +881,7 @@ svg:not(:root) {
     border-bottom: 1px solid #f2f4f6;
 }
 .modalclass_contents_midtwo {
-    padding-right: 16px;
-    padding-left: 56px;
+    padding-left: 5px;
 }
 
 .modalclass_contents_midtwo_one {
@@ -1465,6 +1457,8 @@ body ul {
     margin-top: 4px;
     color: #868e96;
     font-style: normal;
+    padding-left: 1px !important;
+    padding-right: 7px !important;
 }
 
 .TermsConfirmBody_notice__3lqSF {
@@ -1480,7 +1474,6 @@ body ul {
 }
 
 .modalclassbutton_one {
-    position: fixed;
     z-index: 9999;
     cursor: pointer;
     border: 0;
@@ -1508,4 +1501,30 @@ body ul {
     font-style: normal;
     margin-top: 8px;
     /* color: #868e96; */
+}
+
+
+.Button_children__VGHI5{
+	    vertical-align: top;
+	        display: inline-flex;
+  		  align-items: center;
+}
+
+#password input{
+	background-color: #f2f4f6;
+	border:0;
+}
+
+div#agreement_check .Button_children__VGHI5 svg{
+	position: relative; left: -5px; 
+}
+
+.modalclass_content{
+	    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+        top: 21.5%;
+    right: 39%;
+    width: 394px;
+    height: 513px;
 }

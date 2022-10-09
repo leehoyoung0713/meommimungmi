@@ -1,100 +1,153 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>멈미뭄미 로그인</title>
-<link rel="icon" type="image/x-icon" href="diolpit5.ico">
-    <link rel="stylesheet" href="log_in.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<link rel="stylesheet" href="https://static.wadiz.kr/static/web/wui.css?e5a9644b">
+<link rel="stylesheet" href="https://static.wadiz.kr/static/web/css/vendor.5f64dbd5.chunk.css">
+<link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.css?7df0a58c">
+<link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.css?56abc884">
+<link href="https://cdn.wadiz.kr/resources/static/css/wlayout.css?v=201803151400" rel="stylesheet">
+<link rel="stylesheet" href="https://static.wadiz.kr/account/main.1b0cd3eb.css">
+<link rel="stylesheet" href="https://static.wadiz.kr/static/iam/main.f99e3b76.css">
+<link rel="stylesheet" href="https://static.wadiz.kr/static/floating-buttons/main.0b5e20dd.css">
+<style>
+    .Button_button__3ip2b.Button_lg__m4_5e {
+        padding: 9px 24px;
+        line-height: 1.75;
+        font-size: 16px;
+        margin-top: 12px;
+    }
+
+    .bottom-message a {
+        color: #FF914D !important;
+    }
+</style>
+
 <body>
+    <div id="page-container">
+
+        <div class="black-bg-wrap" style="display:none;"></div>
 
 
-    <header>
-        <!-- 와디즈 좌측 상단 로고 -->
 
-        <div id = "logo">    
-        <a href="mainpage.jsp">   
-            <svg xmlns="http://www.w3.org/2000/svg" width="85" height="25" viewBox="0 0 85 25">
-                <path fill="#1D2129" fill-rule="nonzero" d="M58.49 2.23h2.11v21.29H59a1.73 1.73 0 0 1-1.62-1.16 9 9 0 0 1-10.93-.28 7.48 7.48 0 0 1-2.75-6.29 7.65 7.65 0 0 1 12.79-5.07V4.23a2 2 0 0 1 2-2zm-6.3 18.62a4.36 4.36 0 0 0 4.16-4.52 4.19 4.19 0 1 0-8.35 0 4.36 4.36 0 0 0 4.19 4.52zM42 23.52h-1.52a1.73 1.73 0 0 1-1.64-1.16 9 9 0 0 1-10.93-.28 7.48 7.48 0 0 1-2.75-6.29A7.65 7.65 0 0 1 38 10.72a2 2 0 0 1 1.9-1.79H42v14.59zm-8.41-2.67h.02a4.35 4.35 0 0 0 4.15-4.52 4.35 4.35 0 0 0-4.17-4.51 4.35 4.35 0 0 0-4.17 4.51 4.36 4.36 0 0 0 4.17 4.52zM83.47 8.94v2.11l-7.07 9.06h7.06v3.47h-13v-2.1l7.08-9.07h-6.62v-1.47a2 2 0 0 1 2-2h10.55zM65.86 7.3a2.48 2.48 0 1 1 0-4.96 2.48 2.48 0 0 1 0 4.96zM21.21 8.94h4.14l-4.86 14.59h-4.15l-3.21-9.36-3.21 9.36H5.77L.92 8.94h4.13L8 18l2.5-7.74a2 2 0 0 1 1.86-1.34h2.9l3 9.08 2.95-9.06zm42.65 14.59l-.04-12.59a2 2 0 0 1 2-2h2.11v14.59h-4.07z">
-                </path>
-                
-            </svg>
-            </a>
-        </div>
-        <span  id = "login" style = "float : right;"><a href="log_in.html" style="text-decoration-line: none;
-            color: black;">로그인</a></span>
-        <span  id = "join_in" style = "float : right;"><a href="./join_in.html" style="text-decoration-line: none;
-            color: black;">회원가입</a></span>
+        <script>
+            window.dispatchEvent(new CustomEvent('WadizHeaderLoaded', {
+                detail: {
+                    element: document.getElementById('wz-header')
+                }
+            }));
+        </script>
 
-    </header>
-    <section>
-        <main id = "top">
-            <h2>로그인</h2>
-            <div style="argin-top: 12px; margin-bottom:12px;">
-                <input type="email" id="userName" name="userName" class="input-text" placeholder="아이디 입력" title="아이디 입력">
-                <h1 class="idalter"></h1>
+
+        <form id="forwardForm" method="get">
+            <input type="hidden" id="returnURL" name="returnURL">
+        </form>
+        <input type="hidden" id="sessionLoginCheck" value="false">
+
+        <main class="account-intro-login">
+            <div class="user-sign-container">
+                <div class="wz container form-container form-login">
+                    <h2 class="wz text display2">로그인</h2>
+                    <form name="frm_login" id="frm_login" class="wz form">
+                        <div class="field">
+                            <div class="wz input">
+                                <input type="email" id="userName" name="userName" class="input-text"
+                                    placeholder="이메일 입력" title="이메일 입력">
+                            </div>
+                            <em id="emailError" class="error-text helper error">이메일 형식이 올바르지 않습니다.</em>
+                        </div>
+                        <div class="field">
+                            <div class="wz input">
+                                <input type="password" id="password" name="password" class="input-text" maxlength="20"
+                                    placeholder="비밀번호 입력" title="비밀번호 입력">
+                            </div>
+                            <p id="loginError" class="error-text helper error">와디즈에 등록되지 않은 아이디거나, 아이디 또는 비밀번호가 회원정보와
+                                일치하지 않습니다.</p>
+                        </div>
+                        <div class="recaptcha">
+                            <p id="recaptchaMessage" class="error-text">잘못된 아이디 또는 비밀번호로 여러번 로그인 시도하였습니다. <br>계정 보안 조치를
+                                위해 아래 사항을 체크하신 뒤 다시 진행하세요.</p>
+                            <p id="recaptchaComplete" class="complete-text"><span>계정 보안 조치가 완료되었습니다!</span>협조해주셔서 감사합니다.
+                                로그인을 다시 시도하세요</p>
+                            <div class="g-recaptcha" data-sitekey="6Lcr70MUAAAAAHfmxpaHaXPDlgLIwiS6gRO5YCcB"
+                                data-size="600" id="recaptcha" data-callback="recaptchaComplete" style="display: none;">
+                                <div style="width: 304px; height: 78px;">
+                                    <div><iframe title="reCAPTCHA"
+                                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lcr70MUAAAAAHfmxpaHaXPDlgLIwiS6gRO5YCcB&amp;co=aHR0cHM6Ly93d3cud2FkaXoua3I6NDQz&amp;hl=ko&amp;v=vP4jQKq0YJFzU6e21-BGy3GP&amp;size=normal&amp;cb=jgbaly4zwrco"
+                                            width="304" height="78" role="presentation" name="a-499lbqg9luuq"
+                                            frameborder="0" scrolling="no"
+                                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                    </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                        class="g-recaptcha-response"
+                                        style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                </div><iframe style="display: none;"></iframe>
+                            </div>
+                        </div>
+                        <div class="login-action">
+                            <p class="forgot"><a class="wz text" href="/web/waccount/find/pwd"
+                                    data-event="iam.signin.goto.forgot">로그인 정보를 잊으셨나요?</a></p>
+                        </div>
+                        <button type="button" id="btnLogin" class="wz button primary block submit-button"
+                            data-event="iam.signin.submit" style="background-color:#FF914D;border:0">로그인</button>
+                        <input type="hidden" name="returnURL" value="https://www.wadiz.kr/web/main">
+                    </form>
+                    <div id="iam-account-app">
+                        <div>
+                            <div><button
+                                    class="Button_button__3ip2b Button_lg__m4_5e Button_block__2nblq SNSButtonList_kakaoButton__2lTDs SNSButtonList_spacer__38ac5"
+                                    type="button" style="background-color: #FEE500;"><span><span
+                                            class="Button_children__VGHI5"><svg viewBox="0 0 32 32" focusable="false"
+                                                role="presentation"
+                                                class="withIcon_icon__1YH1P SNSButtonList_kakaoIcon__1s6gw"
+                                                aria-hidden="true" style="position: absolute;
+                                                left: 16px;
+                                                width: 22px;
+                                                height: 22px
+                                                ">
+                                                <path
+                                                    d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z">
+                                                </path>
+                                            </svg>카카오로 시작하기</span></span></button><button
+                                    class="Button_button__3ip2b Button_lg__m4_5e Button_block__2nblq SNSButtonList_naverButton__1rzZ_ SNSButtonList_spacer__38ac5"
+                                    type="button" style="background-color:#00D737;color: white;"><span><span
+                                            class="Button_children__VGHI5"><svg viewBox="0 0 32 32" focusable="false"
+                                                role="presentation"
+                                                class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM"
+                                                aria-hidden="true" style="position: absolute;
+                                                left: 16px;
+                                                width: 22px;
+                                                height: 22px;">
+                                                <path
+                                                    d="M19.52 5.76v10.32L12.48 5.76H4.8v20.48h7.68V15.92l7.12 10.32h7.6V5.76z">
+                                                </path>
+                                            </svg>네이버로 시작하기</span></span></button>
+
+                            </div>
+                        </div>
+                        <div class="bottom-message">
+                            <p>아직 와디즈 계정이 없나요?<a href="/web/waccount/wAccountRegistIntro" data-return-url=""
+                                    data-event="iam.signin.goto.signup">회원가입</a></p>
+                        </div>
+                    </div>
                 </div>
-                <input type="password" id="password" name="password" class="input-text" placeholder="비밀번호 입력" title="비밀번호 입력">
-                <p class="forgot"><a class="wz text">로그인 정보를 잊으셨나요?</a></p>
-        
+        </main>
 
+        <!-- S : 리턴 폼 -->
+        <input type="hidden" id="returnForm" value="https://www.wadiz.kr/web/main">
+        <input type="hidden" id="joinType" value="">
+        <!-- E : 리턴 폼 -->
 
-
-
-
-
-
-
-
-        <div id="iam-account-app">
-            <div>
-                <div>
-
-
-                    <button type="button" id="btnLogin" class="wz button primary block submit-button" data-event="iam.signin.submit">로그인</button>
-                    <button class="Button_button__3ip2b Button_lg__m4_5e Button_block__2nblq SNSButtonList_kakaoButton__2lTDs SNSButtonList_spacer__38ac5" type="button">
-                        <span>
-                            <span class="Button_children__VGHI5">
-                                <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_kakaoIcon__1s6gw" aria-hidden="true">
-                                    <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z">
-
-                                    </path>
-                                </svg>카카오로 시작하기</span>
-                            </span>
-                        </button>
-                        <button type="button" id="naverLogin" style="background-image: url(구글아이콘.png); background-repeat: no-repeat;
-    background-position: 18px center; border: 1px solid #0000003b;"  ><svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__1YH1P SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
-                      </svg>구글로 시작하기</button>
-      
-      
-    
-                         
-                </div>
-            </div>
-        </div>
-
-
-    </main>
-
-
-
-
-
-
-
-
-      
-    </section>
-    <img alt="멈미뭄미 상담 버튼" src="https://cf.channel.io/pub-file/22503/5fd6fd874e7f9156515f/group-4-copy.png" width="60" height="60" class="Launcherstyled__Image-ch-front__sc-oef45p-4 gzwqUH">
-    <footer>
-        <p>
-            아직 멈미뭄미 계정이 없나요? <a href="join_in.html" data-return-url="" data-event="iam.signin.goto.signup">회원가입</a>
-        </p>
-    </footer>
+        <!-- S : 페이지별 스크립트 -->
+    </div>
 </body>
+
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
 $('#userName').keypress(function(){
