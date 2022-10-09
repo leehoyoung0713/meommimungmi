@@ -1,23 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>유기동물찾기</title>
-    <link rel="stylesheet" href="./header.css">
-    <link rel="stylesheet" href="./lostfoundanimal.css">
-    <link rel="stylesheet" href="./footer.css">
-    <script src="https://kit.fontawesome.com/5ee2c7b38b.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<title>유기동물 찾기</title>
+<link rel="stylesheet" href="./header.css">
+<link rel="stylesheet" href="./lostfoundanimal.css">
+<link rel="stylesheet" href="./footer.css">
+<script src="https://kit.fontawesome.com/5ee2c7b38b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="page-container">
         <div id="wz-header">
             <div class="web-header">
                 <div class="web-header-large">
-                    <jsp:include page="./header.jsp"></jsp:include>
+                    <jsp:include page="./header.jsp"/>
 
                 </div>
             </div>
@@ -62,14 +60,14 @@
                                     </label>
                                 </form>
                                 <div class="SortingSelect_container__8AOZQ ProjectListHead_sorting__2n1WY">
-                                    추천순
-                                    <select name="order" class="SortingSelect_select__1etN_">
-                                        <option value="recommend">추천순</option>
-                                        <option value="popular">인기순</option>
-                                        <option value="amount">펀딩액순</option>
-                                        <option value="closing">마감임박순</option>
-                                        <option value="recent">최신순</option>
-                                        <option value="support">응원참여자순</option>
+                                    <span>추천순</span>
+                                    <select name="order" id="orders" class="SortingSelect_select__1etN_">
+                                        <option class="opts" value="recommend">추천순</option>
+                                        <option class="opts" value="popular">인기순</option>
+                                        <option class="opts" value="amount">펀딩액순</option>
+                                        <option class="opts" value="closing">마감임박순</option>
+                                        <option class="opts" value="recent">최신순</option>
+                                        <option class="opts" value="support">응원참여자순</option>
                                     </select>
                                 </div>
                                 <div class="ProjectListHead_children__2Y7-F"></div>
@@ -295,16 +293,16 @@
                                 <div class="pagination">
                                     <div class="page">
                                         <div class="desktop-only">
-                                            <button class="prev-page icon-chevron-left"onclick="movePage(0)" disabled="">
+                                            <button class="prev-page icon-chevron-left">
                                                 <span class="text-hidden"><!-- 이전 목록 --></span>
                                             </button>
-                                            <a href="#" class="current" onclick="movePage(1)">1</a>
-                                            <a href="#" onclick="movePage(2)">2</a>
-                                            <a href="#" onclick="movePage(3)">3</a>
-                                            <a href="#" onclick="movePage(4)">4</a>
-                                            <a href="#" onclick="movePage(5)">5</a>
-                                            <a href="#" onclick="movePage(6)">6</a>
-                                            <button class="next-page icon-chevron-right" onclick="movePage(7)">
+                                            <a href="javascript:void(0);" class="current">1</a>
+                                            <a href="javascript:void(0);">2</a>
+                                            <a href="javascript:void(0);">3</a>
+                                            <a href="javascript:void(0);">4</a>
+                                            <a href="javascript:void(0);">5</a>
+                                            <a href="javascript:void(0);">6</a>
+                                            <button class="next-page icon-chevron-right">
                                                 <span class="text-hidden"><!-- 다음 목록 --></span>
                                             </button>
                                         </div>
@@ -315,55 +313,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="Collection_rootContainer__1O8QU">
-                    <div class="Collection_cardListContainer__2Yqjw">
-                        <div class="CardTable_container__1O6AF" style="width:calc(100%+0px);">
-                            <div class="CardTable_itemContainer__2f3YJ" aria-hidden="true" style="width:calc(25% - 18.01px);margin-left:0px;margin-right:12px;margin-bottom:60px;">
-                                <a class="StoreCard_item__30rS1" href="https://www.wadiz.kr/web/store/detail/3396?_refer_section_st=collection_0" data-ec-id="3396" data-ec-name="[와-쑈] 스마트하게 담아드리는 유그린 더블지퍼 디지털 파우치" data-ec-list="collection" data-ec-position="0" data-ec-category="테크·가전" data-ec-brand="베라킷 주식회사" data-ec-price="19000">
-                                    <div class="CardThumbnail_thumbnailContainer__2aP0b">
-                                        <div class="CardThumbnail_thumbnailPlaceholder__Yt4MC"style="padding-top:calc(100% + 0px);">
-                                            <div class="CardThumbnail_thumbnail__2grGx" style="background-image: url('https://cdn2.wadiz.kr/2022/09/16/921c630c-b8da-4a90-a6e4-938b43a56aac.jpg/wadiz/resizecrop/333x333/format/jpg/quality/85/');"></div>
-                                        </div>
-                                    </div>
-                                    <div class="StoreCard_contentContainer__udbh-">
-                                        <div class="StoreCard_title__3VYXn">[와-쑈] 스마트하게 담아드리는 유그린 더블지퍼 디지털 파우치</div>
-                                        <div class="StoreCard_subText__3RNiJ">베라킷 주식회사</div>
-                                        <div class="StoreCard_footer__ByS94">
-                                            <div class="StoreCard_priceGroup__iRexQ">
-                                                <div class="StoreCard_priceContainer__1QVQh">
-                                                    <span class="StoreCard_price__2GK-N">19,900</span>
-                                                    <span>원</span>
-                                                </div>
-                                                <div class="StoreCardFooter_container__DdTXV">
-                                                    <div class="StoreCardFooter_upperFooter__GuACh">
-                                                        <div class="RatingScore_container__2cKSl RatingScore_smCard02__MINsV">
-                                                            <div class="RatingScore_icon__3O00Z"></div>
-                                                            <span class="RatingScore_score__3pgwL">4.6</span>
-                                                        </div>
-                                                        <div class="ParticipantScore_container__1x-of">
-                                                            <div class="ParticipantScore_peopleIcon__16qwx"></div>
-                                                            <span class="ParticipantScore_peopleCountText__3A8QC">169명 참여</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="StoreCardFooter_bottomFooter__2VkOB">
-                                                        <div class="DeliveryBadge_container__qGNgk StoreCardFooter_badgeFooter__1uz9u">
-                                                            <div class="DeliveryBadge_badge__2DeB2">무료배송</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>      
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </main>
     </div>
 
-    <jsp:include page="./footer.jsp"></jsp:include>
-    
+    <jsp:include page="./footer.jsp"/>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="./lostfoundanimal.js"></script>
 </html>
